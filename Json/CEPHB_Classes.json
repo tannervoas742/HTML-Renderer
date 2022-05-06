@@ -11,7 +11,7 @@
 			"whitespace_as": "-"
 		}
 	},
-	"Artificer":{
+	"Artificer#H3":{
 		"Level#HIDDEN#RANGE":[1,20],
 		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
 		"Features#HIDDEN":[
@@ -69,72 +69,72 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
-	"Barbarian":{
+	"Barbarian#H3":{
 		"Level#HIDDEN#RANGE":[1,20],
 		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
 		"Features#HIDDEN":[
@@ -185,7 +185,7 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 			"1.Rage#CONCAT_LINES": [
 				"Enter as a bonus action.",
 				"Amount of rages per level shown on Barbarian table",
@@ -202,13 +202,13 @@
 			"2.Unarmored Defense": "AC is 10 + DEX + CON while you are not wearing armor. You can use a shield and still get this benefit."
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 			"1.Reckless Attack": "You can choose to have advantage on melee weapon attack rolls using strength during this turn, but attack rolls against you have advantage until your next turn.",
 			
 			"2.Danger Sense":"Advantage on DEX saving throws against effects that you can see. You cannot be blinded, deafened, or incapacitated."
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 			"0.Primal Knowledge (Optional)":"When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
 			"1.Ancestral Guardian": {
 				"Ancestral Protectors": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage of the target's attacks."
@@ -283,16 +283,16 @@
 			}
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 			"1.Extra Attack":"Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
 			"2.Fast Movement":"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 			"1.Ancestral Guardian": {
 				"Spirit Shield#CONCAT_LINES": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.", 
 				"When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level."]
@@ -337,7 +337,7 @@
 			}
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 			"1.Feral Instinct#CONCAT_LINES":[
 			"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
 			"Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
@@ -345,15 +345,15 @@
 			"2.Instinctive Pounce (Optional)":"At 7th level, as part of the bonus action you take to enter your rage, you can move up to half your speed."
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 			"Brutal Critical (1 die)":"Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 			"0.Primal Knowledge improvement (Optional)":"When you reach 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
 			"1.Ancestral Guardian": {
 				"Consult the Spirits#CONCAT_LINES": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
@@ -391,22 +391,22 @@
 			}
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 			"Relentless Rage#CONCAT_LINES":[
 			"Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
 			"Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
 			]
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 			"Brutal Critical (2 dice)":"Beginning at 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 			"1.Ancestral Guardian": {
 				"Vengeful Ancestors": "At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage that your Spirit Shield prevents."
 			},
@@ -445,27 +445,27 @@
 			}
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 			"Persistent Rage":"Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."			
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 			"Brutal Critical (3 dice)":"Beginning at 13th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 			"Indomitable Might":"Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."			
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 			"Primal Champion":"At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
 		}
 	},
@@ -531,69 +531,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Cleric":{
@@ -658,69 +658,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Druid":{
@@ -783,69 +783,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Fighter":{
@@ -899,69 +899,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Monk":{
@@ -1015,69 +1015,69 @@
 			"Proficiencies gained: Simple weapons, shortswords"
 		],
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Paladin":{
@@ -1135,69 +1135,69 @@
 			"Spell slots: Add half your levels (round down) in paladin to the levels from other classes to determine spell slots"
 		],
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Ranger":{
@@ -1255,69 +1255,69 @@
 			"Spell slots: Add half your levels (round down) in ranger to the levels from other classes to determine spell slots"
 		],
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Rogue":{
@@ -1369,69 +1369,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Sorceror":{
@@ -1483,69 +1483,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Warlock":{
@@ -1597,69 +1597,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	},
 	"Wizard":{
@@ -1711,69 +1711,69 @@
 		],
 		
 		
-		"6.1st level": {
+		"6.1st level#H1": {
 		},
 		
-		"7.2nd level": {
+		"7.2nd level#H1": {
 		},
 		
-		"8.3rd level": {
+		"8.3rd level#H1": {
 		},
 		
-		"9.4th level": {
+		"9.4th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"10.5th level": {
+		"10.5th level#H1": {
 		},
 		
-		"11.6th level": {
+		"11.6th level#H1": {
 		},
 		
-		"12.7th level": {
+		"12.7th level#H1": {
 		},
 		
-		"13.8th level": {
+		"13.8th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"14.9th level": {
+		"14.9th level#H1": {
 		},
 		
-		"15.10th level": {
+		"15.10th level#H1": {
 		},
 		
-		"16.11th level": {
+		"16.11th level#H1": {
 		},
 		
-		"17.12th level": {
+		"17.12th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"18.13th level": {
+		"18.13th level#H1": {
 		},
 		
-		"19.14th level": {
+		"19.14th level#H1": {
 		},
 		
-		"20.15th level": {
+		"20.15th level#H1": {
 		},
 		
-		"21.16th level": {
+		"21.16th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"22.17th level": {
+		"22.17th level#H1": {
 		},
 		
-		"23.18th level": {
+		"23.18th level#H1": {
 		},
 		
-		"24.19th level": {
+		"24.19th level#H1": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"25.20th level": {
+		"25.20th level#H1": {
 		}
 	}
 }
