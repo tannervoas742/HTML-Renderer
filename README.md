@@ -19,3 +19,5 @@ Uses Yattag to generate HTML webpage from content contained in JSON files.
 
 # In Text Command List:
 - ```<LIST_START>```, ```<LIST_ITEM>```, ```<LIST_STOP>```: USeful in conjunction with ```CONCAT_LINES``` to make bulleted list.
+- ```<GOTO:Text:File+Location>```: Adds a link to the given File (or external webpage) with the given Text. Optionally include +Location to designate jump to location in said file.
+- ```<GOTO:File+Location>```: Adds a link to the given File (or external webpage). Optionally include +Location to designate jump to location in said file. If Location is used Text = Location, else Text = File

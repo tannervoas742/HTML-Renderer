@@ -126,7 +126,7 @@
 				"Tundra. When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."]
 			},
 			"6.Totem Warrior":{
-				"1.Spirit Seeker":"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells#Beast Sense> and <GOTO:Speak with Animals:Spells#Speak with Animals> spells, but only as rituals.",
+				"1.Spirit Seeker":"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells+Beast Sense> and <GOTO:Speak with Animals:Spells+Speak with Animals> spells, but only as rituals.",
 				"2.Totem Spirit#CONCAT_LINES":["At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
 				"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
 				"Bear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.",
@@ -157,7 +157,7 @@
 			},
 			"8.Zealot":{
 				"1.Divine Fury":"Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to 1d6 + half your Barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature.",
-				"2.Warrior of the Gods":"At 3rd level, your soul is marked for endless battle. If a spell, such as <GOTO:Raise Dead:Spells#Raise Dead>, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
+				"2.Warrior of the Gods":"At 3rd level, your soul is marked for endless battle. If a spell, such as <GOTO:Raise Dead:Spells+Raise Dead>, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
 			}
 		},
 		
@@ -256,7 +256,7 @@
 				"Shielding Storm":"At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
 			},
 			"6.Totem Warrior":{
-				"Spirit Walker":"At 10th level, you can cast the <GOTO:Commune with Nature:Spells#Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
+				"Spirit Walker":"At 10th level, you can cast the <GOTO:Commune with Nature:Spells+Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
 			},
 			"7.Wild Magic":{
 				"Unstable Backlash":"At 10th level, when you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."

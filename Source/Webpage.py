@@ -85,7 +85,7 @@ def WriteJSON(path, structure, beautify=True):
 
 class Webpage:
     def __init__(self, SrcJSON):
-        CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/')
+        CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
 
@@ -206,13 +206,35 @@ class Webpage:
             with self.Tag('li', klass=' '.join(State['class'])):
                 self.AddText(Input.replace('<LIST_ITEM>', ''), State, Interface, Data)
             return
-            
+
+        TextTag = None
         if State['text.size'] == 0:
-            with self.Tag('p', klass=' '.join(State['class'])):
-                self.Text(Input)
+            TextTag = 'p'
         else:
-            with self.Tag('h{}'.format(State['text.size']), klass=' '.join(State['class'])):
-                self.Text(Input)
+            TextTag = 'h{}'.format(State['text.size'])
+        if '<GOTO' in Input:
+            while '<GOTO' in Input:
+                GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
+                GotoMatch1 = GotoPattern1.match(Input)
+                if GotoMatch1 != None:
+                    Text = GotoMatch1.group(1)
+                    File = GotoMatch1.group(2)
+                    Location = GotoMatch1.group(3)
+                    ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
+                    FlushPrintUTF8(ToReplace)
+                    with self.Tag(TextTag, klass=' '.join(State['class'])):
+                        self.Text(Input.split(ToReplace)[0])
+                    with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
+                        self.Text(Text)
+                    Input = ToReplace.join(Input.split(ToReplace)[1:])
+                    return self.AddText(Input, State, Interface, Data)
+                GotoPattern2 = re.compile('<GOTO:(.+):(.+)>')
+                GotoPattern3 = re.compile('<GOTO:(.+)+(.+)>')
+                GotoPattern4 = re.compile('<GOTO:(.+)>')
+            
+        with self.Tag(TextTag, klass=' '.join(State['class'])):
+            self.Text(Input)
+
 
     def AddLookupTable(self, Input, State, Interface, Data):
         Table = [Data]
@@ -303,7 +325,7 @@ class Webpage:
             
 
     def Save(self, OutHTML):
-        CleanTarget = OutHTML.replace('\\', '/').replace('//', '/')
+        CleanTarget = OutHTML.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         OutFile = open(CleanTarget, 'w')
         OutFile.write(self.Doc.getvalue()) 
         OutFile.close()
