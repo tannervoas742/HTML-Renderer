@@ -11,11 +11,133 @@
 			"whitespace_as": "-"
 		}
 	},
-	"Barbarian": 
-	{
-		"1.Level#HIDDEN#RANGE":[1,20],
-		"2.Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
-		"3.Features#HIDDEN":[
+	"Artificer":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"Magical Tinkering, Spellcasting", 
+			"Infuse Item", 
+			"Artificer Specialist, The Right Tool for the Job",
+			"Ability Score Improvement",
+			"Artificer Specialist feature",
+			"Tool Expertise",
+			"Flash of Genius",
+			"Ability Score Improvement",
+			"Artificer Specialist feature",
+			"Magic Item Adept",
+			"Spell-Storing Item",
+			"Ability Score Improvement",
+			"–",
+			"Magic Item Savant",
+			"Artificer Specialist feature",
+			"Ability Score Improvement",
+			"–",
+			"Magic Item Master",
+			"Ability Score Improvement",
+			"Soul of Artifice"],
+		"Infusions Known#HIDDEN#INC":[2,2,2,2,6,6,10,10,14,14,18,18],
+		"Infused Items#HIDDEN#INC":[2,2,6,10,14,18],
+		"Cantrips Known#HIDDEN#INC":[1,1,10,14],
+		"1st level spell slots#HIDDEN#INC":[1,1,3,5],
+		"2nd level spell slots#HIDDEN#INC":[5,5,7],
+		"3rd level spell slots#HIDDEN#INC":[9,9,11],
+		"4th level spell slots#HIDDEN#INC":[13,15,17],
+		"5th level spell slots#HIDDEN#INC":[17,19],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features","Infusions Known","Infused Items","Cantrips Known", "Spell slots per Spell Level"
+		],
+		
+		"2.Hit Dice": 8,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "Light armor, medium armor, shields",
+			"2.Weapons": "Simple weapons, firearms*",
+			"3.Tools": "Thieves’ tools, tinker’s tools, artisan’s tools (choose one)",
+			"4.Saving Throws": "CON and INT",
+			"5.Skills": "(2) Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
+		},
+		"4.Starting Equipment or 5d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>Any simple weapon",
+			"<LIST_ITEM>Light crossbow and 20 bolts",
+			"<LIST_ITEM>Thieves’ tools and dungeoneer’s pack",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need INT of 13 to multiclass in or out",
+			"Proficiencies gained: light armor, medium armor, shields, thieves’ tools, tinker’s tools",
+			"Spell slots":"Add half your levels (round up) in artificer to the levels from other classes to determine spell slots"
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Barbarian":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
 			"Rage, Unarmored Defense", 
 			"Reckless Attack, Danger Sense", 
 			"Primal Knowledge (Optional), Primal Path",
@@ -36,34 +158,34 @@
 			"Indomitable Might",
 			"Ability Score Improvement",
 			"Primal Champion"],
-		"4.Rages#HIDDEN#INC":[1,1,3,6,12,17,"20=Unlimited"],
-		"5.Rage Damage#HIDDEN#INC":[1, 1, 9, 16],
-		"6.Barbarian Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+		"Rages#HIDDEN#INC":[1,1,3,6,12,17,"20=Unlimited"],
+		"Rage Damage#HIDDEN#INC":[1, 1, 9, 16],
+		"1.Barbarian Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
 			"Level","Proficiency Bonus","Features","Rages","Rage Damage"
 		],
 		
-		"7.Hit Dice": 12,
-		"8.Proficiencies#H2#TABLE": {
+		"2.Hit Dice": 12,
+		"3.Proficiencies#H2#TABLE": {
 			"1.Armor": "Light armor, medium armor, shields",
 			"2.Weapons": "Simple weapons, martial weapons",
 			"3.Tools": "None",
 			"4.Saving Throws": "STR and CON",
 			"5.Skills": "(2) Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"
 		},
-		"9.Starting Equipment or 2d4 x 10 gp": [
+		"4.Starting Equipment or 2d4 x 10 gp": [
 			"<LIST_START>",
 			"<LIST_ITEM>(a) a greataxe or (b) any martial melee weapon",
 			"<LIST_ITEM>(a) two handaxes or (b) any simple weapon",
 			"<LIST_ITEM>An explorer's pack and four javelins",
 			"<LIST_STOP>"
 		],
-		"10.Multiclassing#CONCAT_LINES":[
+		"5.Multiclassing#CONCAT_LINES":[
 			"Need STR of 13 to multiclass in or out",
 			"Proficiencies gained: Shields, simple weapons, martial weapons"
 		],
 		
 		
-		"11.1st level": {
+		"6.1st level": {
 			"1.Rage#CONCAT_LINES": [
 				"Enter as a bonus action.",
 				"Amount of rages per level shown on Barbarian table",
@@ -80,13 +202,13 @@
 			"2.Unarmored Defense": "AC is 10 + DEX + CON while you are not wearing armor. You can use a shield and still get this benefit."
 		},
 		
-		"12.2nd level": {
+		"7.2nd level": {
 			"1.Reckless Attack": "You can choose to have advantage on melee weapon attack rolls using strength during this turn, but attack rolls against you have advantage until your next turn.",
 			
 			"2.Danger Sense":"Advantage on DEX saving throws against effects that you can see. You cannot be blinded, deafened, or incapacitated."
 		},
 		
-		"13.3rd level": {
+		"8.3rd level": {
 			"0.Primal Knowledge (Optional)":"When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
 			"1.Ancestral Guardian": {
 				"Ancestral Protectors": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage of the target's attacks."
@@ -126,7 +248,7 @@
 				"Tundra. When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."]
 			},
 			"6.Totem Warrior":{
-				"1.Spirit Seeker":"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells+Beast Sense> and <GOTO:Speak with Animals:Spells+Speak with Animals> spells, but only as rituals.",
+				"1.Spirit Seeker":"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells#Beast Sense> and <GOTO:Speak with Animals:Spells#Speak with Animals> spells, but only as rituals.",
 				"2.Totem Spirit#CONCAT_LINES":["At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
 				"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
 				"Bear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.",
@@ -148,7 +270,7 @@
 					"An intangible spirit, which looks like a flumph or a pixie (your choice), appears within 5 feet of one creature of your choice that you can see within 30 feet of you. At the end of the current turn, the spirit explodes, and each creature within 5 feet of it must succeed on a Dexterity saving throw or take 1d6 force damage. Until your rage ends, you can use this effect again, summoning another spirit, on each of your turns as a bonus action.",
 					"Magic infuses one weapon of your choice that you are holding. Until your rage ends, the weapon's damage type changes to force, and it gains the light and thrown properties, with a normal range of 20 feet and a long range of 60 feet. If the weapon leaves your hand, the weapon reappears in your hand at the end of the current turn.",
 					"Whenever a creature hits you with an attack roll before your rage ends, that creature takes 1d6 force damage, as magic lashes out in retribution.",
-					"<INDENT>Until your rage ends, you are surrounded by multicolored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus.",
+					"Until your rage ends, you are surrounded by multicolored, protective lights; you gain a +1 bonus to AC, and while within 10 feet of you, your allies gain the same bonus.",
 					"Flowers and vines temporarily grow around you; until your rage ends, the ground within 15 feet of you is difficult terrain for your enemies.",
 					"A bolt of light shoots from your chest. Another creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take 1d6 radiant damage and be blinded until the start of your next turn. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
 				],
@@ -157,20 +279,20 @@
 			},
 			"8.Zealot":{
 				"1.Divine Fury":"Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to 1d6 + half your Barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature.",
-				"2.Warrior of the Gods":"At 3rd level, your soul is marked for endless battle. If a spell, such as <GOTO:Raise Dead:Spells+Raise Dead>, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
+				"2.Warrior of the Gods":"At 3rd level, your soul is marked for endless battle. If a spell, such as <GOTO:Raise Dead:Spells#Raise Dead>, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
 			}
 		},
 		
-		"14.4th level": {
+		"9.4th level": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"15.5th level": {
+		"10.5th level": {
 			"1.Extra Attack":"Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
 			"2.Fast Movement":"Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
 		},
 		
-		"16.6th level": {
+		"11.6th level": {
 			"1.Ancestral Guardian": {
 				"Spirit Shield#CONCAT_LINES": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.", 
 				"When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level."]
@@ -192,9 +314,9 @@
 			} ,
 			"5.Storm Herald":{
 				"Storm Soul#CONCAT_LINES":["At 6th level, the storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.",
-				"Desert. You gain resistance to fire damage, and you don,t suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.",
+				"Desert. You gain resistance to fire damage, and you don't suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.",
 				"Sea. You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet.",
-				"Tundra. You gain resistance to cold damage, and you don,t suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."]
+				"Tundra. You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."]
 			},
 			"6.Totem Warrior":{
 				"Aspect of the Beast#CONCAT_LINES":["At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
@@ -215,7 +337,7 @@
 			}
 		},
 		
-		"17.7th level": {
+		"12.7th level": {
 			"1.Feral Instinct#CONCAT_LINES":[
 			"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
 			"Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
@@ -223,15 +345,15 @@
 			"2.Instinctive Pounce (Optional)":"At 7th level, as part of the bonus action you take to enter your rage, you can move up to half your speed."
 		},
 		
-		"18.8th level": {
+		"13.8th level": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"19.9th level": {
+		"14.9th level": {
 			"Brutal Critical (1 die)":"Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"20.10th level": {
+		"15.10th level": {
 			"0.Primal Knowledge improvement (Optional)":"When you reach 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
 			"1.Ancestral Guardian": {
 				"Consult the Spirits#CONCAT_LINES": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
@@ -256,7 +378,7 @@
 				"Shielding Storm":"At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
 			},
 			"6.Totem Warrior":{
-				"Spirit Walker":"At 10th level, you can cast the <GOTO:Commune with Nature:Spells+Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
+				"Spirit Walker":"At 10th level, you can cast the <GOTO:Commune with Nature:Spells#Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
 			},
 			"7.Wild Magic":{
 				"Unstable Backlash":"At 10th level, when you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."
@@ -269,22 +391,22 @@
 			}
 		},
 		
-		"21.11th level": {
+		"16.11th level": {
 			"Relentless Rage#CONCAT_LINES":[
 			"Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
 			"Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
 			]
 		},
 		
-		"22.12th level": {
+		"17.12th level": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"23.13th level": {
+		"18.13th level": {
 			"Brutal Critical (2 dice)":"Beginning at 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"24.14th level": {
+		"19.14th level": {
 			"1.Ancestral Guardian": {
 				"Vengeful Ancestors": "At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage that your Spirit Shield prevents."
 			},
@@ -318,33 +440,1326 @@
 			"8.Zealot":{
 				"Rage Beyond Death#CONCAT_LINES":[
 				"Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
-				"While you're raging, having 0 hit points doesn,t knock you unconscious. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don,t die until your rage ends, and you die then only if you still have 0 hit points."
+				"While you're raging, having 0 hit points doesn,t knock you unconscious. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends, and you die then only if you still have 0 hit points."
 				]
 			}
 		},
 		
-		"25.15th level": {
-			
+		"20.15th level": {
+			"Persistent Rage":"Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."			
 		},
 		
-		"26.16th level": {
+		"21.16th level": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"27.17th level": {
+		"22.17th level": {
 			"Brutal Critical (3 dice)":"Beginning at 13th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
 		},
 		
-		"28.18th level": {
-			
+		"23.18th level": {
+			"Indomitable Might":"Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."			
 		},
 		
-		"29.19th level": {
+		"24.19th level": {
 			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
-		"30.20th level": {
-			
+		"25.20th level": {
+			"Primal Champion":"At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
+		}
+	}
+	"Bard":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"Spellcasting, Bardic Inspiration (d6)", 
+			"Jack of All Trades, Song of Rest (d6)", 
+			"Bard College, Expertise",
+			"Ability Score Improvement",
+			"Bardic Inspiration (d8), Font of Inspiration",
+			"Countercharm, Bard College Feature",
+			"–",
+			"Ability Score Improvement",
+			"Song of Rest (d8)",
+			"Bardic Inspiration (d10), Expertise, Magical Secrets",
+			"–",
+			"Ability Score Improvement",
+			"Song of Rest (d10)",
+			"Magical Secrets, Bard College Feature",
+			"Bardic Inspiration (d12)",
+			"Ability Score Improvement",
+			"Song of Rest (d12)",
+			"Magical Secrets",
+			"Ability Score Improvement",
+			"Superior Inspiration"],
+		"Cantrips Known#HIDDEN#INC":[1,1,5,10],
+		"Spells Known#HIDDEN#INC":[1,1,1,12,3,4,5,6,7,8,9,10,10,11,13,14,14,15,17,18,18],
+		"1st level spell slots#HIDDEN#INC":[1,1,2,3],
+		"2nd level spell slots#HIDDEN#INC":[3,4,4],
+		"3rd level spell slots#HIDDEN#INC":[5,5,6],
+		"4th level spell slots#HIDDEN#INC":[7,8,9],
+		"5th level spell slots#HIDDEN#INC":[9,10,18],
+		"6th level spell slots#HIDDEN#INC":[11,19],
+		"7th level spell slots#HIDDEN#INC":[13,20],
+		"8th level spell slots#HIDDEN#INC":[15],
+		"9th level spell slots#HIDDEN#INC":[17],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features","Cantrips Known","Spells Known","Spell slots per Spell Level"
+		],
+		
+		"2.Hit Dice": 8,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "Light armor",
+			"2.Weapons": "Simple weapons, hand crossbows, longswords, rapiers, shortswords",
+			"3.Tools": "Three musical instruments of your choice",
+			"4.Saving Throws": "DEX and CHA",
+			"5.Skills": "Any three"
+		},
+		"4.Starting Equipment or 5d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) a rapier, or (b) a longsword, or (c) any simple weapon",
+			"<LIST_ITEM>(a) a diplomat's pack or (b) an entertainer's pack",
+			"<LIST_ITEM>(a) a lute or (b) any other musical instrument",
+			"<LIST_ITEM> Leather armor and a dagger",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need CHA of 13 to multiclass in or out",
+			"Proficiencies gained: Light armor, one skill, one musical instrument",
+			"Spell slots":"Add your levels in bard to the levels from other classes to determine spell slots"
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Cleric":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"Spellcasting, Divine Domain", 
+			"Channel Divinity (1/rest), Divine Domain feature", 
+			"–",
+			"Ability Score Improvement",
+			"Destroy Undead (CR 1/2)",
+			"Channel Divinity (2/rest), Divine Domain feature",
+			"–",
+			"Ability Score Improvement, Destroy Undead (CR 1), Divine Domain feature",
+			"–",
+			"Divine Intervention",
+			"Destroy Undead (CR 2)",
+			"Ability Score Improvement",
+			"–",
+			"Destroy Undead (CR 3)",
+			"–",
+			"Ability Score Improvement",
+			"Destroy Undead (CR 4), Divine Domain feature",
+			"Channel Divinity (3/rest)",
+			"Ability Score Improvement",
+			"Divine Intervention improvement"],		
+		"Cantrips Known#HIDDEN#INC":[1,1,1,4,10],
+		"1st level spell slots#HIDDEN#INC":[1,1,2,3],
+		"2nd level spell slots#HIDDEN#INC":[3,4,4],
+		"3rd level spell slots#HIDDEN#INC":[5,5,6],
+		"4th level spell slots#HIDDEN#INC":[7,8,9],
+		"5th level spell slots#HIDDEN#INC":[9,10,18],
+		"6th level spell slots#HIDDEN#INC":[11,19],
+		"7th level spell slots#HIDDEN#INC":[13,20],
+		"8th level spell slots#HIDDEN#INC":[15],
+		"9th level spell slots#HIDDEN#INC":[17],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features","Cantrips Known","Spell slots per Spell Level"
+		],
+		
+		"2.Hit Dice": 8,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "Light armor, medium armor, shields",
+			"2.Weapons": "Simple weapons",
+			"3.Tools": "None",
+			"4.Saving Throws": "WIS and CHA",
+			"5.Skills": "(2) History, Insight, Medicine, Persuasion, Religion "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) a mace or (b) a warhammer (if proficient)",
+			"<LIST_ITEM>(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+			"<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) any simple weapon",
+			"<LIST_ITEM>(a) a priest’s pack or (b) an explorer’s pack",
+			"<LIST_ITEM>A shield and a holy symbol",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need WIS of 13 to multiclass in or out",
+			"Proficiencies gained: Light armor, medium armor, shields",
+			"Spell slots":"Add your levels in cleric to the levels from other classes to determine spell slots"
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Druid":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"Druidic, Spellcasting", 
+			"Wild Shape, Druid Circle", 
+			"–",
+			"Wild Shape improvement, Ability Score Improvement",
+			"–",
+			"Druid Circle feature",
+			"–",
+			"Wild Shape improvement, Ability Score Improvement",
+			"–",
+			"Druid Circle feature",
+			"–",
+			"Ability Score Improvement",
+			"–",
+			"Druid Circle feature",
+			"–",
+			"Ability Score Improvement",
+			"–",
+			"Timeless Body, Beast Spells",
+			"Ability Score Improvement",
+			"Archdruid"],
+		"Cantrips Known#HIDDEN#INC":[1,1,4,10],
+		"1st level spell slots#HIDDEN#INC":[1,1,2,3],
+		"2nd level spell slots#HIDDEN#INC":[3,4,4],
+		"3rd level spell slots#HIDDEN#INC":[5,5,6],
+		"4th level spell slots#HIDDEN#INC":[7,8,9],
+		"5th level spell slots#HIDDEN#INC":[9,10,18],
+		"6th level spell slots#HIDDEN#INC":[11,19],
+		"7th level spell slots#HIDDEN#INC":[13,20],
+		"8th level spell slots#HIDDEN#INC":[15],
+		"9th level spell slots#HIDDEN#INC":[17],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features","Cantrips Known","Spell slots per Spell Level"
+		],
+		
+		"2.Hit Dice": 8,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
+			"2.Weapons": "Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
+			"3.Tools": "Herbalism kit",
+			"4.Saving Throws": "INT and WIS",
+			"5.Skills": "(2) Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival"
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) a wooden shield or (b) any simple weapon",
+			"<LIST_ITEM>(a) a scimitar or (b) any simple melee weapon",
+			"<LIST_ITEM>Leather armor, an explorer’s pack, and a druidic focus",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need WIS of 13 to multiclass in or out",
+			"Proficiencies gained: Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
+			"Spell slots":"Add your levels in druid to the levels from other classes to determine spell slots"
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Fighter":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"Fighting Style, Second Wind", 
+			"Action Surge (one use)", 
+			"Martial Archetype",
+			"Ability Score Improvement",
+			"Extra Attack",
+			"Ability Score Improvement",
+			"Martial Archetype feature",
+			"Ability Score Improvement",
+			"Indomitable (one use)",
+			"Martial Archetype feature",
+			"Extra Attack (2)",
+			"Ability Score Improvement",
+			"Indomitable (two uses)",
+			"Ability Score Improvement",
+			"Martial Archetype feature",
+			"Ability Score Improvement",
+			"Action Surge (two uses), Indomitable (three uses)",
+			"Martial Archetype feature",
+			"Ability Score Improvement",
+			"Extra Attack (3)"],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": 10,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "All armor, shields",
+			"2.Weapons": "Simple weapons, martial weapons",
+			"3.Tools": "None",
+			"4.Saving Throws": "STR and CON",
+			"5.Skills": "(2) Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+			"<LIST_ITEM>(a) a martial weapon and a shield or (b) two martial weapons",
+			"<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) two handaxes",
+			"<LIST_ITEM>(a) a dungeoneer’s pack or (b) an explorer’s pack",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need STR or DEX of 13 to multiclass in or out",
+			"Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons",
+			"Spell slots":"Add one third your levels (round down) if you have the Eldritch Knight feature to the levels from other classes to determine spell slots"
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Monk":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Paladin":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Ranger":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Rogue":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Sorceror":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Warlock":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
+		}
+	}
+	"Wizard":{
+		"Level#HIDDEN#RANGE":[1,20],
+		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
+		"Features#HIDDEN":[
+			"", 
+			"", 
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"",
+			"Ability Score Improvement",
+			"",
+			"",
+			"Ability Score Improvement",
+			""],
+		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
+			"Level","Proficiency Bonus","Features"
+		],
+		
+		"2.Hit Dice": ,
+		"3.Proficiencies#H2#TABLE": {
+			"1.Armor": "",
+			"2.Weapons": "",
+			"3.Tools": "",
+			"4.Saving Throws": " and ",
+			"5.Skills": "(2) "
+		},
+		"4.Starting Equipment or 2d4 x 10 gp": [
+			"<LIST_START>",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>(a) or (b) ",
+			"<LIST_ITEM>",
+			"<LIST_STOP>"
+		],
+		"5.Multiclassing#CONCAT_LINES":[
+			"Need of 13 to multiclass in or out",
+			"Proficiencies gained: "
+		],
+		
+		
+		"6.1st level": {
+		},
+		
+		"7.2nd level": {
+		},
+		
+		"8.3rd level": {
+		},
+		
+		"9.4th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"10.5th level": {
+		},
+		
+		"11.6th level": {
+		},
+		
+		"12.7th level": {
+		},
+		
+		"13.8th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"14.9th level": {
+		},
+		
+		"15.10th level": {
+		},
+		
+		"16.11th level": {
+		},
+		
+		"17.12th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"18.13th level": {
+		},
+		
+		"19.14th level": {
+		},
+		
+		"20.15th level": {
+		},
+		
+		"21.16th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"22.17th level": {
+		},
+		
+		"23.18th level": {
+		},
+		
+		"24.19th level": {
+			"Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+		},
+		
+		"25.20th level": {
 		}
 	}
 }
