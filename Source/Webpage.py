@@ -221,16 +221,49 @@ class Webpage:
                     File = GotoMatch1.group(2)
                     Location = GotoMatch1.group(3)
                     ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
-                    FlushPrintUTF8(ToReplace)
                     with self.Tag(TextTag, klass=' '.join(State['class'])):
                         self.Text(Input.split(ToReplace)[0])
                     with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
                         self.Text(Text)
                     Input = ToReplace.join(Input.split(ToReplace)[1:])
                     return self.AddText(Input, State, Interface, Data)
-                GotoPattern2 = re.compile('<GOTO:(.+):(.+)>')
-                GotoPattern3 = re.compile('<GOTO:(.+)+(.+)>')
-                GotoPattern4 = re.compile('<GOTO:(.+)>')
+                GotoPattern2 = re.compile('.*?<GOTO:(.*?):(.*?)>.*')
+                GotoMatch2 = GotoPattern2.match(Input)
+                if GotoMatch2 != None:
+                    Text = GotoMatch2.group(1)
+                    File = GotoMatch2.group(2)
+                    ToReplace = "<GOTO:{}:{}>".format(Text, File)
+                    with self.Tag(TextTag, klass=' '.join(State['class'])):
+                        self.Text(Input.split(ToReplace)[0])
+                    with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
+                        self.Text(Text)
+                    Input = ToReplace.join(Input.split(ToReplace)[1:])
+                    return self.AddText(Input, State, Interface, Data)
+                GotoPattern3 = re.compile('.*?<GOTO:(.*?)\+(.*?)>.*')
+                GotoMatch3 = GotoPattern3.match(Input)
+                if GotoMatch3 != None:
+                    File = GotoMatch3.group(1)
+                    Text = File
+                    Location = GotoMatch3.group(2)
+                    ToReplace = "<GOTO:{}+{}>".format(Text, Location)
+                    with self.Tag(TextTag, klass=' '.join(State['class'])):
+                        self.Text(Input.split(ToReplace)[0])
+                    with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
+                        self.Text(Text)
+                    Input = ToReplace.join(Input.split(ToReplace)[1:])
+                    return self.AddText(Input, State, Interface, Data)
+                GotoPattern4 = re.compile('.*?<GOTO:(.*?)>.*')
+                GotoMatch4 = GotoPattern4.match(Input)
+                if GotoMatch4 != None:
+                    File = GotoMatch4.group(1)
+                    Text = File
+                    ToReplace = "<GOTO:{}>".format(Text)
+                    with self.Tag(TextTag, klass=' '.join(State['class'])):
+                        self.Text(Input.split(ToReplace)[0])
+                    with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
+                        self.Text(Text)
+                    Input = ToReplace.join(Input.split(ToReplace)[1:])
+                    return self.AddText(Input, State, Interface, Data)
             
         with self.Tag(TextTag, klass=' '.join(State['class'])):
             self.Text(Input)
