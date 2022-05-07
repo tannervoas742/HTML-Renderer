@@ -35,6 +35,147 @@
 			"20":"20th"
 		}
 	},
+	"Table of Contents#H3":{
+		"<GOTO:Artificer:Artificer":[
+			"Alchemist",
+			"Armorer",
+			"Artillerist",
+			"Battle Smith"
+		],
+		"<GOTO:Barbarian:Barbarian>":[
+			"Path of the Ancestral Guardian",
+			"Path of the Battlerager",
+			"Path of the Beast",
+			"Path of the Berserker",
+			"Path of the Storm Herald",
+			"Path of the Totem Warrior",
+			"Path of Wild Magic",
+			"Path of the Zealot"
+		],
+		"<GOTO:Bard:Bard>":[
+			"College of Creation",
+			"College of Eloquence",
+			"College of Glamour",
+			"College of Lore",
+			"College of Spirits",
+			"College of Swords",
+			"College of Valor",
+			"College of Whispers"
+		],
+		"<GOTO:Cleric:Cleric>":[
+			"Arcana Domian",
+			"Death Domian",
+			"Forge Domian",
+			"Grave Domian",
+			"Knowledge Domian",
+			"Life Domian",
+			"Light Domian",
+			"Nature Domian",
+			"Order Domian",
+			"Peace Domian",
+			"Tempest Domian",
+			"Trickery Domian",
+			"Twilight Domian",
+			"War Domain"
+		],
+		"<GOTO:Druid:Druid>":[
+			"Circle of Dreams",
+			"Circle of the Land",
+			"Circle of the Moon",
+			"Circle of the Shepherd",
+			"Circle of Spores",
+			"Circle of Stars",
+			"Circle of Wildfire"
+		],
+		"<GOTO:Fighter:Fighter>":[
+			"Arcane Archer",
+			"Battle Master",
+			"Cavalier",
+			"Champion",
+			"Echo Knight",
+			"Eldritch Knight",
+			"Psi Warrior",
+			"Purple Dragon Knight",
+			"Rune Knight",
+			"Samurai"
+		],
+		"<GOTO:Monk:Monk>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Paladin:Paladin>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Ranger:Ranger>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Rogue:Rogue>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Sorceror:Sorceror>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Warlock:Warlock>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Wizard:Wizard>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
 	"Artificer#H3":{
 		"Level#HIDDEN#RANGE":[1,20],
 		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
@@ -87,7 +228,7 @@
 			"<LIST_ITEM>thieves' tools and dungeoneer's pack",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#HR_AFTER#HR_BEFORE":[
+		"5.Multiclassing#H1":[
 			"Need INT of 13 to multiclass in or out",
 			"Proficiencies gained: light armor, medium armor, shields, thieves' tools, tinker's tools",
 			"Spell slots: Add half your levels (round up) in artificer to the levels from other classes to determine spell slots"
