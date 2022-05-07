@@ -218,6 +218,7 @@ class Webpage:
         if 'CONCAT_LINES' in Interface:
             #Data = '\n'.join(Data)
             for Row in Data:
+                _, Row, Interface = self.GetInterfaceFromKey(str(Row))
                 self.AddText(Row, State, Interface, None)
             return False, None
         if 'HR_AFTER' in Interface:
