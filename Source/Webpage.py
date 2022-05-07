@@ -1,3 +1,4 @@
+from grpc import Call
 import yattag
 import json
 import os
@@ -137,6 +138,9 @@ class Webpage:
 
     def LoadItem(self, Input, State, Interface, Data=None):
         ContinueFlag = True
+        if len(State['callback']) > 0:
+            for Callback in State['callback']:
+                Data = Callback(Data)
         if 'INC' in Interface:
             Computed = []
             IntData = list(filter(lambda Item: type(Item) == int, Data))
@@ -256,57 +260,56 @@ class Webpage:
         else:
             TextTag = 'h{}'.format(TextSize)
         if '<GOTO' in Input:
-            while '<GOTO' in Input:
-                GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
-                GotoMatch1 = GotoPattern1.match(Input)
-                if GotoMatch1 != None:
-                    Text = GotoMatch1.group(1)
-                    File = GotoMatch1.group(2)
-                    Location = GotoMatch1.group(3)
-                    ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
-                    with self.Tag(TextTag, klass=' '.join(State['class'])):
-                        self.Text(Input.split(ToReplace)[0])
-                    with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
-                        self.Text(Text)
-                    Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    return self.AddText(Input, State, Interface, Data)
-                GotoPattern2 = re.compile('.*?<GOTO:(.*?):(.*?)>.*')
-                GotoMatch2 = GotoPattern2.match(Input)
-                if GotoMatch2 != None:
-                    Text = GotoMatch2.group(1)
-                    File = GotoMatch2.group(2)
-                    ToReplace = "<GOTO:{}:{}>".format(Text, File)
-                    with self.Tag(TextTag, klass=' '.join(State['class'])):
-                        self.Text(Input.split(ToReplace)[0])
-                    with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
-                        self.Text(Text)
-                    Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    return self.AddText(Input, State, Interface, Data)
-                GotoPattern3 = re.compile('.*?<GOTO:(.*?)\+(.*?)>.*')
-                GotoMatch3 = GotoPattern3.match(Input)
-                if GotoMatch3 != None:
-                    File = GotoMatch3.group(1)
-                    Text = File
-                    Location = GotoMatch3.group(2)
-                    ToReplace = "<GOTO:{}+{}>".format(Text, Location)
-                    with self.Tag(TextTag, klass=' '.join(State['class'])):
-                        self.Text(Input.split(ToReplace)[0])
-                    with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
-                        self.Text(Text)
-                    Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    return self.AddText(Input, State, Interface, Data)
-                GotoPattern4 = re.compile('.*?<GOTO:(.*?)>.*')
-                GotoMatch4 = GotoPattern4.match(Input)
-                if GotoMatch4 != None:
-                    File = GotoMatch4.group(1)
-                    Text = File
-                    ToReplace = "<GOTO:{}>".format(Text)
-                    with self.Tag(TextTag, klass=' '.join(State['class'])):
-                        self.Text(Input.split(ToReplace)[0])
-                    with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
-                        self.Text(Text)
-                    Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    return self.AddText(Input, State, Interface, Data)
+            GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
+            GotoMatch1 = GotoPattern1.match(Input)
+            if GotoMatch1 != None:
+                Text = GotoMatch1.group(1)
+                File = GotoMatch1.group(2)
+                Location = GotoMatch1.group(3)
+                ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
+                with self.Tag(TextTag, klass=' '.join(State['class'])):
+                    self.Text(Input.split(ToReplace)[0])
+                with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
+                    self.Text(Text)
+                Input = ToReplace.join(Input.split(ToReplace)[1:])
+                return self.AddText(Input, State, Interface, Data)
+            GotoPattern2 = re.compile('.*?<GOTO:(.*?):(.*?)>.*')
+            GotoMatch2 = GotoPattern2.match(Input)
+            if GotoMatch2 != None:
+                Text = GotoMatch2.group(1)
+                File = GotoMatch2.group(2)
+                ToReplace = "<GOTO:{}:{}>".format(Text, File)
+                with self.Tag(TextTag, klass=' '.join(State['class'])):
+                    self.Text(Input.split(ToReplace)[0])
+                with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
+                    self.Text(Text)
+                Input = ToReplace.join(Input.split(ToReplace)[1:])
+                return self.AddText(Input, State, Interface, Data)
+            GotoPattern3 = re.compile('.*?<GOTO:(.*?)\+(.*?)>.*')
+            GotoMatch3 = GotoPattern3.match(Input)
+            if GotoMatch3 != None:
+                File = GotoMatch3.group(1)
+                Text = File
+                Location = GotoMatch3.group(2)
+                ToReplace = "<GOTO:{}+{}>".format(Text, Location)
+                with self.Tag(TextTag, klass=' '.join(State['class'])):
+                    self.Text(Input.split(ToReplace)[0])
+                with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), klass=' '.join(State['class'])):
+                    self.Text(Text)
+                Input = ToReplace.join(Input.split(ToReplace)[1:])
+                return self.AddText(Input, State, Interface, Data)
+            GotoPattern4 = re.compile('.*?<GOTO:(.*?)>.*')
+            GotoMatch4 = GotoPattern4.match(Input)
+            if GotoMatch4 != None:
+                File = GotoMatch4.group(1)
+                Text = File
+                ToReplace = "<GOTO:{}>".format(Text)
+                with self.Tag(TextTag, klass=' '.join(State['class'])):
+                    self.Text(Input.split(ToReplace)[0])
+                with self.Tag('a', 'href=\"{0}.html\"'.format(File), klass=' '.join(State['class'])):
+                    self.Text(Text)
+                Input = ToReplace.join(Input.split(ToReplace)[1:])
+                return self.AddText(Input, State, Interface, Data)
             
         with self.Tag(TextTag, klass=' '.join(State['class'])):
             self.Text(Input)
@@ -351,6 +354,7 @@ class Webpage:
         State['mode'] = WebpageEnums.Text
         State['text.size'] = 0
         State['lookup_table.range'] = None
+        State['callback'] = []
         return State
     
     def MixState(self, State, Interface):
@@ -397,6 +401,24 @@ class Webpage:
                 for Tag in Group.lower().split():
                     if Tag in State['class']:
                         del State['class'][State['class'].index(Tag)]
+
+        CallPattern = re.compile('CALL\((.*)\)')
+        CallMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: CallPattern.match(Code), Interface))))))                
+        if len(CallMatch) > 0:
+            State['callback'] = []
+            for Group in CallMatch:
+                State['callback'] += list(map(lambda Item: '_CALLBACK_' + Item, Group.split()))
+            
+            Compiled = []
+            for Func in State['callback']:
+                if Func.replace('_CALLBACK_', '') in self.ParamStorage:
+                    FuncText = self.ParamStorage[Func.replace('_CALLBACK_', '')]
+                    FuncText = 'def {}(ARG):\n    '.format(Func) + '\n    '.join(FuncText)
+                    exec(FuncText)
+                    Compiled += [eval(Func)]
+            State['callback'] = Compiled
+        else:
+            State['callback'] = []
         return State
             
 

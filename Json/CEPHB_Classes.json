@@ -35,14 +35,23 @@
 			"20":"20th"
 		}
 	},
+	"_compute#HIDDEN": {
+		"_hitpoints": [
+			"Return = []",
+			"Return += [\"Hit Dice: 1d{0} per level\".format(ARG)]",
+			"Return += [\"Hit Points at 1st Level: {0} + your Constitution modifier\".format(ARG)]",
+			"Return += [\"Hit Points at Higher Levels: 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
+			"return Return"
+		]
+	},
 	"Table of Contents#H3":{
-		"<GOTO:Artificer:Artificer":[
+		"<GOTO:Artificer:Classes+Artificer>":[
 			"Alchemist",
 			"Armorer",
 			"Artillerist",
 			"Battle Smith"
 		],
-		"<GOTO:Barbarian:Barbarian>":[
+		"<GOTO:Barbarian:Classes+Barbarian>":[
 			"Path of the Ancestral Guardian",
 			"Path of the Battlerager",
 			"Path of the Beast",
@@ -52,7 +61,7 @@
 			"Path of Wild Magic",
 			"Path of the Zealot"
 		],
-		"<GOTO:Bard:Bard>":[
+		"<GOTO:Bard:Classes+Bard>":[
 			"College of Creation",
 			"College of Eloquence",
 			"College of Glamour",
@@ -62,7 +71,7 @@
 			"College of Valor",
 			"College of Whispers"
 		],
-		"<GOTO:Cleric:Cleric>":[
+		"<GOTO:Cleric:Classes+Cleric>":[
 			"Arcana Domian",
 			"Death Domian",
 			"Forge Domian",
@@ -78,7 +87,7 @@
 			"Twilight Domian",
 			"War Domain"
 		],
-		"<GOTO:Druid:Druid>":[
+		"<GOTO:Druid:Classes+Druid>":[
 			"Circle of Dreams",
 			"Circle of the Land",
 			"Circle of the Moon",
@@ -87,7 +96,7 @@
 			"Circle of Stars",
 			"Circle of Wildfire"
 		],
-		"<GOTO:Fighter:Fighter>":[
+		"<GOTO:Fighter:Classes+Fighter>":[
 			"Arcane Archer",
 			"Battle Master",
 			"Cavalier",
@@ -99,7 +108,7 @@
 			"Rune Knight",
 			"Samurai"
 		],
-		"<GOTO:Monk:Monk>":[
+		"<GOTO:Monk:Classes+Monk>":[
 			"",
 			"",
 			"",
@@ -110,7 +119,7 @@
 			"",
 			""
 		],
-		"<GOTO:Paladin:Paladin>":[
+		"<GOTO:Paladin:Classes+Paladin>":[
 			"",
 			"",
 			"",
@@ -121,7 +130,7 @@
 			"",
 			""
 		],
-		"<GOTO:Ranger:Ranger>":[
+		"<GOTO:Ranger:Classes+Ranger>":[
 			"",
 			"",
 			"",
@@ -130,27 +139,7 @@
 			"",
 			""
 		],
-		"<GOTO:Rogue:Rogue>":[
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"<GOTO:Sorceror:Sorceror>":[
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"<GOTO:Warlock:Warlock>":[
+		"<GOTO:Rogue:Classes+Rogue>":[
 			"",
 			"",
 			"",
@@ -161,7 +150,27 @@
 			"",
 			""
 		],
-		"<GOTO:Wizard:Wizard>":[
+		"<GOTO:Sorceror:Classes+Sorceror>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Warlock:Classes+Warlock>":[
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"<GOTO:Wizard:Classes+Wizard>":[
 			"",
 			"",
 			"",
@@ -212,7 +221,7 @@
 			"Level","Proficiency Bonus","Features","Infusions Known","Infused Items","Cantrips Known"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
 			"2.Weapons:Simple weapons, firearms*",
@@ -330,7 +339,7 @@
 			"Level","Proficiency Bonus","Features","Rages","Rage Damage"
 		],
 		
-		"2.Hit Dice#H1": 12,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 12,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
 			"<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
@@ -674,7 +683,7 @@
 			"Level","Proficiency Bonus","Features","Cantrips Known","Spells Known"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor",
 			"<BOLD>Weapons:</BOLD> Simple weapons, hand crossbows, longswords, rapiers, shortswords",
@@ -800,7 +809,7 @@
 			"Level","Proficiency Bonus","Features","Cantrips Known"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
 			"<BOLD>Weapons:</BOLD> Simple weapons",
@@ -927,7 +936,7 @@
 			"Level","Proficiency Bonus","Features","Cantrips Known"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
 			"<BOLD>Weapons:</BOLD> Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
@@ -1042,7 +1051,7 @@
 			"Level","Proficiency Bonus","Features"
 		],
 		
-		"2.Hit Dice#H1": 10,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 10,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> All armor, shields",
 			"<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
@@ -1161,7 +1170,7 @@
 			"Level","Proficiency Bonus","Martial Arts","Ki Points","Unarmored Movement","Features"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> None",
 			"<BOLD>Weapons:</BOLD> Simple weapons, shortswords",
@@ -1279,7 +1288,7 @@
 			"Level","Proficiency Bonus","Features"
 		],
 		
-		"2.Hit Dice#H1": 10,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 10,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> All armor, shields",
 			"<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
@@ -1399,7 +1408,7 @@
 			"Level","Proficiency Bonus","Features"
 		],
 		
-		"2.Hit Dice#H1": 10,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 10,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
 			"<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
@@ -1514,7 +1523,7 @@
 			"Level","Proficiency Bonus","Features"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor",
 			"<BOLD>Weapons:</BOLD> Simple weapons, hand crossbows, longswords, rapiers, shortswords",
@@ -1641,7 +1650,7 @@
 			"Level","Proficiency Bonus","Sorcery Points","Features","Cantrips Known","Spells Known"
 		],
 		
-		"2.Hit Dice#H1": 6,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 6,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> None",
 			"<BOLD>Weapons:</BOLD> Daggers, darts, slings, quarterstaffs, light crossbows",
@@ -1761,7 +1770,7 @@
 			"Level","Proficiency Bonus","Features","Cantrips Known","Spells Known","Spell slots","Slot Level","Invocations Known"
 		],
 		
-		"2.Hit Dice#H1": 8,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 8,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> Light armor",
 			"<BOLD>Weapons:</BOLD> Simple weapons",
@@ -1886,7 +1895,7 @@
 			"Level","Proficiency Bonus","Features", "Cantrips Known"
 		],
 		
-		"2.Hit Dice#H1": 6,
+		"2.Hit Dice#H1#CALL(_hitpoints)": 6,
 		"3.Proficiencies#H1": [
 			"<BOLD>Armor:</BOLD> None",
 			"<BOLD>Weapons:</BOLD> Daggers, darts, slings, quarterstaffs, light crossbows",
