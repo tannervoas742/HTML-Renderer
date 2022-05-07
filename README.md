@@ -8,7 +8,9 @@ Uses Yattag to generate HTML webpage from content contained in JSON files.
   - If you want to just add a class or remove a class can use ```#ADD_CLASS(T1 T2 T3....)``` or ```#REMOVE_CLASS(T1 T2 T3....)``` instead
   - ```T1 T2 T3``` in all above examples have no special meaning. Just using an example where add 3 classes. Any number of classes can be given with any name.
 - ```#HIDDEN```: Hides this item and all of its sub-content. Just used for compute.
-- ```#H0```, ```#H1```, ```#H2```, ```#H3```: Determines text size.
+- ```#H0```, ```#H1```, ```#H2```, ```#H3```: Determines text size for a given header.
+- ```#P0```, ```#P1```, ```#P2```, ```#P3```: Determines text size for a given header and all its children.
+  - If H and P are used in same command H is used on Header but P value is used on children.
 - ```#HR_BEFORE```, ```#HR_MIDDLE```, ```#HR_AFTER```: Adds line breaks at designated location
 - ```#TABLE```: Takes either a dictionary or a list and displays it as a table. No nesting allowed.
 - ```#LOOKUP_TABLE(START, STOP)```: Takes a list of column names and fills in rows using previous computed values.

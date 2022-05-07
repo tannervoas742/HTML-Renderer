@@ -237,10 +237,17 @@ class Webpage:
             return
 
         TextTag = None
-        if State['text.size'] == 0:
+        TextSize = State['text.size']
+        HPattern = re.compile('H(\d+)')
+        HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
+        if len(HMatch) > 0:
+            TextSize = int(max(HMatch))
+            if TextSize > 0:
+                TextSize = 4 - TextSize
+        if TextSize == 0:
             TextTag = 'p'
         else:
-            TextTag = 'h{}'.format(State['text.size'])
+            TextTag = 'h{}'.format(TextSize)
         if '<GOTO' in Input:
             while '<GOTO' in Input:
                 GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
@@ -345,10 +352,10 @@ class Webpage:
             State['visible'] = False
         elif 'SHOWN' in Interface:
             State['visible'] = True
-        HPattern = re.compile('H(\d+)')
-        HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
-        if len(HMatch) > 0:
-            State['text.size'] = int(max(HMatch))
+        PPattern = re.compile('P(\d+)')
+        PMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: PPattern.match(Code), Interface))))))
+        if len(PMatch) > 0:
+            State['text.size'] = int(max(PMatch))
             if State['text.size'] > 0:
                 State['text.size'] = 4 - State['text.size']
 
