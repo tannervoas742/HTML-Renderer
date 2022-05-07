@@ -111,9 +111,21 @@ class Webpage:
             errors = {}
         ).ttl()
 
-        self.ParamStorage = {}
+        with self.Tag('head'):
+            with self.Tag('script', 'src="../JS/jquery-1.2.6.js"'):
+                pass
+            with self.Tag('script', 'src="../JS/materialize.js"'):
+                pass
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/theme.default.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/gradient_list.css"')
+            
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+            
 
-        self.LoadLevel(self.JSON)
+        self.ParamStorage = {}
+        with self.Tag('body'):
+            self.LoadLevel(self.JSON)
 
     def LoadLevel(self, Input, State = None):
         if State == None:
@@ -143,6 +155,7 @@ class Webpage:
             NewState = self.MixState(State, Interface)                
             
             if type(Input) == dict:
+                
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
                 NewState['key'] = Key
                 if ContinueFlag:
@@ -269,10 +282,16 @@ class Webpage:
 
     def AddText(self, Input, State, Interface, Data):
         if '<LIST_START>' in Input:
-            self.Doc.stag('ul', style=' '.join(State['style']), klass=' '.join(State['class']))
+            if self.in_list_div == 0:
+                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
+            self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
+            self.in_list_div += 1
             return
         elif '<LIST_STOP>' in Input:
-            self.Doc.stag('/ul', style=' '.join(State['style']), klass=' '.join(State['class']))
+            self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
+            self.in_list_div -= 1
+            if self.in_list_div == 0:
+                self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
             return
         elif '<LIST_ITEM>' in Input:
             with self.Tag('li', style=' '.join(State['style']), klass=' '.join(State['class'])):
@@ -391,6 +410,7 @@ class Webpage:
 
 
     def GetInitState(self):
+        self.in_list_div = 0
         State = {}
         State['visible'] = True
         State['key'] = ''
@@ -469,6 +489,13 @@ class Webpage:
     def PostProcessPage(self, PageText):
         PageText = PageText.replace('|~[~|', '<')
         PageText = PageText.replace('|~]~|', '>')
+        PageText = PageText.replace('<body>', '<body class="html-renderer">')
+
+        _DONT_CLOSE_THIS_STAG_re = re.compile('.*?_DONT_CLOSE_THIS_STAG_(.*?)/>.*')
+        _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
+        while _DONT_CLOSE_THIS_STAG_ma != None:
+            PageText = PageText.replace('_DONT_CLOSE_THIS_STAG_{}/>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)), '{}>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)))
+            _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
         return PageText
 
     def Save(self, OutHTML):

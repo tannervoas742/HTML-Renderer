@@ -1,0 +1,69 @@
+body.html-renderer {
+    margin-right: 10% !important;
+    margin-left: 10% !important;
+}
+
+ul {
+    padding-left: 20px !important;
+    /*
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+*/
+}
+
+
+/*
+ul ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+*/
+
+div.columns-1,
+div.columns-3,
+div.columns-4,
+div.columns-5,
+div.columns-6 {
+    column-rule: solid;
+    column-rule-color: lightgray;
+    column-rule-width: 2px;
+}
+
+div.columns-1 {
+    column-count: 1;
+}
+
+div.columns-2 {
+    column-count: 2;
+}
+
+div.columns-3 {
+    column-count: 3;
+}
+
+div.columns-4 {
+    column-count: 4;
+}
+
+div.columns-5 {
+    column-count: 5;
+}
+
+div.columns-6 {
+    column-count: 6;
+}
+
+li {
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    color: black !important;
+}
