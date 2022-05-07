@@ -75,15 +75,16 @@
 		"3.Proficiencies#H1#TABLE": {
 			"1.Armor": "Light armor, medium armor, shields",
 			"2.Weapons": "Simple weapons, firearms*",
-			"3.Tools": "Thieves' tools, tinker's tools, artisan's tools (choose one)",
+			"3.Tools": "Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
 			"4.Saving Throws": "CON and INT",
 			"5.Skills (2)": "Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
 		},
 		"4.Starting Equipment or 5d4 x 10 gp#H1": [
 			"<LIST_START>",
-			"<LIST_ITEM>Any simple weapon",
+			"<LIST_ITEM>any two simple weapons",
 			"<LIST_ITEM>Light crossbow and 20 bolts",
-			"<LIST_ITEM>Thieves' tools and dungeoneer's pack",
+			"<LIST_ITEM>(a) studded leather armor or (b) scale mail",
+			"<LIST_ITEM>thieves' tools and dungeoneer's pack",
 			"<LIST_STOP>"
 		],
 		"5.Multiclassing#H1#HR_AFTER#HR_BEFORE#CONCAT_LINES":[
@@ -991,7 +992,7 @@
 	"Monk#H3":{
 		"Level#HIDDEN#RANGE":[1,20],
 		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
-		"Martial Arts#HIDDEN":["1d4","1d4","1d4","1d4","1d6","1d6","1d6","1d6","1d8","1d8","1d8","1d8","1d10","1d10","1d10","1d10"],
+		"Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)":[1,1,1,1,5,5,11,11,17,17],
 		"Ki Points#HIDDEN#INC":[2,3,4,5,67,8,9,10,11,12,13,14,15,16,17,18,19,20],
 		"Unarmored Movement#HIDDEN":["-","+10 ft","+10 ft","+10 ft","+10 ft","+15 ft","+15 ft","+15 ft","+15 ft","+20 ft","+20 ft","+20 ft","+20 ft","+25 ft","+25 ft","+25 ft","+25 ft","+30 ft","+30 ft","+30 ft"],
 		"Features#HIDDEN":[
@@ -1486,6 +1487,15 @@
 			"Sorcerous Restoration"],
 			"Cantrips Known#HIDDEN#INC":[1,1,1,1,4,10],
 			"Spells Known#HIDDEN#INC":[1,1,2,3,4,5,6,7,8,9,10,11,13,15,17],
+			"1st level spell slots#HIDDEN#INC":[1,1,2,3],
+			"2nd level spell slots#HIDDEN#INC":[3,4,4],
+			"3rd level spell slots#HIDDEN#INC":[5,5,6],
+			"4th level spell slots#HIDDEN#INC":[7,8,9],
+			"5th level spell slots#HIDDEN#INC":[9,10,18],
+			"6th level spell slots#HIDDEN#INC":[11,19],
+			"7th level spell slots#HIDDEN#INC":[13,20],
+			"8th level spell slots#HIDDEN#INC":[15],
+			"9th level spell slots#HIDDEN#INC":[17],
 		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
 			"Level","Proficiency Bonus","Sorcery Points","Features","Cantrips Known","Spells Known"
 		],
@@ -1508,7 +1518,8 @@
 		],
 		"5.Multiclassing#H1#CONCAT_LINES":[
 			"Need CHA of 13 to multiclass in or out",
-			"Proficiencies gained: None"
+			"Proficiencies gained: None",
+			"Spell slots: Add your levels in sorceror to the levels from other classes to determine spell slots"
 		],
 		
 		"6.1st level#H2": {
@@ -1700,48 +1711,60 @@
 		"Level#HIDDEN#RANGE":[1,20],
 		"Proficiency Bonus#HIDDEN#INC":[1,1,5,9,13,17],
 		"Features#HIDDEN":[
-			"", 
-			"", 
-			"",
+			"Spellcasting, Arcane Recovery", 
+			"Arcane Tradition", 
+			"-",
 			"Ability Score Improvement",
-			"",
-			"",
-			"",
+			"-",
+			"Arcane Tradition feature",
+			"-",
 			"Ability Score Improvement",
-			"",
-			"",
-			"",
+			"-",
+			"Arcane Tradition feature",
+			"-",
 			"Ability Score Improvement",
-			"",
-			"",
-			"",
+			"-",
+			"Arcane Tradition feature",
+			"-",
 			"Ability Score Improvement",
-			"",
-			"",
+			"-",
+			"Spell Mastery",
 			"Ability Score Improvement",
-			""],
+			"Signature Spell"],
+			"Cantrips Known#HIDDEN#INC":[1,1,1,4,10],
+			"1st level spell slots#HIDDEN#INC":[1,1,2,3],
+			"2nd level spell slots#HIDDEN#INC":[3,4,4],
+			"3rd level spell slots#HIDDEN#INC":[5,5,6],
+			"4th level spell slots#HIDDEN#INC":[7,8,9],
+			"5th level spell slots#HIDDEN#INC":[9,10,18],
+			"6th level spell slots#HIDDEN#INC":[11,19],
+			"7th level spell slots#HIDDEN#INC":[13,20],
+			"8th level spell slots#HIDDEN#INC":[15],
+			"9th level spell slots#HIDDEN#INC":[17],
 		"1.Class Table#H2#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)":[
-			"Level","Proficiency Bonus","Features"
+			"Level","Proficiency Bonus","Features", "Cantrips Known"
 		],
 		
 		"2.Hit Dice#H1": 6,
 		"3.Proficiencies#H1#TABLE": {
-			"1.Armor": "",
-			"2.Weapons": "",
-			"3.Tools": "",
-			"4.Saving Throws": " and ",
-			"5.Skills": "(2) "
+			"1.Armor": "None",
+			"2.Weapons": "Daggers, darts, slings, quarterstaffs, light crossbows",
+			"3.Tools": "None",
+			"4.Saving Throws": "INT and WIS",
+			"5.Skills (2)": "Arcana, History, Insight, Investigation, Medicine, Religion"
 		},
-		"4.Starting Equipment or 2d4 x 10 gp#H1": [
+		"4.Starting Equipment or 4d4 x 10 gp#H1": [
 			"<LIST_START>",
-			"<LIST_ITEM>(a) or (b) ",
-			"<LIST_ITEM>(a) or (b) ",
-			"<LIST_ITEM>",
+			"<LIST_ITEM>(a) a quarterstaff or (b) a dagger",
+			"<LIST_ITEM>(a) a component pouch or (b) an arcane focus",
+			"<LIST_ITEM>(a) a scholar's pack or (b) an explorer's pack",
+			"<LIST_ITEM>A spellbook",
 			"<LIST_STOP>"
 		],
 		"5.Multiclassing#H1#CONCAT_LINES":[
-			"Need of 13 to multiclass in or out",
-			"Proficiencies gained: "
+			"Need INT of 13 to multiclass in or out",
+			"Proficiencies gained: None",
+			"Spell slots: Add your levels in wizard to the levels from other classes to determine spell slots"
 		],
 		
 		
