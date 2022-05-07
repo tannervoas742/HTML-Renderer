@@ -169,7 +169,7 @@ class Webpage:
             LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
             for Match in LookupMatch:
                 Key = Match.group(1)
-                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
+                Computed = list(map(lambda Val: "<ERROR : LOOKUP_NOT_FOUND : {} : {}>".format(Key, Val) if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         elif 'RANGE' in Interface:
@@ -192,7 +192,7 @@ class Webpage:
             LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
             for Match in LookupMatch:
                 Key = Match.group(1)
-                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
+                Computed = list(map(lambda Val: "<ERROR:LOOKUP_NOT_FOUND:{}:{}".format(Key, Val) if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         else:
