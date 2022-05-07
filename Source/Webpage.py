@@ -211,7 +211,6 @@ class Webpage:
         if '<GOTO' in Input and '>' in Input:
             ValidLinkup = False
         if ValidLinkup:
-            FlushPrintUTF8('Linkup')
             with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-'))):
                 self.AddText(Input, State, Interface, Data)
         else:
