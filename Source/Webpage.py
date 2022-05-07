@@ -210,6 +210,8 @@ class Webpage:
             ValidLinkup = False
         if '<GOTO' in Input and '>' in Input:
             ValidLinkup = False
+        if '<LIST_' in Input and '>' in Input:
+            ValidLinkup = False
         if ValidLinkup:
             with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-'))):
                 self.AddText(Input, State, Interface, Data)
@@ -257,12 +259,14 @@ class Webpage:
 
         TextTag = None
         TextSize = State['text.size']
+        if TextSize > 0:
+            TextSize = 5 - TextSize
         HPattern = re.compile('H(\d+)')
         HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
         if len(HMatch) > 0:
             TextSize = int(max(HMatch))
             if TextSize > 0:
-                TextSize = 4 - TextSize
+                TextSize = 5 - TextSize
         if TextSize == 0:
             TextTag = 'p'
         else:
