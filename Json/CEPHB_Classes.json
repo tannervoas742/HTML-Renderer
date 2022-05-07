@@ -211,7 +211,7 @@
 		
 		
 		"6.1st level#H3": {
-			"1.Magical Tinkering":[
+			"1.Magical Tinkering#H2":[
 				"At 1st level, you've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
 				"<LIST_START>",
 				"<LIST_ITEM>The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
@@ -222,39 +222,39 @@
 				"The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.",
 				"You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies."
 			],
-			"2.Spellcasting":{
-				"1.":"You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.",
-				"2.Tools Required":[
+			"2.Spellcasting#H2":{
+				"1.#H1":"You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.",
+				"2.Tools Required#H1":[
 					"You produce your artificer spell effects through your tools. You must have a spellcasting focus-specifically thieves' tools or some kind of artisan's tool-in hand when you cast any spell with this Spellcasting feature (meaning the spell has an \"M\" component when you cast it). You must be proficient with the tool to use it in this way. See the equipment chapter in the Player's Handbook for descriptions of these tools.",
 					"After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus."
 				],
-				"3.Cantrips (0-Level Spells)":[
+				"3.Cantrips (0-Level Spells)#H1":[
 					"At 1st level, you know two cantrips of your choice from the artificer spell list. At higher levels, you learn additional artificer can trips of your choice, as shown in the Cantrips Known column of the Artificer table.",
 					"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
 				],
-				"4.Preparing and Casting Spells":[
+				"4.Preparing and Casting Spells#H1":[
 					"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
 					"You prepare the list of artificer spells that are available for you to cast, choosing from the artificer spell list. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
 					"For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell Cure Wounds, you can cast it using a lst-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
 					"You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list."
 				],
-				"5.Spellcasting Ability":[
+				"5.Spellcasting Ability#H1":[
 					"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
 					"<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Intelligence modifier",
 					"<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Intelligence modifier"
 				],
-				"6.Ritual Casting":"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+				"6.Ritual Casting#H1":"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
 			}	
 		},
 		
 		"7.2nd level#H3": {
-			"Infuse Item":{
-				"1.":"At 2nd level, you've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
-				"2.Infusions Known":[
+			"Infuse Item#H2":{
+				"1.#H1":"At 2nd level, you've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
+				"2.Infusions Known#H1":[
 					"When you gain this feature, pick four artificer infusions to learn. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
 					"Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
 				],
-				"3.Infusing an Item":[
+				"3.Infusing an Item#H1":[
 					"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see the attunement rules in the Dungeon Master's Guide).",
 					"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you replace your knowledge of the infusion.",
 					"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion ends, and then the new infusion applies.",
@@ -264,48 +264,226 @@
 		},
 		
 		"8.3rd level#H3": {
-			"1. The Right Tool for the Job":"At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",
-			"2. Alchemist#H3":{},
-			"3. Armorer#H3":{},
-			"4. Artillerist#H3":{},
-			"5. Battle Smith#H3":{}
+			"1. The Right Tool for the Job#H2":"At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",
+			"2. Alchemist#H3":{
+				"1.Tool Proficiency#H2":"When you adopt this specialization at 3rd level, you gain proficiency with alchemist's supplies. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
+				"2.Alchemist Spells#H2":{
+					"1.#H1":"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+					"2.Alchemist Spells at 3rd Level#H1":[
+						"<GOTO:Healing Word:Spells+Healing Word>",
+						"<GOTO:Ray of Sickness:Spells+Ray of Sickness>"
+					]
+				},
+				"3.Experimental Elixir#H2":{
+					"1.#H1":[
+						"Beginning at 3rd level, whenever you finish a long rest, you can magically produce an <ITALIC>experimental elixir</ITALIC> in an empty flask you touch. Roll on the Experimental Elixir table for the elixir's effect, which is triggered when someone drinks the elixir. As an action, a creature can drink the elixir or administer it to an incapacitated creature.",
+						"You can create additional <ITALIC>experimental elixirs</ITALIC> by expending a spell slot of 1st level or higher for each one. When you do so, you use your action to create the elixir in an empty flask you touch, and you choose the elixir's effect from the Experimental Elixir table.",
+						"Creating an <ITALIC>experimental elixir</ITALIC> requires you to have alchemist supplies on your person, and any elixir you create with this feature lasts until it is drunk or until the end of your next long rest.",
+						"When you reach certain levels in this class, you can make more elixirs at the end of a long rest: two at 6th level and three at 15th level. Roll for each elixir's effect separately. Each elixir requires its own flask."
+					],
+					"2.Experimental Elixir#H1#TABLE":[
+						["1d6","Effect"],
+						["1","<BOLD>Healing.</BOLD> The drinker regains a number of hit points equal to 2d4 + your Intelligence Modifier"],
+						["2","<BOLD>Swiftness.</BOLD> The drinker's walking speed increases by 10 feet for 1 hour."],
+						["3","<BOLD>Resilience.</BOLD> The drinker gains a +1 bonus to AC for 10 minutes."],
+						["4","<BOLD>Boldness.</BOLD> The drinker can roll a d4 and add the number rolled to every attack roll and saving throw they make for the next minute."],
+						["5","<BOLD>Flight.</BOLD> The drinker gains a flying speed of 10 feet for 10 minutes."],
+						["6","<BOLD>Transformation.</BOLD> The drinker's body is transformed as if by the <GOTO:Alter Self:Spells+Alter Self> spell. The drinker determines the transformation caused by the spell, the effects of which last for 10 minutes."]
+					]
+				}
+			},
+			"3. Armorer#H3":{
+				"1.Tools of the Trade#H2":"When you adopt this specialization at 3rd level, you gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
+				"2.Armorer Spells#H2":{
+					"1.#H1":"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+					"2.Armorer Spells at 3rd Level#H1":[
+						"<GOTO:Magic Missile:Spells+Magic Missile>",
+						"<GOTO:Thunderwave:Spells+Thunderwave>"
+					]
+				},
+				"3.Arcane Armor#H2":[
+					"Beginning at 3rd level, your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have smith's tools in hand.",
+					"You gain the following benefits while wearing this armor:",
+					"<LIST_START>",
+					"<LIST_ITEM>If the armor normally has a Strength requirement, the arcane armor lacks this requirement for you.",
+					"<LIST_ITEM>You can use the arcane armor as a spellcasting focus for your artificer spells.",
+					"<LIST_ITEM>The armor attaches to you and can't be removed against your will. It also expands to cover your entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces any missing limbs, functioning identically to a body part it is replacing.",
+					"<LIST_ITEM>You can doff or don the armor as an action.",
+					"<LIST_STOP>",
+					"The armor continues to be Arcane Armor until you don another suit of armor or you die."
+				],
+				"4.Armor Model#H2":[
+					"Beginning at 3rd level, you can customize your Arcane Armor. When you do so, choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you special benefits while you wear it.",
+					"Each model includes a special weapon. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.",
+					"You can change the armor's model whenever you finish a short or long rest, provided you have smith's tools in hand.",
+					"<BOLD>Guardian.</BOLD> You design your armor to be in the front line of conflict. It has the following features:",
+					"<LIST_START>",
+					"<LIST_ITEM><BOLD>Thunder Gauntlets.</BOLD> Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals 1d8 thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else.",
+					"<LIST_ITEM><BOLD>Defensive Field.</BOLD> As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
+					"<LIST_STOP>",
+					"<BOLD>Infiltrator.</BOLD> You customize your armor for subtle undertakings. It has the following features:",
+					"<LIST_START>",
+					"<LIST_ITEM><BOLD>Lightning Launcher.</BOLD> A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals 1d6 lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra 1d6 lightning damage to that target.",
+					"<LIST_ITEM><BOLD>Powered Steps.</BOLD> Your walking speed increases by 5 feet.",
+					"<LIST_ITEM><BOLD>Dampening Field.</BOLD> You have advantage on Dexterity (Stealth) checks. If the armor normally imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal.",
+					"<LIST_STOP>"
+				]
+			},
+			"4. Artillerist#H3":{
+				"1.Tool Proficiency#H2":"When you adopt this specialization at 3rd level, you gain proficiency with woodcarver's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
+				"2.Artillerist Spells#H2":{
+					"1.#H1":"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+					"2.Artillerist Spells at 3rd Level#H1":[
+						"<GOTO:Shield:Spells+Shield>",
+						"<GOTO:Thunderwave:Spells+Thunderwave>"
+					]
+				},
+				"3.Eldritch Cannon#H2":{
+					"1.#H1":[
+						"Also at 3rd level, you've learned how to create a magical cannon. Using woodcarver's tools or smith's tools, you can take an action to magically create a Small or Tiny eldritch cannon in an unoccupied space on a horizontal surface within 5 feet of you. A Small eldritch cannon occupies its space, and a Tiny one can be held in one hand. Once you create a cannon, you can't do so again until you finish a long rest or until you expend a spell slot to create one. You can have only one cannon at a time and can't create one while your cannon is present.",
+						"The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the mending spell is cast on it, it regains 2d6 hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
+						"When you create the cannon, you determine its appearance and whether it has legs. You also decide which type it is, choosing from the options on the Eldritch Cannons table. On each of your turns, you can take a bonus action to cause the cannon to activate if you are within 60 feet of it. As part of the same bonus action, you can direct the cannon to walk or climb up to 15 feet to an unoccupied space, provided it has legs."
+					],
+					"2.Eldritch Cannon#H1#TABLE":[
+						["Cannon","Activation"],
+						["Flamethrower","The cannon exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking 2d8 fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."],
+						["Force Ballista","Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes 2d8 force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon."],
+						["Protector","The cannon emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of it a number of temporary hit points equal to 1d8 + your Intelligence modifier (minimum of +1)."]
+					]
+				}
+			},
+			"5. Battle Smith#H3":{
+				"1.Tool Proficiency#H2":"When you adopt this specialization at 3rd level, you gain proficiency with smith's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
+				"2.Battle Smith Spells#H2":{
+					"1.#H1":"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Battle Smith Spells table. These spells count as artificer spells for you, but they don’t count against the number of artificer spells you prepare.",
+					"2.Battle Smith Spells at 3rd Level#H1":[
+						"<GOTO:Heroism:Spells+Heroism>",
+						"<GOTO:Shield:Spells+Shield>"
+					],
+					"3.Battle Ready#H2":[					
+						"When you reach 3rd level, your combat training and your experiments with magic have paid off in two ways:",
+						"<LIST_START>",
+						"<LIST_ITEM>You gain proficiency with martial weapons.",
+						"<LIST_ITEM>When you attack with a magic weapon, you can use your Intelligence modifier, instead of Strength or Dexterity modifier, for the attack and damage rolls.",
+						"<LIST_STOP>"],
+					"4.Steel Defender#H2":{
+						"1.#H1":[
+							"By 3rd level, your tinkering has borne you a faithful companion, a steel defender. It's friendly to you and your companions, and it obeys your commands. See its game statistics in the Steel Defender stat block, which uses your proficiency bonus (PB) in several places. You determine the creature's appearance and whether it has two legs or four; your choice has no effect on its game statistics.",
+							"In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the defender can take any action of its choice, not just Dodge.",
+							"If the <GOTO:Mending:Spells+Mending> spell is cast on it, it regains 2d6 hit points. If it has died within the last hour, you can use your smith's tools as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The steel defender returns to life after 1 minute with all its hit points restored.",
+							"At the end of a long rest, you can create a new steel defender if you have smith's tools with you. If you already have a defender from this feature, the first one immediately perishes. The defender also perishes if you die."
+						],
+						"Steel Defender Stat Block#H1":"wtf"
+					}
+				}
+			}
 		},
 		
 		"9.4th level#H3": {
-			"Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+			"Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
 		"10.5th level#H3": {
-			"2. Alchemist#H3":{},
-			"3. Armorer#H3":{},
-			"4. Artillerist#H3":{},
-			"5. Battle Smith#H3":{}
+			"2. Alchemist#H3":{
+				"1.Alchemical Savant#H2":"At 5th level, you've developed masterful command of magical chemicals, enhancing the healing and damage you create through them. Whenever you cast a spell using your alchemist's supplies as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1).",
+				"2.Alchemist Spells at 5th Level#H2":[
+					"<GOTO:Flaming Sphere:Spells+Flaming Sphere>",
+					"<GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"
+				]
+			},
+			"3. Armorer#H3":{
+				"1.Extra Attack#H2":"Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.",
+				"2.Armorer Spells at 5th Level#H2":[
+					"<GOTO:Mirror Image:Spells+Mirror Image>",
+					"<GOTO:Shatter:Spells+Shatter>"
+				]
+			},
+			"4. Artillerist#H3":{
+				"1.Arcane Firearm#H2":[
+					"At 5th level, You know how to turn a wand, staff, or rod into an arcane firearm, a conduit for your destructive spells. When you finish a long rest, you can use woodcarver's tools to carve special sigils into a wand, staff, or rod and thereby turn it into your arcane firearm. The sigils disappear from the object if you later carve them on a different item. The sigils otherwise last indefinitely.",
+					"You can use your arcane firearm as a spellcasting focus for your artificer spells. When you cast an artificer spell through the firearm, roll a d8, and you gain a bonus to one of the spell's damage rolls equal to the number rolled."
+				],
+				"2.Artillerist Spells at 5th Level#H2":[
+					"<GOTO:Scorching Ray:Spells+Scorching Ray>",
+					"<GOTO:Shatter:Spells+Shatter>"
+				]
+			},
+			"5. Battle Smith#H3":{
+				"1.Extra Attack#H2":"Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.",
+				"2.Battle Smith Spells at 5th Level#H2":[
+					"<GOTO:Branding Smite:Spells+Branding Smite>",
+					"<GOTO:Warding Bond:Spells+Warding Bond>"
+				]
+			}
 		},
 		
 		"11.6th level#H3": {
-			"Tool Expertise":"At 6th level, your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
+			"Tool Expertise#H2":"At 6th level, your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
 		},
 		
 		"12.7th level#H3": {
-			"Flash of Genius":[
+			"Flash of Genius#H2":[
 				"At 7th level, you've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
 				"You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
 			]
 		},
 		
 		"13.8th level#H3": {
-			"Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+			"Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
 		"14.9th level#H3": {
-			"2. Alchemist#H3":{},
-			"3. Armorer#H3":{},
-			"4. Artillerist#H3":{},
-			"5. Battle Smith#H3":{}
+			"2. Alchemist#H3":{
+				"1.Restorative Reagents#H2":[
+					"Starting at 9th level, you can incorporate restorative reagents into some of your works:",
+					"<LIST_START>",
+					"<LIST_ITEM>Whenever a creature drinks an <ITALIC>experimental elixir</ITALIC> you created, the creature gains temporary hit points equal to 2d6 + your Intelligence modifier (minimum of 1 temporary hit point).",
+					"<LIST_ITEM>You can cast <GOTO:Lesser Restoration:Spells+Lesser Restoration> without expending a spell slot and without preparing the spell, provided you use alchemist's supplies as the spellcasting focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest.",
+					"<LIST_STOP>"
+				],
+				"2.Alchemist Spells at 9th Level#H2":[
+					"<GOTO:Gaseous Form:Spells+Gaseous Form>",
+					"<GOTO:Mass Healing Word:Spells+Mass Healing Word>"
+				]
+			},
+			"3. Armorer#H3":{
+				"1.Armor Modifications":"At 9th level, you learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor.",
+				"2.Armorer Spells at 9th Level#H2":[
+					"<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>",
+					"<GOTO:Lightning Bolt:Spells+Lightning Bolt>"
+				]
+			},
+			"4. Artillerist#H3":{
+				"1.Explosive Cannon#H2":[
+					"Starting at 9th level, every eldritch cannon you create is more destructive:",
+					"<LIST_START>",
+					"<LIST_ITEM>The cannon's damage rolls all increase by 1d8.",
+					"<LIST_ITEM>As an action, you can command the cannon to detonate if you are within 60 feet of it. Doing so destroys the cannon and forces each creature within 20 feet of it to make a Dexterity saving throw against your spell save DC, taking 3d8 force damage on a failed save or half as much damage on a successful one.",
+					"<LIST_STOP>"
+				],
+				"2.Artillerist Spells at 9th Level#H2":[
+					"<GOTO:Fireball:Spells+Fireball>",
+					"<GOTO:Wind Wall:Spells+Wind Wall>"
+				]
+			},
+			"5. Battle Smith#H3":{
+				"1.Arcane Jolt#H2":[
+					"At 9th level, you've learn new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack or your steel defender hits a target, you can channel magical energy through the strike to create one of the following effects:",
+					"<LIST_START>",		
+					"<LIST_ITEM>The target takes an extra 2d6 force damage.",
+					"<LIST_ITEM>Choose one creature or object you can see within 30 feet of the target. Healing energy flows into the chosen recipient, restoring 2d6 hit points to it.",
+					"<LIST_STOP>",
+					"You can use this energy a number of times equal to your Intelligence modifier (minimum of once), but you can do so no more than once on a turn. You regain all expended uses when you finish a long rest."
+				],
+				"2.Battle Smith Spells at 9th Level#H2":[
+					"<GOTO:Aura of Vitality:Spells+Aura of Vitality>",
+					"<GOTO:Conjure Barrage:Spells+Conjure Barrage>"
+				]
+			}
 		},
 		
 		"15.10th level#H3": {
-			"Magic Item Adept":[
+			"Magic Item Adept#H2":[
 				"When you reach 10th level, you achieve a profound understanding of how to use and make magic items:",
 				"<LIST_START>",
 				"<LIST_ITEM>You can attune to up to four magic items at once.",
@@ -315,22 +493,38 @@
 		},
 		
 		"16.11th level#H3": {
-			"Spell-Storing Item":[
+			"Spell-Storing Item#H2":[
 				"At 11th level, you can now store a spell in an object. Whenever you finish a long rest, you can touch one simple or martial weapon or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a lst- or 2nd-level spell from the artificer spell list that requires 1 action to cast (you needn't have it prepared).",
 				"While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires concentration, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
 			]
 		},
 		
 		"17.12th level#H3": {
-			"Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+			"Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
 		"18.13th level#H3": {
-			"1.":"Access to 4th level spells"
+			"1.#H2":"Access to 4th level spells",
+			"2.Alchemist Spells at 13th Level#H2":[
+				"<GOTO:Blight:Spells+Blight>",
+				"<GOTO:Death Ward:Spells+Death Ward>"
+			],
+			"3.Armorer Spells at 13th Level#H2":[
+				"<GOTO:Fire Shield:Spells+Fire Shield>",
+				"<GOTO:Greater Invisibility:Spells+Greater Invisibility>"
+			],
+			"4.Artillerist Spells at 13th Level#H2":[
+				"<GOTO:Ice Storm:Spells+Ice Storm>",
+				"<GOTO:Wall of Fire:Spells+Wall of Fire>"
+			],
+			"5.Battle Smith Spells at 13th Level#H2":[
+				"<GOTO:Aura of Purity:Spells+Aura of Purity>",
+				"<GOTO:Fire Shield:Spells+Fire Shield>"
+			]
 		},
 		
 		"19.14th level#H3": {
-			"Magic Item Savant":[
+			"Magic Item Savant#H2":[
 				"At 14th level, your skill with magic items deepens more:",
 				"<LIST_START>",
 				"<LIST_ITEM>You can attune to up to five magic items at once.",
@@ -340,30 +534,78 @@
 		},
 		
 		"20.15th level#H3": {
-			"2. Alchemist#H3":{},
-			"3. Armorer#H3":{},
-			"4. Artillerist#H3":{},
-			"5. Battle Smith#H3":{}
+			"2. Alchemist#H3":{
+				"Chemical Mastery#H2":[
+					"By 15th level, you have been exposed to so many chemicals that they pose little risk to you, and you can use them to quickly end certain ailments:",
+					"<LIST_START>",
+					"<LIST_ITEM>You gain resistance to acid damage and poison damage, and you are now immune to the poisoned condition.",
+					"<LIST_ITEM>You can cast <GOTO:Greater Restoration:Spells+Greater Restoration> and <GOTO:Heal:Spells+Heal> without expending a spell slot, without preparing the spell, and without providing the material component, provided you use alchemist's supplies as the spellcasting focus. Once you cast either spell with this feature, you can't cast that spell with it again until you finish a long rest.",
+					"<LIST_STOP>"
+				]
+			},
+			"3. Armorer#H3":{
+				"Perfected Armor#H2":[
+					"At 15th level, your Arcane Armor gains additional benefits based on its model, as shown below.",
+					"<BOLD>Guardian.</BOLD> When a Huge or smaller creature you can see ends its turn within 30 feet of you, you can use your reaction to magically force the creature to make a Strength saving throw against your spell save DC, pulling the creature up to 30 feet toward you to an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
+					"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest.",
+					"<BOLD>Infiltrator.</BOLD> Any creature that takes lightning damage from your Lightning Launcher glimmers with magical light until the start of your next turn. The glimmering creature sheds dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light jolts it if it attacks you. In addition, the next attack roll against it has advantage, and if that attack hits, the target takes an extra 1d6 lightning damage."
+				]
+			},
+			"4. Artillerist#H3":{
+				"Fortified Position#H2":[
+					"By 15th level, you're a master at forming well-defended emplacements using Eldritch Cannon:",
+					"<LIST_START>",
+					"<LIST_ITEM>You and your allies have half cover while within 10 feet of a cannon you create with Eldritch Cannon, as a result of a shimmering field of magical protection that the cannon emits.",
+					"<LIST_ITEM>You can now have two cannons at the same time. You can create two with the same action (but not the same spell slot), and you can activate both of them with the same bonus action. You determine whether the cannons are identical to each other or different. You can't create a third cannon while you have two.",
+					"<LIST_STOP>"
+				]
+			},
+			"5. Battle Smith#H3":{
+				"Improved Defender#H2":[
+					"At 15th level, your Arcane Jolt and steel defender become more powerful:",
+					"<LIST_START>",
+					"<LIST_ITEM>The extra damage and the healing of your Arcane Jolt both increase to 4d6.",
+					"<LIST_ITEM>Your steel defender gains a +2 bonus to Armor Class.",
+					"<LIST_ITEM>Whenever your steel defender uses its Deflect Attack, the attacker takes force damage equal to 1d4 + your Intelligence modifier.",
+					"<LIST_STOP>"
+				]
+			}
 		},
 		
 		"21.16th level#H3": {
-			"Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+			"Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
 		"22.17th level#H3": {
-			"1.":"Access to 5th level spells"
+			"1.#H2":"Access to 5th level spells",
+			"2.Alchemist Spells at 17th Level#H2":[
+				"<GOTO:Cloudkill:Spells+Cloudkill>",
+				"<GOTO:Raise Dead:Spells+Raise Dead>"
+			],
+			"3.Armorer Spells at 17th Level#H2":[
+				"<GOTO:Passwall:Spells+Passwall>",
+				"<GOTO:Wall of Force:Spells+Wall of Force>"
+			],
+			"4.Artillerist Spells at 17th Level#H2":[
+				"<GOTO:Cone of Cold:Spells+Cone of Cold>",
+				"<GOTO:Wall of Force:Spells+Wall of Force>"
+			],
+			"5.Battle Smith Spells at 17th Level#H2":[
+				"<GOTO:Banishing Smite:Spells+Banishing Smite>",
+				"<GOTO:Mass Cure Wounds:Spells+Mass Cure Wounds>"
+			]
 		},
 		
 		"23.18th level#H3": {
-			"Magic Item Master":"Starting at 18th level, you can attune up to six magic items at once."
+			"Magic Item Master#H2":"Starting at 18th level, you can attune up to six magic items at once."
 		},
 		
 		"24.19th level#H3": {
-			"Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+			"Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
 		},
 		
 		"25.20th level#H3": {
-			"Soul of Artifice":[
+			"Soul of Artifice#H2":[
 				"At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:",
 				"<LIST_START>",
 				"<LIST_ITEM>You gain a +1 bonus to all saving throws per magic item you are currently attuned to.",
