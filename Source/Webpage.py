@@ -89,6 +89,21 @@ class Webpage:
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
 
+        self.TextReplaceMap = {
+            '<BOLD>': '|~[~|b|~]~|',
+            '<ITALIC>': '|~[~|i|~]~|',
+            '<HIGHLIGHT>': '|~[~|mark|~]~|',
+            '<SMALL>': '|~[~|small|~]~|',
+            '<STRIKE>': '|~[~|del|~]~|',
+            '<UNDER>': '|~[~|ins|~]~|',
+            '<SUB>': '|~[~|sub|~]~|',
+            '<SUP>': '|~[~|sup|~]~|'
+        }
+        for Key in list(self.TextReplaceMap.keys()):
+            NewKey = Key.replace('<', '</')
+            NewValue = self.TextReplaceMap[Key].replace('|~[~|', '|~[~|/')
+            self.TextReplaceMap[NewKey] = NewValue
+
         self.Doc, self.Tag, self.Text, self.Line = yattag.Doc(
             defaults = {
                 'title': self.MetaData['document']['title']
@@ -245,6 +260,13 @@ class Webpage:
             self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
         return ContinueFlag, Data
 
+    def CleanText(self, Text):
+        if type(Text) != str:
+            Text = str(Text)
+        for Key in self.TextReplaceMap:
+            Text = Text.replace(Key, self.TextReplaceMap[Key])
+        return Text
+
     def AddText(self, Input, State, Interface, Data):
         if '<LIST_START>' in Input:
             self.Doc.stag('ul', style=' '.join(State['style']), klass=' '.join(State['class']))
@@ -257,23 +279,7 @@ class Webpage:
                 self.AddText(Input.replace('<LIST_ITEM>', ''), State, Interface + ['LIST_ITEM'], Data)
             return
 
-        TextReplaceMap = {
-            '<BOLD>': '|~[~|b|~]~|',
-            '<ITALIC>': '|~[~|i|~]~|',
-            '<HIGHLIGHT>': '|~[~|mark|~]~|',
-            '<SMALL>': '|~[~|small|~]~|',
-            '<STRIKE>': '|~[~|del|~]~|',
-            '<UNDER>': '|~[~|ins|~]~|',
-            '<SUB>': '|~[~|sub|~]~|',
-            '<SUP>': '|~[~|sup|~]~|'
-        }
-        for Key in list(TextReplaceMap.keys()):
-            NewKey = Key.replace('<', '</')
-            NewValue = TextReplaceMap[Key].replace('|~[~|', '|~[~|/')
-            TextReplaceMap[NewKey] = NewValue
-
-        for Key in TextReplaceMap:
-            Input = Input.replace(Key, TextReplaceMap[Key])
+        Input = self.CleanText(Input)
 
         TextTag = None
         TextSize = State['text.size']
@@ -343,6 +349,12 @@ class Webpage:
         with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
             self.Text(Input)
 
+    def CleanTable(self, Table):
+        for IndexY in range(len(Table)):
+            for IndexX in range(len(Table[IndexY])):
+                Table[IndexY][IndexX] = self.CleanText(Table[IndexY][IndexX])
+        return Table
+
 
     def AddLookupTable(self, Input, State, Interface, Data):
         Table = [Data]
@@ -354,6 +366,8 @@ class Webpage:
                 else:    
                     Row += [self.ParamStorage[Key][i]]
             Table += [Row]
+
+        Table = self.CleanTable(Table)
 
         WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State)
 
@@ -372,6 +386,7 @@ class Webpage:
                 NewData += [['.'.join(Key.split('.')[1:]), Data[Key]]]
             Data = NewData
         Table = [[''] * len(Data[0])] + Data
+        Table = self.CleanTable(Table)
         WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State)
 
 
