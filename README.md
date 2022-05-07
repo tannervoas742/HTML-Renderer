@@ -21,8 +21,17 @@ Uses Yattag to generate HTML webpage from content contained in JSON files.
 - ```#APPEND_AFTER(VAL)```, ```#APPEND_BEFORE(VAL)```: Only available on ```#INC``` and ```#RANGE``` statements at the moment. Appends the VAL to the computed list either before or after.
 - ```#LOOKUP(KEY)```: Only valid on ```#INC``` and ```#RANGE``` at this moment. Replace the calculated value with a value from a already defined table.
   - e.g. ```"_st#HIDDEN": {"1": "1st", "2": "2nd"}``` is an example of a table that can be defined earlier. For convenience these can be defined at a high level and they persist until replaced.
+- ```CALL(FUNC)```: Functions similar to lookup except FUNC should be a set of code that takes 1 argument (ARG) which is the value this key pairs with and replaces this value with said functions return value.
 
 # In Text Command List:
 - ```<LIST_START>```, ```<LIST_ITEM>```, ```<LIST_STOP>```: USeful in conjunction with ```CONCAT_LINES``` to make bulleted list.
 - ```<GOTO:Text:File+Location>```: Adds a link to the given File (or external webpage) with the given Text. Optionally include +Location to designate jump to location in said file.
 - ```<GOTO:File+Location>```: Adds a link to the given File (or external webpage). Optionally include +Location to designate jump to location in said file. If Location is used Text = Location, else Text = File
+- ```<BOLD>```: Make text bold until ```</BOLD>``` is encountered
+- ```<ITALIC>```: Make text italic until ```</ITALIC>``` is encountered 
+- ```<HIGHLIGHT>```: Highlight text until ```</HIGHLIGHT>``` is encountered
+- ```<SMALL>```: Make text smaller until ```</SMALL>``` is encountered
+- ```<STRIKE>```: strikethrough text until ```</STRIKE>``` is encountered
+- ```<UNDER>```: underline text until ```</UNDER>``` is encountered
+- ```<SUB>```: Make text into a subscript until ```</SUB>``` is encountered
+- ```<SUP>```: Make text into a superscript until ```</SUP>``` is encountered

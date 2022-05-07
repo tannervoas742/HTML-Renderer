@@ -257,6 +257,24 @@ class Webpage:
                 self.AddText(Input.replace('<LIST_ITEM>', ''), State, Interface + ['LIST_ITEM'], Data)
             return
 
+        TextReplaceMap = {
+            '<BOLD>': '|~[~|b|~]~|',
+            '<ITALIC>': '|~[~|i|~]~|',
+            '<HIGHLIGHT>': '|~[~|mark|~]~|',
+            '<SMALL>': '|~[~|small|~]~|',
+            '<STRIKE>': '|~[~|del|~]~|',
+            '<UNDER>': '|~[~|ins|~]~|',
+            '<SUB>': '|~[~|sub|~]~|',
+            '<SUP>': '|~[~|sup|~]~|'
+        }
+        for Key in list(TextReplaceMap.keys()):
+            NewKey = Key.replace('<', '</')
+            NewValue = TextReplaceMap[Key].replace('|~[~|', '|~[~|/')
+            TextReplaceMap[NewKey] = NewValue
+
+        for Key in TextReplaceMap:
+            Input = Input.replace(Key, TextReplaceMap[Key])
+
         TextTag = None
         TextSize = State['text.size']
         if TextSize > 0:
@@ -433,11 +451,17 @@ class Webpage:
             State['callback'] = []
         return State
             
+    def PostProcessPage(self, PageText):
+        PageText = PageText.replace('|~[~|', '<')
+        PageText = PageText.replace('|~]~|', '>')
+        return PageText
 
     def Save(self, OutHTML):
         CleanTarget = OutHTML.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         OutFile = open(CleanTarget, 'w')
-        OutFile.write(self.Doc.getvalue()) 
+        PageText = self.Doc.getvalue()
+        PageText = self.PostProcessPage(PageText)
+        OutFile.write(PageText) 
         OutFile.close()
     
 
