@@ -124,7 +124,8 @@ class Webpage:
                 self.LoadLevel(OriginalKey, State)
                 continue
             Rank, Key, Interface = self.GetInterfaceFromKey(OriginalKey)
-            NewState = self.MixState(State, Interface)
+            
+            NewState = self.MixState(State, Interface)                
             
             if type(Input) == dict:
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
@@ -220,6 +221,10 @@ class Webpage:
             for Row in Data:
                 _, Row, Interface = self.GetInterfaceFromKey(str(Row))
                 self.AddText(Row, State, Interface, None)
+            return False, None
+        elif type(Data) in [str, int, float, bool]:
+            _, Data, Interface = self.GetInterfaceFromKey(str(Data))
+            self.AddText(Data, State, Interface, None)
             return False, None
         if 'HR_AFTER' in Interface:
             self.Doc.stag('hr', klass=' '.join(State['class']))
@@ -407,12 +412,13 @@ class Webpage:
 
     def GetInterfaceFromKey(self, OKey):
         Rank = 'INF'
-        if '.' in OKey:
-            Rank = OKey.split('.')[0]
-            OKey = '.'.join(OKey.split('.')[1:])
+        DotPattern = re.compile('(\d+?)\.(.*)')
+        DotMatch = DotPattern.match(OKey)
+        if DotMatch != None:
+            Rank = DotMatch.group(1)
+            OKey = DotMatch.group(2)
         elif '#HIDDEN' in OKey:
             Rank = '.'
-
         OKey = OKey.split('#')
         Interface = []
         if len(OKey) > 1:
