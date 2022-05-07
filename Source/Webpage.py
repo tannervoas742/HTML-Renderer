@@ -205,7 +205,17 @@ class Webpage:
             return ContinueFlag, Data
         if 'HR_BEFORE' in Interface:
             self.Doc.stag('hr', klass=' '.join(State['class']))
-        self.AddText(Input, State, Interface, Data)
+        ValidLinkup = True
+        if Data == None:
+            ValidLinkup = False
+        if '<GOTO' in Input and '>' in Input:
+            ValidLinkup = False
+        if ValidLinkup:
+            FlushPrintUTF8('Linkup')
+            with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-'))):
+                self.AddText(Input, State, Interface, Data)
+        else:
+            self.AddText(Input, State, Interface, Data)
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', klass=' '.join(State['class']))
         if State['mode'] == WebpageEnums.LookupTable:
@@ -453,7 +463,7 @@ def main(Args):
         os.mkdir('HTML/')
     for Arg in Args:
         WP = Webpage(Arg)
-        WP.Save(Arg.replace('Json', 'HTML').replace('json', 'html'))
+        WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
 
 if __name__ == '__main__':
     import sys
