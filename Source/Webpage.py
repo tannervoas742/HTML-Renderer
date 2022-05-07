@@ -155,7 +155,21 @@ class Webpage:
                     Computed += [Computed[-1]]
                 for j in range(Index, len(Computed)):
                     Computed[j] = Value
-            
+            BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
+            BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
+            for Match in BeforeMatch:
+                Pattern = Match.group(1)
+                Computed = list(map(lambda Val: Pattern + str(Val), Computed))
+            AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
+            AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
+            for Match in AfterMatch:
+                Pattern = Match.group(1)
+                Computed = list(map(lambda Val: str(Val) + Pattern, Computed))
+            LookupReg = re.compile("LOOKUP\((.*?)\)")
+            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
+            for Match in LookupMatch:
+                Key = Match.group(1)
+                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         elif 'RANGE' in Interface:
@@ -164,6 +178,21 @@ class Webpage:
                 Computed += [i for i in range(Data[0], Data[1] + 1)]
                 Data = Data[2:]
             Computed.sort()
+            BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
+            BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
+            for Match in BeforeMatch:
+                Pattern = Match.group(1)
+                Computed = list(map(lambda Val: Pattern + str(Val), Computed))
+            AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
+            AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
+            for Match in AfterMatch:
+                Pattern = Match.group(1)
+                Computed = list(map(lambda Val: str(Val) + Pattern, Computed))
+            LookupReg = re.compile("LOOKUP\((.*?)\)")
+            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
+            for Match in LookupMatch:
+                Key = Match.group(1)
+                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         else:
