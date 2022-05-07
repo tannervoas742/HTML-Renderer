@@ -87,7 +87,7 @@
 			"<LIST_ITEM>thieves' tools and dungeoneer's pack",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#HR_AFTER#HR_BEFORE#CONCAT_LINES":[
+		"5.Multiclassing#H1#HR_AFTER#HR_BEFORE":[
 			"Need INT of 13 to multiclass in or out",
 			"Proficiencies gained: light armor, medium armor, shields, thieves' tools, tinker's tools",
 			"Spell slots: Add half your levels (round up) in artificer to the levels from other classes to determine spell slots"
@@ -204,14 +204,14 @@
 			"<LIST_ITEM>An explorer's pack and four javelins",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need STR of 13 to multiclass in or out",
 			"Proficiencies gained: Shields, simple weapons, martial weapons"
 		],
 		
 		
 		"6.1st level#H2": {
-			"1.Rage#H1#CONCAT_LINES": [
+			"1.Rage#H1": [
 				"Enter as a bonus action.",
 				"Amount of rages per level shown on Barbarian table",
 				"While raging:",
@@ -239,9 +239,9 @@
 				"Ancestral Protectors#H1": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage of the target's attacks."
 			},
 			"2.Battlerager#H2":{
-				"1.Restriction: Dwarves Only#H1#CONCAT_LINES": ["Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
+				"1.Restriction: Dwarves Only#H1": ["Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
 				"Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."],
-				"2.Battlerager Armor#H1#CONCAT_LINES": ["When you choose this path at 3rd level, you gain the ability to use spiked armor (AC=14+DEX(max 2), Stealth Disadvantage, 45 lb., 75 gp) as a weapon.",
+				"2.Battlerager Armor#H1": ["When you choose this path at 3rd level, you gain the ability to use spiked armor (AC=14+DEX(max 2), Stealth Disadvantage, 45 lb., 75 gp) as a weapon.",
 				"While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes against a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls.",
 				"Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds."]
 				
@@ -255,7 +255,7 @@
 				"1.Origin of the Beast#H1#LOOKUP_TABLE(1,4)":[
 					"1d4",	"Origin"
 				],					
-				"2.Form of the Beast#H1#CONCAT_LINES":["Starting when you choose this path at 3rd level, when you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.",
+				"2.Form of the Beast#H1":["Starting when you choose this path at 3rd level, when you enter your rage, you can transform, revealing the bestial power within you. Until the rage ends, you manifest a natural weapon. It counts as a simple melee weapon for you, and you add your Strength modifier to the attack and damage rolls when you attack with it, as normal.",
 				"You choose the weapon's form each time you rage:",
 				"Bite. Your mouth transforms into a bestial muzzle or great mandibles (your choice). It deals 1d8 piercing damage on a hit. Once on each of your turns when you damage a creature with this bite, you regain a number of hit points equal to your proficiency bonus, provided you have less than half your hit points when you hit.",
 				"Claws. Each of your hands transforms into a claw, which you can use as a weapon if it's empty. It deals 1d6 slashing damage on a hit. Once on each of your turns when you attack with a claw using the Attack action, you can make one additional claw attack as part of the same action.",
@@ -265,7 +265,7 @@
 				"Frenzy#H1":"Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion."
 			} ,
 			"5.Storm Herald#H2":{
-				"Storm Aura#H1#CONCAT_LINES":["When you select this path at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
+				"Storm Aura#H1":["When you select this path at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
 				"Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.",
 				"If your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
 				"Desert. When this effect is activated, all other creatures in your aura take 2 fire damage each. The damage increases when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level.",
@@ -274,7 +274,7 @@
 			},
 			"6.Totem Warrior#H2":{
 				"1.Spirit Seeker#H1":"Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells+Beast Sense> and <GOTO:Speak with Animals:Spells+Speak with Animals> spells, but only as rituals.",
-				"2.Totem Spirit#H1#CONCAT_LINES":["At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
+				"2.Totem Spirit#H1":["At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
 				"Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
 				"Bear. While raging, you have resistance to all damage except psychic damage. The spirit of the bear makes you tough enough to stand up to any punishment.",
 				"Eagle. While you're raging and aren't wearing heavy armor, other creatures have disadvantage on opportunity attack rolls against you, and you can use the Dash action as a bonus action on your turn. The spirit of the eagle makes you into a predator who can weave through the fray with ease.",
@@ -283,9 +283,9 @@
 				"Wolf. While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."]
 			},
 			"7.Wild Magic#H2":{
-				"1.Magic Awareness#H1#CONCAT_LINES":["When you choose this path at 3rd level, as an action, you can open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60 feet of you that isn't behind total cover. When you sense a spell, you learn which school of magic it belongs to.",
+				"1.Magic Awareness#H1":["When you choose this path at 3rd level, as an action, you can open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60 feet of you that isn't behind total cover. When you sense a spell, you learn which school of magic it belongs to.",
 				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."],
-				"2.Wild Surge#H1#CONCAT_LINES":["Also at 3rd level, the magical energy roiling inside you sometimes erupts from you. When you enter your rage, roll on the Wild Magic table to determine the magical effect produced.",
+				"2.Wild Surge#H1":["Also at 3rd level, the magical energy roiling inside you sometimes erupts from you. When you enter your rage, roll on the Wild Magic table to determine the magical effect produced.",
 				"If the effect requires a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier."],
 				
 				"1d8#HIDDEN#RANGE":[1,8],
@@ -319,14 +319,14 @@
 		
 		"11.6th level#H2": {
 			"1.Ancestral Guardian#H2": {
-				"Spirit Shield#H1#CONCAT_LINES": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.", 
+				"Spirit Shield#H1": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.", 
 				"When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level."]
 			},
 			"2.Battlerager#H2":{
 				"Reckless Abandon#H1":"Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
 			},
 			"3.Beast#H2":{
-				"Bestial Soul#H1#CONCAT_LINES":["Beginning at 6th level, the feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+				"Bestial Soul#H1":["Beginning at 6th level, the feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
 				"You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
 				"<LIST_START>",
 				"<LIST_ITEM>You gain a swimming speed equal to your walking speed, and you can breathe underwater.",
@@ -338,13 +338,13 @@
 				"Mindless Rage#H1":"Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
 			} ,
 			"5.Storm Herald#H2":{
-				"Storm Soul#H1#CONCAT_LINES":["At 6th level, the storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.",
+				"Storm Soul#H1":["At 6th level, the storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.",
 				"Desert. You gain resistance to fire damage, and you don't suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.",
 				"Sea. You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet.",
 				"Tundra. You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."]
 			},
 			"6.Totem Warrior#H2":{
-				"Aspect of the Beast#H1#CONCAT_LINES":["At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
+				"Aspect of the Beast#H1":["At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
 				"Bear. You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects.",
 				"Eagle. You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom (Perception) checks.",
 				"Elk. Whether mounted or on foot, your travel pace is doubled, as is the travel pace of up to ten companions while they're within 60 feet of you and you're not incapacitated. The elk spirit helps you roam far and fast.",
@@ -363,7 +363,7 @@
 		},
 		
 		"12.7th level#H2": {
-			"1.Feral Instinct#H1#CONCAT_LINES":[
+			"1.Feral Instinct#H1":[
 			"By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
 			"Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
 			],
@@ -381,14 +381,14 @@
 		"15.10th level#H2": {
 			"0.Primal Knowledge improvement (Optional)#H1":"When you reach 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
 			"1.Ancestral Guardian#H2": {
-				"Consult the Spirits#H1#CONCAT_LINES": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
+				"Consult the Spirits#H1": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
 				"After you cast either spell in this way, you can,t use this feature again until you finish a short or long rest."]
 			},
 			"2.Battlerager#H2":{
 				"Battlerager Charge#H1":"Beginning at 10th level, you can take the Dash action as a bonus action while you are raging."
 			},
 			"3.Beast#H2":{
-				"Infectious Fury#H1#CONCAT_LINES":["At 10th level, when you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
+				"Infectious Fury#H1":["At 10th level, when you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
 				"<LIST_START>",
 				"<LIST_ITEM>The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
 				"<LIST_ITEM>Target takes 2d12 psychic damage.",
@@ -396,7 +396,7 @@
 				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."]
 			},
 			"4.Berserker#H2": {
-				"Intimidating Presence#H1#CONCAT_LINES":["Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
+				"Intimidating Presence#H1":["Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
 				"If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."]
 			} ,
 			"5.Storm Herald#H2":{
@@ -409,7 +409,7 @@
 				"Unstable Backlash#H1":"At 10th level, when you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."
 			},
 			"8.Zealot#H2":{
-				"Zealous Presence#H1#CONCAT_LINES":[
+				"Zealous Presence#H1":[
 				"At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
 				"Once you use this feature, you can,t use it again until you finish a long rest."
 				]
@@ -417,7 +417,7 @@
 		},
 		
 		"16.11th level#H2": {
-			"Relentless Rage#H1#CONCAT_LINES":[
+			"Relentless Rage#H1":[
 			"Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
 			"Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
 			]
@@ -439,20 +439,20 @@
 				"Spiked Retribution#H1":"Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't incapacitated, and are wearing spiked armor."
 			},
 			"3.Beast#H2":{
-				"Call the Hunt#H1#CONCAT_LINES":["At 14th level, the beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a d6 and gain a bonus to the damage equal to the number rolled.",
+				"Call the Hunt#H1":["At 14th level, the beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a d6 and gain a bonus to the damage equal to the number rolled.",
 				"You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."]
 			},
 			"4.Berserker#H2": {
 				"Retaliation#H1":"Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
 			} ,
 			"5.Storm Herald#H2":{
-				"Raging Storm#H1#CONCAT_LINES":["At 14th level, the power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.",
+				"Raging Storm#H1":["At 14th level, the power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.",
 				"Desert. Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to your Barbarian level.",
 				"Sea. When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked prone, as if struck by a wave.",
 				"Tundra. Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it."]
 			},
 			"6.Totem Warrior#H2":{
-				"Totemic Attunement#H1#CONCAT_LINES":["At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
+				"Totemic Attunement#H1":["At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
 				"Bear. While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened.",
 				"Eagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.",
 				"Elk. While raging, you can use a bonus action during your move to pass through the space of a Large or smaller creature. That creature must succeed on a Strength saving throw (DC 8 + your Strength bonus + your proficiency bonus) or be knocked prone and take bludgeoning damage equal to 1d12 + your Strength modifier.",
@@ -463,7 +463,7 @@
 				"Controlled Surge#H1":"At 14th level, whenever you roll on the Wild Magic table, you can roll the die twice and choose which of the two effects to unleash. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
 			},
 			"8.Zealot#H2":{
-				"Rage Beyond Death#H1#CONCAT_LINES":[
+				"Rage Beyond Death#H1":[
 				"Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
 				"While you're raging, having 0 hit points doesn,t knock you unconscious. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends, and you die then only if you still have 0 hit points."
 				]
@@ -549,7 +549,7 @@
 			"<LIST_ITEM> Leather armor and a dagger",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need CHA of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, one skill, one musical instrument",
 			"Spell slots: Add your levels in bard to the levels from other classes to determine spell slots"
@@ -676,7 +676,7 @@
 			"<LIST_ITEM>A shield and a holy symbol",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need WIS of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, medium armor, shields",
 			"Spell slots:Add your levels in cleric to the levels from other classes to determine spell slots"
@@ -801,7 +801,7 @@
 			"<LIST_ITEM>Leather armor, an explorer's pack, and a druidic focus",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need WIS of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
 			"Spell slots:Add your levels in druid to the levels from other classes to determine spell slots"
@@ -917,7 +917,7 @@
 			"<LIST_ITEM>(a) a dungeoneer's pack or (b) an explorer's pack",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need STR or DEX of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons",
 			"Spell slots:Add one third your levels (round down) if you have the Eldritch Knight feature to the levels from other classes to determine spell slots"
@@ -1035,7 +1035,7 @@
 			"<LIST_ITEM>10 darts",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need DEX and WIS of 13 to multiclass in or out",
 			"Proficiencies gained: Simple weapons, shortswords"
 		],
@@ -1154,7 +1154,7 @@
 			"<LIST_ITEM>Chain mail and a holy symbol",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need STR and CHA of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons",
 			"Spell slots: Add half your levels (round down) in paladin to the levels from other classes to determine spell slots"
@@ -1274,7 +1274,7 @@
 			"<LIST_ITEM>A longbow and a quiver of 20 arrows",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need DEX and WIS of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class list",
 			"Spell slots: Add half your levels (round down) in ranger to the levels from other classes to determine spell slots"
@@ -1389,7 +1389,7 @@
 			"<LIST_ITEM>Leather armor, two daggers, and thieves' tools",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need DEX of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, one skill from the class's skill list, thieves' tools",
 			"Spell slots: Add a third your levels (round down) if you have the Arcane Trickster feature to the levels from other classes to determine spell slots"
@@ -1516,7 +1516,7 @@
 			"<LIST_ITEM>Two daggers",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need CHA of 13 to multiclass in or out",
 			"Proficiencies gained: None",
 			"Spell slots: Add your levels in sorceror to the levels from other classes to determine spell slots"
@@ -1636,7 +1636,7 @@
 			"<LIST_ITEM>Leather armor, any simple weapon and two daggers",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need CHA of 13 to multiclass in or out",
 			"Proficiencies gained: Light armor, simple weapons",
 			"Spell slots: If you have Pact Magic and Spellcasting, you can use any spell slots to cast any spells that you know and have prepared. These spell slots should be tracked separately."
@@ -1761,7 +1761,7 @@
 			"<LIST_ITEM>A spellbook",
 			"<LIST_STOP>"
 		],
-		"5.Multiclassing#H1#CONCAT_LINES":[
+		"5.Multiclassing#H1":[
 			"Need INT of 13 to multiclass in or out",
 			"Proficiencies gained: None",
 			"Spell slots: Add your levels in wizard to the levels from other classes to determine spell slots"
