@@ -215,7 +215,8 @@ class Webpage:
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', klass=' '.join(State['class']))
             return False, None
-
+        if type(Data) == list and not any(list(map(lambda Val: type(Val) not in [int, str, float, bool], Data))):
+            Interface += ['CONCAT_LINES']
         if 'CONCAT_LINES' in Interface:
             #Data = '\n'.join(Data)
             for Row in Data:
