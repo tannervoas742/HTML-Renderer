@@ -1939,86 +1939,86 @@
             "1.#H2": "Access to 4th level spells",
             "2. Arcana Domain#H3":{
                 "1.Arcana Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Arcane Eye:Spells+Arcane Eye>",
+                    "<GOTO:Leomund's Secret Chest:Spells+Leomund's Secret Chest>"
                 ]
             },
             "3. Death Domain#H3":{
                 "1.Death Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Death Ward:Spells+Death Ward>"
                 ]
             },
             "4. Forge Domain#H3":{
                 "1.Forge Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Fabricate:Spells+Fabricate>",
+                    "<GOTO:Wall of Fire:Spells+Wall of Fire>"
                 ]
             },
             "5. Grave Domain#H3":{
                 "1.Grave Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Death Ward:Spells+Death Ward>"
                 ]
             },
             "6. Knowledge Domain#H3":{
                 "1.Knowledge Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Arcane Eye:Spells+Arcane Eye>",
+                    "<GOTO:Confusion:Spells+Confusion>"
                 ]
             },
             "7. Life Domain#H3":{
                 "1.Life Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Death Ward:Spells+Death Ward>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
             "8. Light Domain#H3":{
                 "1.Light Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>",
+                    "<GOTO:Wall of Fire:Spells+Wall of Fire>"
                 ]
             },
             "9. Nature Domain#H3":{
                 "1.Nature Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Dominate Beast:Spells+Dominate Beast>",
+                    "<GOTO:Grasping Vine:Spells+Grasping Vine>"
                 ]
             },
             "10. Order Domain#H3":{
                 "1.Order Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Compulsion:Spells+Compulsion>",
+                    "<GOTO:Locate Creature:Spells+Locate Creature>"
                 ]
             },
             "11. Peace Domain#H3":{
                 "1.Peace Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Purity:Spells+Aura of Purity>",
+                    "<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>"
                 ]
             },
             "12. Tempest Domain#H3":{
                 "1.Tempest Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Control Water:Spells+Control Water>",
+                    "<GOTO:Ice Storm:Spells+Ice Storm>"
                 ]
             },
             "13. Trickery Domain#H3":{
                 "1.Trickery Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Dimension Door:Spells+Dimension Door>",
+                    "<GOTO:Polymorph:Spells+Polymorph>"
                 ]
             },
             "14. Twilight Domain#H3":{
                 "1.Twilight Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Life:Spells+Aura of Life>",
+                    "<GOTO:Greater Invisibility:Spells+Greater Invisibility>"
                 ]
             },
             "15. War Domain#H3":{
                 "1.War Domain Spells at 7th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Hold Monster:Spells+Hold Monster>"
                 ]
             }
         },
@@ -2047,89 +2047,89 @@
         },
 
         "14.9th level#H3": {
-            "1.#H2": "Access to 5th level spells",
+            "1.#H2": "Access to 9th level spells",
             "2. Arcana Domain#H3":{
                 "1.Arcana Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Planar Binding:Spells+Planar Binding>",
+                    "<GOTO:Teleportation Circle:Spells+Teleportation Circle>"
                 ]
             },
             "3. Death Domain#H3":{
                 "1.Death Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Antilife Shell:Spells+Antilife Shell>",
+                    "<GOTO:Cloudkill:Spells+Cloudkill>"
                 ]
             },
             "4. Forge Domain#H3":{
                 "1.Forge Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Animate Objects:Spells+Animate Objects>",
+                    "<GOTO:Creation:Spells+Creation>"
                 ]
             },
             "5. Grave Domain#H3":{
                 "1.Grave Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Antilife Shell:Spells+Antilife Shell>",
+                    "<GOTO:Raise Dead:Spells+Raise Dead>"
                 ]
             },
             "6. Knowledge Domain#H3":{
                 "1.Knowledge Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Legend Lore:Spells+Legend Lore>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "7. Life Domain#H3":{
                 "1.Life Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Mass Cure Wounds:Spells+Mass Cure Wounds>",
+                    "<GOTO:Raise Dead:Spells+Raise Dead>"
                 ]
             },
             "8. Light Domain#H3":{
                 "1.Light Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "9. Nature Domain#H3":{
                 "1.Nature Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Insect Plague:Spells+Insect Plague>",
+                    "<GOTO:Tree Stride:Spells+Tree Stride>"
                 ]
             },
             "10. Order Domain#H3":{
                 "1.Order Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             },
             "11. Peace Domain#H3":{
                 "1.Peace Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Greater Restoration:Spells+Greater Restoration>",
+                    "<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>"
                 ]
             },
             "12. Tempest Domain#H3":{
                 "1.Tempest Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Destructive Wave:Spells+Destructive Wave>",
+                    "<GOTO:Insect Plague:Spells+Insect Plague>"
                 ]
             },
             "13. Trickery Domain#H3":{
                 "1.Trickery Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Dominate Person:Spells+Dominate Person>",
+                    "<GOTO:Modify Memory:Spells+Modify Memory>"
                 ]
             },
             "14. Twilight Domain#H3":{
                 "1.Twilight Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Circle of Power:Spells+Circle of Power>",
+                    "<GOTO:Mislead:Spells+Mislead>"
                 ]
             },
             "15. War Domain#H3":{
                 "1.War Domain Spells at 9th Level#H1": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Hold Monster:Spells+Hold Monster>"
                 ]
             }
         },
