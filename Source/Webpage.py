@@ -185,12 +185,12 @@ class Webpage:
                     if LastItemWasCollapse == False:
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
-                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible popout collapsible-model{}'.format(CollapseModelCount)]))
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
+                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible collapsible-model{}'.format(CollapseModelCount)]))
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
                     else:
                         self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
-                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
+                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
                     CollapseRowCount += 0
@@ -203,13 +203,16 @@ class Webpage:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                 NewState['key'] = Key
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                     CollapseRowCount += 1
                     LastItemWasCollapse = True
+            elif type(Input) == list:
+                if State['visible'] == True:
+                    self.AddText(Key, NewState, Interface, None)
             elif type(Key) in [list, dict]:
                 self.LoadLevel(Key, NewState)
         if LastItemWasCollapse == True:
@@ -311,15 +314,7 @@ class Webpage:
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
             return False, None
-        if type(Data) == list and not any(list(map(lambda Val: type(Val) not in [int, str, float, bool], Data))):
-            Interface += ['CONCAT_LINES']
-        if 'CONCAT_LINES' in Interface:
-            #Data = '\n'.join(Data)
-            for Row in Data:
-                _, Row, Interface = self.GetInterfaceFromKey(str(Row))
-                self.AddText(Row, State, Interface, None)
-            return False, None
-        elif type(Data) in [str, int, float, bool]:
+        if type(Data) in [str, int, float, bool]:
             _, Data, Interface = self.GetInterfaceFromKey(str(Data))
             self.AddText(Data, State, Interface, None)
             return False, None

@@ -33,12 +33,20 @@
         }
     },
     "_compute#HIDDEN": {
+        "_hitpoints_description": [
+            "Add #CALL(_hitpoints) to a key in dictionary paired to a integer value representing the die size.",
+            "Returns a new list of strings which can be paired with #TABLE tag"
+        ],
         "_hitpoints": [
             "Return = []",
-            "Return += [\"Hit Dice: 1d{0} per level\".format(ARG)]",
-            "Return += [\"Hit Points at 1st Level: {0} + your Constitution modifier\".format(ARG)]",
-            "Return += [\"Hit Points at Higher Levels: 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
+            "Return += [\"<BOLD>Hit Dice:</BOLD> 1d{0} per level\".format(ARG)]",
+            "Return += [\"<BOLD>Hit Points at 1st Level:</BOLD> {0} + your Constitution modifier\".format(ARG)]",
+            "Return += [\"<BOLD>Hit Points at Higher Levels:</BOLD> 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
             "return Return"
+        ],
+        "_genlink_description": [
+            "Add #CALL(_genlink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
+            "Returns a new list of strings where each item is actively linked. Links only work within the same file."
         ],
         "_genlink": [
             "NewArg = []",
@@ -219,7 +227,7 @@
         ],
         "999.<LIST_STOP>": ""
     },
-    "Artificer#H4#COLLAPSE": {
+    "Artificer#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -256,8 +264,8 @@
             "Level", "Proficiency Bonus", "Features", "Infusions Known", "Infused Items", "Cantrips Known"
         ],
 
-        "2.Hit Dice#H2#CALL(_hitpoints)": 8,
-        "3.Proficiencies#H2": [
+        "2.Hit Dice#H1#CALL(_hitpoints)": 8,
+        "3.Proficiencies#H1": [
             "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
             "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
@@ -266,7 +274,7 @@
             "",
             "The secrets of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the <ITALIC>Dungeon Master's Guide</ITALIC> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
         ],
-        "4.Starting Equipment or 5d4 x 10 gp#H2": [
+        "4.Starting Equipment or 5d4 x 10 gp#H1": [
             "<LIST_START>",
             "<LIST_ITEM>any two simple weapons",
             "<LIST_ITEM>Light crossbow and 20 bolts",
@@ -274,14 +282,14 @@
             "<LIST_ITEM>thieves' tools and dungeoneer's pack",
             "<LIST_STOP>"
         ],
-        "5.Multiclassing#H2": [
+        "5.Multiclassing#H1": [
             "Need INT of 13 to multiclass in or out",
             "Proficiencies gained: light armor, medium armor, shields, thieves' tools, tinker's tools",
             "Spell slots: Add half your levels (round up) in artificer to the levels from other classes to determine spell slots"
         ],
 
 
-        "6.1st level#H3": {
+        "6.1st level#H1#COLLAPSE": {
             "1.Magical Tinkering#H2": [
                 "At 1st level, you've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
                 "<LIST_START>",
@@ -318,7 +326,7 @@
             }
         },
 
-        "7.2nd level#H3": {
+        "7.2nd level#H1#COLLAPSE": {
             "1.Infuse Item#H2": {
                 "1.#H1": "At 2nd level, you've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
                 "2.Infusions Known#H1": [
@@ -332,7 +340,7 @@
                     "If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
                 ]
             },
-            "2.Artificer Infusions#H3#COLLAPSE": {
+            "2.Artificer Infusions#H1#COLLAPSE": {
                 "1.": [
                     "<BOLD><ITALIC>Artificer infusions are extraordinary processes that rapidly turn a nonmagical object into a magic item. The description of each of the following infusions details the type of object that can receive it, along with whether the resulting magic item requires attunement.</ITALIC></BOLD>",
                     "<BOLD><ITALIC>Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.</ITALIC></BOLD>",
@@ -439,7 +447,7 @@
             }
         },
 
-        "8.3rd level#H3": {
+        "8.3rd level#H1#COLLAPSE": {
             "1. The Right Tool for the Job#H2": "At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",
             "2. Alchemist#H3": {
                 "1.Tool Proficiency#H2": "When you adopt this specialization at 3rd level, you gain proficiency with alchemist's supplies. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
@@ -556,11 +564,11 @@
             }
         },
 
-        "9.4th level#H3": {
+        "9.4th level#H1#COLLAPSE": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#H3": {
+        "10.5th level#H1#COLLAPSE": {
             "2. Alchemist#H3": {
                 "1.Alchemical Savant#H2": "At 5th level, you've developed masterful command of magical chemicals, enhancing the healing and damage you create through them. Whenever you cast a spell using your alchemist's supplies as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1).",
                 "2.Alchemist Spells at 5th Level#H2": [
@@ -594,22 +602,22 @@
             }
         },
 
-        "11.6th level#H3": {
+        "11.6th level#H1#COLLAPSE": {
             "Tool Expertise#H2": "At 6th level, your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
         },
 
-        "12.7th level#H3": {
+        "12.7th level#H1#COLLAPSE": {
             "Flash of Genius#H2": [
                 "At 7th level, you've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
                 "You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
             ]
         },
 
-        "13.8th level#H3": {
+        "13.8th level#H1#COLLAPSE": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#H3": {
+        "14.9th level#H1#COLLAPSE": {
             "2. Alchemist#H3": {
                 "1.Restorative Reagents#H2": [
                     "Starting at 9th level, you can incorporate restorative reagents into some of your works:",
@@ -659,7 +667,7 @@
             }
         },
 
-        "15.10th level#H3": {
+        "15.10th level#H1#COLLAPSE": {
             "Magic Item Adept#H2": [
                 "When you reach 10th level, you achieve a profound understanding of how to use and make magic items:",
                 "<LIST_START>",
@@ -669,18 +677,18 @@
             ]
         },
 
-        "16.11th level#H3": {
+        "16.11th level#H1#COLLAPSE": {
             "Spell-Storing Item#H2": [
                 "At 11th level, you can now store a spell in an object. Whenever you finish a long rest, you can touch one simple or martial weapon or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a lst- or 2nd-level spell from the artificer spell list that requires 1 action to cast (you needn't have it prepared).",
                 "While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires concentration, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
             ]
         },
 
-        "17.12th level#H3": {
+        "17.12th level#H1#COLLAPSE": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#H3": {
+        "18.13th level#H1#COLLAPSE": {
             "1.#H2": "Access to 4th level spells",
             "2.Alchemist Spells at 13th Level#H2": [
                 "<GOTO:Blight:Spells+Blight>",
@@ -700,7 +708,7 @@
             ]
         },
 
-        "19.14th level#H3": {
+        "19.14th level#H1#COLLAPSE": {
             "Magic Item Savant#H2": [
                 "At 14th level, your skill with magic items deepens more:",
                 "<LIST_START>",
@@ -710,7 +718,7 @@
             ]
         },
 
-        "20.15th level#H3": {
+        "20.15th level#H1#COLLAPSE": {
             "2. Alchemist#H3": {
                 "Chemical Mastery#H2": [
                     "By 15th level, you have been exposed to so many chemicals that they pose little risk to you, and you can use them to quickly end certain ailments:",
@@ -749,11 +757,11 @@
             }
         },
 
-        "21.16th level#H3": {
+        "21.16th level#H1#COLLAPSE": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#H3": {
+        "22.17th level#H1#COLLAPSE": {
             "1.#H2": "Access to 5th level spells",
             "2.Alchemist Spells at 17th Level#H2": [
                 "<GOTO:Cloudkill:Spells+Cloudkill>",
@@ -773,15 +781,15 @@
             ]
         },
 
-        "23.18th level#H3": {
+        "23.18th level#H1#COLLAPSE": {
             "Magic Item Master#H2": "Starting at 18th level, you can attune up to six magic items at once."
         },
 
-        "24.19th level#H3": {
+        "24.19th level#H1#COLLAPSE": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#H3": {
+        "25.20th level#H1#COLLAPSE": {
             "Soul of Artifice#H2": [
                 "At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:",
                 "<LIST_START>",
@@ -791,7 +799,7 @@
             ]
         }
     },
-    "Barbarian#H4#COLLAPSE": {
+    "Barbarian#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1148,7 +1156,7 @@
             "Primal Champion#H2": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
         }
     },
-    "Bard#H4#COLLAPSE": {
+    "Bard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1350,7 +1358,7 @@
             "Superior Inspiration#H2": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
         }
     },
-    "Cleric#H4#COLLAPSE": {
+    "Cleric#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1449,7 +1457,7 @@
 
         "25.20th level#H3": {}
     },
-    "Druid#H4#COLLAPSE": {
+    "Druid#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1546,7 +1554,7 @@
 
         "25.20th level#H3": {}
     },
-    "Fighter#H4#COLLAPSE": {
+    "Fighter#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1634,7 +1642,7 @@
 
         "25.20th level#H3": {}
     },
-    "Monk#H4#COLLAPSE": {
+    "Monk#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
@@ -1722,7 +1730,7 @@
 
         "25.20th level#H3": {}
     },
-    "Paladin#H4#COLLAPSE": {
+    "Paladin#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1814,7 +1822,7 @@
 
         "25.20th level#H3": {}
     },
-    "Ranger#H4#COLLAPSE": {
+    "Ranger#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1906,7 +1914,7 @@
 
         "25.20th level#H3": {}
     },
-    "Rogue#H4#COLLAPSE": {
+    "Rogue#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -1993,7 +2001,7 @@
 
         "25.20th level#H3": {}
     },
-    "Sorceror#H4#COLLAPSE": {
+    "Sorceror#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
@@ -2092,7 +2100,7 @@
 
         "25.20th level#H3": {}
     },
-    "Warlock#H4#COLLAPSE": {
+    "Warlock#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
@@ -2184,7 +2192,7 @@
 
         "25.20th level#H3": {}
     },
-    "Wizard#H4#COLLAPSE": {
+    "Wizard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
