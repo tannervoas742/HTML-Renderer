@@ -15,13 +15,15 @@ class WebpageEnums:
         pass
 
 class WebTable:
-    def __init__(self, Doc, Tag, Text, Line, Data, State):
+    def __init__(self, Doc, Tag, Text, Line, Data, State, Interface, WebpageObject):
         self.Doc = Doc
         self.Tag = Tag
         self.Text = Text
         self.Line = Line
         self.Data = Data
         self.State = State
+        self.Interface = Interface
+        self.WebpageObject = WebpageObject
 
         self.RenderToPage()
 
@@ -30,14 +32,23 @@ class WebTable:
         def add_header(doc, header):
             with doc.tag('tr', klass=' '.join(self.State['class'])):
                 for value in header:
-                    doc.line('th', value)
+                    NewState = copy.deepcopy(self.State)
+                    NewState['force-no-inline'] = True
+                    self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
+                    #doc.line('th', value)
 
         def add_row(doc, values, row_name=None):
             with doc.tag('tr', klass=' '.join(self.State['class'])):
                 if row_name is not None:
-                    doc.line('th', row_name)
+                    NewState = copy.deepcopy(self.State)
+                    NewState['force-no-inline'] = True
+                    self.WebpageObject.AddText(row_name, NewState, self.Interface, None, ForceTextTag='th')
+                    #doc.line('th', row_name)
                 for value in values:
-                    doc.line('td', value)
+                    NewState = copy.deepcopy(self.State)
+                    NewState['force-no-inline'] = True
+                    self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='td')
+                    #doc.line('td', value)
                     
         with self.Tag('table', klass='table table-bordered table-responsive table-striped ' + ' '.join(self.State['class'])):
             with self.Tag('thead', klass='thead-light ' + ' '.join(self.State['class'])):
@@ -115,7 +126,7 @@ class Webpage:
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
             
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
+            #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
             
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
                 pass
@@ -210,7 +221,7 @@ class Webpage:
         ContinueFlag = True
         if len(State['callback']) > 0:
             for Callback in State['callback']:
-                Data = Callback(Data)
+                Data = Callback(self, Data)
         if 'INC' in Interface:
             Computed = []
             IntData = list(filter(lambda Item: type(Item) == int, Data))
@@ -323,7 +334,7 @@ class Webpage:
             Text = Text.replace(Key, self.TextReplaceMap[Key])
         return Text
 
-    def AddText(self, Input, State, Interface, Data):
+    def AddText(self, Input, State, Interface, Data, ForceTextTag=None):
         if '<LIST_START>' in Input:
             if self.in_list_div == 0:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
@@ -344,67 +355,81 @@ class Webpage:
         Input = self.CleanText(Input)
 
         TextTag = None
-        TextSize = State['text.size']
-        if TextSize > 0:
-            TextSize = 5 - TextSize
-        HPattern = re.compile('H(\d+)')
-        HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
-        if len(HMatch) > 0:
-            TextSize = int(max(HMatch))
+        if ForceTextTag == None:
+            TextSize = State['text.size']
             if TextSize > 0:
                 TextSize = 5 - TextSize
-        if TextSize == 0:
-            TextTag = 'p'
+            HPattern = re.compile('H(\d+)')
+            HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
+            if len(HMatch) > 0:
+                TextSize = int(max(HMatch))
+                if TextSize > 0:
+                    TextSize = 5 - TextSize
+            if TextSize == 0:
+                TextTag = 'p'
+            else:
+                TextTag = 'h{}'.format(TextSize)
         else:
-            TextTag = 'h{}'.format(TextSize)
+            TextTag = ForceTextTag
         if '<GOTO' in Input and '>' in Input:
             with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
                 while '<GOTO' in Input and '>' in Input:
-                    if 'display:inline' not in State['style']:
+                    if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
                         if 'LIST_ITEM' not in Interface:
                             State['style'] += ['display:inline']
-                    GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
-                    GotoMatch1 = GotoPattern1.match(Input)
-                    if GotoMatch1 != None:
-                        Text = GotoMatch1.group(1)
-                        File = GotoMatch1.group(2)
-                        Location = GotoMatch1.group(3)
-                        ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
-                        self.Text(Input.split(ToReplace)[0])
-                        with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
-                            self.Text(Text)
-                        Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    GotoPattern2 = re.compile('.*?<GOTO:(.*?):(.*?)>.*')
-                    GotoMatch2 = GotoPattern2.match(Input)
-                    if GotoMatch2 != None:
-                        Text = GotoMatch2.group(1)
-                        File = GotoMatch2.group(2)
-                        ToReplace = "<GOTO:{}:{}>".format(Text, File)
-                        self.Text(Input.split(ToReplace)[0])
-                        with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
-                            self.Text(Text)
-                        Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    GotoPattern3 = re.compile('.*?<GOTO:(.*?)\+(.*?)>.*')
-                    GotoMatch3 = GotoPattern3.match(Input)
-                    if GotoMatch3 != None:
-                        File = GotoMatch3.group(1)
-                        Text = File
-                        Location = GotoMatch3.group(2)
-                        ToReplace = "<GOTO:{}+{}>".format(Text, Location)
-                        self.Text(Input.split(ToReplace)[0])
-                        with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
-                            self.Text(Text)
-                        Input = ToReplace.join(Input.split(ToReplace)[1:])
-                    GotoPattern4 = re.compile('.*?<GOTO:(.*?)>.*')
-                    GotoMatch4 = GotoPattern4.match(Input)
-                    if GotoMatch4 != None:
-                        File = GotoMatch4.group(1)
-                        Text = File
-                        ToReplace = "<GOTO:{}>".format(Text)
-                        self.Text(Input.split(ToReplace)[0])
-                        with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
-                            self.Text(Text)
-                        Input = ToReplace.join(Input.split(ToReplace)[1:])
+                    elif 'display:inline' in State['style']:
+                        del State['style'][State['style'].index('display:inline')]
+                    HitAleady = False
+                    if not HitAleady:
+                        GotoPattern1 = re.compile('.*?<GOTO:(.*?):(.*?)\+(.*?)>.*')
+                        GotoMatch1 = GotoPattern1.match(Input)
+                        if GotoMatch1 != None:
+                            Text = GotoMatch1.group(1)
+                            File = GotoMatch1.group(2)
+                            Location = GotoMatch1.group(3)
+                            ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
+                            self.Text(Input.split(ToReplace)[0])
+                            with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                                self.Text(Text)
+                            Input = ToReplace.join(Input.split(ToReplace)[1:])
+                            HitAleady = True
+                    if not HitAleady:
+                        GotoPattern2 = re.compile('.*?<GOTO:(.*?):(.*?)>.*')
+                        GotoMatch2 = GotoPattern2.match(Input)
+                        if GotoMatch2 != None:
+                            Text = GotoMatch2.group(1)
+                            File = GotoMatch2.group(2)
+                            ToReplace = "<GOTO:{}:{}>".format(Text, File)
+                            self.Text(Input.split(ToReplace)[0])
+                            with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                                self.Text(Text)
+                            Input = ToReplace.join(Input.split(ToReplace)[1:])
+                            HitAleady = True
+                    if not HitAleady:
+                        GotoPattern3 = re.compile('.*?<GOTO:(.*?)\+(.*?)>.*')
+                        GotoMatch3 = GotoPattern3.match(Input)
+                        if GotoMatch3 != None:
+                            File = GotoMatch3.group(1)
+                            Text = File
+                            Location = GotoMatch3.group(2)
+                            ToReplace = "<GOTO:{}+{}>".format(Text, Location)
+                            self.Text(Input.split(ToReplace)[0])
+                            with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                                self.Text(Text)
+                            Input = ToReplace.join(Input.split(ToReplace)[1:])
+                            HitAleady = True
+                    if not HitAleady:
+                        GotoPattern4 = re.compile('.*?<GOTO:(.*?)>.*')
+                        GotoMatch4 = GotoPattern4.match(Input)
+                        if GotoMatch4 != None:
+                            File = GotoMatch4.group(1)
+                            Text = File
+                            ToReplace = "<GOTO:{}>".format(Text)
+                            self.Text(Input.split(ToReplace)[0])
+                            with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                                self.Text(Text)
+                            Input = ToReplace.join(Input.split(ToReplace)[1:])
+                            HitAleady = True
                 self.Text(Input)
                 return 
             
@@ -414,7 +439,7 @@ class Webpage:
     def CleanTable(self, Table):
         for IndexY in range(len(Table)):
             for IndexX in range(len(Table[IndexY])):
-                Table[IndexY][IndexX] = self.CleanText(Table[IndexY][IndexX])
+                Table[IndexY][IndexX] = str(Table[IndexY][IndexX])
         return Table
 
 
@@ -431,7 +456,7 @@ class Webpage:
 
         Table = self.CleanTable(Table)
 
-        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State)
+        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State, Interface, self)
 
     def AddTable(self, Input, State, Interface, Data):
         if type(Data) == dict:
@@ -447,9 +472,9 @@ class Webpage:
             for Key in list(sorted(list(Data.keys()), key=lambda x: str(x))):
                 NewData += [['.'.join(Key.split('.')[1:]), Data[Key]]]
             Data = NewData
-        Table = [[''] * len(Data[0])] + Data
+        Table = Data
         Table = self.CleanTable(Table)
-        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State)
+        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State, Interface, self)
 
 
     def GetInitState(self):
@@ -521,7 +546,7 @@ class Webpage:
             for Func in State['callback']:
                 if Func.replace('_CALLBACK_', '') in self.ParamStorage:
                     FuncText = self.ParamStorage[Func.replace('_CALLBACK_', '')]
-                    FuncText = 'def {}(ARG):\n    '.format(Func) + '\n    '.join(FuncText)
+                    FuncText = 'def {}(self, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
                     exec(FuncText)
                     Compiled += [eval(Func)]
             State['callback'] = Compiled
