@@ -39,17 +39,9 @@
             "Return += [\"Hit Points at 1st Level: {0} + your Constitution modifier\".format(ARG)]",
             "Return += [\"Hit Points at Higher Levels: 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
             "return Return"
-        ],
-        "_genlink": [
-            "NewArg = []",
-            "for Group in ARG:",
-            "    while ', ' in Group:",
-            "        Group = Group.replace(', ', ',')",
-            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], Item.lower().replace(' ', '-')), Group.split(','))))]",
-            "return NewArg"
         ]
     },
-    "Table of Contents#H4#ADD_CLASS(columns-4)": {
+    "Table of Contents#H4": {
         "0.<LIST_START>": "",
         "1.<LIST_ITEM><GOTO:Artificer:Classes+Artificer>": [
             "<LIST_START>",
@@ -128,101 +120,38 @@
         ],
         "7.<LIST_ITEM><GOTO:Monk:Classes+Monk>": [
             "<LIST_START>",
-            "<LIST_ITEM>Way of the Ascendant Dragon",
-            "<LIST_ITEM>Way of the Astral Self",
-            "<LIST_ITEM>Way of the Drunken Master",
-            "<LIST_ITEM>Way of the Four Elements",
-            "<LIST_ITEM>Way of the Kensei",
-            "<LIST_ITEM>Way of the Long Death",
-            "<LIST_ITEM>Way of Mercy",
-            "<LIST_ITEM>Way of the Open Hand",
-            "<LIST_ITEM>Way of Shadow",
-            "<LIST_ITEM>Way of the Sun Soul",
             "<LIST_STOP>"
         ],
         "8.<LIST_ITEM><GOTO:Paladin:Classes+Paladin>": [
             "<LIST_START>",
-            "<LIST_ITEM>Oath of the Ancients",
-            "<LIST_ITEM>Oath of Conquest",
-            "<LIST_ITEM>Oath of the Crown",
-            "<LIST_ITEM>Oath of Devotion",
-            "<LIST_ITEM>Oath of Glory",
-            "<LIST_ITEM>Oath of Redemption",
-            "<LIST_ITEM>Oath of Vengeance",
-            "<LIST_ITEM>Oath of the Watchers",
-            "<LIST_ITEM>Oathbreaker",
             "<LIST_STOP>"
         ],
         "9.<LIST_ITEM><GOTO:Ranger:Classes+Ranger>": [
             "<LIST_START>",
-            "<LIST_ITEM>Beast Master Conclave",
-            "<LIST_ITEM>Fey Wanderer",
-            "<LIST_ITEM>Gloom Stalker Conclave",
-            "<LIST_ITEM>Horizon Walker Conclave",
-            "<LIST_ITEM>Hunter Conclave",
-            "<LIST_ITEM>Monster Slayer Conclave",
-            "<LIST_ITEM>Swarmkeeper",
             "<LIST_STOP>"
         ],
         "10.<LIST_ITEM><GOTO:Rogue:Classes+Rogue>": [
             "<LIST_START>",
-            "<LIST_ITEM>Arcane Trickster",
-            "<LIST_ITEM>Assassin",
-            "<LIST_ITEM>Inquisitive",
-            "<LIST_ITEM>Mastermind",
-            "<LIST_ITEM>Phantom",
-            "<LIST_ITEM>Scout",
-            "<LIST_ITEM>Soulknife",
-            "<LIST_ITEM>Swashbuckler",
-            "<LIST_ITEM>Thief",
             "<LIST_STOP>"
         ],
         "11.<LIST_ITEM><GOTO:Sorceror:Classes+Sorceror>": [
             "<LIST_START>",
-            "<LIST_ITEM>Aberrant Mind",
-            "<LIST_ITEM>Clockwork Soul",
-            "<LIST_ITEM>Divine Soul",
-            "<LIST_ITEM>Draconic Bloodline",
-            "<LIST_ITEM>Shadow Magic",
-            "<LIST_ITEM>Storm Sorcery",
-            "<LIST_ITEM>Wild Magic",
             "<LIST_STOP>"
         ],
         "12.<LIST_ITEM><GOTO:Warlock:Classes+Warlock>": [
             "<LIST_START>",
-            "<LIST_ITEM>The Archfey",
-            "<LIST_ITEM>The Celestial",
-            "<LIST_ITEM>The Fathomless",
-            "<LIST_ITEM>The Fiend",
-            "<LIST_ITEM>The Genie",
-            "<LIST_ITEM>The Great Old One",
-            "<LIST_ITEM>The Hexblade",
-            "<LIST_ITEM>The Undead",
-            "<LIST_ITEM>The Undying",
             "<LIST_STOP>"
         ],
         "13.<LIST_ITEM><GOTO:Wizard:Classes+Wizard>": [
             "<LIST_START>",
-            "<LIST_ITEM>Abjuration ",
-            "<LIST_ITEM>Bladesinging",
-            "<LIST_ITEM>Chronurgy",
-            "<LIST_ITEM>Conjuration",
-            "<LIST_ITEM>Divination",
-            "<LIST_ITEM>Enchantment",
-            "<LIST_ITEM>Evocation",
-            "<LIST_ITEM>Graviturgy",
-            "<LIST_ITEM>Necromancy",
-            "<LIST_ITEM>Order of Scribes",
-            "<LIST_ITEM>Transmutation",
-            "<LIST_ITEM>War Magic",
             "<LIST_STOP>"
         ],
         "999.<LIST_STOP>": ""
     },
-    "Artificer#H4#COLLAPSE": {
+    "Artificer#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Magical Tinkering, Spellcasting",
             "Infuse Item",
             "Artificer Specialist, The Right Tool for the Job",
@@ -235,11 +164,11 @@
             "Magic Item Adept",
             "Spell-Storing Item",
             "Ability Score Improvement",
-            "",
+            "-",
             "Magic Item Savant",
             "Artificer Specialist feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Magic Item Master",
             "Ability Score Improvement",
             "Soul of Artifice"
@@ -252,19 +181,17 @@
         "3rd level spell slots#HIDDEN#INC": [9, 9, 11],
         "4th level spell slots#HIDDEN#INC": [13, 15, 17],
         "5th level spell slots#HIDDEN#INC": [17, 19],
-        "1.The Artificer#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Artificer#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Infusions Known", "Infused Items", "Cantrips Known"
         ],
 
         "2.Hit Dice#H2#CALL(_hitpoints)": 8,
         "3.Proficiencies#H2": [
-            "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
+            "<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
             "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
             "<BOLD>Saving Throws:</BOLD> CON and INT",
-            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand ",
-            "",
-            "The secrets of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the <ITALIC>Dungeon Master's Guide</ITALIC> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
+            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H2": [
             "<LIST_START>",
@@ -332,7 +259,7 @@
                     "If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
                 ]
             },
-            "2.Artificer Infusions#H3#COLLAPSE": {
+            "2.Artificer Infusions#H3": {
                 "1.": [
                     "<BOLD><ITALIC>Artificer infusions are extraordinary processes that rapidly turn a nonmagical object into a magic item. The description of each of the following infusions details the type of object that can receive it, along with whether the resulting magic item requires attunement.</ITALIC></BOLD>",
                     "<BOLD><ITALIC>Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.</ITALIC></BOLD>",
@@ -791,10 +718,10 @@
             ]
         }
     },
-    "Barbarian#H4#COLLAPSE": {
+    "Barbarian#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Rage, Unarmored Defense",
             "Reckless Attack, Danger Sense",
             "Primal Knowledge (Optional), Primal Path",
@@ -818,7 +745,7 @@
         ],
         "Rages#HIDDEN#INC": [1, 1, 3, 6, 12, 17, "20=Unlimited"],
         "Rage Damage#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 9, 16],
-        "1.The Barbarian#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Barbarian#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Rages", "Rage Damage"
         ],
 
@@ -998,10 +925,8 @@
             },
             "7.Wild Magic#H3": {
                 "Bolstering Magic#H2": ["Beginning at 6th level, you can harness your wild magic to bolster yourself or a companion. As an action, you can touch one creature (which can be yourself) and confer one of the following benefits of your choice to that creature:",
-                    "<LIST_START>",
                     "<LIST_ITEM>For 10 minutes, the creature can roll a d3 whenever making an attack roll or an ability check and add the number rolled to the d20 roll.",
                     "<LIST_ITEM>Roll a d3. The creature regains one expended spell slot, the level of which equals the number rolled or lower (the creature's choice). Once a creature receives this benefit, that creature can,t receive it again until after a long rest.",
-                    "<LIST_STOP>",
                     "You can take this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
@@ -1148,29 +1073,29 @@
             "Primal Champion#H2": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
         }
     },
-    "Bard#H4#COLLAPSE": {
+    "Bard#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Spellcasting, Bardic Inspiration (d6)",
-            "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
+            "Jack of All Trades, Song of Rest (d6)",
             "Bard College, Expertise",
-            "Ability Score Improvement, Bardic Versatility (Optional)",
+            "Ability Score Improvement",
             "Bardic Inspiration (d8), Font of Inspiration",
             "Countercharm, Bard College Feature",
-            "",
-            "Ability Score Improvement, Bardic Versatility (Optional)",
+            "-",
+            "Ability Score Improvement",
             "Song of Rest (d8)",
             "Bardic Inspiration (d10), Expertise, Magical Secrets",
-            "",
-            "Ability Score Improvement, Bardic Versatility (Optional)",
+            "-",
+            "Ability Score Improvement",
             "Song of Rest (d10)",
             "Magical Secrets, Bard College Feature",
             "Bardic Inspiration (d12)",
-            "Ability Score Improvement, Bardic Versatility (Optional)",
+            "Ability Score Improvement",
             "Song of Rest (d12)",
             "Magical Secrets",
-            "Ability Score Improvement, Bardic Versatility (Optional)",
+            "Ability Score Improvement",
             "Superior Inspiration"
         ],
         "Cantrips Known#HIDDEN#INC": [1, 1, 5, 10],
@@ -1184,7 +1109,7 @@
         "7th level spell slots#HIDDEN#INC": [13, 20],
         "8th level spell slots#HIDDEN#INC": [15],
         "9th level spell slots#HIDDEN#INC": [17],
-        "1.The Bard#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Bard#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "Spells Known"
         ],
 
@@ -1210,165 +1135,76 @@
             "Spell slots: Add your levels in bard to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#H3": {
-            "1.Spellcasting#H2": {
-                "1.#H1": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations.",
-                "2.Cantrips (0-Level Spells)#H1": [
-                    "You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Bard table."
-                ],
-                "3.Spell Slots": "The Bard table shows how many spell slots you have to cast your bard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest. For example, if you know the 1st-level spell <GOTO:Cure Wounds:Spells+Cure Wounds> and have a 1st-level and a 2nd-level spell slot available, you can cast <GOTO:Cure Wounds:Spells+Cure Wounds> using either slot.",
-                "Spells Known of 1st Level and Higher": [
-                    "You know four 1st-level spells of your choice from the bard spell list.",
-                    "The Spells Known column of the Bard table shows when you learn more bard spells of your choice. Each of these spells must be of a level for which you have spell slots, as shown on the table. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
-                    "Additionally, when you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots."
-                ],
-                "5.Spellcasting Ability#H1": [
-                    "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.",
-                    "<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Intelligence modifier",
-                    "<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Charisma modifier"
-                ],
-                "6.Ritual Casting#H1": "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
-                "7.Spellcasting Focus#H1": "You can use a musical instrument as a spellcasting focus for your bard spells."
-            },
-            "2.Bardic Inspiration#H2": [
-                "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.",
-                "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
-                "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.",
-                "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
-            ]
-        },
-        "7.2nd level#H3": {
-            "1.Jack of All Trades#H2": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
-            "2.Song of Rest#H2": [
-                "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.",
-                "The extra Hit Points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
-            ],
-            "3.Magical Inspiration (Optional)#H2": "At 2nd level, if a creature has a Bardic Inspiration die from you and casts a spell that restores hit points or deals damage, the creature can roll that die and choose a target affected by the spell. Add the number rolled as a bonus to the hit points regained or the damage dealt. The Bardic Inspiration die is then lost."
-        },
-        "8.3rd level#H3": {
-            "0.Bard College#H2": "At 3rd level, you delve into the advanced techniques of a bard college of your choice. Your choice grants you features at 3rd level and again at 6th and 14th level.",
-            "1.Creation#H3": {},
-            "2.Eloquence#H3": {},
-            "3.Glamour#H3": {},
-            "4.Lore#H3": {},
-            "5.Spirits#H3": {},
-            "6.Swords#H3": {},
-            "7.Valor#H3": {},
-            "8.Whispers#H3": {},
-            "9.Expertise#H2": [
-                "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
-                "At 10th level, you can choose another two skill proficiencies to gain this benefit."
-            ]
-        },
+
+        "6.1st level#H3": {},
+
+        "7.2nd level#H3": {},
+
+        "8.3rd level#H3": {},
+
         "9.4th level#H3": {
-            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Bardic Versatility (Optional)#H2": [
-                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
-                "<LIST_START>",
-                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
-                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
-                "<LIST_STOP>"
-            ]
+            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#H3": {
-            "1.Bardic Inspiration#H2": "Your Bardic Inspiration die is now a d8.",
-            "2.Font of Inspiration#H2": "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
-        },
-        "11.6th level#H3": {
-            "Countercharm#H2": "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required)."
-        },
-        "12.7th level#H3": {
-            "1.#H2": "Access to 4th level spells"
-        },
+        "10.5th level#H3": {},
+
+        "11.6th level#H3": {},
+
+        "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#H3": {
-            "1.Song of Rest#H2": "Beginning at 9th level, creatures regain an extra 1d8 hit points when you use this feature."
-        },
-        "15.10th level#H3": {
-            "1.Bardic Inspiration#H2": "Your Bardic Inspiration die is now a d10.",
-            "2.Expertise#H2": "At 10th level, you can choose another two skill proficiencies to gain this benefit.",
-            "3.Magical Secrets#H2": [
-                "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
-                "The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table.",
-                "You learn two additional spells from any classes at 14th level and again at 18th level."
-            ]
-        },
-        "16.11th level#H3": {
-            "1.#H2": "Access to 6th level spells"
-        },
+        "14.9th level#H3": {},
+
+        "15.10th level#H3": {},
+
+        "16.11th level#H3": {},
+
         "17.12th level#H3": {
-            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Bardic Versatility (Optional)#H2": [
-                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
-                "<LIST_START>",
-                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
-                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
-                "<LIST_STOP>"
-            ]
+            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#H3": {
-            "1.Song of Rest#H2": "Beginning at 13th level, creatures regain an extra 1d10 hit points when you use this feature."
-        },
-        "19.14th level#H3": {
-            "1.Magical Secrets#H2": "You learn two additional spells from any classes."
-        },
+        "18.13th level#H3": {},
+
+        "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
-            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Bardic Versatility (Optional)#H2": [
-                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
-                "<LIST_START>",
-                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
-                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
-                "<LIST_STOP>"
-            ]
+            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#H3": {
-            "1.Song of Rest#H2": "Beginning at 17th level, creatures regain an extra 1d12 hit points when you use this feature."
-        },
-        "23.18th level#H3": {
-            "1.Magical Secrets#H2": "You learn two additional spells from any classes."
-        },
+        "22.17th level#H3": {},
+
+        "23.18th level#H3": {},
+
         "24.19th level#H3": {
-            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Bardic Versatility (Optional)#H2": [
-                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
-                "<LIST_START>",
-                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
-                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
-                "<LIST_STOP>"
-            ]
+            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#H3": {
-            "Superior Inspiration#H2": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
-        }
+        "25.20th level#H3": {}
     },
-    "Cleric#H4#COLLAPSE": {
+    "Cleric#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Spellcasting, Divine Domain",
             "Channel Divinity (1/rest), Divine Domain feature",
-            "",
+            "-",
             "Ability Score Improvement",
             "Destroy Undead (CR 1/2)",
             "Channel Divinity (2/rest), Divine Domain feature",
-            "",
+            "-",
             "Ability Score Improvement, Destroy Undead (CR 1), Divine Domain feature",
-            "",
+            "-",
             "Divine Intervention",
             "Destroy Undead (CR 2)",
             "Ability Score Improvement",
-            "",
+            "-",
             "Destroy Undead (CR 3)",
-            "",
+            "-",
             "Ability Score Improvement",
             "Destroy Undead (CR 4), Divine Domain feature",
             "Channel Divinity (3/rest)",
@@ -1385,7 +1221,7 @@
         "7th level spell slots#HIDDEN#INC": [13, 20],
         "8th level spell slots#HIDDEN#INC": [15],
         "9th level spell slots#HIDDEN#INC": [17],
-        "1.The Cleric#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Cleric#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known"
         ],
 
@@ -1414,62 +1250,76 @@
 
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Druid#H4#COLLAPSE": {
+    "Druid#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle",
-            "",
+            "-",
             "Wild Shape improvement, Ability Score Improvement",
-            "",
+            "-",
             "Druid Circle feature",
-            "",
+            "-",
             "Wild Shape improvement, Ability Score Improvement",
-            "",
+            "-",
             "Druid Circle feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Druid Circle feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Timeless Body, Beast Spells",
             "Ability Score Improvement",
             "Archdruid"
@@ -1484,7 +1334,7 @@
         "7th level spell slots#HIDDEN#INC": [13, 20],
         "8th level spell slots#HIDDEN#INC": [15],
         "9th level spell slots#HIDDEN#INC": [17],
-        "1.The Druid#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Druid#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known"
         ],
 
@@ -1511,45 +1361,59 @@
 
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Fighter#H4#COLLAPSE": {
+    "Fighter#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
             "Martial Archetype",
@@ -1571,7 +1435,7 @@
             "Ability Score Improvement",
             "Extra Attack (3)"
         ],
-        "1.The Fighter#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Fighter#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features"
         ],
 
@@ -1599,48 +1463,62 @@
 
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Monk#H4#COLLAPSE": {
+    "Monk#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
         "Ki Points#HIDDEN#INC": [2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         "Unarmored Movement#HIDDEN": ["-", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Unarmored Defense, Martial Arts",
             "Ki, Unarmored Movement",
             "Monastic Tradition, Deflect Missiles",
@@ -1662,7 +1540,7 @@
             "Ability Score Improvement",
             "Perfect Self"
         ],
-        "1.The Monk#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Monk#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Martial Arts", "Ki Points", "Unarmored Movement", "Features"
         ],
 
@@ -1687,45 +1565,59 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Paladin#H4#COLLAPSE": {
+    "Paladin#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
             "Divine Health, Sacred Oath",
@@ -1734,15 +1626,15 @@
             "Aura of Protection",
             "Sacred Oath feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Aura of Courage",
             "Improved Divine Smite",
             "Ability Score Improvement",
-            "",
+            "-",
             "Cleansing Touch",
             "Sacred Oath feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Aura Improvements",
             "Ability Score Improvement",
             "Sacred Oath feature"
@@ -1752,7 +1644,7 @@
         "3rd level spell slots#HIDDEN#INC": [9, 9, 11],
         "4th level spell slots#HIDDEN#INC": [13, 15, 17],
         "5th level spell slots#HIDDEN#INC": [17, 19],
-        "1.The Paladin#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Paladin#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features"
         ],
 
@@ -1779,45 +1671,59 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Ranger#H4#COLLAPSE": {
+    "Ranger#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Favored Enemy, Natural Explorer",
             "Fighting Style, Spellcasting",
             "Ranger Archetype, Primeval Awareness",
@@ -1826,15 +1732,15 @@
             "Favored Enemy and Natural Explorer improvements",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Natural Explorer improvement, Hide in Plain Sight",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Favored Enemy improvement, Vanish",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "",
+            "-",
             "Feral Senses",
             "Ability Score Improvement",
             "Foe Slayer"
@@ -1844,7 +1750,7 @@
         "3rd level spell slots#HIDDEN#INC": [9, 9, 11],
         "4th level spell slots#HIDDEN#INC": [13, 15, 17],
         "5th level spell slots#HIDDEN#INC": [17, 19],
-        "1.The Ranger#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Ranger#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features"
         ],
 
@@ -1871,45 +1777,59 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Rogue#H4#COLLAPSE": {
+    "Rogue#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Expertise, Sneak Attack, Thieves' Cant",
             "Cunning Action",
             "Roguish Archetype",
@@ -1931,7 +1851,7 @@
             "Ability Score Improvement",
             "Stroke of Luck"
         ],
-        "1.The Rogue#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Rogue#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features"
         ],
 
@@ -1958,61 +1878,75 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Sorceror#H4#COLLAPSE": {
+    "Sorceror#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Spellcasting, Sorcerous Origin",
             "Font of Magic",
             "Metamagic",
             "Ability Score Improvement",
-            "",
+            "-",
             "Sorcerous Origin feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Metamagic",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Sorcerous Origin feature",
-            "",
+            "-",
             "Ability Score Improvement",
             "Metamagic",
             "Sorcerous Origin feature",
@@ -2030,7 +1964,7 @@
         "7th level spell slots#HIDDEN#INC": [13, 20],
         "8th level spell slots#HIDDEN#INC": [15],
         "9th level spell slots#HIDDEN#INC": [17],
-        "1.The Sorceror#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Sorceror#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Sorcery Points", "Features", "Cantrips Known", "Spells Known"
         ],
 
@@ -2057,54 +1991,68 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Warlock#H4#COLLAPSE": {
+    "Warlock#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
             "Pact Boon",
             "Ability Score Improvement",
-            "",
+            "-",
             "Otherworldly Patron feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Otherworldly Patron feature",
             "Mystic Arcanum (6th level)",
             "Ability Score Improvement",
@@ -2113,7 +2061,7 @@
             "Mystic Arcanum (8th level)",
             "Ability Score Improvement",
             "Mystic Arcanum (9th level)",
-            "",
+            "-",
             "Ability Score Improvement",
             "Eldritch Master"
         ],
@@ -2122,7 +2070,7 @@
         "Spell slots#HIDDEN#INC": [1, 2, 11, 17],
         "Slot Level#HIDDEN#INC#LOOKUP(_st)": [1, 3, 5, 7, 9],
         "Invocations Known#HIDDEN#INC": [2, 2, 5, 7, 9, 12, 15, 18],
-        "1.The Warlock#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Warlock#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "Spells Known", "Spell slots", "Slot Level", "Invocations Known"
         ],
 
@@ -2149,62 +2097,76 @@
         ],
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "25.20th level#H3": {}
     },
-    "Wizard#H4#COLLAPSE": {
+    "Wizard#H4": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN": [
             "Spellcasting, Arcane Recovery",
             "Arcane Tradition",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Arcane Tradition feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Arcane Tradition feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Arcane Tradition feature",
-            "",
+            "-",
             "Ability Score Improvement",
-            "",
+            "-",
             "Spell Mastery",
             "Ability Score Improvement",
             "Signature Spell"
@@ -2219,7 +2181,7 @@
         "7th level spell slots#HIDDEN#INC": [13, 20],
         "8th level spell slots#HIDDEN#INC": [15],
         "9th level spell slots#HIDDEN#INC": [17],
-        "1.The Wizard#H3#LOOKUP_TABLE(1,20)": [
+        "1.The Wizard#H3#HR_AFTER#HR_BEFORE#LOOKUP_TABLE(1,20)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known"
         ],
 
@@ -2247,35 +2209,49 @@
 
 
         "6.1st level#H3": {},
+
         "7.2nd level#H3": {},
+
         "8.3rd level#H3": {},
+
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
+
         "11.6th level#H3": {},
+
         "12.7th level#H3": {},
+
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
+
         "15.10th level#H3": {},
+
         "16.11th level#H3": {},
+
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
+
         "19.14th level#H3": {},
+
         "20.15th level#H3": {},
+
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
+
         "23.18th level#H3": {},
+
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
