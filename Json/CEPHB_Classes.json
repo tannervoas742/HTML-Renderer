@@ -188,10 +188,10 @@
         "2.Hit Dice#H2#CALL(_hitpoints)": 8,
         "3.Proficiencies#H2": [
             "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
-            "2.Weapons:Simple weapons, firearms*",
-            "3.Tools:Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
-            "4.Saving Throws: CON and INT",
-            "5.Skills (2): Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
+            "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
+            "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
+            "<BOLD>Saving Throws:</BOLD> CON and INT",
+            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H2": [
             "<LIST_START>",
@@ -1139,49 +1139,35 @@
 
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1252,49 +1238,35 @@
 
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1363,49 +1335,35 @@
 
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1465,49 +1423,35 @@
 
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1567,49 +1511,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1673,49 +1603,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1779,49 +1695,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1880,49 +1782,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -1993,49 +1881,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -2099,49 +1973,35 @@
         ],
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
@@ -2211,49 +2071,35 @@
 
 
         "6.1st level#H3": {},
-
         "7.2nd level#H3": {},
-
         "8.3rd level#H3": {},
-
         "9.4th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#H3": {},
-
         "11.6th level#H3": {},
-
         "12.7th level#H3": {},
-
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#H3": {},
-
         "15.10th level#H3": {},
-
         "16.11th level#H3": {},
-
         "17.12th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#H3": {},
-
         "19.14th level#H3": {},
-
         "20.15th level#H3": {},
-
         "21.16th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "22.17th level#H3": {},
-
         "23.18th level#H3": {},
-
         "24.19th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
