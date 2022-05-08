@@ -149,6 +149,23 @@ class Webpage:
                 self.Text("$(document).ready(function() {{ $('.collapsible-model{}').collapsible(); }});".format(Model))
                 for Row in range(self.CollapseModelRows[Model]):
                     self.Text("$(document).ready(function() {{ var html_location = window.location.href; if (html_location.indexOf('#collapsible-header{0}-row{1}') |~]~| -1) {{ $('.collapsible-body{0}-row{1}').css(\"display\", \"block\"); document.getElementById('collapsible-body{0}-row{1}').parentNode.className += \" active\"; }} }});".format(Model, Row))
+            
+            opencollapsewithlink = []
+            opencollapsewithlink += ["function opencollapsewithlink(Element) {"]
+            opencollapsewithlink += ["    var targetID = Element.href.split(\"#\")[1];"]
+            opencollapsewithlink += ["    targetElement = document.getElementById(targetID);"]
+            opencollapsewithlink += ["    while (targetElement.parentElement != null) {"]
+            opencollapsewithlink += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
+            opencollapsewithlink += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
+            opencollapsewithlink += ["                if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
+            opencollapsewithlink += ["                    targetElement.parentElement.children[0].click()"]
+            opencollapsewithlink += ["                }"]
+            opencollapsewithlink += ["            }"]
+            opencollapsewithlink += ["        }"]
+            opencollapsewithlink += ["        targetElement = targetElement.parentElement;"]
+            opencollapsewithlink += ["    }"]
+            opencollapsewithlink += ["}"]
+            self.Text(' '.join(opencollapsewithlink))
 
     def LoadLevel(self, Input, State = None):
         if State == None:
@@ -384,7 +401,7 @@ class Webpage:
                             Location = GotoMatch1.group(3)
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -396,7 +413,7 @@ class Webpage:
                             File = GotoMatch2.group(2)
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -409,7 +426,7 @@ class Webpage:
                             Location = GotoMatch3.group(2)
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -421,7 +438,7 @@ class Webpage:
                             Text = File
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
