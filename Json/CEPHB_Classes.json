@@ -42,7 +42,7 @@
             "return Return"
         ]
     },
-    "Table of Contents#H4#ADD_CLASS(columns-3)": {
+    "Table of Contents#H4#ADD_CLASS(columns-4)": {
         "0.<LIST_START>": "",
         "1.<LIST_ITEM><GOTO:Artificer:Classes+Artificer>": [
             "<LIST_START>",
@@ -121,6 +121,16 @@
         ],
         "7.<LIST_ITEM><GOTO:Monk:Classes+Monk>": [
             "<LIST_START>",
+            "<LIST_ITEM>Way of the Ascendant Dragon",
+            "<LIST_ITEM>Way of the Astral Self",
+            "<LIST_ITEM>Way of the Drunken Master",
+            "<LIST_ITEM>Way of the Four Elements",
+            "<LIST_ITEM>Way of the Kensei",
+            "<LIST_ITEM>Way of the Long Death",
+            "<LIST_ITEM>Way of Mercy",
+            "<LIST_ITEM>Way of the Open Hand",
+            "<LIST_ITEM>Way of Shadow",
+            "<LIST_ITEM>Way of the Sun Soul",
             "<LIST_STOP>"
         ],
         "8.<LIST_ITEM><GOTO:Paladin:Classes+Paladin>": [
