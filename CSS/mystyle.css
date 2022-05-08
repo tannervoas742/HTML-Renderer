@@ -85,9 +85,10 @@ tr:hover {
     background-color: lightgray !important;
 }
 
-div.collapsible-header {}
-
-div.collapsible-body {}
+div.collapsible-header {
+    margin-left: -15px;
+    margin-right: -15px;
+}
 
 table th,
 table td {
