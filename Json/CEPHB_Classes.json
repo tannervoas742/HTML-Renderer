@@ -1247,7 +1247,7 @@
         },
         "8.3rd level#H3": {
             "0.Bard College#H2":"At 3rd level, you delve into the advanced techniques of a bard college of your choice. Your choice grants you features at 3rd level and again at 6th and 14th level.",
-            "1.Creation#H3":{
+            "1.College of Creation#H3":{
                 "Note of Potential#H2":[
                     "When you join the College of Creation at 3rd level, whenever you give a creature a Bardic Inspiration die, you can utter a note from the Song of Creation to create a Tiny mote of potential, which orbits within 5 feet of that creature. The mote is intangible and invulnerable, and it lasts until the Bardic Inspiration die is lost. The mote looks like a musical note, a star, a flower, or another symbol of art or life that you choose.",
                     "When the creature uses the Bardic Inspiration die, the mote provides an additional effect based on whether the die benefits an ability check, an attack roll, or a saving throw, as detailed below:",
@@ -1261,11 +1261,11 @@
                     "The size of the item you can create with this feature increases by one size category when you reach 6th level (Large) and 14th level (Huge)."
                 ]
             },
-            "2.Eloquence#H3":{
+            "2.College of Eloquence#H3":{
                 "1.Silver Tongue#H2":"Starting at 3rd level, you are a master at saying the right thing at the right time. When you make a Charisma (Persuasion) or Charisma (Deception) check, you can treat a d20 roll of 9 or lower as a 10.",
                 "2.Unsettling Words#H2":"Also at 3rd level, you can spin words laced with magic that unsettle a creature and cause it to doubt itself. As a bonus action, you can expend one use of your Bardic Inspiration and choose one creature you can see within 60 feet of you. Roll the Bardic Inspiration die. The creature must subtract the number rolled from the next saving throw it makes before the start of your next turn."
             },
-            "3.Glamour#H3":{
+            "3.College of Glamour#H3":{
                 "1.Mantle of Inspiration#H2":[
                     "When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that imbues your allies with vigor and speed.",
                     "As a bonus action, you can expend one use of your Bardic Inspiration to grant yourself a wondrous appearance. When you do so, choose a number of creatures you can see and who can see you within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one). Each of them gains 5 temporary hit points. When a creature gains these temporary hit points, it can immediately use its reaction to move up to its speed, without provoking opportunity attacks.",
@@ -1278,11 +1278,11 @@
                     "Once you use this feature, you can't use it again until you finish a short or long rest."
                 ]
             },
-            "4.Lore#H3":{
+            "4.College of Lore#H3":{
                 "1.Bonus Proficiencies#H2":"When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
                 "2.Cutting Words#H2":"Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed."
             },
-            "5.Spirits#H3":{
+            "5.College of Spirits#H3":{
                 "1.Guiding Whispers#H2":"At 3rd level, you can reach out to spirits to guide you and others. You learn the <GOTO:Guidance:Spells+Guidance> cantrip, which doesn’t count against the number of bard cantrips you know. For you, it has a range of 60 feet when you cast it.",
                 "2.Spiritual Focus#H2":[
                     "At 3rd level, you employ tools that aid you in channeling spirits, be they historical figures or fictional archetypes. You can use the following objects as a spellcasting focus for your bard spells: a candle, crystal ball, skull, spirit board, or tarokka deck.",
@@ -1312,7 +1312,7 @@
                     ]
                 }
             },
-            "6.Swords#H3":{
+            "6.College of Swords#H3":{
                 "1.Bonus Proficiencies#H2":[
                     "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.",
                     "If you’re proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."
@@ -1332,14 +1332,14 @@
                     "<BOLD>Mobile Flourish.</BOLD> You can expend one use of your Bardic Inspiration to cause the weapon to deal extra damage to the target you hit. The damage equals the number you roll on the Bardic Inspiration die. You can also push the target up to 5 feet away from you, plus a number of feet equal to the number you roll on that die. You can then immediately use your reaction to move up to your walking speed to an unoccupied space within 5 feet of the target."
                 ]
             },
-            "7.Valor#H3":{
+            "7.College of Valor#H3":{
                 "1.Bonus Proficiencies#H2":[
                     "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.",
                     "If you’re proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."
                 ],
                 "2.Combat Inspiration#H2":"Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses."
             },
-            "8.Whispers#H3":{
+            "8.College of Whispers#H3":{
                 "1.Psychic Blades#H2":[
                     "When you join the College of Whispers at 3rd level, you gain the ability to make your weapon attacks magically toxic to a creature's mind.",
                     "When you hit a creature with a weapon attack, you can expend one use of your Bardic Inspiration to deal an additional 2d6 psychic damage to that target. You can do so only once per round on your turn.",
@@ -1374,7 +1374,7 @@
         },
         "11.6th level#H3": {
             "0.Countercharm#H2":"At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
-            "1.Creation#H3":{
+            "1.College of Creation#H3":{
                 "1.Animating Performance#H2":[
                     "By 6th level, as an action, you can target a Large or smaller nonmagical item you can see within 30 feet of you and animate it. The animate item uses the Dancing Item stat block, which uses your proficiency bonus (PB), The item is friendly to you and your companions and obeys your commands. It lives for 1 hour, until it is reduced to 0 hit points, or until you die.",
                     "In combat, the item shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the item can take any action of its choice, not just Dodge.",
@@ -1383,37 +1383,37 @@
                     "Dancing Item Stat Block: wtf"
                 ]
             },
-            "2.Eloquence#H3":{
+            "2.College of Eloquence#H3":{
                 "1.Unfailing Inspiration#H2":"At 6th level, your inspiring words are so persuasive that others feel driven to succeed. When a creature adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll fails, the creature can keep the Bardic Inspiration die.",
                 "2.Universal Speech#H2":[
                     "Also at 6th level, you have gained the ability to make your speech intelligible to any creature. As an action, choose one or more creatures within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). The chosen creatures can magically understand you, regardless of the language you speak, for 1 hour.",
                     "Once you use this feature, you can't use it again until you finish a long rest, unless you expend a spell slot to use it again."
                 ]
             },
-            "3.Glamour#H3":{
+            "3.College of Glamour#H3":{
                 "Mantle of Majesty#H2":[
                     "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast <GOTO:Command:Spells+Command>, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast <GOTO:Command:Spells+Command> as a bonus action on each of your turns, without expending a spell slot.",
                     "Any creature charmed by you automatically fails its saving throw against the <GOTO:Command:Spells+Command> you cast with this feature.",
                     "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
-            "4.Lore#H3":{
+            "4.College of Lore#H3":{
                 "Additional Magical Secrets#H2":"At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know."
             },
-            "5.Spirits#H3":{
+            "5.College of Spirits#H3":{
                 "Spirit Session#H2":[
                     "At 6th level, spirits provide you with supernatural insights. You can conduct an hour-long ritual channeling spirits (which can be done during a short or long rest) using your Spiritual Focus. You can conduct the ritual with a number of willing creatures equal to your proficiency bonus (including yourself). At the end of the ritual, you temporarily learn one spell of your choice from any class.",
                     "The spell you choose must be of a level equal to the number of creatures that conducted the ritual or less, the spell must of a level you can cast, and it must be in the school of Divination or Necromancy. The chosen spell counts as a bard spell for you but doesn’t count against the number of bard spells you know.",
                     "Once you perform the ritual, you can’t do so again until you start a long rest, and you know the chosen spell until you start a long rest."
                 ]
             },
-            "6.Swords#H3":{
+            "6.College of Swords#H3":{
                 "Extra Attack#H2":"Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "7.Valor#H3":{
+            "7.College of Valor#H3":{
                 "Extra Attack#H2":"Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "8.Whispers#H3":{
+            "8.College of Whispers#H3":{
                 "Mantle of Whispers#H2":[
                     "At 6th level, you gain the ability to adopt a humanoid's persona. When a humanoid dies within 30 feet of you, you can magically capture its shadow using your reaction. You retain this shadow until you use it or you finish a long rest.",
                     "You can use the shadow as an action. When you do so, it vanishes, magically transforming into a disguise that appears on you. You now look like the dead person, but healthy and alive. This disguise lasts for 1 hour or until you end it as a bonus action.",
@@ -1461,38 +1461,38 @@
         },
         "19.14th level#H3": {
             "0.Magical Secrets#H2":"You learn two additional spells from any classes.",
-            "1.Creation#H3":{
+            "1.College of Creation#H3":{
                 "Creative Crescendo#H2":[
                     "At 14th level, when you use your Performance of Creation feature, you can create more than one item at once. The number of items equals your Charisma modifier (minimum of two items). If you create an item that would exceed that number, you choose which of the previously created items disappears. Only one of these items can be of the maximum size you can create; the rest must be Small or Tiny.",
                     "You are no longer limited by gp value when creating items with Performance of Creation."
                 ]
             },
-            "2.Eloquence#H3":{
+            "2.College of Eloquence#H3":{
                 "1.Infectious Inspiration#H2":[
                     "At 14th level, when you successfully inspire someone, the power of your eloquence can now spread to someone else. When a creature within 60 feet of you adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll succeeds, you can use your reaction to encourage a different creature (other than yourself) that can hear you within 60 feet of you, giving it a Bardic Inspiration die without expending any of your Bardic Inspiration uses.",
                     "You can use this reaction a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "3.Glamour#H3":{
+            "3.College of Glamour#H3":{
                 "Unbreakable Majesty#H2":[
                     "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.",
                     "In addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.",
                     "Once you assume this majestic presence, you can't do so again until you finish a short or long rest."
                 ]
             },
-            "4.Lore#H3":{
+            "4.College of Lore#H3":{
                 "Peerless Skill#H2":"Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
             },
-            "5.Spirits#H3":{
+            "5.College of Spirits#H3":{
                 "Mystical Connection#H2":"At 14th level, you now have the ability to nudge the spirits of Tales from Beyond toward certain tales. Whenever you roll on the Spirit Tales table, you can roll the die twice and choose which of the two effects to bestow. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
             },
-            "6.Swords#H3":{
+            "6.College of Swords#H3":{
                 "Master's Flourish#H2":"Starting at 14th level, whenever you use a Blade Flourish option, you can roll a d6 and use it instead of expending a Bardic Inspiration die."
             },
-            "7.Valor#H3":{
+            "7.College of Valor#H3":{
                 "Battle Magic#H2":"At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
             },
-            "8.Whispers#H3":{
+            "8.College of Whispers#H3":{
                 "Shadow Lore#H2":[
                     "At 14th level, you gain the ability to weave dark magic into your words and tap into a creature’s deepest fears.",
                     "As an action, you magically whisper a phrase that only one creature of your choice within 30 feet of you can hear. The target must make a Wisdom saving throw against your spell save DC. It automatically succeeds if it doesn’t share a language with you or if it can’t hear you. On a successful saving throw, your whisper sounds like unintelligible mumbling and has no effect.",
