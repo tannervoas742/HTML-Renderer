@@ -255,7 +255,9 @@
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
             "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
             "<BOLD>Saving Throws:</BOLD> CON and INT",
-            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
+            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand ",
+            "",
+            "The secrets of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the <ITALIC>Dungeon Master's Guide</ITALIC> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H2": [
             "<LIST_START>",
@@ -323,7 +325,7 @@
                     "If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
                 ]
             },
-            "2.Artificer Infusions#H3": {
+            "2.Artificer Infusions#H3#COLLAPSE": {
                 "1.": [
                     "<BOLD><ITALIC>Artificer infusions are extraordinary processes that rapidly turn a nonmagical object into a magic item. The description of each of the following infusions details the type of object that can receive it, along with whether the resulting magic item requires attunement.</ITALIC></BOLD>",
                     "<BOLD><ITALIC>Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.</ITALIC></BOLD>",
@@ -1144,24 +1146,24 @@
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN": [
             "Spellcasting, Bardic Inspiration (d6)",
-            "Jack of All Trades, Song of Rest (d6)",
+            "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
             "Bard College, Expertise",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Bardic Versatility (Optional)",
             "Bardic Inspiration (d8), Font of Inspiration",
             "Countercharm, Bard College Feature",
             "-",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d8)",
             "Bardic Inspiration (d10), Expertise, Magical Secrets",
             "-",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d10)",
             "Magical Secrets, Bard College Feature",
             "Bardic Inspiration (d12)",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d12)",
             "Magical Secrets",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Bardic Versatility (Optional)",
             "Superior Inspiration"
         ],
         "Cantrips Known#HIDDEN#INC": [1, 1, 5, 10],
@@ -1201,42 +1203,145 @@
             "Spell slots: Add your levels in bard to the levels from other classes to determine spell slots"
         ],
 
-
-        "6.1st level#H3": {},
-        "7.2nd level#H3": {},
-        "8.3rd level#H3": {},
+        "6.1st level#H3": {
+            "1.Spellcasting#H2": {
+                "1.#H1": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations.",
+                "2.Cantrips (0-Level Spells)#H1": [
+                    "You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Bard table."
+                ],
+                "3.Spell Slots":"The Bard table shows how many spell slots you have to cast your bard spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest. For example, if you know the 1st-level spell <GOTO:Cure Wounds:Spells+Cure Wounds> and have a 1st-level and a 2nd-level spell slot available, you can cast <GOTO:Cure Wounds:Spells+Cure Wounds> using either slot.",
+                "Spells Known of 1st Level and Higher":[
+                    "You know four 1st-level spells of your choice from the bard spell list.",
+                    "The Spells Known column of the Bard table shows when you learn more bard spells of your choice. Each of these spells must be of a level for which you have spell slots, as shown on the table. For instance, when you reach 3rd level in this class, you can learn one new spell of 1st or 2nd level.",
+                    "Additionally, when you gain a level in this class, you can choose one of the bard spells you know and replace it with another spell from the bard spell list, which also must be of a level for which you have spell slots."
+                ],
+                "5.Spellcasting Ability#H1": [
+                    "Charisma is your spellcasting ability for your bard spells. Your magic comes from the heart and soul you pour into the performance of your music or oration. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a bard spell you cast and when making an attack roll with one.",
+                    "<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Intelligence modifier",
+                    "<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Charisma modifier"
+                ],
+                "6.Ritual Casting#H1": "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
+                "7.Spellcasting Focus#H1":"You can use a musical instrument as a spellcasting focus for your bard spells."
+            },
+            "2.Bardic Inspiration#H2":[
+                "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.",
+                "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
+                "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.",
+                "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
+            ]
+        },
+        "7.2nd level#H3": {
+            "1.Jack of All Trades#H2":"Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
+            "2.Song of Rest#H2":[
+                "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.",
+                "The extra Hit Points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
+            ],
+            "3.Magical Inspiration (Optional)#H2":"At 2nd level, if a creature has a Bardic Inspiration die from you and casts a spell that restores hit points or deals damage, the creature can roll that die and choose a target affected by the spell. Add the number rolled as a bonus to the hit points regained or the damage dealt. The Bardic Inspiration die is then lost."
+        },
+        "8.3rd level#H3": {
+            "0.Bard College#H2":"At 3rd level, you delve into the advanced techniques of a bard college of your choice. Your choice grants you features at 3rd level and again at 6th and 14th level.",
+            "1.Creation#H3":{},
+            "2.Eloquence#H3":{},
+            "3.Glamour#H3":{},
+            "4.Lore#H3":{},
+            "5.Spirits#H3":{},
+            "6.Swords#H3":{},
+            "7.Valor#H3":{},
+            "8.Whispers#H3":{},
+            "9.Expertise#H2":[
+                "At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.",
+                "At 10th level, you can choose another two skill proficiencies to gain this benefit."
+            ]
+        },
         "9.4th level#H3": {
-            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Bardic Versatility (Optional)#H2":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "10.5th level#H3": {},
-        "11.6th level#H3": {},
-        "12.7th level#H3": {},
+        "10.5th level#H3": {
+            "1.Bardic Inspiration#H2":"Your Bardic Inspiration die is now a d8.",
+            "2.Font of Inspiration#H2":"Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
+        },
+        "11.6th level#H3": {
+            "Countercharm#H2":"At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required)."
+        },
+        "12.7th level#H3": {
+            "1.#H2": "Access to 4th level spells"
+        },
         "13.8th level#H3": {
             "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#H3": {},
-        "15.10th level#H3": {},
-        "16.11th level#H3": {},
+        "14.9th level#H3": {
+            "1.Song of Rest#H2":"Beginning at 9th level, creatures regain an extra 1d8 hit points when you use this feature."
+        },
+        "15.10th level#H3": {
+            "1.Bardic Inspiration#H2":"Your Bardic Inspiration die is now a d10.",
+            "2.Expertise#H2":"At 10th level, you can choose another two skill proficiencies to gain this benefit.",
+            "3.Magical Secrets#H2":[
+                "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
+                "The chosen spells count as bard spells for you and are included in the number in the Spells Known column of the Bard table.",
+                "You learn two additional spells from any classes at 14th level and again at 18th level."
+            ]
+        },
+        "16.11th level#H3": {
+            "1.#H2": "Access to 6th level spells"
+        },
         "17.12th level#H3": {
-            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Bardic Versatility (Optional)#H2":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "18.13th level#H3": {},
-        "19.14th level#H3": {},
+        "18.13th level#H3": {
+            "1.Song of Rest#H2":"Beginning at 13th level, creatures regain an extra 1d10 hit points when you use this feature."
+        },
+        "19.14th level#H3": {
+            "1.Magical Secrets#H2":"You learn two additional spells from any classes."
+        },
         "20.15th level#H3": {},
         "21.16th level#H3": {
-            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Bardic Versatility (Optional)#H2":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "22.17th level#H3": {},
-        "23.18th level#H3": {},
+        "22.17th level#H3": {
+            "1.Song of Rest#H2":"Beginning at 17th level, creatures regain an extra 1d12 hit points when you use this feature."
+        },
+        "23.18th level#H3": {
+            "1.Magical Secrets#H2":"You learn two additional spells from any classes."
+        },
         "24.19th level#H3": {
-            "Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H2": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Bardic Versatility (Optional)#H2":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the skills you chose for the Expertise feature with one of your other skill proficiencies that isn't benefiting from Expertise.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the bard spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "25.20th level#H3": {}
+        "25.20th level#H3": {
+            "Superior Inspiration#H2":"At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
+        }
     },
     "Cleric#H4#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
