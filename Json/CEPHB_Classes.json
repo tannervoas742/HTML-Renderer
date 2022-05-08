@@ -1637,31 +1637,101 @@
                     "Each domain has a list of spells-its domain spells that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
                     "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
                 ],
-                "2. Arcana Domain#H1#COLLAPSE": {},
-                "3. Death Domain#H1#COLLAPSE": {},
-                "4. Forge Domain#H1#COLLAPSE": {},
-                "5. Grave Domain#H1#COLLAPSE": {},
-                "6. Knowledge Domain#H1#COLLAPSE": {},
-                "7. Life Domain#H1#COLLAPSE": {},
-                "8. Light Domain#H1#COLLAPSE": {},
-                "9. Nature Domain#H1#COLLAPSE": {},
-                "10. Order Domain#H1#COLLAPSE": {},
-                "11. Peace Domain#H1#COLLAPSE": {},
-                "12. Tempest Domain#H1#COLLAPSE": {},
-                "13. Trickery Domain#H1#COLLAPSE": {},
-                "14. Twilight Domain#H1#COLLAPSE": {},
-                "15. War Domain#H1#COLLAPSE": {}
+                "2. Arcana Domain#H1#COLLAPSE": {
+                    "1.Arcana Domain Spells at 1st Level#H1": [
+                        "<GOTO:Detect Magic:Spells+Detect Magic>",
+                        "<GOTO:Magic Missile:Spells+Magic Missile>"
+                    ]
+                },
+                "3. Death Domain#H1#COLLAPSE": {
+                    "1.Death Domain Spells at 1st Level#H1": [
+                        "<GOTO:False Life:Spells+False Life>",
+                        "<GOTO:Ray of Sickness:Spells+Ray of Sickness>"
+                    ]
+                },
+                "4. Forge Domain#H1#COLLAPSE": {
+                    "1.Forge Domain Spells at 1st Level#H1": [
+                        "<GOTO:Identify:Spells+Identify>",
+                        "<GOTO:Searing Smite:Spells+Searing Smite>"
+                    ]
+                },
+                "5. Grave Domain#H1#COLLAPSE": {
+                    "1.Grave Domain Spells at 1st Level#H1": [
+                        "<GOTO:Bane:Spells+Bane>",
+                        "<GOTO:False Life:Spells+False Life>"
+                    ]
+                },
+                "6. Knowledge Domain#H1#COLLAPSE": {
+                    "1.Knowledge Domain Spells at 1st Level#H1": [
+                        "<GOTO:Command:Spells+Command>",
+                        "<GOTO:Identify:Spells+Identify>"
+                    ]
+                },
+                "7. Life Domain#H1#COLLAPSE": {
+                    "1.Life Domain Spells at 1st Level#H1": [
+                        "<GOTO:Bless:Spells+Bless>",
+                        "<GOTO:Cure Wounds:Spells+Cure Wounds>"
+                    ]
+                },
+                "8. Light Domain#H1#COLLAPSE": {
+                    "1.Light Domain Spells at 1st Level#H1": [
+                        "<GOTO:Burning Hands:Spells+Burning Hands>",
+                        "<GOTO:Faerie Fire:Spells+Faerie Fire>"
+                    ]
+                },
+                "9. Nature Domain#H1#COLLAPSE": {
+                    "1.Nature Domain Spells at 1st Level#H1": [
+                        "<GOTO:Animal Friendship:Spells+Animal Friendship>",
+                        "<GOTO:Speak with Animals:Spells+Speak with Animals>"
+                    ]
+                },
+                "10. Order Domain#H1#COLLAPSE": {
+                    "1.Order Domain Spells at 1st Level#H1": [
+                        "<GOTO:Command:Spells+Command>",
+                        "<GOTO:Heroism:Spells+Heroism>"
+                    ]
+                },
+                "11. Peace Domain#H1#COLLAPSE": {
+                    "1.Peace Domain Spells at 1st Level#H1": [
+                        "<GOTO:Heroism:Spells+Heroism>",
+                        "<GOTO:Sanctuary:Spells+Sanctuary>"
+                    ]
+                },
+                "12. Tempest Domain#H1#COLLAPSE": {
+                    "1.Tempest Domain Spells at 1st Level#H1": [
+                        "<GOTO:Fog Cloud:Spells+Fog Cloud>",
+                        "<GOTO:Thunderwave:Spells+Thunderwave>"
+                    ]
+                },
+                "13. Trickery Domain#H1#COLLAPSE": {
+                    "1.Trickery Domain Spells at 1st Level#H1": [
+                        "<GOTO:Charm Person:Spells+Charm Person>",
+                        "<GOTO:Disguise Self:Spells+Disguise Self>"
+                    ]
+                },
+                "14. Twilight Domain#H1#COLLAPSE": {
+                    "1.Twilight Domain Spells at 1st Level#H1": [
+                        "<GOTO:Faerie Fire:Spells+Faerie Fire>",
+                        "<GOTO:Sleep:Spells+Sleep>"
+                    ]
+                },
+                "15. War Domain#H1#COLLAPSE": {
+                    "1.War Domain Spells at 1st Level#H1": [
+                        "<GOTO:Divine Favor:Spells+Divine Favor>",
+                        "<GOTO:Shield of Faith:Spells+Shield of Faith>"
+                    ]
+                }
             }
         },
         "7.2nd level#H1#COLLAPSE": {
             "0.Channel Divinity#H1": {
-                "1.": [
+                "1.#H1": [
                     "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
                     "When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.",
                     "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.",
                     "Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or long rest, you regain your expended uses."
                 ],
-                "Channel Divinity: Turn Undead": [
+                "Channel Divinity: Turn Undead#H1": [
                     "As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
                     "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
                 ]
@@ -1683,7 +1753,91 @@
             "15.Harness Divine Power (Optional)#H1": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
         },
         "8.3rd level#H1#COLLAPSE": {
-            "1.#H1": "Access to 2nd level spells"
+            "1.#H1": "Access to 2nd level spells",
+            "2. Arcana Domain#H1#COLLAPSE": {
+                "1.Arcana Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Magic Weapon:Spells+Magic Weapon>",
+                    "<GOTO:Nystul's Magic Aura:Spells+Nystul's Magic Aura>"
+                ]
+            },
+            "3. Death Domain#H1#COLLAPSE": {
+                "1.Death Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>",
+                    "<GOTO:Ray of Enfeeblement:Spells+Ray of Enfeeblement>"
+                ]
+            },
+            "4. Forge Domain#H1#COLLAPSE": {
+                "1.Forge Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Heat Metal:Spells+Heat Metal>",
+                    "<GOTO:Magic Weapon:Spells+Magic Weapon>"
+                ]
+            },
+            "5. Grave Domain#H1#COLLAPSE": {
+                "1.Grave Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Gentle Repose:Spells+Gentle Repose>",
+                    "<GOTO:Ray of Enfeeblement:Spells+Ray of Enfeeblement>"
+                ]
+            },
+            "6. Knowledge Domain#H1#COLLAPSE": {
+                "1.Knowledge Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Augury:Spells+Augury>",
+                    "<GOTO:Suggestion:Spells+Suggestion>"
+                ]
+            },
+            "7. Life Domain#H1#COLLAPSE": {
+                "1.Life Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Lesser Restoration:Spells+Lesser Restoration>",
+                    "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
+                ]
+            },
+            "8. Light Domain#H1#COLLAPSE": {
+                "1.Light Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Flaming Sphere:Spells+Flaming Sphere>",
+                    "<GOTO:Scorching Ray:Spells+Scorching Ray>"
+                ]
+            },
+            "9. Nature Domain#H1#COLLAPSE": {
+                "1.Nature Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Barkskin:Spells+Barkskin>",
+                    "<GOTO:Spike Growth:Spells+Spike Growth>"
+                ]
+            },
+            "10. Order Domain#H1#COLLAPSE": {
+                "1.Order Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Hold Person,:Spells+Hold Person,>",
+                    "<GOTO:Zone of Truth:Spells+Zone of Truth>"
+                ]
+            },
+            "11. Peace Domain#H1#COLLAPSE": {
+                "1.Peace Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Aid:Spells+Aid>",
+                    "<GOTO:Warding Bond:Spells+Warding Bond>"
+                ]
+            },
+            "12. Tempest Domain#H1#COLLAPSE": {
+                "1.Tempest Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Gust of Wind:Spells+Gust of Wind>",
+                    "<GOTO:Shatter:Spells+Shatter>"
+                ]
+            },
+            "13. Trickery Domain#H1#COLLAPSE": {
+                "1.Trickery Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Mirror Image:Spells+Mirror Image>",
+                    "<GOTO:Pass without Trace:Spells+Pass without Trace>"
+                ]
+            },
+            "14. Twilight Domain#H1#COLLAPSE": {
+                "1.Twilight Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Moonbeam:Spells+Moonbeam>",
+                    "<GOTO:See Invisibility:Spells+See Invisibility>"
+                ]
+            },
+            "15. War Domain#H1#COLLAPSE": {
+                "1.War Domain Spells at 3rd Level#H1": [
+                    "<GOTO:Magic Weapon:Spells+Magic Weapon>",
+                    "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
+                ]
+            }
         },
         "9.4th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -1691,7 +1845,91 @@
         },
 
         "10.5th level#H1#COLLAPSE": {
-            "Destroy Undead#H1": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above."
+            "Destroy Undead#H1": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
+            "2. Arcana Domain#H1#COLLAPSE": {
+                "1.Arcana Domain Spells at 5th Level#H1": [
+                    "<GOTO:Dispel Magic:Spells+Dispel Magic>",
+                    "<GOTO:Magic Circle:Spells+Magic Circle>"
+                ]
+            },
+            "3. Death Domain#H1#COLLAPSE": {
+                "1.Death Domain Spells at 5th Level#H1": [
+                    "<GOTO:Animate Dead:Spells+Animate Dead>",
+                    "<GOTO:Vampiric Touch:Spells+Vampiric Touch>"
+                ]
+            },
+            "4. Forge Domain#H1#COLLAPSE": {
+                "1.Forge Domain Spells at 5th Level#H1": [
+                    "<GOTO:Elemental Weapon:Spells+Elemental Weapon>",
+                    "<GOTO:Protection from Energy:Spells+Protection from Energy>"
+                ]
+            },
+            "5. Grave Domain#H1#COLLAPSE": {
+                "1.Grave Domain Spells at 5th Level#H1": [
+                    "<GOTO:Revivify:Spells+Revivify>",
+                    "<GOTO:Vampiric Touch:Spells+Vampiric Touch>"
+                ]
+            },
+            "6. Knowledge Domain#H1#COLLAPSE": {
+                "1.Knowledge Domain Spells at 5th Level#H1": [
+                    "<GOTO:Nondetection:Spells+Nondetection>",
+                    "<GOTO:Speak with Dead:Spells+Speak with Dead>"
+                ]
+            },
+            "7. Life Domain#H1#COLLAPSE": {
+                "1.Life Domain Spells at 5th Level#H1": [
+                    "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "8. Light Domain#H1#COLLAPSE": {
+                "1.Light Domain Spells at 5th Level#H1": [
+                    "<GOTO:Daylight:Spells+Daylight>",
+                    "<GOTO:Fireball:Spells+Fireball>"
+                ]
+            },
+            "9. Nature Domain#H1#COLLAPSE": {
+                "1.Nature Domain Spells at 5th Level#H1": [
+                    "<GOTO:Plant Growth:Spells+Plant Growth>",
+                    "<GOTO:Wind Wall:Spells+Wind Wall>"
+                ]
+            },
+            "10. Order Domain#H1#COLLAPSE": {
+                "1.Order Domain Spells at 5th Level#H1": [
+                    "<GOTO:Mass Healing Word:Spells+Mass Healing Word>",
+                    "<GOTO:Slow:Spells+Slow>"
+                ]
+            },
+            "11. Peace Domain#H1#COLLAPSE": {
+                "1.Peace Domain Spells at 5th Level#H1": [
+                    "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
+                    "<GOTO:Sending:Spells+Sending>"
+                ]
+            },
+            "12. Tempest Domain#H1#COLLAPSE": {
+                "1.Tempest Domain Spells at 5th Level#H1": [
+                    "<GOTO:Call Lightning:Spells+Call Lightning>",
+                    "<GOTO:Sleet Storm:Spells+Sleet Storm>"
+                ]
+            },
+            "13. Trickery Domain#H1#COLLAPSE": {
+                "1.Trickery Domain Spells at 5th Level#H1": [
+                    "<GOTO:Blink:Spells+Blink>",
+                    "<GOTO:Dispel Magic:Spells+Dispel Magic>"
+                ]
+            },
+            "14. Twilight Domain#H1#COLLAPSE": {
+                "1.Twilight Domain Spells at 5th Level#H1": [
+                    "<GOTO:Aura of Vitality:Spells+Aura of Vitality>",
+                    "<GOTO:Leomund's Tiny Hut:Spells+Leomund's Tiny Hut>"
+                ]
+            },
+            "15. War Domain#H1#COLLAPSE": {
+                "1.War Domain Spells at 5th Level#H1": [
+                    "<GOTO:Crusader's Mantle:Spells+Crusader's Mantle>",
+                    "<GOTO:Spirit Guardians:Spells+Spirit Guardians>"
+                ]
+            }
         },
         "11.6th level#H1#COLLAPSE": {
             "0.Channel Divinity#H1": "Beginning at 6th level, you can use your Channel Divinity twice between rests. When you finish a short or long rest, you regain your expended uses.",
@@ -1711,7 +1949,91 @@
             "14. War Domain#H1#COLLAPSE": {}
         },
         "12.7th level#H1#COLLAPSE": {
-            "1.#H1": "Access to 4th level spells"
+            "1.#H1": "Access to 4th level spells",
+            "2. Arcana Domain#H1#COLLAPSE": {
+                "1.Arcana Domain Spells at 7th Level#H1": [
+                    "<GOTO:Arcane Eye:Spells+Arcane Eye>",
+                    "<GOTO:Leomund's Secret Chest:Spells+Leomund's Secret Chest>"
+                ]
+            },
+            "3. Death Domain#H1#COLLAPSE": {
+                "1.Death Domain Spells at 7th Level#H1": [
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Death Ward:Spells+Death Ward>"
+                ]
+            },
+            "4. Forge Domain#H1#COLLAPSE": {
+                "1.Forge Domain Spells at 7th Level#H1": [
+                    "<GOTO:Fabricate:Spells+Fabricate>",
+                    "<GOTO:Wall of Fire:Spells+Wall of Fire>"
+                ]
+            },
+            "5. Grave Domain#H1#COLLAPSE": {
+                "1.Grave Domain Spells at 7th Level#H1": [
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Death Ward:Spells+Death Ward>"
+                ]
+            },
+            "6. Knowledge Domain#H1#COLLAPSE": {
+                "1.Knowledge Domain Spells at 7th Level#H1": [
+                    "<GOTO:Arcane Eye:Spells+Arcane Eye>",
+                    "<GOTO:Confusion:Spells+Confusion>"
+                ]
+            },
+            "7. Life Domain#H1#COLLAPSE": {
+                "1.Life Domain Spells at 7th Level#H1": [
+                    "<GOTO:Death Ward:Spells+Death Ward>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
+                ]
+            },
+            "8. Light Domain#H1#COLLAPSE": {
+                "1.Light Domain Spells at 7th Level#H1": [
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>",
+                    "<GOTO:Wall of Fire:Spells+Wall of Fire>"
+                ]
+            },
+            "9. Nature Domain#H1#COLLAPSE": {
+                "1.Nature Domain Spells at 7th Level#H1": [
+                    "<GOTO:Dominate Beast:Spells+Dominate Beast>",
+                    "<GOTO:Grasping Vine:Spells+Grasping Vine>"
+                ]
+            },
+            "10. Order Domain#H1#COLLAPSE": {
+                "1.Order Domain Spells at 7th Level#H1": [
+                    "<GOTO:Compulsion:Spells+Compulsion>",
+                    "<GOTO:Locate Creature:Spells+Locate Creature>"
+                ]
+            },
+            "11. Peace Domain#H1#COLLAPSE": {
+                "1.Peace Domain Spells at 7th Level#H1": [
+                    "<GOTO:Aura of Purity:Spells+Aura of Purity>",
+                    "<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>"
+                ]
+            },
+            "12. Tempest Domain#H1#COLLAPSE": {
+                "1.Tempest Domain Spells at 7th Level#H1": [
+                    "<GOTO:Control Water:Spells+Control Water>",
+                    "<GOTO:Ice Storm:Spells+Ice Storm>"
+                ]
+            },
+            "13. Trickery Domain#H1#COLLAPSE": {
+                "1.Trickery Domain Spells at 7th Level#H1": [
+                    "<GOTO:Dimension Door:Spells+Dimension Door>",
+                    "<GOTO:Polymorph:Spells+Polymorph>"
+                ]
+            },
+            "14. Twilight Domain#H1#COLLAPSE": {
+                "1.Twilight Domain Spells at 7th Level#H1": [
+                    "<GOTO:Aura of Life:Spells+Aura of Life>",
+                    "<GOTO:Greater Invisibility:Spells+Greater Invisibility>"
+                ]
+            },
+            "15. War Domain#H1#COLLAPSE": {
+                "1.War Domain Spells at 7th Level#H1": [
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Hold Monster:Spells+Hold Monster>"
+                ]
+            }
         },
         "13.8th level#H1#COLLAPSE": {
             "0.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -1738,7 +2060,91 @@
         },
 
         "14.9th level#H1#COLLAPSE": {
-            "1.#H1": "Access to 5th level spells"
+            "1.#H1": "Access to 5th level spells",
+            "2. Arcana Domain#H1#COLLAPSE": {
+                "1.Arcana Domain Spells at 9th Level#H1": [
+                    "<GOTO:Planar Binding:Spells+Planar Binding>",
+                    "<GOTO:Teleportation Circle:Spells+Teleportation Circle>"
+                ]
+            },
+            "3. Death Domain#H1#COLLAPSE": {
+                "1.Death Domain Spells at 9th Level#H1": [
+                    "<GOTO:Antilife Shell:Spells+Antilife Shell>",
+                    "<GOTO:Cloudkill:Spells+Cloudkill>"
+                ]
+            },
+            "4. Forge Domain#H1#COLLAPSE": {
+                "1.Forge Domain Spells at 9th Level#H1": [
+                    "<GOTO:Animate Objects:Spells+Animate Objects>",
+                    "<GOTO:Creation:Spells+Creation>"
+                ]
+            },
+            "5. Grave Domain#H1#COLLAPSE": {
+                "1.Grave Domain Spells at 9th Level#H1": [
+                    "<GOTO:Antilife Shell:Spells+Antilife Shell>",
+                    "<GOTO:Raise Dead:Spells+Raise Dead>"
+                ]
+            },
+            "6. Knowledge Domain#H1#COLLAPSE": {
+                "1.Knowledge Domain Spells at 9th Level#H1": [
+                    "<GOTO:Legend Lore:Spells+Legend Lore>",
+                    "<GOTO:Scrying:Spells+Scrying>"
+                ]
+            },
+            "7. Life Domain#H1#COLLAPSE": {
+                "1.Life Domain Spells at 9th Level#H1": [
+                    "<GOTO:Mass Cure Wounds:Spells+Mass Cure Wounds>",
+                    "<GOTO:Raise Dead:Spells+Raise Dead>"
+                ]
+            },
+            "8. Light Domain#H1#COLLAPSE": {
+                "1.Light Domain Spells at 9th Level#H1": [
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Scrying:Spells+Scrying>"
+                ]
+            },
+            "9. Nature Domain#H1#COLLAPSE": {
+                "1.Nature Domain Spells at 9th Level#H1": [
+                    "<GOTO:Insect Plague:Spells+Insect Plague>",
+                    "<GOTO:Tree Stride:Spells+Tree Stride>"
+                ]
+            },
+            "10. Order Domain#H1#COLLAPSE": {
+                "1.Order Domain Spells at 9th Level#H1": [
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
+                ]
+            },
+            "11. Peace Domain#H1#COLLAPSE": {
+                "1.Peace Domain Spells at 9th Level#H1": [
+                    "<GOTO:Greater Restoration:Spells+Greater Restoration>",
+                    "<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>"
+                ]
+            },
+            "12. Tempest Domain#H1#COLLAPSE": {
+                "1.Tempest Domain Spells at 9th Level#H1": [
+                    "<GOTO:Destructive Wave:Spells+Destructive Wave>",
+                    "<GOTO:Insect Plague:Spells+Insect Plague>"
+                ]
+            },
+            "13. Trickery Domain#H1#COLLAPSE": {
+                "1.Trickery Domain Spells at 9th Level#H1": [
+                    "<GOTO:Dominate Person:Spells+Dominate Person>",
+                    "<GOTO:Modify Memory:Spells+Modify Memory>"
+                ]
+            },
+            "14. Twilight Domain#H1#COLLAPSE": {
+                "1.Twilight Domain Spells at 9th Level#H1": [
+                    "<GOTO:Circle of Power:Spells+Circle of Power>",
+                    "<GOTO:Mislead:Spells+Mislead>"
+                ]
+            },
+            "15. War Domain#H1#COLLAPSE": {
+                "1.War Domain Spells at 9th Level#H1": [
+                    "<GOTO:Flame Strike:Spells+Flame Strike>",
+                    "<GOTO:Hold Monster:Spells+Hold Monster>"
+                ]
+            }
         },
         "15.10th level#H1#COLLAPSE": {
             "Divine Intervention#H1": [
