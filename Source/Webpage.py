@@ -139,11 +139,29 @@ class Webpage:
         self.CollapseModelCount = 0
         self.CollapseModelRows = {}
 
+        self.Doc.stag('hr')
         with self.Tag('body'):
             self.LoadLevel(self.JSON)
             self.AddJS()
+        self.Doc.stag('hr')
+        with self.Tag('footer'):
+            self.AddFooter()
+
+    def AddFooter(self, State = None):
+        if State == None:
+            State = self.GetInitState()
+        if 'authors' in self.MetaData['document']:
+            if type(self.MetaData['document']['authors']) == list:
+                for Author in self.MetaData['document']['authors']:
+                    self.Line('p', 'Author: {}'.format(Author))
+            else:
+                self.Line('p', 'Author: {}'.format(self.MetaData['document']['authors']))
+        if 'date' in self.MetaData['document']:
+            self.Line('p', 'Last Modified: {}'.format(self.MetaData['document']['date']))
 
     def AddJS(self, State = None):
+        if State == None:
+            State = self.GetInitState()
         with self.Tag('script'):
             for Model in range(self.CollapseModelCount):
                 self.Text("$(document).ready(function() {{ $('.collapsible-model{}').collapsible(); }});".format(Model))
