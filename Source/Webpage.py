@@ -112,20 +112,32 @@ class Webpage:
         ).ttl()
 
         with self.Tag('head'):
-            with self.Tag('script', 'src="../JS/jquery-1.2.6.js"'):
-                pass
-            with self.Tag('script', 'src="../JS/materialize.js"'):
-                pass
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/theme.default.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/gradient_list.css"')
             
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
+            
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
+                pass
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
+                pass
+            
             
 
         self.ParamStorage = {}
+        self.CollapseModelCount = 0
+        self.CollapseModelRows = {}
+
         with self.Tag('body'):
             self.LoadLevel(self.JSON)
+            self.AddJS()
+
+    def AddJS(self, State = None):
+        with self.Tag('script'):
+            for Model in range(self.CollapseModelCount):
+                self.Text("$(document).ready(function() {{ $('.collapsible-model{}').collapsible(); }});".format(Model))
+                for Row in range(self.CollapseModelRows[Model]):
+                    self.Text("$(document).ready(function() {{ var html_location = window.location.href; if (html_location.indexOf('#collapsible-header{0}-row{1}') |~]~| -1) {{ $('.collapsible-body{0}-row{1}').css(\"display\", \"block\"); document.getElementById('collapsible-body{0}-row{1}').parentNode.className += \" active\"; }} }});".format(Model, Row))
 
     def LoadLevel(self, Input, State = None):
         if State == None:
@@ -146,6 +158,9 @@ class Webpage:
                 Items /= 10
             FormatString = '{:0>' + str(Digits) + '}'
             InputSorted = list(sorted(Input.keys(), key=lambda Key: FormatString.format(self.GetInterfaceFromKey(Key)[0])))
+        LastItemWasCollapse = False
+        CollapseModelCount = self.CollapseModelCount
+        CollapseRowCount = 0
         for OriginalKey in InputSorted:
             if type(OriginalKey) in [list, dict]:
                 self.LoadLevel(OriginalKey, State)
@@ -155,13 +170,41 @@ class Webpage:
             NewState = self.MixState(State, Interface)                
             
             if type(Input) == dict:
-                
+                if 'COLLAPSE' in Interface:
+                    if LastItemWasCollapse == False:
+                        CollapseModelCount = self.CollapseModelCount
+                        self.CollapseModelCount += 1
+                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible popout collapsible-model{}'.format(CollapseModelCount)]))
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
+                    else:
+                        self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
+                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                elif LastItemWasCollapse:
+                    self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
+                    CollapseRowCount += 0
+                    LastItemWasCollapse = False
+                    self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
+                    self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
+                    
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
+                if 'COLLAPSE' in Interface:
+                    self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                 NewState['key'] = Key
+                if 'COLLAPSE' in Interface:
+                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
+                if 'COLLAPSE' in Interface:
+                    self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
+                    CollapseRowCount += 1
+                    LastItemWasCollapse = True
             elif type(Key) in [list, dict]:
                 self.LoadLevel(Key, NewState)
+        if LastItemWasCollapse == True:
+            self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
+            self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
+            self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
 
     def LoadItem(self, Input, State, Interface, Data=None):
         ContinueFlag = True

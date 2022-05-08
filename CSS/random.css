@@ -1,0 +1,419 @@
+body {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-family: Calibri, Arial, sans-serif !important;
+}
+
+.image-effect img {
+    margin-left: 40% !important;
+    height: 40px !important;
+    max-width: 100% !important;
+}
+
+.app-title {
+    color: #333333 !important;
+    padding-left: 5% !important;
+    font-size: 2.25rem !important;
+    letter-spacing: -0.1rem !important;
+    vertical-align: middle !important;
+    display: flex !important;
+    flex: 1 !important;
+    flex-direction: row !important;
+}
+
+div.header-row {
+    margin: 0px !important;
+    flex-direction: row !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-right: 3% !important;
+    font-size: 0.75rem !important;
+    font-family: "Asap", sans-serif !important;
+}
+
+.comment-list li * {
+    margin: 0px !important;
+}
+
+input.switch-input+span.switch-slider:before,
+input.switch-input:checked+span.switch-slider:before {
+    position: 0px !important;
+    top: 0px !important;
+    margin: 0 !important;
+    width: 40% !important;
+    height: 100% !important;
+    border: 2px solid black !important;
+}
+
+input.switch-input+span.switch-slider:before {
+    left: 0px !important;
+    background-color: #DF744A !important;
+}
+
+input.switch-input:checked+span.switch-slider:before {
+    left: 60% !important;
+    background-color: #07889B !important;
+    -webkit-transform: rotate(0) !important;
+    transform: rotate(0) !important;
+}
+
+label.switch {
+    position: relative !important;
+    display: inline-block !important;
+    width: 60px !important;
+    height: auto !important;
+}
+
+label.switch input.switch-input {
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+label.switch span.switch-slider {
+    position: relative !important;
+    width: -webkit-fill-available !important;
+    cursor: pointer !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: #CCC !important;
+    -webkit-transition: .4s !important;
+}
+
+span.switch-slider::before {
+    position: absolute !important;
+    content: !important;
+    height: auto !important;
+    width: 26px !important;
+    left: 4px !important;
+    bottom: 4px !important;
+    background-color: white !important;
+    -webkit-transition: .4s !important;
+    transition: .4s !important;
+}
+
+.switch-slider.round {
+    border-radius: 34px !important;
+}
+
+.switch-slider.round::before {
+    border-radius: 50% !important;
+}
+
+td:hover {
+    background-color: #66B98F !important;
+}
+
+td#alert_bg:hover {
+    background-color: #DF744A !important;
+}
+
+#alert_bg {
+    background-color: #FEDCD2 !important;
+}
+
+input.searchable-table-input {
+    flex-direction: row !important;
+    display: inline-flex !important;
+    width: 100% !important;
+    border: 1px solid black !important;
+}
+
+table th,
+table.search-entry-table td {
+    border: 0px !important;
+    padding: 2px !important;
+}
+
+table.search-entry-table td {
+    line-height: 0px !important;
+}
+
+table.search-entry-table tr {
+    border-bottom: 0px !important;
+}
+
+table.search-entry-table thead,
+table.search-entry-table tbody {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+div.searchable-table-div input.searchable-table-button {
+    font-size: 10px !important;
+}
+
+tr.hidden-row {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+ol.gradient-list>li.alert_link::before,
+ol.gradient-list>li.alert_link::after {
+    background: linear-gradient(135deg, #DF744A 0%, #949494b5 100%) !important;
+    background-image: linear-gradient(135deg, #DF744A 0%, #949494b5 100%) !important;
+    background-position-x: initial !important;
+    background-position-y: initial !important;
+    background-size: initial !important;
+    background-repeat-x: initial !important;
+    background-repeat-y: initial !important;
+    background-attachment: initial !important;
+    background-origin: initial !important;
+    background-clip: initial !important;
+    background-color: initial !important;
+}
+
+ol.gradient-list>li.alert_link:hover {
+    background: linear-gradient(135deg, #EEEEEE 0%, #DDDDDD 100%) !important;
+}
+
+ol.gradient-list>li.alert_link:active {
+    border: 3px solid #1D1F20 !important;
+}
+
+li.alert_link a {
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+}
+
+ol.gradient-list>li.okay_link::before,
+ol.gradient-list>li.okay_link::after {
+    background: linear-gradient(135deg, #07889B 0%, #949494b5 100%) !important;
+    background-image: linear-gradient(135deg, #07889B 0%, #949494b5 100%) !important;
+    background-position-x: initial !important;
+    background-position-y: initial !important;
+    background-size: initial !important;
+    background-repeat-x: initial !important;
+    background-repeat-y: initial !important;
+    background-attachment: initial !important;
+    background-origin: initial !important;
+    background-clip: initial !important;
+    background-color: initial !important;
+}
+
+ol.gradient-list>li.okay_link:hover {
+    background: linear-gradient(135deg, #EEEEEE 0%, #DDDDDD 100%) !important;
+}
+
+ol.gradient-list>li.okay_link:active {
+    border: 3px solid #1D1F20 !important;
+}
+
+li.okay_link a {
+    width: 100% !important;
+    height: 100% !important;
+    display: inline-block !important;
+}
+
+header {
+    background-color: #FAFAFA !important;
+    padding: 5px !important;
+    font-size: 30px !important;
+    color: black !important;
+    text-align: center !important;
+}
+
+header p {
+    margin: 1rem !important;
+}
+
+header nav {
+    background-color: #127CC1 !important;
+}
+
+header nav ul {}
+
+header nav ul li {
+    display: inline-block !important;
+    float: none !important;
+}
+
+footer {
+    background-color: #FAFAFA !important;
+    padding: 5px !important;
+    color: black !important;
+    font-size: 12px !important;
+}
+
+.go-to-button {
+    border-radius: 50px !important;
+    border: 3px solid #1D1F20 !important;
+    color: #1D1F20 !important;
+    background-color: #D1D1D1 !important;
+    line-height: 2rem !important;
+}
+
+.go-to-button:hover {
+    background: #7fa0fb !important;
+}
+
+.go-to-button:active {
+    border-color: #7fa0fb !important;
+}
+
+div.collapsible-header {
+    font: 16px Arial !important;
+    line-height: 1.5rem !important;
+}
+
+.normal-collapsible {
+    background: linear-gradient(135deg, #FFFFFF 0%, #EEEEEE 100%) !important;
+    border: solid 1px #EEEEEE !important;
+}
+
+.normal-collapsible:hover {
+    background: linear-gradient(135deg, #EEEEEE 0%, #DDDDDD 100%) !important;
+}
+
+ul.collapsible li.active div.normal-collapsible {
+    background: linear-gradient(135deg, #EEEEEE 0%, #DDDDDD 100%) !important;
+    border: solid 1px black !important;
+}
+
+.alert-collapsible {
+    background: linear-gradient(135deg, #FEDCD2 0%, #DF744A 100%) !important;
+    border: solid 1px #EEEEEE !important;
+}
+
+.alert-collapsible:hover {
+    background: linear-gradient(135deg, #DF744A 0%, #E24E42 100%) !important;
+}
+
+ul.collapsible li.active div.alert-collapsible {
+    background: linear-gradient(135deg, #DF744A 0%, #E24E42 100%) !important;
+    border: solid 1px black !important;
+}
+
+.okay-collapsible {
+    background: linear-gradient(135deg, #66B98F 0%, #07889B 100%) !important;
+    border: solid 1px #EEEEEE !important;
+}
+
+.okay-collapsible:hover {
+    background: linear-gradient(135deg, #07889B 0%, #127CC1 100%) !important;
+}
+
+ul.collapsible li.active div.okay-collapsible {
+    background: linear-gradient(135deg, #07889B 0%, #127CC1 100%) !important;
+    border: solid 1px black !important;
+}
+
+ul.collapsible li.active {
+    border: solid 2px black !important;
+}
+
+ul.collapsible li div.collapsible-header table th,
+ul.collapsible li div.collapsible-header table td,
+ul.collapsible li div.collapsible-header table tr {
+    background-color: #EEEEEE !important;
+    border: solid 1px #1D1F20 !important;
+}
+
+ul.collapsible li div.collapsible-header table {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: solid 3px #1D1F20 !important;
+}
+
+ul.collapsible li div.collapsible-body table th,
+ul.collapsible li div.collapsible-body table.table td {
+    border: solid 2px #AAAAAA !important;
+    padding: 2px !important;
+}
+
+ul.collapsible div.collapsible-body p {
+    margin: inherit !important;
+    font-family: monospace !important;
+    white-space: pre !important;
+}
+
+ul.collapsible div.collapsible-body {
+    overflow-y: auto !important;
+}
+
+ul.collapsible div.collapsible-body ol li {
+    display: contents !important;
+}
+
+ul.collapsible div.collapsible-body ol {
+    padding: unset !important;
+}
+
+.collapsible.popout {
+    margin: 0px !important;
+}
+
+.collapsible.popout>li.active {
+    margin: 0px !important;
+}
+
+.collapsible.popout>li {
+    margin: 0px !important;
+}
+
+div.open-header:before {
+    border-radius: 5px !important;
+    content: "-" !important;
+    color: white !important;
+    display: block !important;
+    float: left !important;
+    font-size: 2.0rem !important;
+    margin-top: -2px !important;
+    margin-right: 10px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    width: 20px !important;
+    align-self: center !important;
+}
+
+div.closed-header:before {
+    border-radius: 5px !important;
+    content: "+" !important;
+    color: #363636 !important;
+    display: block !important;
+    float: left !important;
+    font-size: 2.0rem !important;
+    margin-right: 10px !important;
+    padding: 0 !important;
+    text-align: center !important;
+    width: 20px !important;
+    align-self: center !important;
+}
+
+ol.gradient-list>li {
+    padding: unset !important;
+}
+
+ol.gradient-list>li a p {
+    text-indent: 2rem !important;
+}
+
+div.js-plotly-plot {
+    border: 2px solid black !important;
+    overflow: hidden !important;
+    background-color: #FFFFFF !important;
+}
+
+.collapsible-header-model0-row0 {
+    background-color: #dddddd;
+    padding: 18px;
+}
+
+.collapsible-header-model0-row1 {
+    background-color: d;
+    padding: 2px;
+}
+
+.collapsible-header-model0-row2 {
+    background-color: d;
+    padding: 2px;
+}
+
+.collapsible-header-model0-row3 {
+    background-color: d;
+    padding: 2px;
+}
