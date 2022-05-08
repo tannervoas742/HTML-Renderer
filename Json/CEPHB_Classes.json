@@ -1,7 +1,8 @@
 {
     "_metadata": {
         "document": {
-            "title": "Classes"
+            "title": "Classes",
+            "test":"yo"
         },
         "tag": {
             "case_sensitive": false,
