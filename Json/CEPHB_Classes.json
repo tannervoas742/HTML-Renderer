@@ -135,26 +135,40 @@
         ],
         "8.<LIST_ITEM><GOTO:Paladin:Classes+Paladin>": [
             "<LIST_START>",
+            "<LIST_ITEM>Oath of the Ancients",
+            "<LIST_ITEM>Oath of Conquest",
+            "<LIST_ITEM>Oath of the Crown",
+            "<LIST_ITEM>Oath of Devotion",
+            "<LIST_ITEM>Oath of Glory",
+            "<LIST_ITEM>Oath of Redemption",
+            "<LIST_ITEM>Oath of Vengeance",
+            "<LIST_ITEM>Oath of the Watchers",
+            "<LIST_ITEM>Oathbreaker",
             "<LIST_STOP>"
         ],
         "9.<LIST_ITEM><GOTO:Ranger:Classes+Ranger>": [
             "<LIST_START>",
+            "<LIST_ITEM>",
             "<LIST_STOP>"
         ],
         "10.<LIST_ITEM><GOTO:Rogue:Classes+Rogue>": [
             "<LIST_START>",
+            "<LIST_ITEM>",
             "<LIST_STOP>"
         ],
         "11.<LIST_ITEM><GOTO:Sorceror:Classes+Sorceror>": [
             "<LIST_START>",
+            "<LIST_ITEM>",
             "<LIST_STOP>"
         ],
         "12.<LIST_ITEM><GOTO:Warlock:Classes+Warlock>": [
             "<LIST_START>",
+            "<LIST_ITEM>",
             "<LIST_STOP>"
         ],
         "13.<LIST_ITEM><GOTO:Wizard:Classes+Wizard>": [
             "<LIST_START>",
+            "<LIST_ITEM>",
             "<LIST_STOP>"
         ],
         "999.<LIST_STOP>": ""
