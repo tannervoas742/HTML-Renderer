@@ -188,10 +188,10 @@
         "2.Hit Dice#H2#CALL(_hitpoints)": 8,
         "3.Proficiencies#H2": [
             "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
-            "2.Weapons:Simple weapons, firearms*",
-            "3.Tools:Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
-            "4.Saving Throws: CON and INT",
-            "5.Skills (2): Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
+            "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
+            "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
+            "<BOLD>Saving Throws:</BOLD> CON and INT",
+            "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand "
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H2": [
             "<LIST_START>",
