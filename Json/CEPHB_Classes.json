@@ -148,7 +148,13 @@
         ],
         "9.<LIST_ITEM><GOTO:Ranger:Classes+Ranger>": [
             "<LIST_START>",
-            "<LIST_ITEM>",
+            "<LIST_ITEM>Beast Master Conclave",
+            "<LIST_ITEM>Fey Wanderer",
+            "<LIST_ITEM>Gloom Stalker Conclave",
+            "<LIST_ITEM>Horizon Walker Conclave",
+            "<LIST_ITEM>Hunter Conclave",
+            "<LIST_ITEM>Monster Slayer Conclave",
+            "<LIST_ITEM>Swarmkeeper",
             "<LIST_STOP>"
         ],
         "10.<LIST_ITEM><GOTO:Rogue:Classes+Rogue>": [
