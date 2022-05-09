@@ -132,9 +132,9 @@ class Webpage:
         self.CollapseModelCount = 0
         self.CollapseModelRows = {}
 
-        with self.Tag('html'):
+        with self.Tag('html', 'id="top-html"'):
 
-            with self.Tag('head', 'id="top-html"'):
+            with self.Tag('head'):
                 self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
@@ -228,15 +228,15 @@ class Webpage:
             opencollapsewithlinkaddress += ["        targetElement = targetElement.parentElement;"]
             opencollapsewithlinkaddress += ["    }"]
             opencollapsewithlinkaddress += ["    if (Pre == true) {"]
-            opencollapsewithlinkaddress += ["        var gotoLinkOneUpdatingCollapsibleIsDone = function() {"]
-            opencollapsewithlinkaddress += ["            if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
-            opencollapsewithlinkaddress += ["                setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
-            opencollapsewithlinkaddress += ["            } else {"]
-            opencollapsewithlinkaddress += ["                window.location.href = Address;"]
-            opencollapsewithlinkaddress += ["            }"]
-            opencollapsewithlinkaddress += ["        }"]
-            opencollapsewithlinkaddress += ["        setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
-            opencollapsewithlinkaddress += ["    }"]
+            opencollapsewithlinkaddress += ["\n        var gotoLinkOneUpdatingCollapsibleIsDone = function() {"]
+            opencollapsewithlinkaddress += ["\n            if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
+            opencollapsewithlinkaddress += ["\n                setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
+            opencollapsewithlinkaddress += ["\n            } else {"]
+            opencollapsewithlinkaddress += ["\n                window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["\n            }"]
+            opencollapsewithlinkaddress += ["\n        }"]
+            opencollapsewithlinkaddress += ["\n        setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
+            opencollapsewithlinkaddress += ["\n    }"]
             opencollapsewithlinkaddress += ["    return false;"]
             opencollapsewithlinkaddress += ["}"]
             self.Text(self.PreProcessText(' '.join(opencollapsewithlinkaddress)))
@@ -390,7 +390,7 @@ class Webpage:
         if '<LIST_' in Input and '>' in Input:
             ValidLinkup = False
         if ValidLinkup:
-            with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-'))):
+            with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-').replace("'", ''))):
                 self.AddText(Input, State, Interface, Data)
         else:
             self.AddText(Input, State, Interface, Data)
@@ -476,7 +476,7 @@ class Webpage:
                             Location = GotoMatch1.group(3)
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-'))
+                            LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-').replace("'", ''))
                             with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -503,7 +503,7 @@ class Webpage:
                             Location = GotoMatch3.group(2)
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-'))
+                            LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-').replace("'", ''))
                             with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
