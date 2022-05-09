@@ -185,8 +185,36 @@ class Webpage:
                 for Row in range(self.CollapseModelRows[Model]):
                     pass
 
+            opencollapse = []
+            opencollapse += ["$(document).ready(function() {"]
+            opencollapse += ["    setTimeout(function() {"]
+            opencollapse += ["        scroll(0,0);"]
+            opencollapse += ["    }, 30);"]
+            opencollapse += ["    var origLink = window.location.href;"]
+            opencollapse += ["    var linkSplit = window.location.href.split(\"#\");"]
+            opencollapse += ["    if (linkSplit.length <= 1) {"]
+            opencollapse += ["        return;"]
+            opencollapse += ["    }"]
+            opencollapse += ["    var targetID = linkSplit[1];"]
+            opencollapse += ["    targetElement = document.getElementById(targetID);"]
+            opencollapse += ["    while (targetElement != null && targetElement.parentElement != null) {"]
+            opencollapse += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
+            opencollapse += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
+            opencollapse += ["                if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
+            opencollapse += ["                    targetElement.parentElement.children[0].click()"]
+            opencollapse += ["                }"]
+            opencollapse += ["            }"]
+            opencollapse += ["        }"]
+            opencollapse += ["        targetElement = targetElement.parentElement;"]
+            opencollapse += ["    }"]
+            opencollapse += ["    setTimeout(function() {"]
+            opencollapse += ["        window.location.href = origLink;"]
+            opencollapse += ["    }, 1000);"]
+            opencollapse += ["});"]
+            self.Text(self.PreProcessText(' '.join(opencollapse)))
+
             opencollapsewithlinkaddress = []
-            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(Element, Address) {"]
+            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(Pre, Address) {"]
             opencollapsewithlinkaddress += ["    var targetID = Address.split(\"#\")[1];"]
             opencollapsewithlinkaddress += ["    targetElement = document.getElementById(targetID);"]
             opencollapsewithlinkaddress += ["    while (targetElement != null && targetElement.parentElement != null) {"]
@@ -199,7 +227,11 @@ class Webpage:
             opencollapsewithlinkaddress += ["        }"]
             opencollapsewithlinkaddress += ["        targetElement = targetElement.parentElement;"]
             opencollapsewithlinkaddress += ["    }"]
-            opencollapsewithlinkaddress += ["    window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["    if (Pre == true) {"]
+            opencollapsewithlinkaddress += ["        setTimeout(function() {"]
+            opencollapsewithlinkaddress += ["            window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["        }, 400);"]
+            opencollapsewithlinkaddress += ["    }"]
             opencollapsewithlinkaddress += ["    return false;"]
             opencollapsewithlinkaddress += ["}"]
             self.Text(self.PreProcessText(' '.join(opencollapsewithlinkaddress)))
@@ -239,6 +271,7 @@ class Webpage:
                     if LastItemWasCollapse == False:
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
+                        self.Doc.stag('br', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['pre-collapsible-br']))
                         self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible collapsible-model{}'.format(CollapseModelCount)]))
                         self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
                     else:
@@ -439,7 +472,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-'))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -452,7 +485,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -466,7 +499,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-'))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -479,7 +512,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True

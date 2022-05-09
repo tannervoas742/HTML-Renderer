@@ -280,12 +280,10 @@
             "The secrets of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the <ITALIC>Dungeon Master's Guide</ITALIC> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>any two simple weapons",
-            "<LIST_ITEM>Light crossbow and 20 bolts",
-            "<LIST_ITEM>(a) studded leather armor or (b) scale mail",
-            "<LIST_ITEM>thieves' tools and dungeoneer's pack",
-            "<LIST_STOP>"
+            "any two simple weapons",
+            "Light crossbow and 20 bolts",
+            "(a) studded leather armor or (b) scale mail",
+            "thieves' tools and dungeoneer's pack"
         ],
         "5.Multiclassing#H1": [
             "Need INT of 13 to multiclass in or out",
@@ -844,11 +842,9 @@
             "<BOLD>Skills:</BOLD> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a greataxe or (b) any martial melee weapon",
-            "<LIST_ITEM>(a) two handaxes or (b) any simple weapon",
-            "<LIST_ITEM>An explorer's pack and four javelins",
-            "<LIST_STOP>"
+            "(a) a greataxe or (b) any martial melee weapon",
+            "(a) two handaxes or (b) any simple weapon",
+            "an explorer's pack and four javelins"
         ],
         "5.Multiclassing#H1": [
             "Need STR of 13 to multiclass in or out",
@@ -1210,12 +1206,10 @@
             "5.Skills: Any three"
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a rapier, or (b) a longsword, or (c) any simple weapon",
-            "<LIST_ITEM>(a) a diplomat's pack or (b) an entertainer's pack",
-            "<LIST_ITEM>(a) a lute or (b) any other musical instrument",
-            "<LIST_ITEM> Leather armor and a dagger",
-            "<LIST_STOP>"
+            "(a) a rapier, or (b) a longsword, or (c) any simple weapon",
+            "(a) a diplomat's pack or (b) an entertainer's pack",
+            "(a) a lute or (b) any other musical instrument",
+            "Leather armor and a dagger"
         ],
         "5.Multiclassing#H1": [
             "Need CHA of 13 to multiclass in or out",
@@ -1599,13 +1593,11 @@
             "<BOLD>Skills:</BOLD> Choose two from History, Insight, Medicine, Persuasion, Religion "
         ],
         "4.Starting Equipment or 2d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a mace or (b) a warhammer (if proficient)",
-            "<LIST_ITEM>(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
-            "<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) any simple weapon",
-            "<LIST_ITEM>(a) a priest's pack or (b) an explorer's pack",
-            "<LIST_ITEM>A shield and a holy symbol",
-            "<LIST_STOP>"
+            "(a) a mace or (b) a warhammer (if proficient)",
+            "(a) scale mail, (b) leather armor, or (c) chain mail (if proficient)",
+            "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+            "(a) a priest's pack or (b) an explorer's pack",
+            "A shield and a holy symbol"
         ],
         "5.Multiclassing#H1": [
             "Need WIS of 13 to multiclass in or out",
@@ -2252,11 +2244,9 @@
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a wooden shield or (b) any simple weapon",
-            "<LIST_ITEM>(a) a scimitar or (b) any simple melee weapon",
-            "<LIST_ITEM>Leather armor, an explorer's pack, and a druidic focus",
-            "<LIST_STOP>"
+            "(a) a wooden shield or (b) any simple weapon",
+            "(a) a scimitar or (b) any simple melee weapon",
+            "Leather armor, an explorer's pack, and a druidic focus"
         ],
         "5.Multiclassing#H1": [
             "Need WIS of 13 to multiclass in or out",
@@ -2339,12 +2329,10 @@
             "<BOLD>Skills:</BOLD> Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival "
         ],
         "4.Starting Equipment or 2d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) chain mail or (b) leather armor, longbow, and 20 arrows",
-            "<LIST_ITEM>(a) a martial weapon and a shield or (b) two martial weapons",
-            "<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) two handaxes",
-            "<LIST_ITEM>(a) a dungeoneer's pack or (b) an explorer's pack",
-            "<LIST_STOP>"
+            "(a) chain mail or (b) leather armor, longbow, and 20 arrows",
+            "(a) a martial weapon and a shield or (b) two martial weapons",
+            "(a) a light crossbow and 20 bolts or (b) two handaxes",
+            "(a) a dungeoneer's pack or (b) an explorer's pack"
         ],
         "5.Multiclassing#H1": [
             "Need STR or DEX of 13 to multiclass in or out",
@@ -2430,11 +2418,9 @@
             "<BOLD>Skills:</BOLD> Choose two from Acrobatics, Athletics, History, Insight, Religion, Stealth"
         ],
         "4.Starting Equipment or 5d4 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a shortsword or (b) any simple weapon",
-            "<LIST_ITEM>(a) a dungeoneer's pack or (b) an explorer's pack",
-            "<LIST_ITEM>10 darts",
-            "<LIST_STOP>"
+            "(a) a shortsword or (b) any simple weapon",
+            "(a) a dungeoneer's pack or (b) an explorer's pack",
+            "10 darts"
         ],
         "5.Multiclassing#H1": [
             "Need DEX and WIS of 13 to multiclass in or out",
@@ -2520,12 +2506,10 @@
             "<BOLD>Skills:</BOLD> Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion"
         ],
         "4.Starting Equipment or 5d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a martial weapon and a shield or (b) two martial weapons",
-            "<LIST_ITEM>(a) five javelins or (b) any simple melee weapon",
-            "<LIST_ITEM>(a) a priest's pack or (b) an explorer's pack",
-            "<LIST_ITEM>Chain mail and a holy symbol",
-            "<LIST_STOP>"
+            "(a) a martial weapon and a shield or (b) two martial weapons",
+            "(a) five javelins or (b) any simple melee weapon",
+            "(a) a priest's pack or (b) an explorer's pack",
+            "Chain mail and a holy symbol"
         ],
         "5.Multiclassing#H1": [
             "Need STR and CHA of 13 to multiclass in or out",
@@ -2612,12 +2596,10 @@
             "<BOLD>Skills:</BOLD> Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) scale mail or (b) leather armor",
-            "<LIST_ITEM>(a) two shortswords or (b) two simple melee weapons",
-            "<LIST_ITEM>(a) a dungeoneer's pack or (b) an explorer's pack",
-            "<LIST_ITEM>A longbow and a quiver of 20 arrows",
-            "<LIST_STOP>"
+            "(a) scale mail or (b) leather armor",
+            "(a) two shortswords or (b) two simple melee weapons",
+            "(a) a dungeoneer's pack or (b) an explorer's pack",
+            "A longbow and a quiver of 20 arrows"
         ],
         "5.Multiclassing#H1": [
             "Need DEX and WIS of 13 to multiclass in or out",
@@ -2699,12 +2681,10 @@
             "<BOLD>Skills:</BOLD> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth"
         ],
         "4.Starting Equipment or 4d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a rapier or (b) a shortsword",
-            "<LIST_ITEM>(a) a shortbow and quiver of 20 arrows or (b) a shortsword",
-            "<LIST_ITEM>(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack",
-            "<LIST_ITEM>Leather armor, two daggers, and thieves' tools",
-            "<LIST_STOP>"
+            "(a) a rapier or (b) a shortsword",
+            "(a) a shortbow and quiver of 20 arrows or (b) a shortsword",
+            "(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack",
+            "Leather armor, two daggers, and thieves' tools"
         ],
         "5.Multiclassing#H1": [
             "Need DEX of 13 to multiclass in or out",
@@ -2798,12 +2778,10 @@
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, Religion"
         ],
         "4.Starting Equipment or 3d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) any simple weapon",
-            "<LIST_ITEM>(a) a component pouch or (b) an arcane focus",
-            "<LIST_ITEM>(a) a dungeoneer's pack or (b) an explorer's pack",
-            "<LIST_ITEM>Two daggers",
-            "<LIST_STOP>"
+            "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+            "(a) a component pouch or (b) an arcane focus",
+            "(a) a dungeoneer's pack or (b) an explorer's pack",
+            "Two daggers"
         ],
         "5.Multiclassing#H1": [
             "Need CHA of 13 to multiclass in or out",
@@ -2890,12 +2868,10 @@
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion"
         ],
         "4.Starting Equipment or 4d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a light crossbow and 20 bolts or (b) any simple weapon",
-            "<LIST_ITEM>(a) a component pouch or (b) an arcane focus",
-            "<LIST_ITEM>(a) a scholar's pack or (b) a dungeoneer's pack",
-            "<LIST_ITEM>Leather armor, any simple weapon and two daggers",
-            "<LIST_STOP>"
+            "(a) a light crossbow and 20 bolts or (b) any simple weapon",
+            "(a) a component pouch or (b) an arcane focus",
+            "(a) a scholar's pack or (b) a dungeoneer's pack",
+            "Leather armor, any simple weapon and two daggers"
         ],
         "5.Multiclassing#H1": [
             "Need CHA of 13 to multiclass in or out",
@@ -2987,12 +2963,10 @@
             "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Insight, Investigation, Medicine, Religion"
         ],
         "4.Starting Equipment or 4d4 x 10 gp#H1": [
-            "<LIST_START>",
-            "<LIST_ITEM>(a) a quarterstaff or (b) a dagger",
-            "<LIST_ITEM>(a) a component pouch or (b) an arcane focus",
-            "<LIST_ITEM>(a) a scholar's pack or (b) an explorer's pack",
-            "<LIST_ITEM>A spellbook",
-            "<LIST_STOP>"
+            "(a) a quarterstaff or (b) a dagger",
+            "(a) a component pouch or (b) an arcane focus",
+            "(a) a scholar's pack or (b) an explorer's pack",
+            "A spellbook"
         ],
         "5.Multiclassing#H1": [
             "Need INT of 13 to multiclass in or out",
