@@ -50,8 +50,8 @@ class WebTable:
                     self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='td')
                     #doc.line('td', value)
                     
-        with self.Tag('table', klass='table table-bordered table-responsive table-striped ' + ' '.join(self.State['class'])):
-            with self.Tag('thead', klass='thead-light ' + ' '.join(self.State['class'])):
+        with self.Tag('table', klass='table renderer-table-bordered' + ' '.join(self.State['class'])):
+            with self.Tag('thead', klass='thead-dark ' + ' '.join(self.State['class'])):
                 add_header(self.Doc, self.Data[0])
             with self.Tag('tbody', klass=' '.join(self.State['class'])):
                 for row in self.Data[1:]:
@@ -100,19 +100,25 @@ class Webpage:
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
 
+        self.JSCodeMap = {
+            '<': '|~lt~|',
+            '>': '|~gt~|',
+            '&': '|~and~|'
+        }
+
         self.TextReplaceMap = {
-            '<BOLD>': '|~[~|b|~]~|',
-            '<ITALIC>': '|~[~|i|~]~|',
-            '<HIGHLIGHT>': '|~[~|mark|~]~|',
-            '<SMALL>': '|~[~|small|~]~|',
-            '<STRIKE>': '|~[~|del|~]~|',
-            '<UNDER>': '|~[~|ins|~]~|',
-            '<SUB>': '|~[~|sub|~]~|',
-            '<SUP>': '|~[~|sup|~]~|'
+            '<BOLD>': self.PreProcessText('<b>'),
+            '<ITALIC>': self.PreProcessText('<i>'),
+            '<HIGHLIGHT>': self.PreProcessText('<mark>'),
+            '<SMALL>': self.PreProcessText('<small>'),
+            '<STRIKE>': self.PreProcessText('<del>'),
+            '<UNDER>': self.PreProcessText('<ins>'),
+            '<SUB>': self.PreProcessText('<sub>'),
+            '<SUP>': self.PreProcessText('<sup>')
         }
         for Key in list(self.TextReplaceMap.keys()):
             NewKey = Key.replace('<', '</')
-            NewValue = self.TextReplaceMap[Key].replace('|~[~|', '|~[~|/')
+            NewValue = self.TextReplaceMap[Key].replace(self.PreProcessText('<'), self.PreProcessText('</'))
             self.TextReplaceMap[NewKey] = NewValue
 
         self.Doc, self.Tag, self.Text, self.Line = yattag.Doc(
@@ -122,30 +128,34 @@ class Webpage:
             errors = {}
         ).ttl()
 
-        with self.Tag('head'):
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
-            
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
-            #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
-            
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
-                pass
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
-                pass
-            
-            
-
         self.ParamStorage = {}
         self.CollapseModelCount = 0
         self.CollapseModelRows = {}
 
-        self.Doc.stag('hr')
-        with self.Tag('body'):
-            self.LoadLevel(self.JSON)
-            self.AddJS()
-        self.Doc.stag('hr')
-        with self.Tag('footer'):
-            self.AddFooter()
+        with self.Tag('html'):
+
+            with self.Tag('head', 'id="top-html"'):
+                self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
+                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
+                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+                #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
+                
+
+                with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
+                    pass
+                with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.min.js"'):
+                    pass
+                with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
+                    pass
+
+            self.Doc.stag('hr')
+            with self.Tag('body'):
+                with self.Tag('div', klass='body-div'):
+                    self.LoadLevel(self.JSON)
+                self.AddJS()
+            self.Doc.stag('hr')
+            with self.Tag('footer'):
+                self.AddFooter()
 
     def AddFooter(self, State = None):
         if State == None:
@@ -162,28 +172,37 @@ class Webpage:
     def AddJS(self, State = None):
         if State == None:
             State = self.GetInitState()
+
+        documentReadFuncCollapsible = []
+        documentReadFuncCollapsible += ['$(document).ready(function() {{']
+        documentReadFuncCollapsible += ['    $(\'.collapsible-model{0}\').collapsible();']
+        documentReadFuncCollapsible += ['}});']
+        documentReadFuncCollapsible = ' '.join(documentReadFuncCollapsible)
+
         with self.Tag('script'):
             for Model in range(self.CollapseModelCount):
-                self.Text("$(document).ready(function() {{ $('.collapsible-model{}').collapsible(); }});".format(Model))
+                self.Text(self.PreProcessText(documentReadFuncCollapsible.format(Model)))
                 for Row in range(self.CollapseModelRows[Model]):
-                    self.Text("$(document).ready(function() {{ var html_location = window.location.href; if (html_location.indexOf('#collapsible-header{0}-row{1}') |~]~| -1) {{ $('.collapsible-body{0}-row{1}').css(\"display\", \"block\"); document.getElementById('collapsible-body{0}-row{1}').parentNode.className += \" active\"; }} }});".format(Model, Row))
-            
-            opencollapsewithlink = []
-            opencollapsewithlink += ["function opencollapsewithlink(Element) {"]
-            opencollapsewithlink += ["    var targetID = Element.href.split(\"#\")[1];"]
-            opencollapsewithlink += ["    targetElement = document.getElementById(targetID);"]
-            opencollapsewithlink += ["    while (targetElement.parentElement != null) {"]
-            opencollapsewithlink += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
-            opencollapsewithlink += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
-            opencollapsewithlink += ["                if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
-            opencollapsewithlink += ["                    targetElement.parentElement.children[0].click()"]
-            opencollapsewithlink += ["                }"]
-            opencollapsewithlink += ["            }"]
-            opencollapsewithlink += ["        }"]
-            opencollapsewithlink += ["        targetElement = targetElement.parentElement;"]
-            opencollapsewithlink += ["    }"]
-            opencollapsewithlink += ["}"]
-            self.Text(' '.join(opencollapsewithlink))
+                    pass
+
+            opencollapsewithlinkaddress = []
+            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(Element, Address) {"]
+            opencollapsewithlinkaddress += ["    var targetID = Address.split(\"#\")[1];"]
+            opencollapsewithlinkaddress += ["    targetElement = document.getElementById(targetID);"]
+            opencollapsewithlinkaddress += ["    while (targetElement != null && targetElement.parentElement != null) {"]
+            opencollapsewithlinkaddress += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
+            opencollapsewithlinkaddress += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
+            opencollapsewithlinkaddress += ["                if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
+            opencollapsewithlinkaddress += ["                    targetElement.parentElement.children[0].click()"]
+            opencollapsewithlinkaddress += ["                }"]
+            opencollapsewithlinkaddress += ["            }"]
+            opencollapsewithlinkaddress += ["        }"]
+            opencollapsewithlinkaddress += ["        targetElement = targetElement.parentElement;"]
+            opencollapsewithlinkaddress += ["    }"]
+            opencollapsewithlinkaddress += ["    window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["    return false;"]
+            opencollapsewithlinkaddress += ["}"]
+            self.Text(self.PreProcessText(' '.join(opencollapsewithlinkaddress)))
 
     def LoadLevel(self, Input, State = None):
         if State == None:
@@ -419,7 +438,8 @@ class Webpage:
                             Location = GotoMatch1.group(3)
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-'))
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -431,7 +451,8 @@ class Webpage:
                             File = GotoMatch2.group(2)
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\"{0}.html\"'.format(File)
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -444,7 +465,8 @@ class Webpage:
                             Location = GotoMatch3.group(2)
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-'))
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -456,7 +478,8 @@ class Webpage:
                             Text = File
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
-                            with self.Tag('a', 'onclick="opencollapsewithlink(this)"', 'onload="opencollapsewithlink(this)"', 'href=\"{0}.html\"'.format(File), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\"{0}.html\"'.format(File)
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, {})"'.format(LinkAddress), 'href="#"', style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -583,10 +606,18 @@ class Webpage:
         else:
             State['callback'] = []
         return State
+
+    def PreProcessText(self, Text):
+
+        for Key in self.JSCodeMap:
+            Text = Text.replace(Key, self.JSCodeMap[Key])
+        
+        return Text
             
     def PostProcessPage(self, PageText):
-        PageText = PageText.replace('|~[~|', '<')
-        PageText = PageText.replace('|~]~|', '>')
+        for Key in self.JSCodeMap:
+            PageText = PageText.replace(self.JSCodeMap[Key], Key)
+
         PageText = PageText.replace('<body>', '<body class="html-renderer">')
 
         _DONT_CLOSE_THIS_STAG_re = re.compile('.*?_DONT_CLOSE_THIS_STAG_(.*?)/>.*')

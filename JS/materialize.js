@@ -790,7 +790,7 @@ M.anime = function() {
                                     s = i.children("li"),
                                     o = n[0].classList.contains("active"),
                                     a = s.index(n);
-                                o ? this.close(a) : this.open(a)
+                                o ? this.close(a) : this.open(a);
                             }
                         }
                     }
@@ -831,6 +831,9 @@ M.anime = function() {
                                     i.close(e)
                                 })
                             }
+                            if (e.length && e[0].children.length && e[0].children[0].classList.contains("collapsible-header-open") == false) {
+                                e[0].children[0].classList.add("collapsible-header-open");
+                            }
                             e[0].classList.add("active"), this._animateIn(t)
                         }
                     }
@@ -838,6 +841,9 @@ M.anime = function() {
                     key: "close",
                     value: function(t) {
                         var e = this.$el.children("li").eq(t);
+                        if (e.length && e[0].children.length && e[0].children[0].classList.contains("collapsible-header-open")) {
+                            e[0].children[0].classList.remove("collapsible-header-open");
+                        }
                         e.length && e[0].classList.contains("active") && ("function" == typeof this.options.onCloseStart && this.options.onCloseStart.call(this, e[0]), e[0].classList.remove("active"), this._animateOut(t))
                     }
                 }], [{ key: "init", value: function(t, e) { return _get(s.__proto__ || Object.getPrototypeOf(s), "init", this).call(this, this, t, e) } }, { key: "getInstance", value: function(t) { return (t.jquery ? t[0] : t).M_Collapsible } }, { key: "defaults", get: function() { return e } }]), s
