@@ -3,6 +3,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
 var _get = function t(e, i, n) { null === e && (e = Function.prototype); var s = Object.getOwnPropertyDescriptor(e, i); if (void 0 === s) { var o = Object.getPrototypeOf(e); return null === o ? void 0 : t(o, i, n) } if ("value" in s) return s.value; var a = s.get; return void 0 !== a ? a.call(n) : void 0 },
     _createClass = function() {
         function n(t, e) {
@@ -821,6 +822,9 @@ M.anime = function() {
                 }, {
                     key: "open",
                     value: function(t) {
+                        if (document.getElementById("top-html").classList.contains("updating-collapsible") == false) {
+                            document.getElementById("top-html").classList.add("updating-collapsible")
+                        }
                         var i = this,
                             e = this.$el.children("li").eq(t);
                         if (e.length && !e[0].classList.contains("active")) {
@@ -834,7 +838,34 @@ M.anime = function() {
                             if (e.length && e[0].children.length && e[0].children[0].classList.contains("collapsible-header-open") == false) {
                                 e[0].children[0].classList.add("collapsible-header-open");
                             }
-                            e[0].classList.add("active"), this._animateIn(t)
+
+                            e[0].classList.add("active");
+                            this._animateIn(t);
+                            document.documentElement.style.scrollBehavior = 'auto';
+                            window.scrollTo(0, 0);
+                            var waitfortop = function() {
+                                var doc = document.documentElement;
+                                var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+                                if (top > 0) {
+                                    setTimeout(waitfortop, 10);
+                                } else {
+                                    document.documentElement.style.scrollBehavior = 'smooth';
+                                    var doc2 = document.documentElement;
+                                    var top2 = (window.pageYOffset || doc2.scrollTop) - (doc2.clientTop || 0);
+                                    window.scroll(0, top2 + e[0].children[0].getBoundingClientRect().top);
+                                    setTimeout(waitforelement, 10);
+                                }
+                            }
+
+                            var waitforelement = function() {
+                                if (Math.abs(e[0].children[0].getBoundingClientRect().top) > 1) {
+                                    setTimeout(waitforelement, 10);
+                                } else {
+                                    document.getElementById("top-html").classList.remove("updating-collapsible")
+                                }
+                            }
+
+                            setTimeout(waitfortop, 10);
                         }
                     }
                 }, {
