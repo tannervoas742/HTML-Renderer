@@ -841,7 +841,6 @@ M.anime = function() {
 
                             e[0].classList.add("active");
                             this._animateIn(t);
-                            document.documentElement.style.scrollBehavior = 'auto';
                             window.scrollTo(0, 0);
                             var waitfortop = function() {
                                 var doc = document.documentElement;
@@ -849,7 +848,6 @@ M.anime = function() {
                                 if (top > 0 && e[0].children[0].getBoundingClientRect().y < 0) {
                                     setTimeout(waitfortop, 10);
                                 } else {
-                                    document.documentElement.style.scrollBehavior = 'smooth';
                                     var doc2 = document.documentElement;
                                     var top2 = (window.pageYOffset || doc2.scrollTop) - (doc2.clientTop || 0);
                                     window.scroll(0, top2 + e[0].children[0].getBoundingClientRect().top);
