@@ -846,7 +846,7 @@ M.anime = function() {
                             var waitfortop = function() {
                                 var doc = document.documentElement;
                                 var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-                                if (top > 0) {
+                                if (top > 0 && e[0].children[0].getBoundingClientRect().y < 0) {
                                     setTimeout(waitfortop, 10);
                                 } else {
                                     document.documentElement.style.scrollBehavior = 'smooth';
@@ -865,7 +865,18 @@ M.anime = function() {
                                 }
                             }
 
-                            setTimeout(waitfortop, 10);
+                            var prevElementY = e[0].children[0].getBoundingClientRect().y
+                            var elementcollapsing = function() {
+                                var elementY = e[0].children[0].getBoundingClientRect().y
+                                if (elementY < prevElementY) {
+                                    prevElementY = elementY;
+                                    setTimeout(elementcollapsing, 10);
+                                } else {
+                                    setTimeout(waitfortop, 10);
+                                }
+                            }
+
+                            setTimeout(elementcollapsing, 10);
                         }
                     }
                 }, {
