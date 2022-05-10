@@ -57,8 +57,11 @@ class WebTable:
                 for row in self.Data[1:]:
                     add_row(self.Doc, row)
 
-
-
+def PermuteWithOrder(List):
+    if len(List) == 1:
+        return [[List[0]]]
+    ChildList = PermuteWithOrder(List[1:])
+    return list(map(lambda Item: [List[0]] + Item, copy.deepcopy(ChildList))) + ChildList
 
 def FlushPrintUTF8(*args, **kw):
     if 'end' not in kw:
@@ -214,7 +217,7 @@ class Webpage:
             self.Text(self.PreProcessText(' '.join(opencollapse)))
 
             opencollapsewithlinkaddress = []            
-            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(Pre, Address) {"]
+            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(LinkElement, Pre, Address) {"]
             opencollapsewithlinkaddress += ["    var targetID = Address.split(\"#\")[1];"]
             opencollapsewithlinkaddress += ["    targetElement = document.getElementById(targetID);"]
             opencollapsewithlinkaddress += ["    while (targetElement != null && targetElement.parentElement != null) {"]
@@ -293,7 +296,7 @@ class Webpage:
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
-                NewState['key'] = Key
+                NewState['key'] += [Key]
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 if ContinueFlag:
@@ -302,6 +305,7 @@ class Webpage:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                     CollapseRowCount += 1
                     LastItemWasCollapse = True
+                del NewState['key'][-1]
             elif type(Input) == list:
                 if State['visible'] == True:
                     self.AddText(Key, NewState, Interface, None)
@@ -316,7 +320,7 @@ class Webpage:
         ContinueFlag = True
         if len(State['callback']) > 0:
             for Callback in State['callback']:
-                Data = Callback(self, Data)
+                Data = Callback(self, State, Interface, Data)
         if 'INC' in Interface:
             Computed = []
             IntData = list(filter(lambda Item: type(Item) == int, Data))
@@ -390,7 +394,11 @@ class Webpage:
         if '<LIST_' in Input and '>' in Input:
             ValidLinkup = False
         if ValidLinkup:
-            with self.Tag('a', 'id={}'.format(Input.lower().replace(' ', '-').replace("'", ''))):
+            ListToLink = PermuteWithOrder(State['key'] + [Input])
+            if len(ListToLink) > 1:
+                for ListIn in ListToLink[1:]:
+                    self.Doc.stag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListIn)))))
+            with self.Tag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListToLink[0]))))):
                 self.AddText(Input, State, Interface, Data)
         else:
             self.AddText(Input, State, Interface, Data)
@@ -477,7 +485,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -490,7 +498,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -504,7 +512,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -517,7 +525,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -572,7 +580,7 @@ class Webpage:
         self.in_list_div = 0
         State = {}
         State['visible'] = True
-        State['key'] = ''
+        State['key'] = []
         State['class'] = []
         State['style'] = []
         State['mode'] = WebpageEnums.Text
@@ -637,7 +645,7 @@ class Webpage:
             for Func in State['callback']:
                 if Func.replace('_CALLBACK_', '') in self.ParamStorage:
                     FuncText = self.ParamStorage[Func.replace('_CALLBACK_', '')]
-                    FuncText = 'def {}(self, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
+                    FuncText = 'def {}(self, STATE, INTERFACE, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
                     exec(FuncText)
                     Compiled += [eval(Func)]
             State['callback'] = Compiled

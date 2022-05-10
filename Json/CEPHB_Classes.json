@@ -58,7 +58,7 @@
             "for Group in ARG:",
             "    while ', ' in Group:",
             "        Group = Group.replace(', ', ',')",
-            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], Item.lower().replace(' ', '-')), Group.split(','))))]",
+            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: LinkKey.lower().replace(' ', '-').replace(\"'\", ''), STATE['key'] + [Item])))), Group.split(','))))]",
             "return NewArg"
         ]
     },
