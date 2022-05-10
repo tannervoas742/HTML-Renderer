@@ -842,42 +842,26 @@ M.anime = function() {
                             e[0].classList.add("active");
                             this._animateIn(t);
 
-                            var waitfortop = function() {
-                                var doc = document.documentElement;
-                                var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-                                if (top > 0 && e[0].children[0].getBoundingClientRect().y < 0) {
-                                    setTimeout(waitfortop, 10);
+                            var mat_prevWindowHeight = -100;
+
+                            var mat_elementopenning = function() {
+                                var mat_windowHeight = document.getElementById("top-html").getBoundingClientRect().height;
+
+                                if (Math.abs(mat_windowHeight - mat_prevWindowHeight) > 0.1) {
+                                    mat_prevWindowHeight = mat_windowHeight;
+                                    setTimeout(mat_elementopenning, 33);
                                 } else {
-                                    setTimeout(function() {
-                                        var doc2 = document.documentElement;
-                                        var top2 = (window.pageYOffset || doc2.scrollTop) - (doc2.clientTop || 0);
-                                        window.scroll(0, top2 + e[0].children[0].getBoundingClientRect().top);
-                                        setTimeout(waitforelement, 10);
-                                    }, 10);
+                                    var doc = document.documentElement;
+                                    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+                                    var goto = top + e[0].children[0].getBoundingClientRect().top - 0.5;
+                                    window.scrollTo(0, goto);
+
+                                    document.getElementById("top-html").classList.remove("updating-collapsible");
+
                                 }
                             }
 
-                            var waitforelement = function() {
-                                if (Math.abs(e[0].children[0].getBoundingClientRect().top) > 1) {
-                                    setTimeout(waitforelement, 10);
-                                } else {
-                                    document.getElementById("top-html").classList.remove("updating-collapsible")
-                                }
-                            }
-
-                            var prevElementY = e[0].children[0].getBoundingClientRect().y
-                            var elementcollapsing = function() {
-                                var elementY = e[0].children[0].getBoundingClientRect().y
-                                if (elementY < prevElementY) {
-                                    prevElementY = elementY;
-                                    setTimeout(elementcollapsing, 10);
-                                } else {
-                                    window.scrollTo(0, 0);
-                                    setTimeout(waitfortop, 10);
-                                }
-                            }
-
-                            setTimeout(elementcollapsing, 10);
+                            setTimeout(mat_elementopenning, 33);
                         }
                     }
                 }, {
