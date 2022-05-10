@@ -847,7 +847,6 @@ M.anime = function() {
                             var mat_elementopenning = function() {
                                 var mat_windowHeight = document.getElementById("top-html").getBoundingClientRect().height;
 
-                                console.log(mat_windowHeight - mat_prevWindowHeight);
                                 if (Math.abs(mat_windowHeight - mat_prevWindowHeight) > 0.1) {
                                     mat_prevWindowHeight = mat_windowHeight;
                                     setTimeout(mat_elementopenning, 33);
@@ -857,7 +856,6 @@ M.anime = function() {
                                     var goto = top + e[0].children[0].getBoundingClientRect().top - 0.5;
                                     window.scrollTo(0, goto);
 
-                                    console.log("element open done")
                                     document.getElementById("top-html").classList.remove("updating-collapsible");
 
                                 }
