@@ -138,6 +138,7 @@ class Webpage:
         with self.Tag('html', 'id="top-html"'):
 
             with self.Tag('head'):
+                self.Doc.stag('meta', 'charset="UTF-8"')
                 self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
