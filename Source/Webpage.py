@@ -103,6 +103,10 @@ class Webpage:
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
 
+        self.SeenLinkUps = {}
+        self.SeenLinkDowns = {}
+        self.PostProcessRefList = {}
+
         self.JSCodeMap = {
             '<': '|~lt~|',
             '>': '|~gt~|',
@@ -415,8 +419,12 @@ class Webpage:
             ListToLink = PermuteWithOrder(State['key'] + [Input])
             if len(ListToLink) > 1:
                 for ListIn in ListToLink[1:]:
-                    self.Doc.stag('a', 'id={}'.format('_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))))
-            with self.Tag('a', 'id={}'.format('_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0]))))):
+                    LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))
+                    self.SeenLinkUps[LinkUpID] = True
+                    self.Doc.stag('a', 'id={}'.format(LinkUpID))
+            LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
+            self.SeenLinkUps[LinkUpID] = True
+            with self.Tag('a', 'id={}'.format(LinkUpID)):
                 self.AddText(Input, State, Interface, Data)
         else:
             self.AddText(Input, State, Interface, Data)
@@ -485,6 +493,13 @@ class Webpage:
         else:
             TextTag = ForceTextTag
         if '<GOTO' in Input and '>' in Input:
+            HasRef = None
+            if '<REF:' in Input and '>' in Input:
+                RefPattern = re.compile('.*?<REF:(.*?)>.*')
+                RefMatch = RefPattern.match(Input)
+                if RefMatch != None:
+                    HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
+                    Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
             with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
@@ -503,6 +518,13 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\'{0}.html#{1}\''.format(File, self.CleanLinkText(Location))
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1    
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -516,6 +538,13 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -530,6 +559,13 @@ class Webpage:
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html#{1}\"'.format(File, self.CleanLinkText(Location))
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -543,6 +579,13 @@ class Webpage:
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -681,7 +724,7 @@ class Webpage:
                 NewText += Char
         NewText = NewText.replace(' ', '-')
         if len(NewText) > 0 and NewText[0].isnumeric():
-            NewText = '_' + NewText
+            NewText = 'A' + NewText
         return NewText
 
 
@@ -702,6 +745,26 @@ class Webpage:
         while _DONT_CLOSE_THIS_STAG_ma != None:
             PageText = PageText.replace('_DONT_CLOSE_THIS_STAG_{}/>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)), '{}>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)))
             _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
+
+
+        for Key in list(self.PostProcessRefList.keys()):
+            Goal = Key.split('|+REF+')[0]
+            Insert = Key.split('|+REF+')[1][:-2]
+            Matched = False
+            for LinkUp in self.SeenLinkUps:
+                if Insert in LinkUp:
+                    Snipped1 = LinkUp.replace('_' + Insert, '')
+                    if Snipped1 == Goal:
+                        PageText = PageText.replace(Key, LinkUp)
+                        Matched = True
+                        break
+                    Snipped2 = LinkUp.replace(Insert + '_', '')
+                    if Snipped2 == Goal:
+                        PageText = PageText.replace(Key, LinkUp)
+                        Matched = True
+                        break
+            if not Matched:
+                PageText = PageText.replace(Key, Goal)
         return PageText
 
     def Save(self, OutHTML):
@@ -738,6 +801,9 @@ def main(Args):
     for Arg in Args:
         WP = Webpage(Arg)
         WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
+        #SortedByCount = list(sorted(WP.SeenLinkUps.keys(), key=lambda Key: WP.SeenLinkUps[Key], reverse=True))
+        #for Key in SortedByCount:
+        #    FlushPrintUTF8(Key, WP.SeenLinkUps[Key])
 
 if __name__ == '__main__':
     import sys

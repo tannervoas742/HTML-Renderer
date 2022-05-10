@@ -49,16 +49,16 @@
             "Return += [\"<BOLD>Hit Points at Higher Levels:</BOLD> 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
             "return Return"
         ],
-        "_genlink_description": [
-            "Add #CALL(_genlink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
+        "_genlocallink_description": [
+            "Add #CALL(_genlocallink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
             "Returns a new list of strings where each item is actively linked. Links only work within the same file."
         ],
-        "_genlink": [
+        "_genlocallink": [
             "NewArg = []",
             "for Group in ARG:",
             "    while ', ' in Group:",
             "        Group = Group.replace(', ', ',')",
-            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: self.CleanLinkText(LinkKey), STATE['key'] + [Item])))), Group.split(','))))]",
+            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: self.CleanLinkText(LinkKey), STATE['key'] + [Item.split('<REF:')[0]])))), Group.split(','))))]",
             "return NewArg"
         ]
     },
@@ -235,7 +235,7 @@
     "Artificer#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Magical Tinkering, Spellcasting",
             "Infuse Item",
             "Artificer Specialist, The Right Tool for the Job",
@@ -805,7 +805,7 @@
     "Barbarian#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Rage, Unarmored Defense",
             "Reckless Attack, Danger Sense",
             "Primal Knowledge (Optional), Primal Path",
@@ -1160,7 +1160,7 @@
     "Bard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Spellcasting, Bardic Inspiration (d6)",
             "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
             "Bard College, Expertise",
@@ -1548,7 +1548,7 @@
     "Cleric#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Spellcasting, Divine Domain",
             "Channel Divinity (1/rest), Divine Domain feature, Harness Divine Power (Optional)",
             "—",
@@ -2451,7 +2451,7 @@
     "Druid#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle, Wild Companion (Optional)",
             "—",
@@ -2656,7 +2656,7 @@
     "Fighter#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
             "Martial Archetype",
@@ -2745,7 +2745,7 @@
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
         "Ki Points#HIDDEN#INC": [2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         "Unarmored Movement#HIDDEN": ["—", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Unarmored Defense, Martial Arts",
             "Ki, Unarmored Movement",
             "Monastic Tradition, Deflect Missiles",
@@ -2828,7 +2828,7 @@
     "Paladin#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
             "Divine Health, Sacred Oath",
@@ -2918,7 +2918,7 @@
     "Ranger#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Favored Enemy, Natural Explorer",
             "Fighting Style, Spellcasting",
             "Ranger Archetype, Primeval Awareness",
@@ -3008,7 +3008,7 @@
     "Rogue#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Expertise, Sneak Attack, Thieves' Cant",
             "Cunning Action",
             "Roguish Archetype",
@@ -3094,7 +3094,7 @@
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Spellcasting, Sorcerous Origin",
             "Font of Magic",
             "Metamagic",
@@ -3190,7 +3190,7 @@
     "Warlock#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
             "Pact Boon",
@@ -3280,7 +3280,7 @@
     "Wizard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_genlocallink)": [
             "Spellcasting, Arcane Recovery",
             "Arcane Tradition",
             "—",
