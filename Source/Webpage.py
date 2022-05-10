@@ -412,8 +412,8 @@ class Webpage:
             ListToLink = PermuteWithOrder(State['key'] + [Input])
             if len(ListToLink) > 1:
                 for ListIn in ListToLink[1:]:
-                    self.Doc.stag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListIn)))))
-            with self.Tag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListToLink[0]))))):
+                    self.Doc.stag('a', 'id={}'.format('_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))))
+            with self.Tag('a', 'id={}'.format('_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0]))))):
                 self.AddText(Input, State, Interface, Data)
         else:
             self.AddText(Input, State, Interface, Data)
@@ -499,7 +499,7 @@ class Webpage:
                             Location = GotoMatch1.group(3)
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-').replace("'", ''))
+                            LinkAddress = '\'{0}.html#{1}\''.format(File, self.CleanLinkText(Location))
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -526,7 +526,7 @@ class Webpage:
                             Location = GotoMatch3.group(2)
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-').replace("'", ''))
+                            LinkAddress = '\"{0}.html#{1}\"'.format(File, self.CleanLinkText(Location))
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
@@ -667,6 +667,20 @@ class Webpage:
         else:
             State['callback'] = []
         return State
+
+    def CleanLinkText(self, OText):
+        Text = OText.lower().replace("'", '')
+        NewText = ''
+        for Char in Text:
+            if Char in '-_':
+                NewText += Char
+            elif Char.isalnum() or Char == ' ':
+                NewText += Char
+        NewText = NewText.replace(' ', '-')
+        if len(NewText) > 0 and NewText[0].isnumeric():
+            NewText = '_' + NewText
+        return NewText
+
 
     def PreProcessText(self, Text):
 
