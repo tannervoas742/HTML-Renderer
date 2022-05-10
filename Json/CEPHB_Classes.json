@@ -2453,24 +2453,24 @@
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_genlink)": [
             "Druidic, Spellcasting",
-            "Wild Shape, Druid Circle",
+            "Wild Shape, Druid Circle, Wild Companion (Optional)",
             "-",
-            "Wild Shape improvement, Ability Score Improvement",
-            "-",
-            "Druid Circle feature",
-            "-",
-            "Wild Shape improvement, Ability Score Improvement",
+            "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
             "-",
             "Druid Circle feature",
             "-",
-            "Ability Score Improvement",
+            "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
             "-",
             "Druid Circle feature",
             "-",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Cantrip Versatility (Optional)",
+            "-",
+            "Druid Circle feature",
+            "-",
+            "Ability Score Improvement, Cantrip Versatility (Optional)",
             "-",
             "Timeless Body, Beast Spells",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Cantrip Versatility (Optional)",
             "Archdruid"
         ],
         "Cantrips Known#HIDDEN#INC": [1, 1, 4, 10],
@@ -2507,7 +2507,9 @@
         ],
 
 
-        "6.1st level#H1#COLLAPSE": {},
+        "6.1st level#H1#COLLAPSE": {
+            "1.Druidic":"You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic."
+        },
         "7.2nd level#H1#COLLAPSE": {},
         "8.3rd level#H1#COLLAPSE": {},
         "9.4th level#H1#COLLAPSE": {
