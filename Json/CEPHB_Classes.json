@@ -1641,16 +1641,16 @@
                         "<GOTO:False Life:Spells+False Life>",
                         "<GOTO:Ray of Sickness:Spells+Ray of Sickness>"
                     ],
-                    "2.Bonus Proficiency": "When you choose this domain at 1st level, you gain proficiency with martial weapons.",
-                    "3.Reaper": "At 1st level, you learn one necromancy cantrip of your choice from any spell list. When you cast a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
+                    "2.Bonus Proficiency#H1": "When you choose this domain at 1st level, you gain proficiency with martial weapons.",
+                    "3.Reaper#H1": "At 1st level, you learn one necromancy cantrip of your choice from any spell list. When you cast a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
                 },
                 "4. Forge Domain#H1#COLLAPSE": {
                     "1.Forge Domain Spells at 1st Level#H1": [
                         "<GOTO:Identify:Spells+Identify>",
                         "<GOTO:Searing Smite:Spells+Searing Smite>"
                     ],
-                    "2.Bonus Proficiencies": "When you choose this domain at 1st level, you gain proficiency with heavy armor and smith's tools.",
-                    "3.Blessing of the Forge": [
+                    "2.Bonus Proficiencies#H1": "When you choose this domain at 1st level, you gain proficiency with heavy armor and smith's tools.",
+                    "3.Blessing of the Forge#H1": [
                         "At 1st level, you gain the ability to imbue magic into a weapon or armor. At the end of a long rest, you can touch one nonmagical object that is a suit of armor or a simple or martial weapon. Until the end of your next long rest or until you die, the object becomes a magic item, granting a +1 bonus to AC if it's armor or a +1 bonus to attack and damage rolls if it's a weapon.",
                         "Once you use this feature, you can't use it again until you finish a long rest."
                     ]
@@ -1660,11 +1660,11 @@
                         "<GOTO:Bane:Spells+Bane>",
                         "<GOTO:False Life:Spells+False Life>"
                     ],
-                    "2.Circle of Mortality": [
+                    "2.Circle of Mortality#H1": [
                         "At 1st level, you gain the ability to manipulate the line between life and death. When you would normally roll one or more dice to restore hit points with a spell to a creature at 0 hit points, you instead use the highest number possible for each die.",
                         "In addition, you learn the <GOTO:Spare the Dying:Spells+Spare the Dying> cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action."
                     ],
-                    "3.Eyes of the Grave": [
+                    "3.Eyes of the Grave#H1": [
                         "At 1st level, you gain the ability to occasionally sense the presence of the undead, whose existence is an insult to the natural cycle of life. As an action, you can open your awareness to magically detect undead. Until the end of your next turn, you know the location of any undead within 60 feet of you that isn't behind total cover and that isn't protected from divination magic. This sense doesn't tell you anything about a creature's capabilities or identity.",
                         "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
                     ]
@@ -1674,7 +1674,7 @@
                         "<GOTO:Command:Spells+Command>",
                         "<GOTO:Identify:Spells+Identify>"
                     ],
-                    "2.Blessings of Knowledge": [
+                    "2.Blessings of Knowledge#H1": [
                         "At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion.",
                         "Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
                     ]
@@ -1684,16 +1684,16 @@
                         "<GOTO:Bless:Spells+Bless>",
                         "<GOTO:Cure Wounds:Spells+Cure Wounds>"
                     ],
-                    "2.Bonus Proficiency": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
-                    "3.Disciple of Life": "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
+                    "2.Bonus Proficiency#H1": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
+                    "3.Disciple of Life#H1": "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
                 },
                 "8. Light Domain#H1#COLLAPSE": {
                     "1.Light Domain Spells at 1st Level#H1": [
                         "<GOTO:Burning Hands:Spells+Burning Hands>",
                         "<GOTO:Faerie Fire:Spells+Faerie Fire>"
                     ],
-                    "2.Bonus Cantrip": "When you choose this domain at 1st level, you gain the <GOTO:Light:Spells+Light> cantrip if you don't already know it. This cantrip doesn’t count against the number of cleric cantrips you know.",
-                    "3.Warding Flare": [
+                    "2.Bonus Cantrip#H1": "When you choose this domain at 1st level, you gain the <GOTO:Light:Spells+Light> cantrip if you don't already know it. This cantrip doesn’t count against the number of cleric cantrips you know.",
+                    "3.Warding Flare#H1": [
                         "Also at 1st level, you can interpose divine light between yourself and an attacking enemy. When you are attacked by a creature within 30 feet of you that you can see, you can use your reaction to impose disadvantage on the attack roll, causing light to flare before the attacker before it hits or misses. An attacker that can't be blinded is immune to this feature.",
                         "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
                     ]
@@ -1703,16 +1703,16 @@
                         "<GOTO:Animal Friendship:Spells+Animal Friendship>",
                         "<GOTO:Speak with Animals:Spells+Speak with Animals>"
                     ],
-                    "2.Acolyte of Nature": "At 1st level, you learn one cantrip of your choice from the druid spell list. This cantrip counts as a cleric cantrip for you, but it doesn’t count against the number of cleric cantrips you know. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
-                    "3.Bonus Proficiency": "Also at 1st level, you gain proficiency with heavy armor."
+                    "2.Acolyte of Nature#H1": "At 1st level, you learn one cantrip of your choice from the druid spell list. This cantrip counts as a cleric cantrip for you, but it doesn’t count against the number of cleric cantrips you know. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
+                    "3.Bonus Proficiency#H1": "Also at 1st level, you gain proficiency with heavy armor."
                 },
                 "10. Order Domain#H1#COLLAPSE": {
                     "1.Order Domain Spells at 1st Level#H1": [
                         "<GOTO:Command:Spells+Command>",
                         "<GOTO:Heroism:Spells+Heroism>"
                     ],
-                    "2.Bonus Proficiencies": "When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice).",
-                    "3.Voice of Authority": [
+                    "2.Bonus Proficiencies#H1": "When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice).",
+                    "3.Voice of Authority#H1": [
                         "Starting at 1st level, you can invoke the power of law to embolden an ally to attack. If you cast a spell with a spell slot of 1st level or higher and target an ally with the spell, that ally can use their reaction immediately after the spell to make one weapon attack against a creature of your choice that you can see.",
                         "If the spell targets more than one ally, you choose the ally who can make the attack."
                     ]
@@ -1722,8 +1722,8 @@
                         "<GOTO:Heroism:Spells+Heroism>",
                         "<GOTO:Sanctuary:Spells+Sanctuary>"
                     ],
-                    "2.Implement of Peace": "When you choose this domain at 1st level, you gain proficiency in the Insight, Performance, or Persuasion skill (your choice).",
-                    "3.Emboldening Bond": [
+                    "2.Implement of Peace#H1": "When you choose this domain at 1st level, you gain proficiency in the Insight, Performance, or Persuasion skill (your choice).",
+                    "3.Emboldening Bond#H1": [
                         "Starting at 1st level, you can forge an empowering bond among people who are at peace with one another. As an action, you choose a number of willing creatures within 30 feet of you (this can include yourself) equal to your proficiency bonus. You create a magical bond among them for 10 minutes or until you use this feature again. While any bonded creature is within 30 feet of another, the creature can roll a d4 and add the number rolled to an attack roll, an ability check, or a saving throw it makes. Each creature can add the d4 no more than once per turn.",
                         "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                     ]
@@ -1733,8 +1733,8 @@
                         "<GOTO:Fog Cloud:Spells+Fog Cloud>",
                         "<GOTO:Thunderwave:Spells+Thunderwave>"
                     ],
-                    "Bonus Proficiencies": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
-                    "Wrath of the Storm": [
+                    "Bonus Proficiencies#H1": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+                    "Wrath of the Storm#H1": [
                         "Also at 1st level, you can thunderously rebuke attackers. When a creature within 5 feet of you that you can see hits you with an attack, you can use your reaction to cause the creature to make a Dexterity saving throw. The creature takes 2d8 lightning or thunder damage (your choice) on a failed saving throw, and half as much damage on a successful one.",
                         "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
                     ]
@@ -1751,20 +1751,20 @@
                         "<GOTO:Faerie Fire:Spells+Faerie Fire>",
                         "<GOTO:Sleep:Spells+Sleep>"
                     ],
-                    "2.Bonus Proficiencies": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
-                    "3.Eyes of Night": [
+                    "2.Bonus Proficiencies#H1": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+                    "3.Eyes of Night#H1": [
                         "Starting at 1st level, You can see through the deepest gloom. You have darkvision out to a range of 300 feet. In that radius, you can see in dim light as if it were bright light and in darkness as if it were dim light.",
                         "As an action, you can magically share the darkvision of this feature with willing creatures you can see within 10 feet of you, up to a number of creatures equal to your Wisdom modifier (minimum of one creature). The shared darkvision lasts for 1 hour. Once you share it, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to share it again."
                     ],
-                    "Vigilant Blessing": "At 1st level, the night has taught you to be vigilant. As an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this feature again."
+                    "Vigilant Blessing#H1": "At 1st level, the night has taught you to be vigilant. As an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this feature again."
                 },
                 "15. War Domain#H1#COLLAPSE": {
                     "1.War Domain Spells at 1st Level#H1": [
                         "<GOTO:Divine Favor:Spells+Divine Favor>",
                         "<GOTO:Shield of Faith:Spells+Shield of Faith>"
                     ],
-                    "2.Bonus Proficiencies": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
-                    "3.War Priest": [
+                    "2.Bonus Proficiencies#H1": "At 1st level, you gain proficiency with martial weapons and heavy armor.",
+                    "3.War Priest#H1": [
                         "From 1st level, your god delivers bolts of inspiration to you while you are engaged in battle. When you use the Attack action, you can make one weapon attack as a bonus action.",
                         "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
                     ]
@@ -1785,14 +1785,14 @@
                 ]
             },
             "1. Arcana Domain#H1#COLLAPSE": {
-                "1.Channel Divinity: Arcane Abjuration": {
+                "1.Channel Divinity: Arcane Abjuration#H1": {
                     "1.": [
                         "Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures.",
                         "As an action, you present your holy symbol, and one celestial, elemental, fey, or fiend of your choice that is within 30 feet of you must make a Wisdom saving throw, provided that the creature can see or hear you. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.",
                         "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can only use the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
                         "After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the Banishment spell, no concentration required) if it isn't on its plane of origin and its challenge rating is at or below a certain threshold, as shown on the Arcane Banishment table."
                     ],
-                    "2.Arcane Banishment#TABLE": [
+                    "2.Arcane Banishment#H1#TABLE": [
                         ["Cleric Level", "Banishes Creatures of CR"],
                         ["5th", "1/2 or lower"],
                         ["8th", "1 or lower"],
@@ -1803,10 +1803,10 @@
                 }
             },
             "2. Death Domain#H1#COLLAPSE": {
-                "Channel Divinity: Touch of Death": "Starting at 2nd level, you can use Channel Divinity to destroy another creature's life force by touch. When you hit a creature with a melee attack, you can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice your cleric level."
+                "Channel Divinity: Touch of Death#H1": "Starting at 2nd level, you can use Channel Divinity to destroy another creature's life force by touch. When you hit a creature with a melee attack, you can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice your cleric level."
             },
             "3. Forge Domain#H1#COLLAPSE": {
-                "Channel Divinity: Artisan's Blessing": [
+                "Channel Divinity: Artisan's Blessing#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to create simple items.",
                     "You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object. The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.",
                     "The thing you create can be something that is worth no more than 100 gp. As part of this ritual, you must lay out metal, which can include coins, with a value equal to the creation. The metal irretrievably coalesces and transforms into the creation at the ritual's end, magically forming even nonmetal parts of the creation.",
@@ -1814,56 +1814,56 @@
                 ]
             },
             "4. Grave Domain#H1#COLLAPSE": {
-                "Channel Divinity: Path to the Grave": [
+                "Channel Divinity: Path to the Grave#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to mark another creature's life force for termination.",
                     "As an action, you choose one creature you can see within 30 feet of you, cursing it until the end of your next turn. The next time you or an ally of yours hits the cursed creature with an attack, the creature has vulnerability to all of that attack's damage, and then the curse ends."
                 ]
             },
             "5. Knowledge Domain#H1#COLLAPSE": {
-                "1.Channel Divinity: Knowledge of the Ages": "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
+                "1.Channel Divinity: Knowledge of the Ages#H1": "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
             },
             "6. Life Domain#H1#COLLAPSE": {
-                "Channel Divinity: Preserve Life": [
+                "Channel Divinity: Preserve Life#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
                     "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
                 ]
             },
             "7. Light Domain#H1#COLLAPSE": {
-                "Channel Divinity: Radiance of the Dawn": [
+                "Channel Divinity: Radiance of the Dawn#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
                     "As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
                 ]
             },
             "8. Nature Domain#H1#COLLAPSE": {
-                "Channel Divinity: Charm Animals and Plants": [
+                "Channel Divinity: Charm Animals and Plants#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
                     "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage. While it is charmed by you, it is friendly to you and other creatures you designate."
                 ]
             },
             "9. Order Domain#H1#COLLAPSE": {
-                "Channel Divinity: Order's Demand": [
+                "Channel Divinity: Order's Demand#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.",
                     "As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be charmed by you until the end of your next turn or until the charmed creature takes any damage. You can also cause any of the charmed creatures to drop what they are holding when they fail the saving throw."
                 ]
             },
             "10. Peace Domain#H1#COLLAPSE": {
-                "Channel Divinity: Balm of Peace": "Starting at 2nd level, you can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action, you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action."
+                "Channel Divinity: Balm of Peace#H1": "Starting at 2nd level, you can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action, you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action."
             },
             "11. Tempest Domain#H1#COLLAPSE": {
-                "Channel Divinity: Destructive Wrath": [
+                "Channel Divinity: Destructive Wrath#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
             "12. Trickery Domain#H1#COLLAPSE": {
-                "Channel Divinity: Invoke Duplicity": [
+                "Channel Divinity: Invoke Duplicity#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
                     "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
                     "For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
                 ]
             },
             "13. Twilight Domain#H1#COLLAPSE": {
-                "Channel Divinity: Twilight Sanctuary": [
+                "Channel Divinity: Twilight Sanctuary#H1": [
                     "At 2nd level, you can use your Channel Divinity to refresh your allies with soothing twilight.",
                     "As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are incapacitated or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
                     "<LIST_START>",
@@ -1873,7 +1873,7 @@
                 ]
             },
             "14. War Domain#H1#COLLAPSE": {
-                "Channel Divinity: Guided Strike": "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+                "Channel Divinity: Guided Strike#H1": "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             },
             "15.Harness Divine Power (Optional)#H1": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
         },
@@ -2059,13 +2059,13 @@
         "11.6th level#H1#COLLAPSE": {
             "0.Channel Divinity#H1": "Beginning at 6th level, you can use your Channel Divinity twice between rests. When you finish a short or long rest, you regain your expended uses.",
             "1. Arcana Domain#H1#COLLAPSE": {
-                "Spell Breaker": "Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
+                "Spell Breaker#H1": "Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
             },
             "2. Death Domain#H1#COLLAPSE": {
-                "Inescapable Destruction": "Starting at 6th level, your ability to channel negative energy becomes more potent. Necrotic damage dealt by your cleric spells and Channel Divinity options ignores resistance to necrotic damage."
+                "Inescapable Destruction#H1": "Starting at 6th level, your ability to channel negative energy becomes more potent. Necrotic damage dealt by your cleric spells and Channel Divinity options ignores resistance to necrotic damage."
             },
             "3. Forge Domain#H1#COLLAPSE": {
-                "1.Soul of the Forge": [
+                "1.Soul of the Forge#H1": [
                     "Starting at 6th level, your mastery of the forge grants you special abilities:",
                     "<LIST_START>",
                     "<LIST_ITEM>You gain resistance to fire damage.",
@@ -2074,13 +2074,13 @@
                 ]
             },
             "4. Grave Domain#H1#COLLAPSE": {
-                "Sentinel at Death's Door": [
+                "Sentinel at Death's Door#H1": [
                     "At 6th level, you gain the ability to impede death's progress. As a reaction when you or an ally that you can see within 30 feet of you suffers a critical hit, you can turn that attack into a normal hit. Any effects triggered by a critical hit are canceled.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
                 ]
             },
             "5. Knowledge Domain#H1#COLLAPSE": {
-                "1.Channel Divinity: Read Thoughts": [
+                "1.Channel Divinity: Read Thoughts#H1": [
                     "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
                     "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
                     "If the creature fails its save, you can read its surface thoughts (those foremost in its mind, reflecting its current emotions and what it is actively thinking about) when it is within 60 feet of you. This effect lasts for 1 minute.",
@@ -2088,41 +2088,41 @@
                 ]
             },
             "6. Life Domain#H1#COLLAPSE": {
-                "Blessed Healer": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
+                "Blessed Healer#H1": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
             },
             "7. Light Domain#H1#COLLAPSE": {
-                "Improved Flare": "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
+                "Improved Flare#H1": "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
             },
             "8. Nature Domain#H1#COLLAPSE": {
-                "Dampen Elements": "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
+                "Dampen Elements#H1": "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
             },
             "9. Order Domain#H1#COLLAPSE": {
-                "Embodiment of the Law": [
+                "Embodiment of the Law#H1": [
                     "At 6th level, you become remarkably adept at channeling magical energy to compel others.",
                     "If you cast a spell of the enchantment school using a spell slot of 1st level or higher, you can change the spell's casting time to 1 bonus action for this casting, provided the spell's casting time is normally 1 action.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
                 ]
             },
             "10. Peace Domain#H1#COLLAPSE": {
-                "Protective Bond": "Beginning at 6th level, the bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead."
+                "Protective Bond#H1": "Beginning at 6th level, the bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead."
             },
             "11. Tempest Domain#H1#COLLAPSE": {
-                "Channel Divinity: Destructive Wrath": [
+                "Channel Divinity: Destructive Wrath#H1": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
             "12. Trickery Domain#H1#COLLAPSE": {
-                "Channel Divinity: Cloak of Shadows": [
+                "Channel Divinity: Cloak of Shadows#H1": [
                     "Starting at 6th level, you can use your Channel Divinity to vanish.",
                     "As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell."
                 ]
             },
             "13. Twilight Domain#H1#COLLAPSE": {
-                "Steps of Night": "Starting at 6th level, you can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                "Steps of Night#H1": "Starting at 6th level, you can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             },
             "14. War Domain#H1#COLLAPSE": {
-                "Channel Divinity: War God's Blessing": "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+                "Channel Divinity: War God's Blessing#H1": "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             }
         },
         "12.7th level#H1#COLLAPSE": {
@@ -2217,46 +2217,46 @@
             "1.Destroy Undead#H1": "Starting at 8th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 1.",
             "2.Cantrip Versatility (Optional)#H1": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list.",
             "3. Arcana Domain#H1#COLLAPSE": {
-                "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                "Potent Spellcasting#H1": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
             "4. Death Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an a 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an a 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "5. Forge Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 fire damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 fire damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "6. Grave Domain#H1#COLLAPSE": {
-                "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                "Potent Spellcasting#H1": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
             "7. Knowledge Domain#H1#COLLAPSE": {
-                "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                "Potent Spellcasting#H1": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
             "8. Life Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "9. Light Domain#H1#COLLAPSE": {
-                "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                "Potent Spellcasting#H1": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
             "10. Nature Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "11. Order Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "12. Peace Domain#H1#COLLAPSE": {
-                "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
+                "Potent Spellcasting#H1": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
             "13. Tempest Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "14. Trickery Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "15. Twilight Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage. When you reach 14th level, the extra damage increases to 2d8."
             },
             "16. War Domain#H1#COLLAPSE": {
-                "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
+                "Divine Strike#H1": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "Blessed Strikes (Optional)#H1": [
                 "<ITALIC>Replaces the Divine Strike or Potent Spellcasting feature</ITALIC>",
@@ -2383,13 +2383,13 @@
         "22.17th level#H1#COLLAPSE": {
             "0.Destroy Undead#H1": "Starting at 17th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 4.",
             "1. Arcana Domain#H1#COLLAPSE": {
-                "Arcane Mastery": "At 17th level, you choose four spells from the wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
+                "Arcane Mastery#H1": "At 17th level, you choose four spells from the wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
             },
             "2. Death Domain#H1#COLLAPSE": {
-                "Improved Reaper": "Starting at 17th level, when you cast a necromancy spell of 1st through 5th level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, you must provide them for each target."
+                "Improved Reaper#H1": "Starting at 17th level, when you cast a necromancy spell of 1st through 5th level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, you must provide them for each target."
             },
             "3. Forge Domain#H1#COLLAPSE": {
-                "Saint of Forge and Fire": [
+                "Saint of Forge and Fire#H1": [
                     "At 17th level, your blessed affinity with fire and metal becomes more powerful:",
                     "<LIST_START>",
                     "<LIST_ITEM>You gain immunity to fire damage.",
@@ -2398,10 +2398,10 @@
                 ]
             },
             "4. Grave Domain#H1#COLLAPSE": {
-                "Keeper of Souls": "At 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't incapacitated. Once you use it, you can't do so again until the start of your next turn."
+                "Keeper of Souls#H1": "At 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't incapacitated. Once you use it, you can't do so again until the start of your next turn."
             },
             "5. Knowledge Domain#H1#COLLAPSE": {
-                "Visions of the Past": [
+                "Visions of the Past#H1": [
                     "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
                     "Once you use this feature, you can't use it again until you finish a short or long rest.",
                     "<BOLD>Object Reading.</BOLD> Holding an object as you meditate, you can see visions of the object's previous owner. After meditating for 1 minute, you learn how the owner acquired and lost the object, as well as the most recent significant event involving the object and that owner. If the object was owned by another creature in the recent past (within a number of days equal to your Wisdom score), you can spend 1 additional minute for each owner to learn the same information about that creature.",
@@ -2409,31 +2409,31 @@
                 ]
             },
             "6. Life Domain#H1#COLLAPSE": {
-                "Supreme Healing": "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d6 hit points to a creature, you restore 12."
+                "Supreme Healing#H1": "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d6 hit points to a creature, you restore 12."
             },
             "7. Light Domain#H1#COLLAPSE": {
-                "Corona of Light": "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
+                "Corona of Light#H1": "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
             },
             "8. Nature Domain#H1#COLLAPSE": {
-                "Master of Nature": "At 17th level, you gain the ability to command animals and plant creatures. While creatures are charmed by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
+                "Master of Nature#H1": "At 17th level, you gain the ability to command animals and plant creatures. While creatures are charmed by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
             },
             "9. Order Domain#H1#COLLAPSE": {
-                "Order's Wrath": "Starting at 17th level, enemies you designate for destruction wilt under the combined efforts of you and your allies. If you deal your Divine Strike damage to a creature on your turn, you can curse that creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack, the target also takes 2d8 psychic damage, and the curse ends. You can curse a creature in this way only once per turn."
+                "Order's Wrath#H1": "Starting at 17th level, enemies you designate for destruction wilt under the combined efforts of you and your allies. If you deal your Divine Strike damage to a creature on your turn, you can curse that creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack, the target also takes 2d8 psychic damage, and the curse ends. You can curse a creature in this way only once per turn."
             },
             "10. Peace Domain#H1#COLLAPSE": {
-                "Expansive Bond": "At 17th level, the benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance to that damage."
+                "Expansive Bond#H1": "At 17th level, the benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance to that damage."
             },
             "11. Tempest Domain#H1#COLLAPSE": {
-                "Stormborn": "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
+                "Stormborn#H1": "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
             },
             "12. Trickery Domain#H1#COLLAPSE": {
-                "Improved Duplicity": "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
+                "Improved Duplicity#H1": "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
             },
             "13. Twilight Domain#H1#COLLAPSE": {
-                "Twilight Shroud": "At 17th level, the twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
+                "Twilight Shroud#H1": "At 17th level, the twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
             },
             "14. War Domain#H1#COLLAPSE": {
-                "Avatar of Battle": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+                "Avatar of Battle#H1": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
             }
         },
         "23.18th level#H1#COLLAPSE": {
