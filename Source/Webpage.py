@@ -106,7 +106,8 @@ class Webpage:
         self.JSCodeMap = {
             '<': '|~lt~|',
             '>': '|~gt~|',
-            '&': '|~and~|'
+            '&': '|~and~|',
+            '—': '|~em~dash~|'
         }
 
         self.TextReplaceMap = {
@@ -117,7 +118,8 @@ class Webpage:
             '<STRIKE>': self.PreProcessText('<del>'),
             '<UNDER>': self.PreProcessText('<ins>'),
             '<SUB>': self.PreProcessText('<sub>'),
-            '<SUP>': self.PreProcessText('<sup>')
+            '<SUP>': self.PreProcessText('<sup>'),
+            '—': self.PreProcessText('—')
         }
         for Key in list(self.TextReplaceMap.keys()):
             NewKey = Key.replace('<', '</')
@@ -684,7 +686,6 @@ class Webpage:
 
 
     def PreProcessText(self, Text):
-
         for Key in self.JSCodeMap:
             Text = Text.replace(Key, self.JSCodeMap[Key])
         
@@ -705,11 +706,10 @@ class Webpage:
 
     def Save(self, OutHTML):
         CleanTarget = OutHTML.replace('\\', '/').replace('//', '/').replace('/', os.sep)
-        OutFile = open(CleanTarget, 'w')
-        PageText = self.Doc.getvalue()
-        PageText = self.PostProcessPage(PageText)
-        OutFile.write(PageText) 
-        OutFile.close()
+        with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
+            PageText = self.Doc.getvalue()
+            PageText = self.PostProcessPage(PageText)
+            OutFile.write(PageText) 
     
 
     def ConsumeMetaData(self, Key):
