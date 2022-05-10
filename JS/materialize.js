@@ -841,17 +841,19 @@ M.anime = function() {
 
                             e[0].classList.add("active");
                             this._animateIn(t);
-                            window.scrollTo(0, 0);
+
                             var waitfortop = function() {
                                 var doc = document.documentElement;
                                 var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
                                 if (top > 0 && e[0].children[0].getBoundingClientRect().y < 0) {
                                     setTimeout(waitfortop, 10);
                                 } else {
-                                    var doc2 = document.documentElement;
-                                    var top2 = (window.pageYOffset || doc2.scrollTop) - (doc2.clientTop || 0);
-                                    window.scroll(0, top2 + e[0].children[0].getBoundingClientRect().top);
-                                    setTimeout(waitforelement, 10);
+                                    setTimeout(function() {
+                                        var doc2 = document.documentElement;
+                                        var top2 = (window.pageYOffset || doc2.scrollTop) - (doc2.clientTop || 0);
+                                        window.scroll(0, top2 + e[0].children[0].getBoundingClientRect().top);
+                                        setTimeout(waitforelement, 10);
+                                    }, 10);
                                 }
                             }
 
@@ -870,6 +872,7 @@ M.anime = function() {
                                     prevElementY = elementY;
                                     setTimeout(elementcollapsing, 10);
                                 } else {
+                                    window.scrollTo(0, 0);
                                     setTimeout(waitfortop, 10);
                                 }
                             }
