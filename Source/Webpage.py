@@ -193,7 +193,7 @@ class Webpage:
             opencollapse += ["    var waitforelement = function() {"]
             opencollapse += ["        if (Math.abs(onOpenCollapseWaitFor.getBoundingClientRect().top - onOpenCollapseWaitForPosition) > 0) {"]
             opencollapse += ["            onOpenCollapseWaitForPosition = onOpenCollapseWaitFor.getBoundingClientRect().top;"]
-            opencollapse += ["            setTimeout(waitforelement, 10);"]
+            opencollapse += ["            setTimeout(waitforelement, 33);"]
             opencollapse += ["        } else {"]
             opencollapse += ["            window.location.href = origLink;"]
             opencollapse += ["        }"]
@@ -218,20 +218,20 @@ class Webpage:
             opencollapse += ["            }"]
             opencollapse += ["            targetElement = targetElement.parentElement;"]
             opencollapse += ["        }"]
-            opencollapse += ["        setTimeout(waitforelement, 10);"]
+            opencollapse += ["        setTimeout(waitforelement, 33);"]
             opencollapse += ["    }"]
             opencollapse += ["    var waitfortop = function() {"]
             opencollapse += ["        var doc = document.documentElement;"]
             opencollapse += ["        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);"]
             opencollapse += ["        if (top > 0) {"]
-            opencollapse += ["            setTimeout(waitfortop, 10);"]
+            opencollapse += ["            setTimeout(waitfortop, 33);"]
             opencollapse += ["        } else {"]
-            opencollapse += ["            setTimeout(opencollapse, 10);"]
+            opencollapse += ["            setTimeout(opencollapse, 33);"]
             opencollapse += ["        }"]
             opencollapse += ["    }"]
             opencollapse += ["    setTimeout(function() {"]
             opencollapse += ["        window.scrollTo(0, 0);"]
-            opencollapse += ["        setTimeout(waitfortop, 10);"]
+            opencollapse += ["        setTimeout(waitfortop, 33);"]
             opencollapse += ["    }, 30);"]
             opencollapse += ["});"]
             self.Text(self.PreProcessText('\n'.join(opencollapse)))
@@ -253,12 +253,12 @@ class Webpage:
             opencollapsewithlinkaddress += ["    if (Pre == true) {"]
             opencollapsewithlinkaddress += ["        var gotoLinkOneUpdatingCollapsibleIsDone = function() {"]
             opencollapsewithlinkaddress += ["            if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
-            opencollapsewithlinkaddress += ["                setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
+            opencollapsewithlinkaddress += ["                setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 33);"]
             opencollapsewithlinkaddress += ["            } else {"]
             opencollapsewithlinkaddress += ["                window.location.href = Address;"]
             opencollapsewithlinkaddress += ["            }"]
             opencollapsewithlinkaddress += ["        }"]
-            opencollapsewithlinkaddress += ["        setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 10);"]
+            opencollapsewithlinkaddress += ["        setTimeout(gotoLinkOneUpdatingCollapsibleIsDone, 33);"]
             opencollapsewithlinkaddress += ["    }"]
             opencollapsewithlinkaddress += ["    return false;"]
             opencollapsewithlinkaddress += ["}"]
@@ -505,7 +505,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -518,7 +518,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -532,7 +532,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -545,7 +545,7 @@ class Webpage:
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="return opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="return opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
