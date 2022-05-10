@@ -2454,21 +2454,21 @@
         "Features#HIDDEN#CALL(_genlink)": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle, Wild Companion (Optional)",
-            "-",
+            "",
             "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
-            "-",
+            "",
             "Druid Circle feature",
-            "-",
+            "",
             "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
-            "-",
+            "",
             "Druid Circle feature",
-            "-",
+            "",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
-            "-",
+            "",
             "Druid Circle feature",
-            "-",
+            "",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
-            "-",
+            "",
             "Timeless Body, Beast Spells",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
             "Archdruid"
@@ -2566,39 +2566,92 @@
                 "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
             ]
         },
-        "8.3rd level#H1#COLLAPSE": {},
+        "8.3rd level#H1#COLLAPSE": {
+            "1.":"Access to 2nd level spells"
+        },
         "9.4th level#H1#COLLAPSE": {
-            "Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "10.5th level#H1#COLLAPSE": {},
-        "11.6th level#H1#COLLAPSE": {},
-        "12.7th level#H1#COLLAPSE": {},
+        "10.5th level#H1#COLLAPSE": {
+            "1.":"Access to 3rd level spells"
+        },
+        "11.6th level#H1#COLLAPSE": {
+            "2.Circle of Dreams":{},
+            "3.Circle of the Land":{},
+            "4.Circle of the Moon":{},
+            "5.Circle of the Shepherd":{},
+            "6.Circle of Spores":{},
+            "7.Circle of Stars":{},
+            "8.Circle of Wildfire":{}
+        },
+        "12.7th level#H1#COLLAPSE": {
+            "1.":"Access to 4th level spells"
+        },
         "13.8th level#H1#COLLAPSE": {
-            "Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "14.9th level#H1#COLLAPSE": {},
-        "15.10th level#H1#COLLAPSE": {},
-        "16.11th level#H1#COLLAPSE": {},
+        "14.9th level#H1#COLLAPSE": {
+            "1.":"Access to 5th level spells"
+        },
+        "15.10th level#H1#COLLAPSE": {
+            "2.Circle of Dreams":{},
+            "3.Circle of the Land":{},
+            "4.Circle of the Moon":{},
+            "5.Circle of the Shepherd":{},
+            "6.Circle of Spores":{},
+            "7.Circle of Stars":{},
+            "8.Circle of Wildfire":{}
+        },
+        "16.11th level#H1#COLLAPSE": {
+            "1.":"Access to 6th level spells"
+        },
         "17.12th level#H1#COLLAPSE": {
-            "Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "18.13th level#H1#COLLAPSE": {},
-        "19.14th level#H1#COLLAPSE": {},
-        "20.15th level#H1#COLLAPSE": {},
+        "18.13th level#H1#COLLAPSE": {
+            "1.":"Access to 7th level spells"
+        },
+        "19.14th level#H1#COLLAPSE": {
+            "2.Circle of Dreams":{},
+            "3.Circle of the Land":{},
+            "4.Circle of the Moon":{},
+            "5.Circle of the Shepherd":{},
+            "6.Circle of Spores":{},
+            "7.Circle of Stars":{},
+            "8.Circle of Wildfire":{}
+        },
+        "20.15th level#H1#COLLAPSE": {
+            "1.":"Access to 8th level spells"
+        },
         "21.16th level#H1#COLLAPSE": {
-            "Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "22.17th level#H1#COLLAPSE": {},
-        "23.18th level#H1#COLLAPSE": {},
+        "22.17th level#H1#COLLAPSE": {
+            "1.":"Access to 9th level spells"
+        },
+        "23.18th level#H1#COLLAPSE": {
+            "1.Timeless Body":"Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+            "2.Beast Spells":"Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+        },
         "24.19th level#H1#COLLAPSE": {
-            "Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "25.20th level#H1#COLLAPSE": {}
+        "25.20th level#H1#COLLAPSE": {
+            "1.Archdruid":[
+                "At 20th level, you can use your Wild Shape an unlimited number of times.",
+                "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
+            ]
+        }
     },
     "Fighter#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
