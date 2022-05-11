@@ -60,6 +60,34 @@
             "        Group = Group.replace(', ', ',')",
             "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: self.CleanLinkText(LinkKey), STATE['key'] + [Item.split('<REF:')[0]])))), Group.split(','))))]",
             "return NewArg"
+        ],
+        "_autorefrepeatitems_description": [
+            "Checks for repeated items in this table and adds <REF:[ROW#] level> to the repeated items."
+        ],
+        "_autorefrepeatitems": [
+            "RepeatCounter = {}",
+            "NewArg = []",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    for SubArg in SplitArg:",
+            "        if SubArg not in RepeatCounter:",
+            "            RepeatCounter[SubArg] = 0",
+            "        RepeatCounter[SubArg] += 1",
+            "Level = 1",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    NewSplit = []",
+            "    for SubArg in SplitArg:",
+            "        if RepeatCounter[SubArg] > 1:",
+            "            SubArg += '<REF:{} level>'.format(self.ParamStorage['_st'][str(Level)])",
+            "        NewSplit += [SubArg]",
+            "    Level += 1",
+            "    NewArg += [', '.join(NewSplit)]",
+            "return NewArg"
         ]
     },
     "Table of Contents#H4#ADD_CLASS(columns-6)": {
@@ -235,26 +263,26 @@
     "Artificer#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Magical Tinkering, Spellcasting",
             "Infuse Item",
             "Artificer Specialist, The Right Tool for the Job",
-            "Ability Score Improvement<REF:4th level>",
-            "Artificer Specialist feature<REF:5th level>",
+            "Ability Score Improvement",
+            "Artificer Specialist feature",
             "Tool Expertise",
             "Flash of Genius",
-            "Ability Score Improvement<REF:8th level>",
-            "Artificer Specialist feature<REF:9th level>",
+            "Ability Score Improvement",
+            "Artificer Specialist feature",
             "Magic Item Adept",
             "Spell-Storing Item",
-            "Ability Score Improvement<REF:12th level>",
+            "Ability Score Improvement",
             "—",
             "Magic Item Savant",
-            "Artificer Specialist feature<REF:15th level>",
-            "Ability Score Improvement<REF:16th level>",
+            "Artificer Specialist feature",
+            "Ability Score Improvement",
             "—",
             "Magic Item Master",
-            "Ability Score Improvement<REF:19th level>",
+            "Ability Score Improvement",
             "Soul of Artifice"
         ],
         "Infusions Known#HIDDEN#INC": [2, 2, 2, 2, 6, 6, 10, 10, 14, 14, 18, 18],
@@ -805,7 +833,7 @@
     "Barbarian#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Rage, Unarmored Defense",
             "Reckless Attack, Danger Sense",
             "Primal Knowledge (Optional), Primal Path",
@@ -1160,7 +1188,7 @@
     "Bard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Bardic Inspiration (d6)",
             "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
             "Bard College, Expertise",
@@ -1548,7 +1576,7 @@
     "Cleric#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Divine Domain",
             "Channel Divinity (1/rest), Divine Domain feature, Harness Divine Power (Optional)",
             "—",
@@ -2451,7 +2479,7 @@
     "Druid#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle, Wild Companion (Optional)",
             "—",
@@ -2656,7 +2684,7 @@
     "Fighter#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
             "Martial Archetype",
@@ -2745,7 +2773,7 @@
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
         "Ki Points#HIDDEN#INC": [2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         "Unarmored Movement#HIDDEN": ["—", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Unarmored Defense, Martial Arts",
             "Ki, Unarmored Movement",
             "Monastic Tradition, Deflect Missiles",
@@ -2828,7 +2856,7 @@
     "Paladin#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
             "Divine Health, Sacred Oath",
@@ -2918,7 +2946,7 @@
     "Ranger#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Favored Enemy, Natural Explorer",
             "Fighting Style, Spellcasting",
             "Ranger Archetype, Primeval Awareness",
@@ -3008,7 +3036,7 @@
     "Rogue#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Expertise, Sneak Attack, Thieves' Cant",
             "Cunning Action",
             "Roguish Archetype",
@@ -3094,7 +3122,7 @@
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Sorcerous Origin",
             "Font of Magic",
             "Metamagic",
@@ -3190,7 +3218,7 @@
     "Warlock#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
             "Pact Boon",
@@ -3280,7 +3308,7 @@
     "Wizard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlocallink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Arcane Recovery",
             "Arcane Tradition",
             "—",
