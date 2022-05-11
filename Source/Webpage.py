@@ -159,7 +159,7 @@ class Webpage:
                     pass
             
             with self.Tag('header'):
-                with self.Tag('nav'):
+                with self.Tag('nav', id='sticky-header-nav'):
                     with self.Tag('div'):
                         with self.Tag('ul'):
                             with self.Tag('li'):
@@ -207,7 +207,15 @@ class Webpage:
             opencollapse += ["        if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
             opencollapse += ["            setTimeout(waitforelement, 10);"]
             opencollapse += ["        } else {"]
-            opencollapse += ["            window.location.href = origLink;"]
+            opencollapse += ["            var targetElement = document.getElementById(origLink.split(\"#\")[1]);"]
+            opencollapse += ["            var doc = document.documentElement;"]
+            opencollapse += ["            var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);"]
+            opencollapse += ["            var goto = top + targetElement.getBoundingClientRect().top - 0.5;"]
+            opencollapse += ["            var stickyHeaderNav = document.getElementById(\"sticky-header-nav\");"]
+            opencollapse += ["            if (stickyHeaderNav != null) {"]
+            opencollapse += ["                goto = goto - stickyHeaderNav.getBoundingClientRect().height;"]
+            opencollapse += ["            }"]
+            opencollapse += ["            window.scrollTo(0, goto);"]
             opencollapse += ["        }"]
             opencollapse += ["    }"]
             opencollapse += ["    var opencollapse = function() {"]
@@ -219,6 +227,10 @@ class Webpage:
             opencollapse += ["        var linkSplit = window.location.href.split(\"#\");"]
             opencollapse += ["        if (linkSplit.length <= 1) {"]
             opencollapse += ["            return;"]
+            opencollapse += ["        }"]
+            opencollapse += ["        var targetElement = document.getElementById(linkSplit[1]);"]
+            opencollapse += ["        if (targetElement == null) {"]
+            opencollapse += ["            window.location.href = linkSplit[0];"]
             opencollapse += ["        }"]
             opencollapse += ["        var targetID = linkSplit[1];"]
             opencollapse += ["        var targetElement = document.getElementById(targetID);"]
@@ -246,8 +258,20 @@ class Webpage:
 
             opencollapsewithlinkaddress = []            
             opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(LinkElement, Pre, Address) {"]
+            opencollapsewithlinkaddress += ["    var currentHref = window.location.href.split(\"#\")[0]"]
+            opencollapsewithlinkaddress += ["    if (currentHref.includes('/')) {"]
+            opencollapsewithlinkaddress += ["        currentHref = currentHref.split('/');"]
+            opencollapsewithlinkaddress += ["        currentHref = currentHref[currentHref.length - 1];"]
+            opencollapsewithlinkaddress += ["    }"]
+            opencollapsewithlinkaddress += ["    if (Address.split(\"#\")[0] != currentHref) {"]
+            opencollapsewithlinkaddress += ["        window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["        return false"]
+            opencollapsewithlinkaddress += ["    }"]
             opencollapsewithlinkaddress += ["    var targetID = Address.split(\"#\")[1];"]
-            opencollapsewithlinkaddress += ["    targetElement = document.getElementById(targetID);"]
+            opencollapsewithlinkaddress += ["    var targetElement = document.getElementById(targetID);"]
+            opencollapsewithlinkaddress += ["    if (targetElement == null) {"]
+            opencollapsewithlinkaddress += ["        return false"]
+            opencollapsewithlinkaddress += ["    }"]
             opencollapsewithlinkaddress += ["    while (targetElement != null && targetElement.parentElement != null) {"]
             opencollapsewithlinkaddress += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
             opencollapsewithlinkaddress += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
@@ -263,7 +287,15 @@ class Webpage:
             opencollapsewithlinkaddress += ["            if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
             opencollapsewithlinkaddress += ["                setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);"]
             opencollapsewithlinkaddress += ["            } else {"]
-            opencollapsewithlinkaddress += ["                window.location.href = Address;"]
+            opencollapsewithlinkaddress += ["                var targetElement = document.getElementById(targetID);"]
+            opencollapsewithlinkaddress += ["                var doc = document.documentElement;"]
+            opencollapsewithlinkaddress += ["                var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);"]
+            opencollapsewithlinkaddress += ["                var goto = top + targetElement.getBoundingClientRect().top - 0.5;"]
+            opencollapsewithlinkaddress += ["                var stickyHeaderNav = document.getElementById(\"sticky-header-nav\");"]
+            opencollapsewithlinkaddress += ["                if (stickyHeaderNav != null) {"]
+            opencollapsewithlinkaddress += ["                    goto = goto - stickyHeaderNav.getBoundingClientRect().height;"]
+            opencollapsewithlinkaddress += ["                }"]
+            opencollapsewithlinkaddress += ["                window.scrollTo(0, goto);"]
             opencollapsewithlinkaddress += ["            }"]
             opencollapsewithlinkaddress += ["        }"]
             opencollapsewithlinkaddress += ["        setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);"]
@@ -531,7 +563,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1    
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -551,7 +583,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -572,7 +604,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -592,7 +624,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
