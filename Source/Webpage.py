@@ -157,13 +157,19 @@ class Webpage:
                     pass
                 with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
                     pass
-
-            self.Doc.stag('hr')
-            with self.Tag('body'):
+            
+            with self.Tag('header'):
+                with self.Tag('nav'):
+                    with self.Tag('div'):
+                        with self.Tag('ul'):
+                            with self.Tag('li'):
+                                self.Line('a', 'TBD')
+            with self.Tag('body', klass='content html-renderer'):
                 with self.Tag('div', klass='body-div'):
+                    with self.Tag('div', klass='header-spacer'):
+                        self.Line('p', ' ')
                     self.LoadLevel(self.JSON)
                 self.AddJS()
-            self.Doc.stag('hr')
             with self.Tag('footer'):
                 self.AddFooter()
 
@@ -737,8 +743,6 @@ class Webpage:
     def PostProcessPage(self, PageText):
         for Key in self.JSCodeMap:
             PageText = PageText.replace(self.JSCodeMap[Key], Key)
-
-        PageText = PageText.replace('<body>', '<body class="html-renderer">')
 
         _DONT_CLOSE_THIS_STAG_re = re.compile('.*?_DONT_CLOSE_THIS_STAG_(.*?)/>.*')
         _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
