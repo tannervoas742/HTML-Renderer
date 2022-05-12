@@ -28,13 +28,27 @@ class WebTable:
         self.RenderToPage()
 
     def RenderToPage(self):
-
+        Widths = [None for i in self.Data[0]]
+        ColumnWidthPattern = re.compile('COLUMN_WIDTH\((.*?)\)')
+        ColumnWidthMatch = list(filter(lambda Result: Result != None, list(map(lambda Interface: ColumnWidthPattern.match(Interface), self.Interface))))
+        if len(ColumnWidthMatch) > 0:
+            NewWidths = ColumnWidthMatch[0].group(1).replace(' ', '').split(',')
+            for IDX in range(len(NewWidths)):
+                if IDX < len(Widths):
+                    if NewWidths[IDX].lower() != 'none':
+                        Widths[IDX] = NewWidths[IDX]
         def add_header(doc, header):
             with doc.tag('tr', klass=' '.join(self.State['class'])):
+                ColumnIDX = 0
                 for value in header:
                     NewState = copy.deepcopy(self.State)
                     NewState['force-no-inline'] = True
+                    NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
+                    if Widths[ColumnIDX] != None:
+                        NewState['style'] += ['width: {}'.format(Widths[ColumnIDX])]
+                        NewState['style'] += ['table-layout: fixed']
                     self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
+                    ColumnIDX += 1
                     #doc.line('th', value)
 
         def add_row(doc, values, row_name=None):
@@ -44,11 +58,17 @@ class WebTable:
                     NewState['force-no-inline'] = True
                     self.WebpageObject.AddText(row_name, NewState, self.Interface, None, ForceTextTag='th')
                     #doc.line('th', row_name)
+                ColumnIDX = 0
                 for value in values:
                     NewState = copy.deepcopy(self.State)
                     NewState['force-no-inline'] = True
+                    NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
+                    if Widths[ColumnIDX] != None:
+                        NewState['style'] += ['width: {}'.format(Widths[ColumnIDX])]
+                        NewState['style'] += ['table-layout: fixed']
                     self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='td')
                     #doc.line('td', value)
+                    ColumnIDX += 1
                     
         with self.Tag('table', klass='table renderer-table-bordered' + ' '.join(self.State['class'])):
             with self.Tag('thead', klass='thead-dark ' + ' '.join(self.State['class'])):
@@ -238,13 +258,13 @@ class Webpage:
                     if LastItemWasCollapse == False:
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
-                        self.Doc.stag('br', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['pre-collapsible-br']))
-                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible collapsible-model{}'.format(CollapseModelCount)]))
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
+                        self.Doc.stag('br', style='; '.join(NewState['style']), klass=' '.join(NewState['class'] + ['pre-collapsible-br']))
+                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible collapsible-model{}'.format(CollapseModelCount)]))
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
                     else:
                         self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
-                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
+                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
                     CollapseRowCount += 0
@@ -257,7 +277,7 @@ class Webpage:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                 NewState['key'] += [Key]
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' '.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
                 if 'COLLAPSE' in Interface:
@@ -344,7 +364,7 @@ class Webpage:
         if State['visible'] == False:
             return ContinueFlag, Data
         if 'HR_BEFORE' in Interface:
-            self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
+            self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
         ValidLinkup = True
         if Data == None:
             ValidLinkup = False
@@ -366,23 +386,23 @@ class Webpage:
         else:
             self.AddText(Input, State, Interface, Data)
         if 'HR_MIDDLE' in Interface:
-            self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
+            self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
         if State['mode'] == WebpageEnums.LookupTable:
             self.AddLookupTable(Input, State, Interface, Data)
             if 'HR_AFTER' in Interface:
-                self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
+                self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
         elif State['mode'] == WebpageEnums.Table:
             self.AddTable(Input, State, Interface, Data)
             if 'HR_AFTER' in Interface:
-                self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
+                self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
         if type(Data) in [str, int, float, bool]:
             _, Data, Interface = self.GetInterfaceFromKey(str(Data))
             self.AddText(Data, State, Interface, None)
             return False, None
         if 'HR_AFTER' in Interface:
-            self.Doc.stag('hr', style=' '.join(State['style']), klass=' '.join(State['class']))
+            self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
         return ContinueFlag, Data
 
     def CleanText(self, Text):
@@ -395,8 +415,8 @@ class Webpage:
     def AddText(self, Input, State, Interface, Data, ForceTextTag=None):
         if '<LIST_START>' in Input:
             if self.in_list_div == 0:
-                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
-            self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' '.join(State['style']), klass=' '.join(State['class']))
+                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
+            self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             self.in_list_div += 1
             return
         elif '<LIST_STOP>' in Input:
@@ -406,7 +426,7 @@ class Webpage:
                 self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
             return
         elif '<LIST_ITEM>' in Input:
-            with self.Tag('li', style=' '.join(State['style']), klass=' '.join(State['class'])):
+            with self.Tag('li', style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                 self.AddText(Input.replace('<LIST_ITEM>', ''), State, Interface + ['LIST_ITEM'], Data)
             return
 
@@ -437,7 +457,7 @@ class Webpage:
                 if RefMatch != None:
                     HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
                     Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
-            with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
+            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
                         if 'LIST_ITEM' not in Interface:
@@ -462,7 +482,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1    
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -482,7 +502,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -503,7 +523,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -523,14 +543,14 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
                 self.Text(Input)
                 return 
             
-        with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
+        with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
             self.Text(Input)
 
     def CleanTable(self, Table):
