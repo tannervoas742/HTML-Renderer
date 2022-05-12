@@ -2600,63 +2600,63 @@
                         ],
                         "2.Arctic#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Hold Person:Spells+Hold Person>,<GOTO:Spike Growth:Spells+Spike Growth>"],
-                            ["5th","<GOTO:Sleet Storm:Spells+Sleet Storm>,<GOTO:Slow:Spells+Slow>"],
-                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Ice Storm:Spells+Ice Storm>"],
-                            ["9th","<GOTO:Commune with Nature:Spells+Commune with Nature>,<GOTO:Cone of Cold:Spells+Cone of Cold>"]   
+                            ["3rd","<GOTO:Hold Person:Spells+Hold Person>, <GOTO:Spike Growth:Spells+Spike Growth>"],
+                            ["5th","<GOTO:Sleet Storm:Spells+Sleet Storm>, <GOTO:Slow:Spells+Slow>"],
+                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Ice Storm:Spells+Ice Storm>"],
+                            ["9th","<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Cone of Cold:Spells+Cone of Cold>"]   
 
                         ],
                         "3.Coast#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Mirror Image:Spells+Mirror Image>,<GOTO:Misty Step:Spells+Misty Step>"],
-                            ["5th","<GOTO:Water Breathing:Spells+Water Breathing>,<GOTO:Water Walk:Spells+Water Walk>"],
-                            ["7th","<GOTO:Control Water:Spells+Control Water>,<GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
-                            ["9th","<GOTO:Conjure Elemental:Spells+Conjure Elemental>,<GOTO:Scrying:Spells+Scrying>"]
+                            ["3rd","<GOTO:Mirror Image:Spells+Mirror Image>, <GOTO:Misty Step:Spells+Misty Step>"],
+                            ["5th","<GOTO:Water Breathing:Spells+Water Breathing>, <GOTO:Water Walk:Spells+Water Walk>"],
+                            ["7th","<GOTO:Control Water:Spells+Control Water>, <GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
+                            ["9th","<GOTO:Conjure Elemental:Spells+Conjure Elemental>, <GOTO:Scrying:Spells+Scrying>"]
 
                         ],
                         "4.Desert#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Blur:Spells+Blur>,<GOTO:Silence:Spells+Silence>"],
-                            ["5th","<GOTO:Create Food and Water:Spells+Create Food and Water>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
-                            ["7th","<GOTO:Blight:Spells+Blight>,<GOTO:Hallucinatory Terrain:Spells+Hallucinatory Terrain>"],
-                            ["9th","<GOTO:Insect Plague:Spells+Insect Plague>,<GOTO:Wall of Stone:Spells+Wall of Stone>"]
+                            ["3rd","<GOTO:Blur:Spells+Blur>, <GOTO:Silence:Spells+Silence>"],
+                            ["5th","<GOTO:Create Food and Water:Spells+Create Food and Water>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                            ["7th","<GOTO:Blight:Spells+Blight>, <GOTO:Hallucinatory Terrain:Spells+Hallucinatory Terrain>"],
+                            ["9th","<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
 
                         ],
                         "5.Forest#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Barkskin:Spells+Barkskin>,<GOTO:Spider Climb:Spells+Spider Climb>"],
-                            ["5th","<GOTO:Call Lightning:Spells+Call Lightning>,<GOTO:Plant Growth:Spells+Plant Growth>"],
-                            ["7th","<GOTO:Divination:Spells+Divination>,<GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
-                            ["9th","<GOTO:Commune with Nature:Spells+Commune with Nature>,<GOTO:Tree Stride:Spells+Tree Stride>"]
+                            ["3rd","<GOTO:Barkskin:Spells+Barkskin>, <GOTO:Spider Climb:Spells+Spider Climb>"],
+                            ["5th","<GOTO:Call Lightning:Spells+Call Lightning>, <GOTO:Plant Growth:Spells+Plant Growth>"],
+                            ["7th","<GOTO:Divination:Spells+Divination>, <GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
+                            ["9th","<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Tree Stride:Spells+Tree Stride>"]
                         ],
                         "6.Grassland#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Invisibility:Spells+Invisibility>,<GOTO:Pass Without Trace:Spells+Pass Without Trace>"],
-                            ["5th","<GOTO:Daylight:Spells+Daylight>,<GOTO:Haste:Spells+Haste>"],
-                            ["7th","<GOTO:Divination:Spells+Divination>,<GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
-                            ["9th","<GOTO:Dream:Spells+Dream>,<GOTO:Insect Plague:Spells+Insect Plague>"]
+                            ["3rd","<GOTO:Invisibility:Spells+Invisibility>, <GOTO:Pass Without Trace:Spells+Pass Without Trace>"],
+                            ["5th","<GOTO:Daylight:Spells+Daylight>, <GOTO:Haste:Spells+Haste>"],
+                            ["7th","<GOTO:Divination:Spells+Divination>, <GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
+                            ["9th","<GOTO:Dream:Spells+Dream>, <GOTO:Insect Plague:Spells+Insect Plague>"]
 
                         ],
                         "7.Mountain#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Spider Climb:Spells+Spider Climb>,<GOTO:Spike Growth:Spells+Spike Growth>"],
-                            ["5th","<GOTO:Lightning Bolt:Spells+Lightning Bolt>,<GOTO:Meld into Stone:Spells+Meld into Stone>"],
-                            ["7th","<GOTO:Stone Shape:Spells+Stone Shape>,<GOTO:Stoneskin:Spells+Stoneskin>"],
-                            ["9th","<GOTO:Passwall:Spells+Passwall>,<GOTO:Wall of Stone:Spells+Wall of Stone>"]
+                            ["3rd","<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Spike Growth:Spells+Spike Growth>"],
+                            ["5th","<GOTO:Lightning Bolt:Spells+Lightning Bolt>, <GOTO:Meld into Stone:Spells+Meld into Stone>"],
+                            ["7th","<GOTO:Stone Shape:Spells+Stone Shape>, <GOTO:Stoneskin:Spells+Stoneskin>"],
+                            ["9th","<GOTO:Passwall:Spells+Passwall>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
                         ],
                         "8.Swamp#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Darkness:Spells+Darkness>,<GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"],
-                            ["5th","<GOTO:Water Walk:Spells+Water Walk>,<GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
-                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Locate Creature:Spells+Locate Creature>"],
-                            ["9th","<GOTO:Insect Plague:Spells+Insect Plague>,<GOTO:Scrying:Spells+Scrying>"]
+                            ["3rd","<GOTO:Darkness:Spells+Darkness>, <GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"],
+                            ["5th","<GOTO:Water Walk:Spells+Water Walk>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
+                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Locate Creature:Spells+Locate Creature>"],
+                            ["9th","<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Scrying:Spells+Scrying>"]
                         ],
                         "9.Underdark#TABLE#H1":[
                             ["Druid Level","Circle Spells"],
-                            ["3rd","<GOTO:Spider Climb:Spells+Spider Climb>,<GOTO:Web:Spells+Web>"],
-                            ["5th","<GOTO:Gaseous Form:Spells+Gaseous Form>,<GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
-                            ["7th","<GOTO:Greater Invisibility:Spells+Greater Invisibility>,<GOTO:Stone Shape:Spells+Stone Shape>"],
-                            ["9th","<GOTO:Cloudkill:Spells+Cloudkill>,<GOTO:Insect Plague:Spells+Insect Plague>"]
+                            ["3rd","<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Web:Spells+Web>"],
+                            ["5th","<GOTO:Gaseous Form:Spells+Gaseous Form>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
+                            ["7th","<GOTO:Greater Invisibility:Spells+Greater Invisibility>, <GOTO:Stone Shape:Spells+Stone Shape>"],
+                            ["9th","<GOTO:Cloudkill:Spells+Cloudkill>, <GOTO:Insect Plague:Spells+Insect Plague>"]
                         ]
                     }
                 },
