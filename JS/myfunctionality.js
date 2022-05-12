@@ -1,0 +1,104 @@
+$(document).ready(function() {
+    var waitforelement = function() {
+        if (document.getElementById("top-html").classList.contains("updating-collapsible")) {
+            setTimeout(waitforelement, 10);
+        } else {
+            var targetElement = document.getElementById(origLink.split("#")[1]);
+            var doc = document.documentElement;
+            var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+            var goto = top + targetElement.getBoundingClientRect().top - 20.5;
+            var stickyHeaderNav = document.getElementById("sticky-header-nav");
+            if (stickyHeaderNav != null) {
+                goto = goto - stickyHeaderNav.getBoundingClientRect().height;
+            }
+            if (goto < 0) {
+                goto = 0;
+            }
+            window.scrollTo(0, goto);
+        }
+    }
+    var opencollapse = function() {
+        if (document.getElementById("top-html").classList.contains("updating-collapsible")) {
+            setTimeout(opencollapse, 10);
+            return;
+        }
+        origLink = window.location.href;
+        var linkSplit = window.location.href.split("#");
+        if (linkSplit.length <= 1) {
+            return;
+        }
+        var targetElement = document.getElementById(linkSplit[1]);
+        if (targetElement == null) {
+            window.location.href = linkSplit[0];
+        }
+        var targetID = linkSplit[1];
+        var targetElement = document.getElementById(targetID);
+        var toClickOuter = null
+        while (targetElement != null && targetElement.parentElement != null) {
+            if (targetElement.parentElement.classList.contains("list-collapsible")) {
+                if (targetElement.parentElement.classList.contains("active") == false) {
+                    if (targetElement.parentElement.children[0].classList.contains("collapsible-header")) {
+                        toClickOuter = targetElement.parentElement.children[0];
+                    }
+                }
+            }
+            targetElement = targetElement.parentElement;
+        }
+        if (toClickOuter != null) {
+            toClickOuter.click();
+            setTimeout(opencollapse, 10);
+            return;
+        }
+        setTimeout(waitforelement, 10);
+    }
+    opencollapse();
+});
+
+function opencollapsewithlinkaddress(LinkElement, Pre, Address) {
+    var currentHref = window.location.href.split("#")[0]
+    if (currentHref.includes('/')) {
+        currentHref = currentHref.split('/');
+        currentHref = currentHref[currentHref.length - 1];
+    }
+    if (Address.split("#")[0] != currentHref) {
+        window.location.href = Address;
+        return false
+    }
+    var targetID = Address.split("#")[1];
+    var targetElement = document.getElementById(targetID);
+    if (targetElement == null) {
+        return false
+    }
+    while (targetElement != null && targetElement.parentElement != null) {
+        if (targetElement.parentElement.classList.contains("list-collapsible")) {
+            if (targetElement.parentElement.classList.contains("active") == false) {
+                if (targetElement.parentElement.children[0].classList.contains("collapsible-header")) {
+                    targetElement.parentElement.children[0].click()
+                }
+            }
+        }
+        targetElement = targetElement.parentElement;
+    }
+    if (Pre == true) {
+        var gotoLinkOnceUpdatingCollapsibleIsDone = function() {
+            if (document.getElementById("top-html").classList.contains("updating-collapsible")) {
+                setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);
+            } else {
+                var targetElement = document.getElementById(targetID);
+                var doc = document.documentElement;
+                var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+                var goto = top + targetElement.getBoundingClientRect().top - 20.5;
+                var stickyHeaderNav = document.getElementById("sticky-header-nav");
+                if (stickyHeaderNav != null) {
+                    goto = goto - stickyHeaderNav.getBoundingClientRect().height;
+                }
+                if (goto < 0) {
+                    goto = 0;
+                }
+                window.scrollTo(0, goto);
+            }
+        }
+        setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);
+    }
+    return false;
+}
