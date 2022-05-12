@@ -49,16 +49,44 @@
             "Return += [\"<BOLD>Hit Points at Higher Levels:</BOLD> 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
             "return Return"
         ],
-        "_genlink_description": [
-            "Add #CALL(_genlink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
+        "_genlocallink_description": [
+            "Add #CALL(_genlocallink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
             "Returns a new list of strings where each item is actively linked. Links only work within the same file."
         ],
-        "_genlink": [
+        "_genlocallink": [
             "NewArg = []",
             "for Group in ARG:",
             "    while ', ' in Group:",
             "        Group = Group.replace(', ', ',')",
-            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: LinkKey.lower().replace(' ', '-').replace(\"'\", ''), STATE['key'] + [Item])))), Group.split(','))))]",
+            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: self.CleanLinkText(LinkKey), STATE['key'] + [Item.split('<REF:')[0]])))), Group.split(','))))]",
+            "return NewArg"
+        ],
+        "_autorefrepeatitems_description": [
+            "Checks for repeated items in this table and adds <REF:[ROW#] level> to the repeated items."
+        ],
+        "_autorefrepeatitems": [
+            "RepeatCounter = {}",
+            "NewArg = []",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    for SubArg in SplitArg:",
+            "        if SubArg not in RepeatCounter:",
+            "            RepeatCounter[SubArg] = 0",
+            "        RepeatCounter[SubArg] += 1",
+            "Level = 1",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    NewSplit = []",
+            "    for SubArg in SplitArg:",
+            "        if RepeatCounter[SubArg] > 1:",
+            "            SubArg += '<REF:{} level>'.format(self.ParamStorage['_st'][str(Level)])",
+            "        NewSplit += [SubArg]",
+            "    Level += 1",
+            "    NewArg += [', '.join(NewSplit)]",
             "return NewArg"
         ]
     },
@@ -235,26 +263,26 @@
     "Artificer#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Magical Tinkering, Spellcasting",
             "Infuse Item",
             "Artificer Specialist, The Right Tool for the Job",
-            "Ability Score Improvement<REF:4th level>",
-            "Artificer Specialist feature<REF:5th level>",
+            "Ability Score Improvement",
+            "Artificer Specialist feature",
             "Tool Expertise",
             "Flash of Genius",
-            "Ability Score Improvement<REF:8th level>",
-            "Artificer Specialist feature<REF:9th level>",
+            "Ability Score Improvement",
+            "Artificer Specialist feature",
             "Magic Item Adept",
             "Spell-Storing Item",
-            "Ability Score Improvement<REF:12th level>",
-            "",
+            "Ability Score Improvement",
+            "—",
             "Magic Item Savant",
-            "Artificer Specialist feature<REF:15th level>",
-            "Ability Score Improvement<REF:16th level>",
-            "",
+            "Artificer Specialist feature",
+            "Ability Score Improvement",
+            "—",
             "Magic Item Master",
-            "Ability Score Improvement<REF:19th level>",
+            "Ability Score Improvement",
             "Soul of Artifice"
         ],
         "Infusions Known#HIDDEN#INC": [2, 2, 2, 2, 6, 6, 10, 10, 14, 14, 18, 18],
@@ -805,7 +833,7 @@
     "Barbarian#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Rage, Unarmored Defense",
             "Reckless Attack, Danger Sense",
             "Primal Knowledge (Optional), Primal Path",
@@ -1160,18 +1188,18 @@
     "Bard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Bardic Inspiration (d6)",
             "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
             "Bard College, Expertise",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Bardic Inspiration (d8), Font of Inspiration",
             "Countercharm, Bard College Feature",
-            "-",
+            "—",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d8)",
             "Bardic Inspiration (d10), Expertise, Magical Secrets",
-            "-",
+            "—",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d10)",
             "Magical Secrets, Bard College Feature",
@@ -1548,22 +1576,22 @@
     "Cleric#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Divine Domain",
             "Channel Divinity (1/rest), Divine Domain feature, Harness Divine Power (Optional)",
-            "-",
+            "—",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
             "Destroy Undead (CR 1/2)",
             "Channel Divinity (2/rest), Divine Domain feature",
-            "-",
+            "—",
             "Ability Score Improvement, Destroy Undead (CR 1), Cantrip Versatility (Optional), Divine Domain feature",
-            "-",
+            "—",
             "Divine Intervention",
             "Destroy Undead (CR 2)",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
-            "-",
+            "—",
             "Destroy Undead (CR 3)",
-            "-",
+            "—",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
             "Destroy Undead (CR 4), Divine Domain feature",
             "Channel Divinity (3/rest)",
@@ -2451,24 +2479,24 @@
     "Druid#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle, Wild Companion (Optional)",
-            "",
+            "—",
             "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
-            "",
+            "—",
             "Druid Circle feature",
-            "",
+            "—",
             "Wild Shape improvement, Ability Score Improvement, Cantrip Versatility (Optional)",
-            "",
+            "—",
             "Druid Circle feature",
-            "",
+            "—",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
-            "",
+            "—",
             "Druid Circle feature",
-            "",
+            "—",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
-            "",
+            "—",
             "Timeless Body, Beast Spells",
             "Ability Score Improvement, Cantrip Versatility (Optional)",
             "Archdruid"
@@ -2507,38 +2535,38 @@
         ],
 
         "6.1st level#H1#COLLAPSE": {
-            "1.Druidic":"You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.",
-            "2.Spellcasting":{
-                "1.":"Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.",
-                "2.Cantrips":"At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.",
-                "3.Preparing and Casting Spells":[
+            "1.Druidic": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.",
+            "2.Spellcasting": {
+                "1.": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.",
+                "2.Cantrips": "At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.",
+                "3.Preparing and Casting Spells": [
                     "The Druid table shows how many spell slots you have to cast your druid spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
                     "You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your Druid level (minimum of one spell). The spells must be of a level for which you have spell slots.",
                     "For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell <GOTO:Cure Wounds:Spells+Cure Wounds>, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
                     "You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
                 ],
-                "4.Spellcasting Ability":[
+                "4.Spellcasting Ability": [
                     "Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.",
                     "<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Wisdom modifier",
                     "<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Wisdom modifier"
                 ],
-                "5.Ritual Casting":"You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.",
-                "6.Spellcasting Focus":"You can use a druidic focus as a spellcasting focus for your druid spells."
+                "5.Ritual Casting": "You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.",
+                "6.Spellcasting Focus": "You can use a druidic focus as a spellcasting focus for your druid spells."
             }
         },
         "7.2nd level#H1#COLLAPSE": {
-            "1.Wild Shape":{
-                "1.":[
+            "1.Wild Shape": {
+                "1.": [
                     "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
                     "Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed."
                 ],
-                "2.Beast Shapes#TABLE":[
-                    ["Level","Max. CR","Limitations","Example"],
-                    ["2nd","1/4","No flying or swimming speed","Wolf"],
-                    ["4th","1/2","No flying speed","Crocodile"],
-                    ["8th","1","","Giant eagle"]
+                "2.Beast Shapes#TABLE": [
+                    ["Level", "Max. CR", "Limitations", "Example"],
+                    ["2nd", "1/4", "No flying or swimming speed", "Wolf"],
+                    ["4th", "1/2", "No flying speed", "Crocodile"],
+                    ["8th", "1", "", "Giant eagle"]
                 ],
-                "3.":[
+                "3.": [
                     "You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die.",
                     "While you are transformed, the following rules apply:",
                     "<LIST_START>",
@@ -2581,9 +2609,9 @@
                         "3.Coast":[
                             ["Druid Level","Circle Spells"],
                             ["3rd","<GOTO:Mirror Image:Spells+Mirror Image>,<GOTO:Misty Step:Spells+Misty Step>"],
-["5th","<GOTO:Water Breathing:Spells+Water Breathing>,<GOTO:Water Walk:Spells+Water Walk>"],
-["7th","<GOTO:Control Water:Spells+Control Water>,<GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
-["9th","<GOTO:Conjure Elemental:Spells+Conjure Elemental>,<GOTO:Scrying:Spells+Scrying>"]
+                            ["5th","<GOTO:Water Breathing:Spells+Water Breathing>,<GOTO:Water Walk:Spells+Water Walk>"],
+                            ["7th","<GOTO:Control Water:Spells+Control Water>,<GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
+                            ["9th","<GOTO:Conjure Elemental:Spells+Conjure Elemental>,<GOTO:Scrying:Spells+Scrying>"]
 
                         ],
                         "4.Desert":[
@@ -2746,93 +2774,93 @@
                     }
                 }
             },
-            "3.Wild Companion (Optional)":[
+            "3.Wild Companion (Optional)": [
                 "At 2nd level, you gain the ability to summon a spirit that assumes an animal form: as an action, you can expend a use of your Wild Shape feature to cast the <GOTO:Find Familiar:Spells+Find Familiar> spell, without material components.",
                 "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
             ]
         },
         "8.3rd level#H1#COLLAPSE": {
-            "1.":"Access to 2nd level spells"
+            "1.": "Access to 2nd level spells"
         },
         "9.4th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "10.5th level#H1#COLLAPSE": {
-            "1.":"Access to 3rd level spells"
+            "1.": "Access to 3rd level spells"
         },
         "11.6th level#H1#COLLAPSE": {
-            "2.Circle of Dreams":{},
-            "3.Circle of the Land":{},
-            "4.Circle of the Moon":{},
-            "5.Circle of the Shepherd":{},
-            "6.Circle of Spores":{},
-            "7.Circle of Stars":{},
-            "8.Circle of Wildfire":{}
+            "2.Circle of Dreams": {},
+            "3.Circle of the Land": {},
+            "4.Circle of the Moon": {},
+            "5.Circle of the Shepherd": {},
+            "6.Circle of Spores": {},
+            "7.Circle of Stars": {},
+            "8.Circle of Wildfire": {}
         },
         "12.7th level#H1#COLLAPSE": {
-            "1.":"Access to 4th level spells"
+            "1.": "Access to 4th level spells"
         },
         "13.8th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "14.9th level#H1#COLLAPSE": {
-            "1.":"Access to 5th level spells"
+            "1.": "Access to 5th level spells"
         },
         "15.10th level#H1#COLLAPSE": {
-            "2.Circle of Dreams":{},
-            "3.Circle of the Land":{},
-            "4.Circle of the Moon":{},
-            "5.Circle of the Shepherd":{},
-            "6.Circle of Spores":{},
-            "7.Circle of Stars":{},
-            "8.Circle of Wildfire":{}
+            "2.Circle of Dreams": {},
+            "3.Circle of the Land": {},
+            "4.Circle of the Moon": {},
+            "5.Circle of the Shepherd": {},
+            "6.Circle of Spores": {},
+            "7.Circle of Stars": {},
+            "8.Circle of Wildfire": {}
         },
         "16.11th level#H1#COLLAPSE": {
-            "1.":"Access to 6th level spells"
+            "1.": "Access to 6th level spells"
         },
         "17.12th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "18.13th level#H1#COLLAPSE": {
-            "1.":"Access to 7th level spells"
+            "1.": "Access to 7th level spells"
         },
         "19.14th level#H1#COLLAPSE": {
-            "2.Circle of Dreams":{},
-            "3.Circle of the Land":{},
-            "4.Circle of the Moon":{},
-            "5.Circle of the Shepherd":{},
-            "6.Circle of Spores":{},
-            "7.Circle of Stars":{},
-            "8.Circle of Wildfire":{}
+            "2.Circle of Dreams": {},
+            "3.Circle of the Land": {},
+            "4.Circle of the Moon": {},
+            "5.Circle of the Shepherd": {},
+            "6.Circle of Spores": {},
+            "7.Circle of Stars": {},
+            "8.Circle of Wildfire": {}
         },
         "20.15th level#H1#COLLAPSE": {
-            "1.":"Access to 8th level spells"
+            "1.": "Access to 8th level spells"
         },
         "21.16th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "22.17th level#H1#COLLAPSE": {
-            "1.":"Access to 9th level spells"
+            "1.": "Access to 9th level spells"
         },
         "23.18th level#H1#COLLAPSE": {
-            "1.Timeless Body":"Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
-            "2.Beast Spells":"Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+            "1.Timeless Body": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+            "2.Beast Spells": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
         },
         "24.19th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "25.20th level#H1#COLLAPSE": {
-            "1.Archdruid":[
+            "1.Archdruid": [
                 "At 20th level, you can use your Wild Shape an unlimited number of times.",
                 "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
             ]
@@ -2841,7 +2869,7 @@
     "Fighter#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
             "Martial Archetype",
@@ -2929,8 +2957,8 @@
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
         "Ki Points#HIDDEN#INC": [2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        "Unarmored Movement#HIDDEN": ["-", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Unarmored Movement#HIDDEN": ["—", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Unarmored Defense, Martial Arts",
             "Ki, Unarmored Movement",
             "Monastic Tradition, Deflect Missiles",
@@ -3013,7 +3041,7 @@
     "Paladin#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
             "Divine Health, Sacred Oath",
@@ -3022,15 +3050,15 @@
             "Aura of Protection",
             "Sacred Oath feature",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Aura of Courage",
             "Improved Divine Smite",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Cleansing Touch",
             "Sacred Oath feature",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Aura Improvements",
             "Ability Score Improvement",
             "Sacred Oath feature"
@@ -3103,7 +3131,7 @@
     "Ranger#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Favored Enemy, Natural Explorer",
             "Fighting Style, Spellcasting",
             "Ranger Archetype, Primeval Awareness",
@@ -3112,15 +3140,15 @@
             "Favored Enemy and Natural Explorer improvements",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Natural Explorer improvement, Hide in Plain Sight",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Favored Enemy improvement, Vanish",
             "Ranger Archetype feature",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Feral Senses",
             "Ability Score Improvement",
             "Foe Slayer"
@@ -3193,7 +3221,7 @@
     "Rogue#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Expertise, Sneak Attack, Thieves' Cant",
             "Cunning Action",
             "Roguish Archetype",
@@ -3279,22 +3307,22 @@
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Sorcerous Origin",
             "Font of Magic",
             "Metamagic",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Sorcerous Origin feature",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Metamagic",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Sorcerous Origin feature",
-            "-",
+            "—",
             "Ability Score Improvement",
             "Metamagic",
             "Sorcerous Origin feature",
@@ -3375,16 +3403,16 @@
     "Warlock#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
             "Pact Boon",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Otherworldly Patron feature",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Otherworldly Patron feature",
             "Mystic Arcanum (6th level)",
             "Ability Score Improvement",
@@ -3393,7 +3421,7 @@
             "Mystic Arcanum (8th level)",
             "Ability Score Improvement",
             "Mystic Arcanum (9th level)",
-            "-",
+            "—",
             "Ability Score Improvement",
             "Eldritch Master"
         ],
@@ -3465,24 +3493,24 @@
     "Wizard#H1#COLLAPSE": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
-        "Features#HIDDEN#CALL(_genlink)": [
+        "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Arcane Recovery",
             "Arcane Tradition",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Arcane Tradition feature",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Arcane Tradition feature",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Arcane Tradition feature",
-            "-",
+            "—",
             "Ability Score Improvement",
-            "-",
+            "—",
             "Spell Mastery",
             "Ability Score Improvement",
             "Signature Spell"

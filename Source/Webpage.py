@@ -103,10 +103,15 @@ class Webpage:
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
 
+        self.SeenLinkUps = {}
+        self.SeenLinkDowns = {}
+        self.PostProcessRefList = {}
+
         self.JSCodeMap = {
             '<': '|~lt~|',
             '>': '|~gt~|',
-            '&': '|~and~|'
+            '&': '|~and~|',
+            '—': '|~em~dash~|'
         }
 
         self.TextReplaceMap = {
@@ -117,7 +122,8 @@ class Webpage:
             '<STRIKE>': self.PreProcessText('<del>'),
             '<UNDER>': self.PreProcessText('<ins>'),
             '<SUB>': self.PreProcessText('<sub>'),
-            '<SUP>': self.PreProcessText('<sup>')
+            '<SUP>': self.PreProcessText('<sup>'),
+            '—': self.PreProcessText('—')
         }
         for Key in list(self.TextReplaceMap.keys()):
             NewKey = Key.replace('<', '</')
@@ -138,6 +144,7 @@ class Webpage:
         with self.Tag('html', 'id="top-html"'):
 
             with self.Tag('head'):
+                self.Doc.stag('meta', 'charset="UTF-8"')
                 self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
@@ -150,13 +157,21 @@ class Webpage:
                     pass
                 with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
                     pass
-
-            self.Doc.stag('hr')
-            with self.Tag('body'):
+                with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
+                    pass
+            
+            with self.Tag('header'):
+                with self.Tag('nav', id='sticky-header-nav'):
+                    with self.Tag('div'):
+                        with self.Tag('ul'):
+                            with self.Tag('li'):
+                                self.Line('a', 'TBD')
+            with self.Tag('body', klass='content html-renderer'):
                 with self.Tag('div', klass='body-div'):
+                    with self.Tag('div', klass='header-spacer'):
+                        self.Line('p', ' ')
                     self.LoadLevel(self.JSON)
                 self.AddJS()
-            self.Doc.stag('hr')
             with self.Tag('footer'):
                 self.AddFooter()
 
@@ -187,77 +202,6 @@ class Webpage:
                 self.Text(self.PreProcessText(documentReadFuncCollapsible.format(Model)))
                 for Row in range(self.CollapseModelRows[Model]):
                     pass
-
-            opencollapse = []
-            opencollapse += ["$(document).ready(function() {"]
-            opencollapse += ["    var waitforelement = function() {"]
-            opencollapse += ["        if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
-            opencollapse += ["            setTimeout(waitforelement, 10);"]
-            opencollapse += ["        } else {"]
-            opencollapse += ["            window.location.href = origLink;"]
-            opencollapse += ["        }"]
-            opencollapse += ["    }"]
-            opencollapse += ["    var opencollapse = function() {"]
-            opencollapse += ["        if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
-            opencollapse += ["            setTimeout(opencollapse, 10);"]
-            opencollapse += ["            return;"]
-            opencollapse += ["        }"]
-            opencollapse += ["        origLink = window.location.href;"]
-            opencollapse += ["        var linkSplit = window.location.href.split(\"#\");"]
-            opencollapse += ["        if (linkSplit.length <= 1) {"]
-            opencollapse += ["            return;"]
-            opencollapse += ["        }"]
-            opencollapse += ["        var targetID = linkSplit[1];"]
-            opencollapse += ["        var targetElement = document.getElementById(targetID);"]
-            opencollapse += ["        var toClickOuter = null"]
-            opencollapse += ["        while (targetElement != null && targetElement.parentElement != null) {"]
-            opencollapse += ["            if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
-            opencollapse += ["                if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
-            opencollapse += ["                    if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
-            opencollapse += ["                        toClickOuter = targetElement.parentElement.children[0];"]
-            opencollapse += ["                    }"]
-            opencollapse += ["                }"]
-            opencollapse += ["            }"]
-            opencollapse += ["            targetElement = targetElement.parentElement;"]
-            opencollapse += ["        }"]
-            opencollapse += ["        if (toClickOuter != null) {"]
-            opencollapse += ["            toClickOuter.click();"]
-            opencollapse += ["            setTimeout(opencollapse, 10);"]
-            opencollapse += ["            return;"]
-            opencollapse += ["        }"]
-            opencollapse += ["        setTimeout(waitforelement, 10);"]
-            opencollapse += ["    }"]
-            opencollapse += ["    opencollapse();"]
-            opencollapse += ["});"]
-            self.Text(self.PreProcessText('\n'.join(opencollapse)))
-
-            opencollapsewithlinkaddress = []            
-            opencollapsewithlinkaddress += ["function opencollapsewithlinkaddress(LinkElement, Pre, Address) {"]
-            opencollapsewithlinkaddress += ["    var targetID = Address.split(\"#\")[1];"]
-            opencollapsewithlinkaddress += ["    targetElement = document.getElementById(targetID);"]
-            opencollapsewithlinkaddress += ["    while (targetElement != null && targetElement.parentElement != null) {"]
-            opencollapsewithlinkaddress += ["        if (targetElement.parentElement.classList.contains(\"list-collapsible\")) {"]
-            opencollapsewithlinkaddress += ["            if (targetElement.parentElement.classList.contains(\"active\") == false) {"]
-            opencollapsewithlinkaddress += ["                if (targetElement.parentElement.children[0].classList.contains(\"collapsible-header\")) {"]
-            opencollapsewithlinkaddress += ["                    targetElement.parentElement.children[0].click()"]
-            opencollapsewithlinkaddress += ["                }"]
-            opencollapsewithlinkaddress += ["            }"]
-            opencollapsewithlinkaddress += ["        }"]
-            opencollapsewithlinkaddress += ["        targetElement = targetElement.parentElement;"]
-            opencollapsewithlinkaddress += ["    }"]
-            opencollapsewithlinkaddress += ["    if (Pre == true) {"]
-            opencollapsewithlinkaddress += ["        var gotoLinkOnceUpdatingCollapsibleIsDone = function() {"]
-            opencollapsewithlinkaddress += ["            if (document.getElementById(\"top-html\").classList.contains(\"updating-collapsible\")) {"]
-            opencollapsewithlinkaddress += ["                setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);"]
-            opencollapsewithlinkaddress += ["            } else {"]
-            opencollapsewithlinkaddress += ["                window.location.href = Address;"]
-            opencollapsewithlinkaddress += ["            }"]
-            opencollapsewithlinkaddress += ["        }"]
-            opencollapsewithlinkaddress += ["        setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);"]
-            opencollapsewithlinkaddress += ["    }"]
-            opencollapsewithlinkaddress += ["    return false;"]
-            opencollapsewithlinkaddress += ["}"]
-            self.Text(self.PreProcessText('\n'.join(opencollapsewithlinkaddress)))
 
     def LoadLevel(self, Input, State = None):
         if State == None:
@@ -412,8 +356,12 @@ class Webpage:
             ListToLink = PermuteWithOrder(State['key'] + [Input])
             if len(ListToLink) > 1:
                 for ListIn in ListToLink[1:]:
-                    self.Doc.stag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListIn)))))
-            with self.Tag('a', 'id={}'.format('_'.join(list(map(lambda Item: Item.lower().replace(' ', '-').replace("'", ''), ListToLink[0]))))):
+                    LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))
+                    self.SeenLinkUps[LinkUpID] = True
+                    self.Doc.stag('a', 'id={}'.format(LinkUpID))
+            LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
+            self.SeenLinkUps[LinkUpID] = True
+            with self.Tag('a', 'id={}'.format(LinkUpID)):
                 self.AddText(Input, State, Interface, Data)
         else:
             self.AddText(Input, State, Interface, Data)
@@ -482,6 +430,13 @@ class Webpage:
         else:
             TextTag = ForceTextTag
         if '<GOTO' in Input and '>' in Input:
+            HasRef = None
+            if '<REF:' in Input and '>' in Input:
+                RefPattern = re.compile('.*?<REF:(.*?)>.*')
+                RefMatch = RefPattern.match(Input)
+                if RefMatch != None:
+                    HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
+                    Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
             with self.Tag(TextTag, style=' '.join(State['style']), klass=' '.join(State['class'])):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
@@ -499,8 +454,15 @@ class Webpage:
                             Location = GotoMatch1.group(3)
                             ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\'{0}.html#{1}\''.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\'{0}.html#{1}\''.format(File, self.CleanLinkText(Location))
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1    
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -513,7 +475,14 @@ class Webpage:
                             ToReplace = "<GOTO:{}:{}>".format(Text, File)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -526,8 +495,15 @@ class Webpage:
                             Location = GotoMatch3.group(2)
                             ToReplace = "<GOTO:{}+{}>".format(Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html#{1}\"'.format(File, Location.lower().replace(' ', '-').replace("'", ''))
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            LinkAddress = '\"{0}.html#{1}\"'.format(File, self.CleanLinkText(Location))
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -540,7 +516,14 @@ class Webpage:
                             ToReplace = "<GOTO:{}>".format(Text)
                             self.Text(Input.split(ToReplace)[0])
                             LinkAddress = '\"{0}.html\"'.format(File)
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onclick="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
+                            if HasRef != None:
+                                LinkAddress = LinkAddress[1:-1] + HasRef
+                                self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
+                                LinkAddress = "'{}'".format(LinkAddress)
+                            if LinkAddress not in self.SeenLinkDowns:
+                                self.SeenLinkDowns[LinkAddress] = 0
+                            self.SeenLinkDowns[LinkAddress] += 1  
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' '.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -668,8 +651,21 @@ class Webpage:
             State['callback'] = []
         return State
 
-    def PreProcessText(self, Text):
+    def CleanLinkText(self, OText):
+        Text = OText.lower().replace("'", '')
+        NewText = ''
+        for Char in Text:
+            if Char in '-_':
+                NewText += Char
+            elif Char.isalnum() or Char == ' ':
+                NewText += Char
+        NewText = NewText.replace(' ', '-')
+        if len(NewText) > 0 and NewText[0].isnumeric():
+            NewText = 'A' + NewText
+        return NewText
 
+
+    def PreProcessText(self, Text):
         for Key in self.JSCodeMap:
             Text = Text.replace(Key, self.JSCodeMap[Key])
         
@@ -679,22 +675,39 @@ class Webpage:
         for Key in self.JSCodeMap:
             PageText = PageText.replace(self.JSCodeMap[Key], Key)
 
-        PageText = PageText.replace('<body>', '<body class="html-renderer">')
-
         _DONT_CLOSE_THIS_STAG_re = re.compile('.*?_DONT_CLOSE_THIS_STAG_(.*?)/>.*')
         _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
         while _DONT_CLOSE_THIS_STAG_ma != None:
             PageText = PageText.replace('_DONT_CLOSE_THIS_STAG_{}/>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)), '{}>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)))
             _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
+
+
+        for Key in list(self.PostProcessRefList.keys()):
+            Goal = Key.split('|+REF+')[0]
+            Insert = Key.split('|+REF+')[1][:-2]
+            Matched = False
+            for LinkUp in self.SeenLinkUps:
+                if Insert in LinkUp:
+                    Snipped1 = LinkUp.replace('_' + Insert, '')
+                    if Snipped1 == Goal:
+                        PageText = PageText.replace(Key, LinkUp)
+                        Matched = True
+                        break
+                    Snipped2 = LinkUp.replace(Insert + '_', '')
+                    if Snipped2 == Goal:
+                        PageText = PageText.replace(Key, LinkUp)
+                        Matched = True
+                        break
+            if not Matched:
+                PageText = PageText.replace(Key, Goal)
         return PageText
 
     def Save(self, OutHTML):
         CleanTarget = OutHTML.replace('\\', '/').replace('//', '/').replace('/', os.sep)
-        OutFile = open(CleanTarget, 'w')
-        PageText = self.Doc.getvalue()
-        PageText = self.PostProcessPage(PageText)
-        OutFile.write(PageText) 
-        OutFile.close()
+        with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
+            PageText = self.Doc.getvalue()
+            PageText = self.PostProcessPage(PageText)
+            OutFile.write(PageText) 
     
 
     def ConsumeMetaData(self, Key):
@@ -723,6 +736,9 @@ def main(Args):
     for Arg in Args:
         WP = Webpage(Arg)
         WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
+        #SortedByCount = list(sorted(WP.SeenLinkUps.keys(), key=lambda Key: WP.SeenLinkUps[Key], reverse=True))
+        #for Key in SortedByCount:
+        #    FlushPrintUTF8(Key, WP.SeenLinkUps[Key])
 
 if __name__ == '__main__':
     import sys

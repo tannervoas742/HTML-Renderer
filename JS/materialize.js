@@ -853,7 +853,14 @@ M.anime = function() {
                                 } else {
                                     var doc = document.documentElement;
                                     var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
                                     var goto = top + e[0].children[0].getBoundingClientRect().top - 0.5;
+
+                                    var stickyHeaderNav = document.getElementById("sticky-header-nav");
+                                    if (stickyHeaderNav != null) {
+                                        goto = goto - stickyHeaderNav.getBoundingClientRect().height;
+                                    }
+
                                     window.scrollTo(0, goto);
 
                                     document.getElementById("top-html").classList.remove("updating-collapsible");
