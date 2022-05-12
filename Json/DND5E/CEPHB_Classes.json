@@ -2763,7 +2763,7 @@
                         ]
                     },
                     "2.Summon Wildfire Spirit#H1":{
-                        "1.":[
+                        "1.#H1":[
                             "At 2nd level, You can summon the primal spirit bound to your soul. As an action, you can expend one use of your Wild Shape feature to summon your wildfire spirit, rather than assuming a beast form.",
                             "The spirit appears in an unoccupied space of your choice that you can see within 30 feet of you. Each creature within 10 feet of the spirit (other than you) when it appears must succeed on a Dexterity saving throw against your spell save DC or take 2d6 fire damage.",
                             "The spirit is friendly to you and your companions and obeys your commands. See this creature's game statistics in the Wildfire Spirit stat block, which uses your proficiency bonus (PB) in several places. You determine the spirit's appearance. Some spirits take the form of a humanoid figure made of gnarled branches covered in flame, while others look like beasts wreathed in fire.",
@@ -2791,24 +2791,24 @@
             "1.#H1": "Access to 3rd level spells"
         },
         "11.6th level#H1#COLLAPSE": {
-            "2.Circle of Dreams": {
-                "Hearth of Moonlight and Shadow":[
+            "2.Circle of Dreams#H1": {
+                "Hearth of Moonlight and Shadow#H1":[
                     "At 6th level, home can be wherever you are. During a short or long rest, you can invoke the shadowy power of the Gloaming Court to help guard your respite. At the start of the rest, you touch a point in space, and an invisible, 30-foot-radius sphere of magic appears, centered on that point. Total cover blocks the sphere.",
                     "While within the sphere, you and your allies gain a +5 bonus to Dexterity (Stealth) and Wisdom (Perception) checks, and any light from open flames in the sphere (a campfire, torches, or the like) isn't visible outside it.",
                     "The sphere vanishes at the end of the rest or when you leave the sphere."
                 ]
             },
-            "3.Circle of the Land": {
-                "Land's Stride":[
+            "3.Circle of the Land#H1": {
+                "Land's Stride#H1":[
                     "Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.",
                     "In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such as those created by the <GOTO:Entangle:Spells+Entangle> spell."
                 ]
             },
-            "4.Circle of the Moon": {
-                "Primal Strike":"Starting at 6th level, your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
+            "4.Circle of the Moon#H1": {
+                "Primal Strike#H1":"Starting at 6th level, your attacks in beast form count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
             },
-            "5.Circle of the Shepherd": {
-                "Mighty Summoner":[
+            "5.Circle of the Shepherd#H1": {
+                "Mighty Summoner#H1":[
                     "At 6th level, beasts and fey that you conjure are more resilient than normal. Any beast or fey summoned or created by a spell that you cast gains two benefits:",
                     "<LIST_START>",
                     "<LIST_ITEM>The creature appears with more hit points than normal: 2 extra hit points per Hit Die it has.",
@@ -2817,118 +2817,118 @@
                     
                 ]
             },
-            "6.Circle of Spores": {
-                "Fungal Infestation":[
+            "6.Circle of Spores#H1": {
+                "Fungal Infestation#H1":[
                     "At 6th level, your spores gain the ability to infest a corpse and animate it. If a beast or a humanoid that is Small or Medium dies within 10 feet of you, you can use your reaction to animate it, causing it to stand up immediately with 1 hit point. The creature uses the Zombie stat block in the Monster Manual. It remains animate for 1 hour, after which time it collapses and dies.",
                     "In combat, the zombie's turn comes immediately after yours. It obeys your mental commands, and the only action it can take is the Attack action, making one melee attack.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
                 ]
             },
-            "7.Circle of Stars": {
-                "Cosmic Omen":[
+            "7.Circle of Stars#H1": {
+                "Cosmic Omen#H1":[
                     "When you reach 6th level, you learn to use your star map to divine the will of the cosmos. Whenever you finish a long rest, you can consult your Star Map for omens. When you do so, roll a die. Until you finish your next long rest, you gain access to a special reaction based on whether you rolled an even or an odd number on the die:",
                     "<BOLD>Weal (even). </BOLD>Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a d6 and add the number rolled to the total.",
                     "<BOLD>Woe (odd).</BOLD> Whenever a creature you can see within 30 feet of you is about to make an attack roll, a saving throw, or an ability check, you can use your reaction to roll a d6 and subtract the number rolled from the total.",
                     "You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "8.Circle of Wildfire": {
-                "Enhanced Bond":[
+            "8.Circle of Wildfire#H1": {
+                "Enhanced Bond#H1":[
                     "At 6th level, the bond with your wildfire spirit enhances your destructive and restorative spells. Whenever you cast a spell that deals fire damage or restores hit points while your wildfire spirit is summoned, roll a d8, and you gain a bonus equal to the number rolled to one damage or healing roll of the spell.",
                     "In addition, when you cast a spell with a range other than self, the spell can originate from you or your wildfire spirit."
                 ]
             }
         },
         "12.7th level#H1#COLLAPSE": {
-            "1.": "Access to 4th level spells"
+            "1.#H1": "Access to 4th level spells"
         },
         "13.8th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)#H1": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "14.9th level#H1#COLLAPSE": {
-            "1.": "Access to 5th level spells"
+            "1.#H1": "Access to 5th level spells"
         },
         "15.10th level#H1#COLLAPSE": {
-            "2.Circle of Dreams": {
-                "Hidden Paths":[
+            "2.Circle of Dreams#H1": {
+                "Hidden Paths#H1":[
                     "Starting at 10th level, you can use the hidden, magical pathways that some fey use to traverse space in a blink of an eye. As a bonus action on your turn, you can teleport up to 60 feet to an unoccupied space you can see. Alternatively, you can use your action to teleport one willing creature you touch up to 30 feet to an unoccupied space you can see.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
                 ]
             },
-            "3.Circle of the Land": {
-                "Nature's Ward":"When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease."
+            "3.Circle of the Land#H1": {
+                "Nature's Ward#H1":"When you reach 10th level, you can't be charmed or frightened by elementals or fey, and you are immune to poison and disease."
             },
-            "4.Circle of the Moon": {
-                "Elemental Wild Shape":"At 10th level, you can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental."
+            "4.Circle of the Moon#H1": {
+                "Elemental Wild Shape#H1":"At 10th level, you can expend two uses of Wild Shape at the same time to transform into an air elemental, an earth elemental, a fire elemental, or a water elemental."
             },
-            "5.Circle of the Shepherd": {
-                "Guardian Spirit":"Beginning at 10th level, your Spirit Totem safeguards the beasts and fey that you call forth with your magic. When a beast or fey that you summoned or created with a spell ends its turn in your Spirit Totem aura, that creature regains a number of hit points equal to half your druid level."
+            "5.Circle of the Shepherd#H1": {
+                "Guardian Spirit#H1":"Beginning at 10th level, your Spirit Totem safeguards the beasts and fey that you call forth with your magic. When a beast or fey that you summoned or created with a spell ends its turn in your Spirit Totem aura, that creature regains a number of hit points equal to half your druid level."
             },
-            "6.Circle of Spores": {
-                "Spreading Spores":[
+            "6.Circle of Spores#H1": {
+                "Spreading Spores#H1":[
                     "At 10th level, you gain the ability to seed an area with deadly spores. As a bonus action while your Symbiotic Entity feature is active, you can hurl spores up to 30 feet away, where they swirl in a 10-foot cube for 1 minute. The spores disappear early if you use this feature again, if you dismiss them as a bonus action, or if your Symbiotic Entity feature is no longer active.",
                     "Whenever a creature moves into the cube or starts its turn there, that creature takes your Halo of Spores damage, unless the creature succeeds on a Constitution saving throw against your spell save DC. A creature can take this damage no more than once per turn.",
                     "While the cube of spores persists, you can't use your Halo of Spores reaction."
                 ]
             },
-            "7.Circle of Stars": {
-                "Twinkling Constellations":[
+            "7.Circle of Stars#H1": {
+                "Twinkling Constellations#H1":[
                     "At 10th level, the constellations of your Starry Form improve. The 1d8 of the Archer and the Chalice becomes 2d8, and while the Dragon is active, you have a flying speed of 20 feet and can hover.",
                     "Moreover, at the start of each of your turns while in your Starry Form, you can change which constellation glimmers on your body."
                 ]
             },
-            "8.Circle of Wildfire": {
-                "Cauterizing Flames":[
+            "8.Circle of Wildfire#H1": {
+                "Cauterizing Flames#H1":[
                     "At 10th level, you gain the ability to turn death into magical flames that can heal or incinerate. When a Small or larger creature dies within 30 feet of you or your wildfire spirit, a harmless spectral flame springs forth in the dead creature's space and flickers there for 1 minute. When a creature you can see enters that space, you can use your reaction to extinguish the spectral flame there and either heal the creature or deal fire damage to it. The healing or damage equals 2d10 + your Wisdom modifier.",
                     "You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             }
         },
         "16.11th level#H1#COLLAPSE": {
-            "1.": "Access to 6th level spells"
+            "1.#H1": "Access to 6th level spells"
         },
         "17.12th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)#H1": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "18.13th level#H1#COLLAPSE": {
-            "1.": "Access to 7th level spells"
+            "1.#H1": "Access to 7th level spells"
         },
         "19.14th level#H1#COLLAPSE": {
-            "2.Circle of Dreams": {
-                "Walker in Dreams":[
+            "2.Circle of Dreams#H1": {
+                "Walker in Dreams#H1":[
                     "At 14th level, the magic of the Feywild grants you the ability to travel mentally or physically through dreamlands.",
                     "When you finish a short rest, you can cast one of the following spells, without expending a spell slot or requiring material components: <GOTO:Dream:Spells+Dream> (with you as the messenger), <GOTO:Scrying:Spells+Scrying>, or <GOTO:Teleportation Circle:Spells+Teleportation Circle>.",
                     "This use of <GOTO:Teleportation Circle:Spells+Teleportation Circle> is special. Rather than opening a portal to a permanent teleportation circle, it opens a portal to the last location where you finished a long rest on your current plane of existence. If you haven't taken a long rest on your current plane, the spell fails but isn't wasted.",
                     "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
-            "3.Circle of the Land": {
-                "Nature's Sanctuary":[
+            "3.Circle of the Land#H1": {
+                "Nature's Sanctuary#H1":[
                     "When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.",
                     "The creature is aware of this effect before it makes its attack against you."
                 ]
             },
-            "4.Circle of the Moon": {
-                "Thousand Forms":"By 14th level, you have learned to use magic to alter your physical form in more subtle ways. You can cast the <GOTO:Alter Self:Spells+Alter Self> spell at will."
+            "4.Circle of the Moon#H1": {
+                "Thousand Forms#H1":"By 14th level, you have learned to use magic to alter your physical form in more subtle ways. You can cast the <GOTO:Alter Self:Spells+Alter Self> spell at will."
             },
-            "5.Circle of the Shepherd": {
-                "Faithful Summons":[
+            "5.Circle of the Shepherd#H1": {
+                "Faithful Summons#H1":[
                     "Starting at 14th level, the nature spirits you commune with protect you when you are the most defenseless. If you are reduced to 0 hit points or are incapacitated against your will, you can immediately gain the benefits of Conjure Animals as if it were cast with a 9th-level spell slot. It summons four beasts of your choice that are challenge rating 2 or lower. The conjured beasts appear within 20 feet of you. If they receive no commands from you, they protect you from harm and attack your foes. The spell lasts for 1 hour, requiring no concentration, or until you dismiss it (no action required).",
                     "Once you use this feature, you can’t use it again until you finish a long rest."
                 ]
             },
-            "6.Circle of Spores": {
-                "Fungal Body":"At 14th level, the fungal spores in your body alter you: you can't be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
+            "6.Circle of Spores#H1": {
+                "Fungal Body#H1":"At 14th level, the fungal spores in your body alter you: you can't be blinded, deafened, frightened, or poisoned, and any critical hit against you counts as a normal hit instead, unless you're incapacitated."
             },
-            "7.Circle of Stars": {
-                "Full of Stars":"At 14th level, while in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
+            "7.Circle of Stars#H1": {
+                "Full of Stars#H1":"At 14th level, while in your Starry Form, you become partially incorporeal, giving you resistance to bludgeoning, piercing, and slashing damage."
             },
-            "8.Circle of Wildfire": {
-                "Blazing Revival":[
+            "8.Circle of Wildfire#H1": {
+                "Blazing Revival#H1":[
                     "At 14th level, the bond with your wildfire spirit can save you from death. If the spirit is within 120 feet of you when you are reduced to 0 hit points and thereby fall unconscious, you can cause the spirit to drop to 0 hit points. You then regain half your hit points and immediately rise to your feet.",
                     "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
@@ -2939,23 +2939,23 @@
         },
         "21.16th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)#H1": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "22.17th level#H1#COLLAPSE": {
-            "1.": "Access to 9th level spells"
+            "1.#H1": "Access to 9th level spells"
         },
         "23.18th level#H1#COLLAPSE": {
-            "1.Timeless Body": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
-            "2.Beast Spells": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
+            "1.Timeless Body#H1": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
+            "2.Beast Spells#H1": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
         },
         "24.19th level#H1#COLLAPSE": {
             "1.Ability Score Improvement#H1": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
+            "2.Cantrip Versatility (Optional)#H1": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
         "25.20th level#H1#COLLAPSE": {
-            "1.Archdruid": [
+            "1.Archdruid#H1": [
                 "At 20th level, you can use your Wild Shape an unlimited number of times.",
                 "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
             ]
