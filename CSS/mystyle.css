@@ -1,3 +1,7 @@
+/*
+Potential parchment color: #FCF5E5. Im not a huge fan of this look though.
+*/
+
 @font-face {
     font-family: "Computer Modern";
     src: url('../Fonts/cm-unicode-0.7.0/cmunss.ttf');
@@ -24,6 +28,7 @@
 
 body {
     font-family: "Computer Modern", sans-serif;
+    background-color: rgb(253, 252, 250);
 }
 
 body.html-renderer {
@@ -121,6 +126,7 @@ div.collapsible-header {
     margin-right: -30px;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
+    background-color: rgb(253, 252, 250);
 }
 
 div.collapsible-header:hover {
@@ -231,7 +237,7 @@ div.header-spacer {
 }
 
 div.body-div {
-    background-color: white;
+    background-color: ;
 }
 
 nav ul {
