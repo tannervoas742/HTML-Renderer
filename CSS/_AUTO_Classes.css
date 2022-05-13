@@ -1,10 +1,10 @@
 
-.font-class-DEFAULT { font-size: 16px !important;}
+.font-class-DEFAULT { font: 16px bold !important;}
 
-.font-class-TOC { font-style: Calibri !important;font-size: 40px !important;text-align: center !important;text-decoration-line: underline !important;}
+.font-class-TOC { font: 36px bold !important;text-align: center !important;border-bottom: 2px solid darkgrey !important;}
 
 .font-class-COLLAPSE { font: 30px bold !important;text-align: left !important;}
 
-.font-class-LARGE_HEADER { font-size: 30px !important;text-decoration-line: underline !important;}
+.font-class-LARGE_HEADER { font: 30px bold !important;border-bottom: 2px solid darkgrey !important;}
 
-.font-class-HEADER { font-size: 24px !important;}
+.font-class-HEADER { font: 24px bold !important;}

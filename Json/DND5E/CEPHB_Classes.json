@@ -14,24 +14,23 @@
         },
         "font": {
             "DEFAULT": {
-                "font-size": "16px"
+                "font": "16px bold"
             },
             "TOC": {
-                "font-style": "Calibri",
-                "font-size": "40px",
+                "font": "36px bold",
                 "text-align": "center",
-                "text-decoration-line": "underline"
+                "border-bottom": "2px solid darkgrey"
             },
             "COLLAPSE": {
                 "font": "30px bold",
                 "text-align": "left"
             },
             "LARGE_HEADER": {
-                "font-size": "30px",
-                "text-decoration-line": "underline"
+                "font": "30px bold",
+                "border-bottom": "2px solid darkgrey"
             },
             "HEADER": {
-                "font-size": "24px"
+                "font": "24px bold"
             }
         }
     },
