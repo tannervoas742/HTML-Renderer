@@ -11,6 +11,28 @@
         "tag": {
             "case_sensitive": false,
             "whitespace_as": "-"
+        },
+        "font": {
+            "DEFAULT": {
+                "font": "16px bold"
+            },
+            "TOC": {
+                "font": "36px bold",
+                "text-align": "center",
+                "border-bottom": "2px solid darkgrey",
+                "margin-bottom": "10px"
+            },
+            "COLLAPSE": {
+                "font": "30px bold",
+                "text-align": "left"
+            },
+            "LARGE_HEADER": {
+                "font": "30px bold",
+                "border-bottom": "2px solid darkgrey"
+            },
+            "HEADER": {
+                "font": "24px bold"
+            }
         }
     },
     "_precompute#HIDDEN": {
@@ -90,5 +112,5 @@
             "return NewArg"
         ]
     },
-    "Table of Contents#H4#ADD_CLASS(columns-6)": {}
+    "Table of Contents#ADD_CLASS(columns-6)#FONT(TOC, DEFAULT)": {}
 }

@@ -219,11 +219,11 @@ class Webpage:
         if 'authors' in self.MetaData['document']:
             if type(self.MetaData['document']['authors']) == list:
                 for Author in self.MetaData['document']['authors']:
-                    self.Line('p', 'Author: {}'.format(Author))
+                    self.AddText('Author: {}'.format(Author), State, [], None)
             else:
-                self.Line('p', 'Author: {}'.format(self.MetaData['document']['authors']))
+                self.AddText('Author: {}'.format(self.MetaData['document']['authors']), State, [], None)
         if 'date' in self.MetaData['document']:
-            self.Line('p', 'Last Modified: {}'.format(self.MetaData['document']['date']))
+            self.AddText('Last Modified: {}'.format(self.MetaData['document']['date']), State, [], None)
 
     def AddJS(self, State = None):
         if State == None:
