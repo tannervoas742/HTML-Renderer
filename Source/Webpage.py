@@ -117,6 +117,18 @@ def WriteJSON(path, structure, beautify=True):
     with io.open(path, mode='w', encoding='utf-8') as json_file:
         json.dump(structure, json_file, indent=2 if beautify else None, sort_keys=beautify, ensure_ascii=False)
 
+def DeepSize(Item):
+    Size = 0
+    if type(Item) == list:
+        for Sub in Item:
+            Size += DeepSize(Sub)
+    elif type(Item) == dict:
+        for Key in Item:
+            Size += DeepSize(Item[Key])
+    else:
+        return 1
+    return Size
+    
 class Webpage:
     def __init__(self, SrcJSON):
         CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/').replace('/', os.sep)
@@ -179,6 +191,8 @@ class Webpage:
                     pass
                 with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
                     pass
+
+            self.ItemsToProcess = DeepSize(self.JSON)
             
             with self.Tag('header'):
                 with self.Tag('nav', id='sticky-header-nav'):
