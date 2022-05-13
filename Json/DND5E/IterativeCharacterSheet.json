@@ -1,0 +1,94 @@
+{
+    "_metadata": {
+        "document": {
+            "title": "IterativeCharacterSheet",
+            "authors": [
+                "Peter Vandermeulen",
+                "Tanner Voas - tannervoas@gmail.com"
+            ],
+            "date": "05/12/2022"
+        },
+        "tag": {
+            "case_sensitive": false,
+            "whitespace_as": "-"
+        }
+    },
+    "_precompute#HIDDEN": {
+        "_st": {
+            "1": "1st",
+            "2": "2nd",
+            "3": "3rd",
+            "4": "4th",
+            "5": "5th",
+            "6": "6th",
+            "7": "7th",
+            "8": "8th",
+            "9": "9th",
+            "10": "10th",
+            "11": "11th",
+            "12": "12th",
+            "13": "13th",
+            "14": "14th",
+            "15": "15th",
+            "16": "16th",
+            "17": "17th",
+            "18": "18th",
+            "19": "19th",
+            "20": "20th"
+        }
+    },
+    "_compute#HIDDEN": {
+        "_hitpoints_description": [
+            "Add #CALL(_hitpoints) to a key in dictionary paired to a integer value representing the die size.",
+            "Returns a new list of strings which can be paired with #TABLE tag"
+        ],
+        "_hitpoints": [
+            "Return = []",
+            "Return += [\"<BOLD>Hit Dice:</BOLD> 1d{0} per level\".format(ARG)]",
+            "Return += [\"<BOLD>Hit Points at 1st Level:</BOLD> {0} + your Constitution modifier\".format(ARG)]",
+            "Return += [\"<BOLD>Hit Points at Higher Levels:</BOLD> 1d{0} (or {1}) + your Constitution modifier\".format(ARG, ARG // 2 + 1)]",
+            "return Return"
+        ],
+        "_genlocallink_description": [
+            "Add #CALL(_genlocallink) list of strings. Each string will be converted to a <GOTO> link statement. Each string can contain multiple links, just separate them by a comma.",
+            "Returns a new list of strings where each item is actively linked. Links only work within the same file."
+        ],
+        "_genlocallink": [
+            "NewArg = []",
+            "for Group in ARG:",
+            "    while ', ' in Group:",
+            "        Group = Group.replace(', ', ',')",
+            "    NewArg += [', '.join(list(map(lambda Item: '<GOTO:{0}:{1}+{2}>'.format(Item, self.MetaData['document']['title'], '_'.join(list(map(lambda LinkKey: self.CleanLinkText(LinkKey), STATE['key'] + [Item.split('<REF:')[0]])))), Group.split(','))))]",
+            "return NewArg"
+        ],
+        "_autorefrepeatitems_description": [
+            "Checks for repeated items in this table and adds <REF:[ROW#] level> to the repeated items."
+        ],
+        "_autorefrepeatitems": [
+            "RepeatCounter = {}",
+            "NewArg = []",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    for SubArg in SplitArg:",
+            "        if SubArg not in RepeatCounter:",
+            "            RepeatCounter[SubArg] = 0",
+            "        RepeatCounter[SubArg] += 1",
+            "Level = 1",
+            "for Arg in ARG:",
+            "    while ', ' in Arg:",
+            "        Arg = Arg.replace(', ', ',')",
+            "    SplitArg = Arg.split(',')",
+            "    NewSplit = []",
+            "    for SubArg in SplitArg:",
+            "        if RepeatCounter[SubArg] > 1:",
+            "            SubArg += '<REF:{} level>'.format(self.ParamStorage['_st'][str(Level)])",
+            "        NewSplit += [SubArg]",
+            "    Level += 1",
+            "    NewArg += [', '.join(NewSplit)]",
+            "return NewArg"
+        ]
+    },
+    "Table of Contents#H4#ADD_CLASS(columns-6)": {}
+}
