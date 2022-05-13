@@ -1,7 +1,7 @@
 
 .font-class-DEFAULT { font: 16px bold !important;}
 
-.font-class-TOC { font: 36px bold !important;text-align: center !important;border-bottom: 2px solid darkgrey !important;}
+.font-class-TOC { font: 36px bold !important;text-align: center !important;border-bottom: 2px solid darkgrey !important;margin-bottom: 10px !important;}
 
 .font-class-COLLAPSE { font: 30px bold !important;text-align: left !important;}
 

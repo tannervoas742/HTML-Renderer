@@ -19,7 +19,8 @@
             "TOC": {
                 "font": "36px bold",
                 "text-align": "center",
-                "border-bottom": "2px solid darkgrey"
+                "border-bottom": "2px solid darkgrey",
+                "margin-bottom": "10px"
             },
             "COLLAPSE": {
                 "font": "30px bold",

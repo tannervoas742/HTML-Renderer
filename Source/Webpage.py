@@ -202,12 +202,14 @@ class Webpage:
                         with self.Tag('ul'):
                             with self.Tag('li'):
                                 self.Line('a', 'TBD')
+            self.Doc.stag('br')
             with self.Tag('body', klass='content html-renderer'):
                 with self.Tag('div', klass='body-div'):
                     with self.Tag('div', klass='header-spacer'):
                         self.Line('p', ' ')
                     self.LoadLevel(self.JSON)
                 self.AddJS()
+            self.Doc.stag('br')
             with self.Tag('footer'):
                 self.AddFooter()
 
