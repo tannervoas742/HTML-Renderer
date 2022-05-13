@@ -164,7 +164,7 @@ div.collapsible-header:before {
     color: #363636 !important;
     display: block !important;
     float: left !important;
-    font-size: 2.0rem !important;
+    font: 30px bold !important;
     margin-right: 10px !important;
     padding: 0 !important;
     text-align: center !important;
@@ -175,9 +175,6 @@ div.collapsible-header:before {
 div.collapsible-header.collapsible-header-open:before {
     content: "-" !important;
 }
-
-
-/* li.list-collapsible.active div.collapsible-header */
 
 table {
     border-collapse: separate !important;
