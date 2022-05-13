@@ -263,8 +263,7 @@ class Webpage:
             if type(OriginalKey) in [list, dict]:
                 self.LoadLevel(OriginalKey, State)
                 continue
-            Rank, Key, Interface = self.GetInterfaceFromKey(OriginalKey)
-            
+            Rank, Key, Interface = self.GetInterfaceFromKey(OriginalKey)   
             NewState = self.MixState(State, Interface)                
             
             if type(Input) == dict:
@@ -448,19 +447,7 @@ class Webpage:
 
         TextTag = None
         if ForceTextTag == None:
-            TextSize = State['text.size']
-            if TextSize > 0:
-                TextSize = 5 - TextSize
-            HPattern = re.compile('H(\d+)')
-            HMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: HPattern.match(Code), Interface))))))
-            if len(HMatch) > 0:
-                TextSize = int(max(HMatch))
-                if TextSize > 0:
-                    TextSize = 5 - TextSize
-            if TextSize == 0:
-                TextTag = 'p'
-            else:
-                TextTag = 'h{}'.format(TextSize)
+            TextTag = 'p'
         else:
             TextTag = ForceTextTag
         if '<GOTO' in Input and '>' in Input:
@@ -561,11 +548,12 @@ class Webpage:
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
-                self.Text(Input)
+                if Input.strip() != '':
+                    self.Text(Input)
                 return 
-            
-        with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
-            self.Text(Input)
+        if Input.strip() != '':   
+            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+                self.Text(Input)
 
     def CleanTable(self, Table):
         for IndexY in range(len(Table)):
@@ -616,7 +604,6 @@ class Webpage:
         State['class'] = []
         State['style'] = []
         State['mode'] = WebpageEnums.Text
-        State['text.size'] = 0
         State['lookup_table.range'] = None
         State['callback'] = []
         return State
@@ -627,12 +614,6 @@ class Webpage:
             State['visible'] = False
         elif 'SHOWN' in Interface:
             State['visible'] = True
-        PPattern = re.compile('P(\d+)')
-        PMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: PPattern.match(Code), Interface))))))
-        if len(PMatch) > 0:
-            State['text.size'] = int(max(PMatch))
-            if State['text.size'] > 0:
-                State['text.size'] = 4 - State['text.size']
 
         LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
         LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                
