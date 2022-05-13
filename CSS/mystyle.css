@@ -77,34 +77,6 @@ li {
     break-inside: avoid-column !important;
 }
 
-p.columns-2,
-h1.columns-2,
-h2.columns-2,
-h3.columns-2,
-h4.columns-2,
-p.columns-3,
-h1.columns-3,
-h2.columns-3,
-h3.columns-3,
-h4.columns-3,
-p.columns-4,
-h1.columns-4,
-h2.columns-4,
-h3.columns-4,
-h4.columns-4,
-p.columns-5,
-h1.columns-5,
-h2.columns-5,
-h3.columns-5,
-h4.columns-5,
-p.columns-6,
-h1.columns-6,
-h2.columns-6,
-h3.columns-6,
-h4.columns-6 {
-    text-align: center;
-}
-
 p,
 h1,
 h2,

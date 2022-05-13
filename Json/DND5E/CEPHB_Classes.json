@@ -13,11 +13,24 @@
             "whitespace_as": "-"
         },
         "font": {
-            "0": {
-                "font-size": 10
+            "DEFAULT": {
+                "font-size": "16px"
             },
-            "1": {
-
+            "TOC": {
+                "font-size": "40px",
+                "text-align": "center",
+                "text-decoration-line": "underline"
+            },
+            "COLLAPSE": {
+                "font-size": "30px",
+                "text-align": "left"
+            },
+            "LARGE_HEADER": {
+                "font-size": "30px",
+                "text-decoration-line": "underline"
+            },
+            "HEADER": {
+                "font-size": "24px"
             }
         }
     },
@@ -98,7 +111,7 @@
             "return NewArg"
         ]
     },
-    "Table of Contents#ADD_CLASS(columns-6)#H3": {
+    "Table of Contents#ADD_CLASS(columns-6)#FONT(TOC, DEFAULT)": {
         "0.<LIST_START>": "",
         "1.<LIST_ITEM><GOTO:Artificer:Classes+Artificer>": [
             "<LIST_START>",
@@ -268,7 +281,7 @@
         ],
         "999.<LIST_STOP>": ""
     },
-    "Artificer#COLLAPSE#P2": {
+    "Artificer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -328,8 +341,8 @@
         ],
 
 
-        "6.1st level#COLLAPSE#P3": {
-            "1.Magical Tinkering#H2": [
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "1.Magical Tinkering": [
                 "At 1st level, you've learned how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
                 "<LIST_START>",
                 "<LIST_ITEM>The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
@@ -365,7 +378,7 @@
             }
         },
 
-        "7.2nd level#COLLAPSE#P3": {
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Infuse Item": {
                 "1.": "At 2nd level, you've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
                 "2.Infusions Known": [
@@ -379,7 +392,7 @@
                     "If an infusion ends on an item that contains other things, like a bag of holding, its contents harmlessly appear in and around its space."
                 ]
             },
-            "2.Artificer Infusions#COLLAPSE": {
+            "2.Artificer Infusions#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.": [
                     "<BOLD><ITALIC>Artificer infusions are extraordinary processes that rapidly turn a nonmagical object into a magic item. The description of each of the following infusions details the type of object that can receive it, along with whether the resulting magic item requires attunement.</ITALIC></BOLD>",
                     "<BOLD><ITALIC>Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.</ITALIC></BOLD>",
@@ -486,9 +499,9 @@
             }
         },
 
-        "8.3rd level#COLLAPSE#P3": {
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1. The Right Tool for the Job": "At 3rd level, you've learned how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.",
-            "2. Alchemist#COLLAPSE": {
+            "2. Alchemist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tool Proficiency": "When you adopt this specialization at 3rd level, you gain proficiency with alchemist's supplies. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
                 "2.Alchemist Spells": {
                     "1.": "Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
@@ -515,7 +528,7 @@
                     ]
                 }
             },
-            "3. Armorer#COLLAPSE": {
+            "3. Armorer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tools of the Trade": "When you adopt this specialization at 3rd level, you gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
                 "2.Armorer Spells": {
                     "1.": "Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
@@ -552,7 +565,7 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4. Artillerist#COLLAPSE": {
+            "4. Artillerist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tool Proficiency": "When you adopt this specialization at 3rd level, you gain proficiency with woodcarver's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
                 "2.Artillerist Spells": {
                     "1.": "Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
@@ -575,7 +588,7 @@
                     ]
                 }
             },
-            "5. Battle Smith#COLLAPSE": {
+            "5. Battle Smith#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tool Proficiency": "When you adopt this specialization at 3rd level, you gain proficiency with smith's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.",
                 "2.Battle Smith Spells": {
                     "1.": "Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Battle Smith Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
@@ -603,26 +616,26 @@
             }
         },
 
-        "9.4th level#COLLAPSE#P3": {
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE#P3": {
-            "2. Alchemist#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "2. Alchemist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Alchemical Savant": "At 5th level, you've developed masterful command of magical chemicals, enhancing the healing and damage you create through them. Whenever you cast a spell using your alchemist's supplies as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1).",
                 "2.Alchemist Spells at 5th level": [
                     "<GOTO:Flaming Sphere:Spells+Flaming Sphere>",
                     "<GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"
                 ]
             },
-            "3. Armorer#COLLAPSE": {
+            "3. Armorer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Extra Attack": "Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.",
                 "2.Armorer Spells at 5th level": [
                     "<GOTO:Mirror Image:Spells+Mirror Image>",
                     "<GOTO:Shatter:Spells+Shatter>"
                 ]
             },
-            "4. Artillerist#COLLAPSE": {
+            "4. Artillerist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcane Firearm": [
                     "At 5th level, You know how to turn a wand, staff, or rod into an arcane firearm, a conduit for your destructive spells. When you finish a long rest, you can use woodcarver's tools to carve special sigils into a wand, staff, or rod and thereby turn it into your arcane firearm. The sigils disappear from the object if you later carve them on a different item. The sigils otherwise last indefinitely.",
                     "You can use your arcane firearm as a spellcasting focus for your artificer spells. When you cast an artificer spell through the firearm, roll a d8, and you gain a bonus to one of the spell's damage rolls equal to the number rolled."
@@ -632,7 +645,7 @@
                     "<GOTO:Shatter:Spells+Shatter>"
                 ]
             },
-            "5. Battle Smith#COLLAPSE": {
+            "5. Battle Smith#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Extra Attack": "Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.",
                 "2.Battle Smith Spells at 5th level": [
                     "<GOTO:Branding Smite:Spells+Branding Smite>",
@@ -641,23 +654,23 @@
             }
         },
 
-        "11.6th level#COLLAPSE#P3": {
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Tool Expertise": "At 6th level, your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
         },
 
-        "12.7th level#COLLAPSE#P3": {
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Flash of Genius": [
                 "At 7th level, you've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
                 "You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
             ]
         },
 
-        "13.8th level#COLLAPSE#P3": {
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE#P3": {
-            "2. Alchemist#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "2. Alchemist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Restorative Reagents": [
                     "Starting at 9th level, you can incorporate restorative reagents into some of your works:",
                     "<LIST_START>",
@@ -670,14 +683,14 @@
                     "<GOTO:Mass Healing Word:Spells+Mass Healing Word>"
                 ]
             },
-            "3. Armorer#COLLAPSE": {
+            "3. Armorer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Armor Modifications": "At 9th level, you learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor.",
                 "2.Armorer Spells at 9th level": [
                     "<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>",
                     "<GOTO:Lightning Bolt:Spells+Lightning Bolt>"
                 ]
             },
-            "4. Artillerist#COLLAPSE": {
+            "4. Artillerist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Explosive Cannon": [
                     "Starting at 9th level, every eldritch cannon you create is more destructive:",
                     "<LIST_START>",
@@ -690,7 +703,7 @@
                     "<GOTO:Wind Wall:Spells+Wind Wall>"
                 ]
             },
-            "5. Battle Smith#COLLAPSE": {
+            "5. Battle Smith#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcane Jolt": [
                     "At 9th level, you've learn new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack or your steel defender hits a target, you can channel magical energy through the strike to create one of the following effects:",
                     "<LIST_START>",
@@ -706,7 +719,7 @@
             }
         },
 
-        "15.10th level#COLLAPSE#P3": {
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Magic Item Adept": [
                 "When you reach 10th level, you achieve a profound understanding of how to use and make magic items:",
                 "<LIST_START>",
@@ -716,38 +729,38 @@
             ]
         },
 
-        "16.11th level#COLLAPSE#P3": {
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Spell-Storing Item": [
                 "At 11th level, you can now store a spell in an object. Whenever you finish a long rest, you can touch one simple or martial weapon or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a lst- or 2nd-level spell from the artificer spell list that requires 1 action to cast (you needn't have it prepared).",
                 "While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires concentration, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
             ]
         },
 
-        "17.12th level#COLLAPSE#P3": {
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE#P3": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 4th level spells",
-            "2.Alchemist Spells at 13th level#COLLAPSE": [
+            "2.Alchemist Spells at 13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Blight:Spells+Blight>",
                 "<GOTO:Death Ward:Spells+Death Ward>"
             ],
-            "3.Armorer Spells at 13th level#COLLAPSE": [
+            "3.Armorer Spells at 13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Fire Shield:Spells+Fire Shield>",
                 "<GOTO:Greater Invisibility:Spells+Greater Invisibility>"
             ],
-            "4.Artillerist Spells at 13th level#COLLAPSE": [
+            "4.Artillerist Spells at 13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Ice Storm:Spells+Ice Storm>",
                 "<GOTO:Wall of Fire:Spells+Wall of Fire>"
             ],
-            "5.Battle Smith Spells at 13th level#COLLAPSE": [
+            "5.Battle Smith Spells at 13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Aura of Purity:Spells+Aura of Purity>",
                 "<GOTO:Fire Shield:Spells+Fire Shield>"
             ]
         },
 
-        "19.14th level#COLLAPSE#P3": {
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Magic Item Savant": [
                 "At 14th level, your skill with magic items deepens more:",
                 "<LIST_START>",
@@ -757,8 +770,8 @@
             ]
         },
 
-        "20.15th level#COLLAPSE#P3": {
-            "2. Alchemist#COLLAPSE": {
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "2. Alchemist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Chemical Mastery": [
                     "By 15th level, you have been exposed to so many chemicals that they pose little risk to you, and you can use them to quickly end certain ailments:",
                     "<LIST_START>",
@@ -767,7 +780,7 @@
                     "<LIST_STOP>"
                 ]
             },
-            "3. Armorer#COLLAPSE": {
+            "3. Armorer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Perfected Armor": [
                     "At 15th level, your Arcane Armor gains additional benefits based on its model, as shown below.",
                     "<BOLD>Guardian.</BOLD> When a Huge or smaller creature you can see ends its turn within 30 feet of you, you can use your reaction to magically force the creature to make a Strength saving throw against your spell save DC, pulling the creature up to 30 feet toward you to an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
@@ -775,7 +788,7 @@
                     "<BOLD>Infiltrator.</BOLD> Any creature that takes lightning damage from your Lightning Launcher glimmers with magical light until the start of your next turn. The glimmering creature sheds dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light jolts it if it attacks you. In addition, the next attack roll against it has advantage, and if that attack hits, the target takes an extra 1d6 lightning damage."
                 ]
             },
-            "4. Artillerist#COLLAPSE": {
+            "4. Artillerist#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Fortified Position": [
                     "By 15th level, you're a master at forming well-defended emplacements using Eldritch Cannon:",
                     "<LIST_START>",
@@ -784,7 +797,7 @@
                     "<LIST_STOP>"
                 ]
             },
-            "5. Battle Smith#COLLAPSE": {
+            "5. Battle Smith#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Improved Defender": [
                     "At 15th level, your Arcane Jolt and steel defender become more powerful:",
                     "<LIST_START>",
@@ -796,39 +809,39 @@
             }
         },
 
-        "21.16th level#COLLAPSE#P3": {
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE#P3": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 5th level spells",
-            "2.Alchemist Spells at 17th level#COLLAPSE": [
+            "2.Alchemist Spells at 17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Cloudkill:Spells+Cloudkill>",
                 "<GOTO:Raise Dead:Spells+Raise Dead>"
             ],
-            "3.Armorer Spells at 17th level#COLLAPSE": [
+            "3.Armorer Spells at 17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Passwall:Spells+Passwall>",
                 "<GOTO:Wall of Force:Spells+Wall of Force>"
             ],
-            "4.Artillerist Spells at 17th level#COLLAPSE": [
+            "4.Artillerist Spells at 17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Cone of Cold:Spells+Cone of Cold>",
                 "<GOTO:Wall of Force:Spells+Wall of Force>"
             ],
-            "5.Battle Smith Spells at 17th level#COLLAPSE": [
+            "5.Battle Smith Spells at 17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": [
                 "<GOTO:Banishing Smite:Spells+Banishing Smite>",
                 "<GOTO:Mass Cure Wounds:Spells+Mass Cure Wounds>"
             ]
         },
 
-        "23.18th level#COLLAPSE#P3": {
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Magic Item Master": "Starting at 18th level, you can attune up to six magic items at once."
         },
 
-        "24.19th level#COLLAPSE#P3": {
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE#P3": {
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Soul of Artifice": [
                 "At 20th level, you develop a mystical connection to your magic items, which you can draw on for protection:",
                 "<LIST_START>",
@@ -838,7 +851,7 @@
             ]
         }
     },
-    "Barbarian#COLLAPSE": {
+    "Barbarian#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -888,7 +901,7 @@
         ],
 
 
-        "6.1st level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Rage": [
                 "Enter as a bonus action.",
                 "Amount of rages per level shown on Barbarian table",
@@ -905,18 +918,18 @@
             "2.Unarmored Defense": "AC is 10 + DEX + CON while you are not wearing armor. You can use a shield and still get this benefit."
         },
 
-        "7.2nd level#COLLAPSE": {
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Reckless Attack": "You can choose to have advantage on melee weapon attack rolls using strength during this turn, but attack rolls against you have advantage until your next turn.",
 
             "2.Danger Sense": "Advantage on DEX saving throws against effects that you can see. You cannot be blinded, deafened, or incapacitated."
         },
 
-        "8.3rd level#COLLAPSE": {
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Primal Knowledge (Optional)": "When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
-            "1.Ancestral Guardian#COLLAPSE": {
+            "1.Ancestral Guardian#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Ancestral Protectors": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage of the target's attacks."
             },
-            "2.Battlerager#COLLAPSE": {
+            "2.Battlerager#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Restriction: Dwarves Only": ["Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
                     "Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."
                 ],
@@ -926,7 +939,7 @@
                 ]
 
             },
-            "3.Beast#COLLAPSE": {
+            "3.Beast#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1d4#HIDDEN#RANGE": [1, 4],
                 "Origin#HIDDEN": ["One of your parents is a lycanthrope, and you've inherited some of their curse.",
                     "You are descended from an archdruid and inherited the ability to partially change shape.",
@@ -943,10 +956,10 @@
                     "Tail. You grow a lashing, spiny tail, which deals 1d8 piercing damage on a hit and has the reach property. If a creature you can see within 10 feet of you hits you with an attack roll, you can use your reaction to swipe your tail and roll a d8, applying a bonus to your AC equal to the number rolled, potentially causing the attack to miss you."
                 ]
             },
-            "4.Berserker#COLLAPSE": {
+            "4.Berserker#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Frenzy": "Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion."
             },
-            "5.Storm Herald#COLLAPSE": {
+            "5.Storm Herald#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Storm Aura": ["When you select this path at 3rd level, you emanate a stormy, magical aura while you rage. The aura extends 10 feet from you in every direction, but not through total cover.",
                     "Your aura has an effect that activates when you enter your rage, and you can activate the effect again on each of your turns as a bonus action. Choose desert, sea, or tundra. Your aura's effect depends on that chosen environment, as detailed below. You can change your environment choice whenever you gain a level in this class.",
                     "If your aura's effects require a saving throw, the DC equals 8 + your proficiency bonus + your Constitution modifier.",
@@ -955,7 +968,7 @@
                     "Tundra. When this effect is activated, each creature of your choice in your aura gains 2 temporary hit points, as icy spirits inure it to suffering. The temporary hit points increase when you reach certain levels in this class, increasing to 3 at 5th level, 4 at 10th level, 5 at 15th level, and 6 at 20th level."
                 ]
             },
-            "6.Totem Warrior#COLLAPSE": {
+            "6.Totem Warrior#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Spirit Seeker": "Yours is a path that seeks attunement with the natural world, giving you a kinship with beasts. At 3rd level when you adopt this path, you gain the ability to cast the <GOTO:Beast Sense:Spells+Beast Sense> and <GOTO:Speak with Animals:Spells+Speak with Animals> spells, but only as rituals.",
                 "2.Totem Spirit": ["At 3rd level, when you adopt this path, you choose a totem spirit and gain its feature. You must make or acquire a physical totem object - an amulet or similar adornment - that incorporates fur or feathers, claws, teeth, or bones of the totem animal. At your option, you also gain minor physical attributes that are reminiscent of your totem spirit. For example, if you have a bear totem spirit, you might be unusually hairy and thick-skinned, or if your totem is the eagle, your eyes turn bright yellow.",
                     "Your totem animal might be an animal related to those listed here but more appropriate to your homeland. For example, you could choose a hawk or vulture in place of an eagle.",
@@ -966,7 +979,7 @@
                     "Wolf. While you're raging, your friends have advantage on melee attack rolls against any creature within 5 feet of you that is hostile to you. The spirit of the wolf makes you a leader of hunters."
                 ]
             },
-            "7.Wild Magic#COLLAPSE": {
+            "7.Wild Magic#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Magic Awareness": ["When you choose this path at 3rd level, as an action, you can open your awareness to the presence of concentrated magic. Until the end of your next turn, you know the location of any spell or magic item within 60 feet of you that isn't behind total cover. When you sense a spell, you learn which school of magic it belongs to.",
                     "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ],
@@ -988,31 +1001,31 @@
 
                 "3.Wild Surge Table#LOOKUP_TABLE(1,8)": ["1d8", "Effect"]
             },
-            "8.Zealot#COLLAPSE": {
+            "8.Zealot#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Divine Fury": "Starting when you choose this path at 3rd level, you can channel divine fury into your weapon strikes. While you're raging, the first creature you hit on each of your turns with a weapon attack takes extra damage equal to 1d6 + half your Barbarian level. The extra damage is necrotic or radiant; you choose the type of damage when you gain this feature.",
                 "2.Warrior of the Gods": "At 3rd level, your soul is marked for endless battle. If a spell, such as <GOTO:Raise Dead:Spells+Raise Dead>, has the sole effect of restoring you to life (but not undeath), the caster doesn't need material components to cast the spell on you."
             }
         },
 
-        "9.4th level#COLLAPSE": {
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Extra Attack": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
             "2.Fast Movement": "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
         },
 
-        "11.6th level#COLLAPSE": {
-            "1.Ancestral Guardian#COLLAPSE": {
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "1.Ancestral Guardian#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Spirit Shield": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.",
                     "When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level."
                 ]
             },
-            "2.Battlerager#COLLAPSE": {
+            "2.Battlerager#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Reckless Abandon": "Beginning at 6th level, when you use Reckless Attack while raging, you also gain temporary hit points equal to your Constitution modifier (minimum of 1). They vanish if any of them are left when your rage ends."
             },
-            "3.Beast#COLLAPSE": {
+            "3.Beast#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Bestial Soul": ["Beginning at 6th level, the feral power within you increases, causing the natural weapons of your Form of the Beast to count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
                     "You can also alter your form to help you adapt to your surroundings. When you finish a short or long rest, choose one of the following benefits, which lasts until you finish a short or long rest:",
                     "<LIST_START>",
@@ -1022,17 +1035,17 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4.Berserker#COLLAPSE": {
+            "4.Berserker#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Mindless Rage": "Beginning at 6th level, you can't be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage."
             },
-            "5.Storm Herald#COLLAPSE": {
+            "5.Storm Herald#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Storm Soul": ["At 6th level, the storm grants you benefits even when your aura isn't active. The benefits are based on the environment you chose for your Storm Aura.",
                     "Desert. You gain resistance to fire damage, and you don't suffer the effects of extreme heat, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch a flammable object that isn't being worn or carried by anyone else and set it on fire.",
                     "Sea. You gain resistance to lightning damage, and you can breathe underwater. You also gain a swimming speed of 30 feet.",
                     "Tundra. You gain resistance to cold damage, and you don't suffer the effects of extreme cold, as described in the Dungeon Master's Guide. Moreover, as an action, you can touch water and turn a 5-foot cube of it into ice, which melts after 1 minute. This action fails if a creature is in the cube."
                 ]
             },
-            "6.Totem Warrior#COLLAPSE": {
+            "6.Totem Warrior#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Aspect of the Beast": ["At 6th level, you gain a magical benefit based on the totem animal of your choice. You can choose the same animal you selected at 3rd level or a different one.",
                     "Bear. You gain the might of a bear. Your carrying capacity (including maximum load and maximum lift) is doubled, and you have advantage on Strength checks made to push, pull, lift, or break objects.",
                     "Eagle. You gain the eyesight of an eagle. You can see up to 1 mile away with no difficulty, able to discern even fine details as though looking at something no more than 100 feet away from you. Additionally, dim light doesn't impose disadvantage on your Wisdom (Perception) checks.",
@@ -1041,7 +1054,7 @@
                     "Wolf. You gain the hunting sensibilities of a wolf. You can track other creatures while traveling at a fast pace, and you can move stealthily while traveling at a normal pace."
                 ]
             },
-            "7.Wild Magic#COLLAPSE": {
+            "7.Wild Magic#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Bolstering Magic": ["Beginning at 6th level, you can harness your wild magic to bolster yourself or a companion. As an action, you can touch one creature (which can be yourself) and confer one of the following benefits of your choice to that creature:",
                     "<LIST_START>",
                     "<LIST_ITEM>For 10 minutes, the creature can roll a d3 whenever making an attack roll or an ability check and add the number rolled to the d20 roll.",
@@ -1050,12 +1063,12 @@
                     "You can take this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "8.Zealot#COLLAPSE": {
+            "8.Zealot#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Fanatical Focus": "Starting at 6th level, the divine power that fuels your rage can protect you. If you fail a saving throw while raging, you can reroll it, and you must use the new roll. You can use this ability only once per rage."
             }
         },
 
-        "12.7th level#COLLAPSE": {
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Feral Instinct": [
                 "By 7th level, your instincts are so honed that you have advantage on initiative rolls.",
                 "Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn."
@@ -1063,25 +1076,25 @@
             "2.Instinctive Pounce (Optional)": "At 7th level, as part of the bonus action you take to enter your rage, you can move up to half your speed."
         },
 
-        "13.8th level#COLLAPSE": {
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Brutal Critical (1 die)": "Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
         },
 
-        "15.10th level#COLLAPSE": {
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Primal Knowledge improvement (Optional)": "When you reach 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
-            "1.Ancestral Guardian#COLLAPSE": {
+            "1.Ancestral Guardian#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Consult the Spirits": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
                     "After you cast either spell in this way, you can,t use this feature again until you finish a short or long rest."
                 ]
             },
-            "2.Battlerager#COLLAPSE": {
+            "2.Battlerager#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Battlerager Charge": "Beginning at 10th level, you can take the Dash action as a bonus action while you are raging."
             },
-            "3.Beast#COLLAPSE": {
+            "3.Beast#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Infectious Fury": ["At 10th level, when you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
                     "<LIST_START>",
                     "<LIST_ITEM>The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
@@ -1090,21 +1103,21 @@
                     "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "4.Berserker#COLLAPSE": {
+            "4.Berserker#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Intimidating Presence": ["Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
                     "If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
                 ]
             },
-            "5.Storm Herald#COLLAPSE": {
+            "5.Storm Herald#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Shielding Storm": "At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
             },
-            "6.Totem Warrior#COLLAPSE": {
+            "6.Totem Warrior#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Spirit Walker": "At 10th level, you can cast the <GOTO:Commune with Nature:Spells+Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
             },
-            "7.Wild Magic#COLLAPSE": {
+            "7.Wild Magic#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Unstable Backlash": "At 10th level, when you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."
             },
-            "8.Zealot#COLLAPSE": {
+            "8.Zealot#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Zealous Presence": [
                     "At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
                     "Once you use this feature, you can,t use it again until you finish a long rest."
@@ -1112,44 +1125,44 @@
             }
         },
 
-        "16.11th level#COLLAPSE": {
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Relentless Rage": [
                 "Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.",
                 "Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10."
             ]
         },
 
-        "17.12th level#COLLAPSE": {
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Brutal Critical (2 dice)": "Beginning at 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
         },
 
-        "19.14th level#COLLAPSE": {
-            "1.Ancestral Guardian#COLLAPSE": {
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+            "1.Ancestral Guardian#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Vengeful Ancestors": "At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage that your Spirit Shield prevents."
             },
-            "2.Battlerager#COLLAPSE": {
+            "2.Battlerager#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Spiked Retribution": "Starting at 14th level, when a creature within 5 feet of you hits you with a melee attack, the attacker takes 3 piercing damage if you are raging, aren't incapacitated, and are wearing spiked armor."
             },
-            "3.Beast#COLLAPSE": {
+            "3.Beast#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Call the Hunt": ["At 14th level, the beast within you grows so powerful that you can spread its ferocity to others and gain resilience from them joining your hunt. When you enter your rage, you can choose a number of other willing creatures you can see within 30 feet of you equal to your Constitution modifier (minimum of one creature). You gain 5 temporary hit points for each creature that accepts this feature. Until the rage ends, the chosen creatures can use the following benefit once on each of their turns: when the creature hits a target with an attack roll and deals damage to it, the creature can roll a d6 and gain a bonus to the damage equal to the number rolled.",
                     "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "4.Berserker#COLLAPSE": {
+            "4.Berserker#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Retaliation": "Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature."
             },
-            "5.Storm Herald#COLLAPSE": {
+            "5.Storm Herald#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Raging Storm": ["At 14th level, the power of the storm you channel grows mightier, lashing out at your foes. The effect is based on the environment you chose for your Storm Aura.",
                     "Desert. Immediately after a creature in your aura hits you with an attack, you can use your reaction to force that creature to make a Dexterity saving throw. On a failed save, the creature takes fire damage equal to your Barbarian level.",
                     "Sea. When you hit a creature in your aura with an attack, you can use your reaction to force that creature to make a Strength saving throw. On a failed save, the creature is knocked prone, as if struck by a wave.",
                     "Tundra. Whenever the effect of your Storm Aura is activated, you can choose one creature you can see in the aura. That creature must succeed on a Strength saving throw, or its speed is reduced to 0 until the start of your next turn, as magical frost covers it."
                 ]
             },
-            "6.Totem Warrior#COLLAPSE": {
+            "6.Totem Warrior#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Totemic Attunement": ["At 14th level, you gain a magical benefit based on a totem animal of your choice. You can choose the same animal you selected previously or a different one.",
                     "Bear. While you're raging, any creature within 5 feet of you that's hostile to you has disadvantage on attack rolls against targets other than you or another character with this feature. An enemy is immune to this effect if it can't see or hear you or if it can't be frightened.",
                     "Eagle. While raging, you have a flying speed equal to your current walking speed. This benefit works only in short bursts; you fall if you end your turn in the air and nothing else is holding you aloft.",
@@ -1158,10 +1171,10 @@
                     "Wolf. While you're raging, you can use a bonus action on your turn to knock a Large or smaller creature prone when you hit it with melee weapon attack."
                 ]
             },
-            "7.Wild Magic#COLLAPSE": {
+            "7.Wild Magic#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Controlled Surge": "At 14th level, whenever you roll on the Wild Magic table, you can roll the die twice and choose which of the two effects to unleash. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
             },
-            "8.Zealot#COLLAPSE": {
+            "8.Zealot#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Rage Beyond Death": [
                     "Beginning at 14th level, the divine power that fuels your rage allows you to shrug off fatal blows.",
                     "While you're raging, having 0 hit points doesn,t knock you unconscious. You still must make death saving throws, and you suffer the normal effects of taking damage while at 0 hit points. However, if you would die due to failing death saving throws, you don't die until your rage ends, and you die then only if you still have 0 hit points."
@@ -1169,31 +1182,31 @@
             }
         },
 
-        "20.15th level#COLLAPSE": {
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Persistent Rage": "Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it."
         },
 
-        "21.16th level#COLLAPSE": {
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Brutal Critical (3 dice)": "Beginning at 13th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack."
         },
 
-        "23.18th level#COLLAPSE": {
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Indomitable Might": "Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total."
         },
 
-        "24.19th level#COLLAPSE": {
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Primal Champion": "At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24."
         }
     },
-    "Bard#COLLAPSE": {
+    "Bard#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -1253,7 +1266,7 @@
             "Spell slots: Add your levels in bard to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Spellcasting": {
                 "1.": "You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations.",
                 "2.Cantrips (0-Level Spells)": [
@@ -1280,7 +1293,7 @@
                 "Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
             ]
         },
-        "7.2nd level#COLLAPSE": {
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Jack of All Trades": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
             "2.Song of Rest": [
                 "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.",
@@ -1288,9 +1301,9 @@
             ],
             "3.Magical Inspiration (Optional)": "At 2nd level, if a creature has a Bardic Inspiration die from you and casts a spell that restores hit points or deals damage, the creature can roll that die and choose a target affected by the spell. Add the number rolled as a bonus to the hit points regained or the damage dealt. The Bardic Inspiration die is then lost."
         },
-        "8.3rd level#COLLAPSE": {
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Bard College": "At 3rd level, you delve into the advanced techniques of a bard college of your choice. Your choice grants you features at 3rd level and again at 6th and 14th level.",
-            "1.College of Creation#COLLAPSE": {
+            "1.College of Creation#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Note of Potential": [
                     "When you join the College of Creation at 3rd level, whenever you give a creature a Bardic Inspiration die, you can utter a note from the Song of Creation to create a Tiny mote of potential, which orbits within 5 feet of that creature. The mote is intangible and invulnerable, and it lasts until the Bardic Inspiration die is lost. The mote looks like a musical note, a star, a flower, or another symbol of art or life that you choose.",
                     "When the creature uses the Bardic Inspiration die, the mote provides an additional effect based on whether the die benefits an ability check, an attack roll, or a saving throw, as detailed below:",
@@ -1304,11 +1317,11 @@
                     "The size of the item you can create with this feature increases by one size category when you reach 6th level (Large) and 14th level (Huge)."
                 ]
             },
-            "2.College of Eloquence#COLLAPSE": {
+            "2.College of Eloquence#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Silver Tongue": "Starting at 3rd level, you are a master at saying the right thing at the right time. When you make a Charisma (Persuasion) or Charisma (Deception) check, you can treat a d20 roll of 9 or lower as a 10.",
                 "2.Unsettling Words": "Also at 3rd level, you can spin words laced with magic that unsettle a creature and cause it to doubt itself. As a bonus action, you can expend one use of your Bardic Inspiration and choose one creature you can see within 60 feet of you. Roll the Bardic Inspiration die. The creature must subtract the number rolled from the next saving throw it makes before the start of your next turn."
             },
-            "3.College of Glamour#COLLAPSE": {
+            "3.College of Glamour#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Mantle of Inspiration": [
                     "When you join the College of Glamour at 3rd level, you gain the ability to weave a song of fey magic that imbues your allies with vigor and speed.",
                     "As a bonus action, you can expend one use of your Bardic Inspiration to grant yourself a wondrous appearance. When you do so, choose a number of creatures you can see and who can see you within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one). Each of them gains 5 temporary hit points. When a creature gains these temporary hit points, it can immediately use its reaction to move up to its speed, without provoking opportunity attacks.",
@@ -1321,11 +1334,11 @@
                     "Once you use this feature, you can't use it again until you finish a short or long rest."
                 ]
             },
-            "4.College of Lore#COLLAPSE": {
+            "4.College of Lore#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Bonus Proficiencies": "When you join the College of Lore at 3rd level, you gain proficiency with three skills of your choice.",
                 "2.Cutting Words": "Also at 3rd level, you learn how to use your wit to distract, confuse, and otherwise sap the confidence and competence of others. When a creature that you can see within 60 feet of you makes an attack roll, an ability check, or a damage roll, you can use your reaction to expend one of your uses of Bardic Inspiration, rolling a Bardic Inspiration die and subtracting the number rolled from the creature's roll. You can choose to use this feature after the creature makes its roll, but before the DM determines whether the attack roll or ability check succeeds or fails, or before the creature deals its damage. The creature is immune if it can't hear you or if it's immune to being charmed."
             },
-            "5.College of Spirits#COLLAPSE": {
+            "5.College of Spirits#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Guiding Whispers": "At 3rd level, you can reach out to spirits to guide you and others. You learn the <GOTO:Guidance:Spells+Guidance> cantrip, which doesn't count against the number of bard cantrips you know. For you, it has a range of 60 feet when you cast it.",
                 "2.Spiritual Focus": [
                     "At 3rd level, you employ tools that aid you in channeling spirits, be they historical figures or fictional archetypes. You can use the following objects as a spellcasting focus for your bard spells: a candle, crystal ball, skull, spirit board, or tarokka deck.",
@@ -1355,7 +1368,7 @@
                     ]
                 }
             },
-            "6.College of Swords#COLLAPSE": {
+            "6.College of Swords#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Bonus Proficiencies": [
                     "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.",
                     "If you're proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."
@@ -1375,14 +1388,14 @@
                     "<BOLD>Mobile Flourish.</BOLD> You can expend one use of your Bardic Inspiration to cause the weapon to deal extra damage to the target you hit. The damage equals the number you roll on the Bardic Inspiration die. You can also push the target up to 5 feet away from you, plus a number of feet equal to the number you roll on that die. You can then immediately use your reaction to move up to your walking speed to an unoccupied space within 5 feet of the target."
                 ]
             },
-            "7.College of Valor#COLLAPSE": {
+            "7.College of Valor#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Bonus Proficiencies": [
                     "When you join the College of Swords at 3rd level, you gain proficiency with medium armor and the scimitar.",
                     "If you're proficient with a simple or martial melee weapon, you can use it as a spellcasting focus for your bard spells."
                 ],
                 "2.Combat Inspiration": "Also at 3rd level, you learn to inspire others in battle. A creature that has a Bardic Inspiration die from you can roll that die and add the number rolled to a weapon damage roll it just made. Alternatively, when an attack roll is made against the creature, it can use its reaction to roll the Bardic Inspiration die and add the number rolled to its AC against that attack, after seeing the roll but before knowing whether it hits or misses."
             },
-            "8.College of Whispers#COLLAPSE": {
+            "8.College of Whispers#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Psychic Blades": [
                     "When you join the College of Whispers at 3rd level, you gain the ability to make your weapon attacks magically toxic to a creature's mind.",
                     "When you hit a creature with a weapon attack, you can expend one use of your Bardic Inspiration to deal an additional 2d6 psychic damage to that target. You can do so only once per round on your turn.",
@@ -1400,7 +1413,7 @@
                 "At 10th level, you can choose another two skill proficiencies to gain this benefit."
             ]
         },
-        "9.4th level#COLLAPSE": {
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Bardic Versatility (Optional)": [
                 "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
@@ -1411,13 +1424,13 @@
             ]
         },
 
-        "10.5th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d8.",
             "2.Font of Inspiration": "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
         },
-        "11.6th level#COLLAPSE": {
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Countercharm": "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
-            "1.College of Creation#COLLAPSE": {
+            "1.College of Creation#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Animating Performance": [
                     "By 6th level, as an action, you can target a Large or smaller nonmagical item you can see within 30 feet of you and animate it. The animate item uses the Dancing Item stat block, which uses your proficiency bonus (PB), The item is friendly to you and your companions and obeys your commands. It lives for 1 hour, until it is reduced to 0 hit points, or until you die.",
                     "In combat, the item shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the item can take any action of its choice, not just Dodge.",
@@ -1426,37 +1439,37 @@
                     "Dancing Item Stat Block: wtf"
                 ]
             },
-            "2.College of Eloquence#COLLAPSE": {
+            "2.College of Eloquence#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Unfailing Inspiration": "At 6th level, your inspiring words are so persuasive that others feel driven to succeed. When a creature adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll fails, the creature can keep the Bardic Inspiration die.",
                 "2.Universal Speech": [
                     "Also at 6th level, you have gained the ability to make your speech intelligible to any creature. As an action, choose one or more creatures within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). The chosen creatures can magically understand you, regardless of the language you speak, for 1 hour.",
                     "Once you use this feature, you can't use it again until you finish a long rest, unless you expend a spell slot to use it again."
                 ]
             },
-            "3.College of Glamour#COLLAPSE": {
+            "3.College of Glamour#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Mantle of Majesty": [
                     "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast <GOTO:Command:Spells+Command>, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast <GOTO:Command:Spells+Command> as a bonus action on each of your turns, without expending a spell slot.",
                     "Any creature charmed by you automatically fails its saving throw against the <GOTO:Command:Spells+Command> you cast with this feature.",
                     "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
-            "4.College of Lore#COLLAPSE": {
+            "4.College of Lore#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Additional Magical Secrets": "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know."
             },
-            "5.College of Spirits#COLLAPSE": {
+            "5.College of Spirits#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Spirit Session": [
                     "At 6th level, spirits provide you with supernatural insights. You can conduct an hour-long ritual channeling spirits (which can be done during a short or long rest) using your Spiritual Focus. You can conduct the ritual with a number of willing creatures equal to your proficiency bonus (including yourself). At the end of the ritual, you temporarily learn one spell of your choice from any class.",
                     "The spell you choose must be of a level equal to the number of creatures that conducted the ritual or less, the spell must of a level you can cast, and it must be in the school of Divination or Necromancy. The chosen spell counts as a bard spell for you but doesn't count against the number of bard spells you know.",
                     "Once you perform the ritual, you can't do so again until you start a long rest, and you know the chosen spell until you start a long rest."
                 ]
             },
-            "6.College of Swords#COLLAPSE": {
+            "6.College of Swords#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Extra Attack": "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "7.College of Valor#COLLAPSE": {
+            "7.College of Valor#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Extra Attack": "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "8.College of Whispers#COLLAPSE": {
+            "8.College of Whispers#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Mantle of Whispers": [
                     "At 6th level, you gain the ability to adopt a humanoid's persona. When a humanoid dies within 30 feet of you, you can magically capture its shadow using your reaction. You retain this shadow until you use it or you finish a long rest.",
                     "You can use the shadow as an action. When you do so, it vanishes, magically transforming into a disguise that appears on you. You now look like the dead person, but healthy and alive. This disguise lasts for 1 hour or until you end it as a bonus action.",
@@ -1466,17 +1479,17 @@
                 ]
             }
         },
-        "12.7th level#COLLAPSE": {
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 4th level spells"
         },
-        "13.8th level#COLLAPSE": {
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Song of Rest": "Beginning at 9th level, creatures regain an extra 1d8 hit points when you use this feature."
         },
-        "15.10th level#COLLAPSE": {
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d10.",
             "2.Expertise": "At 10th level, you can choose another two skill proficiencies to gain this benefit.",
             "3.Magical Secrets": [
@@ -1485,10 +1498,10 @@
                 "You learn two additional spells from any classes at 14th level and again at 18th level."
             ]
         },
-        "16.11th level#COLLAPSE": {
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 6th level spells"
         },
-        "17.12th level#COLLAPSE": {
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Bardic Versatility (Optional)": [
                 "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
@@ -1499,43 +1512,43 @@
             ]
         },
 
-        "18.13th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Song of Rest": "Beginning at 13th level, creatures regain an extra 1d10 hit points when you use this feature."
         },
-        "19.14th level#COLLAPSE": {
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Magical Secrets": "You learn two additional spells from any classes.",
-            "1.College of Creation#COLLAPSE": {
+            "1.College of Creation#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Creative Crescendo": [
                     "At 14th level, when you use your Performance of Creation feature, you can create more than one item at once. The number of items equals your Charisma modifier (minimum of two items). If you create an item that would exceed that number, you choose which of the previously created items disappears. Only one of these items can be of the maximum size you can create; the rest must be Small or Tiny.",
                     "You are no longer limited by gp value when creating items with Performance of Creation."
                 ]
             },
-            "2.College of Eloquence#COLLAPSE": {
+            "2.College of Eloquence#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Infectious Inspiration": [
                     "At 14th level, when you successfully inspire someone, the power of your eloquence can now spread to someone else. When a creature within 60 feet of you adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll succeeds, you can use your reaction to encourage a different creature (other than yourself) that can hear you within 60 feet of you, giving it a Bardic Inspiration die without expending any of your Bardic Inspiration uses.",
                     "You can use this reaction a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "3.College of Glamour#COLLAPSE": {
+            "3.College of Glamour#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Unbreakable Majesty": [
                     "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.",
                     "In addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.",
                     "Once you assume this majestic presence, you can't do so again until you finish a short or long rest."
                 ]
             },
-            "4.College of Lore#COLLAPSE": {
+            "4.College of Lore#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Peerless Skill": "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
             },
-            "5.College of Spirits#COLLAPSE": {
+            "5.College of Spirits#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Mystical Connection": "At 14th level, you now have the ability to nudge the spirits of Tales from Beyond toward certain tales. Whenever you roll on the Spirit Tales table, you can roll the die twice and choose which of the two effects to bestow. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
             },
-            "6.College of Swords#COLLAPSE": {
+            "6.College of Swords#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Master's Flourish": "Starting at 14th level, whenever you use a Blade Flourish option, you can roll a d6 and use it instead of expending a Bardic Inspiration die."
             },
-            "7.College of Valor#COLLAPSE": {
+            "7.College of Valor#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Battle Magic": "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
             },
-            "8.College of Whispers#COLLAPSE": {
+            "8.College of Whispers#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Shadow Lore": [
                     "At 14th level, you gain the ability to weave dark magic into your words and tap into a creature's deepest fears.",
                     "As an action, you magically whisper a phrase that only one creature of your choice within 30 feet of you can hear. The target must make a Wisdom saving throw against your spell save DC. It automatically succeeds if it doesn't share a language with you or if it can't hear you. On a successful saving throw, your whisper sounds like unintelligible mumbling and has no effect.",
@@ -1546,10 +1559,10 @@
                 ]
             }
         },
-        "20.15th level#COLLAPSE": {
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d12."
         },
-        "21.16th level#COLLAPSE": {
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Bardic Versatility (Optional)": [
                 "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
@@ -1560,13 +1573,13 @@
             ]
         },
 
-        "22.17th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Song of Rest": "Beginning at 17th level, creatures regain an extra 1d12 hit points when you use this feature."
         },
-        "23.18th level#COLLAPSE": {
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Magical Secrets": "You learn two additional spells from any classes."
         },
-        "24.19th level#COLLAPSE": {
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Bardic Versatility (Optional)": [
                 "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing a change in focus as you use your skills and magic:",
@@ -1577,11 +1590,11 @@
             ]
         },
 
-        "25.20th level#COLLAPSE": {
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Superior Inspiration": "At 20th level, when you roll initiative and have no uses of Bardic Inspiration left, you regain one use."
         }
     },
-    "Cleric#COLLAPSE": {
+    "Cleric#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -1641,7 +1654,7 @@
             "Spell slots:Add your levels in cleric to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Spellcasting": {
                 "1.": "As a conduit for divine power, you can cast cleric spells.",
                 "2.Cantrips": "At 1st level, you know three cantrips of your choice from the cleric spell list. You learn additional cleric cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Cleric table.",
@@ -1665,14 +1678,14 @@
                     "Each domain has a list of spells-its domain spells that you gain at the cleric levels noted in the domain description. Once you gain a domain spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day.",
                     "If you have a domain spell that doesn't appear on the cleric spell list, the spell is nonetheless a cleric spell for you."
                 ],
-                "2. Arcana Domain#COLLAPSE": {
+                "2. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Arcana Domain Spells at 1st Level": [
                         "<GOTO:Detect Magic:Spells+Detect Magic>",
                         "<GOTO:Magic Missile:Spells+Magic Missile>"
                     ],
                     "2.Arcane Initiate": "When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips."
                 },
-                "3. Death Domain#COLLAPSE": {
+                "3. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Death Domain Spells at 1st Level": [
                         "<GOTO:False Life:Spells+False Life>",
                         "<GOTO:Ray of Sickness:Spells+Ray of Sickness>"
@@ -1680,7 +1693,7 @@
                     "2.Bonus Proficiency": "When you choose this domain at 1st level, you gain proficiency with martial weapons.",
                     "3.Reaper": "At 1st level, you learn one necromancy cantrip of your choice from any spell list. When you cast a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other."
                 },
-                "4. Forge Domain#COLLAPSE": {
+                "4. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Forge Domain Spells at 1st Level": [
                         "<GOTO:Identify:Spells+Identify>",
                         "<GOTO:Searing Smite:Spells+Searing Smite>"
@@ -1691,7 +1704,7 @@
                         "Once you use this feature, you can't use it again until you finish a long rest."
                     ]
                 },
-                "5. Grave Domain#COLLAPSE": {
+                "5. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Grave Domain Spells at 1st Level": [
                         "<GOTO:Bane:Spells+Bane>",
                         "<GOTO:False Life:Spells+False Life>"
@@ -1705,7 +1718,7 @@
                         "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
                     ]
                 },
-                "6. Knowledge Domain#COLLAPSE": {
+                "6. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Knowledge Domain Spells at 1st Level": [
                         "<GOTO:Command:Spells+Command>",
                         "<GOTO:Identify:Spells+Identify>"
@@ -1715,7 +1728,7 @@
                         "Your proficiency bonus is doubled for any ability check you make that uses either of those skills."
                     ]
                 },
-                "7. Life Domain#COLLAPSE": {
+                "7. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Life Domain Spells at 1st Level": [
                         "<GOTO:Bless:Spells+Bless>",
                         "<GOTO:Cure Wounds:Spells+Cure Wounds>"
@@ -1723,7 +1736,7 @@
                     "2.Bonus Proficiency": "When you choose this domain at 1st level, you gain proficiency with heavy armor.",
                     "3.Disciple of Life": "Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level."
                 },
-                "8. Light Domain#COLLAPSE": {
+                "8. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Light Domain Spells at 1st Level": [
                         "<GOTO:Burning Hands:Spells+Burning Hands>",
                         "<GOTO:Faerie Fire:Spells+Faerie Fire>"
@@ -1734,7 +1747,7 @@
                         "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
                     ]
                 },
-                "9. Nature Domain#COLLAPSE": {
+                "9. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Nature Domain Spells at 1st Level": [
                         "<GOTO:Animal Friendship:Spells+Animal Friendship>",
                         "<GOTO:Speak with Animals:Spells+Speak with Animals>"
@@ -1742,7 +1755,7 @@
                     "2.Acolyte of Nature": "At 1st level, you learn one cantrip of your choice from the druid spell list. This cantrip counts as a cleric cantrip for you, but it doesn’t count against the number of cleric cantrips you know. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.",
                     "3.Bonus Proficiency": "Also at 1st level, you gain proficiency with heavy armor."
                 },
-                "10. Order Domain#COLLAPSE": {
+                "10. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Order Domain Spells at 1st Level": [
                         "<GOTO:Command:Spells+Command>",
                         "<GOTO:Heroism:Spells+Heroism>"
@@ -1753,7 +1766,7 @@
                         "If the spell targets more than one ally, you choose the ally who can make the attack."
                     ]
                 },
-                "11. Peace Domain#COLLAPSE": {
+                "11. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Peace Domain Spells at 1st Level": [
                         "<GOTO:Heroism:Spells+Heroism>",
                         "<GOTO:Sanctuary:Spells+Sanctuary>"
@@ -1764,7 +1777,7 @@
                         "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                     ]
                 },
-                "12. Tempest Domain#COLLAPSE": {
+                "12. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Tempest Domain Spells at 1st Level": [
                         "<GOTO:Fog Cloud:Spells+Fog Cloud>",
                         "<GOTO:Thunderwave:Spells+Thunderwave>"
@@ -1775,14 +1788,14 @@
                         "You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest."
                     ]
                 },
-                "13. Trickery Domain#COLLAPSE": {
+                "13. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Trickery Domain Spells at 1st Level": [
                         "<GOTO:Charm Person:Spells+Charm Person>",
                         "<GOTO:Disguise Self:Spells+Disguise Self>"
                     ],
                     "2.Blessing of the Trickster": "Starting when you choose this domain at 1st level, you can use your action to touch a willing creature other than yourself to give it advantage on Dexterity (Stealth) checks. This blessing lasts for 1 hour or until you use this feature again."
                 },
-                "14. Twilight Domain#COLLAPSE": {
+                "14. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.Twilight Domain Spells at 1st Level": [
                         "<GOTO:Faerie Fire:Spells+Faerie Fire>",
                         "<GOTO:Sleep:Spells+Sleep>"
@@ -1794,7 +1807,7 @@
                     ],
                     "Vigilant Blessing": "At 1st level, the night has taught you to be vigilant. As an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this feature again."
                 },
-                "15. War Domain#COLLAPSE": {
+                "15. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                     "1.War Domain Spells at 1st Level": [
                         "<GOTO:Divine Favor:Spells+Divine Favor>",
                         "<GOTO:Shield of Faith:Spells+Shield of Faith>"
@@ -1807,7 +1820,7 @@
                 }
             }
         },
-        "7.2nd level#COLLAPSE": {
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Channel Divinity": {
                 "1.": [
                     "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
@@ -1820,7 +1833,7 @@
                     "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
                 ]
             },
-            "1. Arcana Domain#COLLAPSE": {
+            "1. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Channel Divinity: Arcane Abjuration": {
                     "1.": [
                         "Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures.",
@@ -1838,10 +1851,10 @@
                     ]
                 }
             },
-            "2. Death Domain#COLLAPSE": {
+            "2. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Touch of Death": "Starting at 2nd level, you can use Channel Divinity to destroy another creature's life force by touch. When you hit a creature with a melee attack, you can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice your cleric level."
             },
-            "3. Forge Domain#COLLAPSE": {
+            "3. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Artisan's Blessing": [
                     "Starting at 2nd level, you can use your Channel Divinity to create simple items.",
                     "You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object. The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.",
@@ -1849,56 +1862,56 @@
                     "The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual."
                 ]
             },
-            "4. Grave Domain#COLLAPSE": {
+            "4. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Path to the Grave": [
                     "Starting at 2nd level, you can use your Channel Divinity to mark another creature's life force for termination.",
                     "As an action, you choose one creature you can see within 30 feet of you, cursing it until the end of your next turn. The next time you or an ally of yours hits the cursed creature with an attack, the creature has vulnerability to all of that attack's damage, and then the curse ends."
                 ]
             },
-            "5. Knowledge Domain#COLLAPSE": {
+            "5. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Channel Divinity: Knowledge of the Ages": "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
             },
-            "6. Life Domain#COLLAPSE": {
+            "6. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Preserve Life": [
                     "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
                     "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
                 ]
             },
-            "7. Light Domain#COLLAPSE": {
+            "7. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Radiance of the Dawn": [
                     "Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
                     "As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
                 ]
             },
-            "8. Nature Domain#COLLAPSE": {
+            "8. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Charm Animals and Plants": [
                     "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
                     "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage. While it is charmed by you, it is friendly to you and other creatures you designate."
                 ]
             },
-            "9. Order Domain#COLLAPSE": {
+            "9. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Order's Demand": [
                     "Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.",
                     "As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be charmed by you until the end of your next turn or until the charmed creature takes any damage. You can also cause any of the charmed creatures to drop what they are holding when they fail the saving throw."
                 ]
             },
-            "10. Peace Domain#COLLAPSE": {
+            "10. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Balm of Peace": "Starting at 2nd level, you can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action, you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action."
             },
-            "11. Tempest Domain#COLLAPSE": {
+            "11. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Destructive Wrath": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
-            "12. Trickery Domain#COLLAPSE": {
+            "12. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Invoke Duplicity": [
                     "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
                     "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
                     "For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
                 ]
             },
-            "13. Twilight Domain#COLLAPSE": {
+            "13. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Twilight Sanctuary": [
                     "At 2nd level, you can use your Channel Divinity to refresh your allies with soothing twilight.",
                     "As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are incapacitated or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
@@ -1908,199 +1921,199 @@
                     "<LIST_STOP>"
                 ]
             },
-            "14. War Domain#COLLAPSE": {
+            "14. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Guided Strike": "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             },
             "15.Harness Divine Power (Optional)": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
         },
-        "8.3rd level#COLLAPSE": {
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 2nd level spells",
-            "2. Arcana Domain#COLLAPSE": {
+            "2. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcana Domain Spells at 3rd Level": [
                     "<GOTO:Magic Weapon:Spells+Magic Weapon>",
                     "<GOTO:Nystul's Magic Aura:Spells+Nystul's Magic Aura>"
                 ]
             },
-            "3. Death Domain#COLLAPSE": {
+            "3. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Death Domain Spells at 3rd Level": [
                     "<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>",
                     "<GOTO:Ray of Enfeeblement:Spells+Ray of Enfeeblement>"
                 ]
             },
-            "4. Forge Domain#COLLAPSE": {
+            "4. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Forge Domain Spells at 3rd Level": [
                     "<GOTO:Heat Metal:Spells+Heat Metal>",
                     "<GOTO:Magic Weapon:Spells+Magic Weapon>"
                 ]
             },
-            "5. Grave Domain#COLLAPSE": {
+            "5. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Grave Domain Spells at 3rd Level": [
                     "<GOTO:Gentle Repose:Spells+Gentle Repose>",
                     "<GOTO:Ray of Enfeeblement:Spells+Ray of Enfeeblement>"
                 ]
             },
-            "6. Knowledge Domain#COLLAPSE": {
+            "6. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Knowledge Domain Spells at 3rd Level": [
                     "<GOTO:Augury:Spells+Augury>",
                     "<GOTO:Suggestion:Spells+Suggestion>"
                 ]
             },
-            "7. Life Domain#COLLAPSE": {
+            "7. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Life Domain Spells at 3rd Level": [
                     "<GOTO:Lesser Restoration:Spells+Lesser Restoration>",
                     "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
                 ]
             },
-            "8. Light Domain#COLLAPSE": {
+            "8. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Light Domain Spells at 3rd Level": [
                     "<GOTO:Flaming Sphere:Spells+Flaming Sphere>",
                     "<GOTO:Scorching Ray:Spells+Scorching Ray>"
                 ]
             },
-            "9. Nature Domain#COLLAPSE": {
+            "9. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Nature Domain Spells at 3rd Level": [
                     "<GOTO:Barkskin:Spells+Barkskin>",
                     "<GOTO:Spike Growth:Spells+Spike Growth>"
                 ]
             },
-            "10. Order Domain#COLLAPSE": {
+            "10. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Order Domain Spells at 3rd Level": [
                     "<GOTO:Hold Person,:Spells+Hold Person,>",
                     "<GOTO:Zone of Truth:Spells+Zone of Truth>"
                 ]
             },
-            "11. Peace Domain#COLLAPSE": {
+            "11. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Peace Domain Spells at 3rd Level": [
                     "<GOTO:Aid:Spells+Aid>",
                     "<GOTO:Warding Bond:Spells+Warding Bond>"
                 ]
             },
-            "12. Tempest Domain#COLLAPSE": {
+            "12. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tempest Domain Spells at 3rd Level": [
                     "<GOTO:Gust of Wind:Spells+Gust of Wind>",
                     "<GOTO:Shatter:Spells+Shatter>"
                 ]
             },
-            "13. Trickery Domain#COLLAPSE": {
+            "13. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Trickery Domain Spells at 3rd Level": [
                     "<GOTO:Mirror Image:Spells+Mirror Image>",
                     "<GOTO:Pass without Trace:Spells+Pass without Trace>"
                 ]
             },
-            "14. Twilight Domain#COLLAPSE": {
+            "14. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Twilight Domain Spells at 3rd Level": [
                     "<GOTO:Moonbeam:Spells+Moonbeam>",
                     "<GOTO:See Invisibility:Spells+See Invisibility>"
                 ]
             },
-            "15. War Domain#COLLAPSE": {
+            "15. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.War Domain Spells at 3rd Level": [
                     "<GOTO:Magic Weapon:Spells+Magic Weapon>",
                     "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
                 ]
             }
         },
-        "9.4th level#COLLAPSE": {
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list."
         },
 
-        "10.5th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Destroy Undead": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
-            "2. Arcana Domain#COLLAPSE": {
+            "2. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcana Domain Spells at 5th Level": [
                     "<GOTO:Dispel Magic:Spells+Dispel Magic>",
                     "<GOTO:Magic Circle:Spells+Magic Circle>"
                 ]
             },
-            "3. Death Domain#COLLAPSE": {
+            "3. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Death Domain Spells at 5th Level": [
                     "<GOTO:Animate Dead:Spells+Animate Dead>",
                     "<GOTO:Vampiric Touch:Spells+Vampiric Touch>"
                 ]
             },
-            "4. Forge Domain#COLLAPSE": {
+            "4. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Forge Domain Spells at 5th Level": [
                     "<GOTO:Elemental Weapon:Spells+Elemental Weapon>",
                     "<GOTO:Protection from Energy:Spells+Protection from Energy>"
                 ]
             },
-            "5. Grave Domain#COLLAPSE": {
+            "5. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Grave Domain Spells at 5th Level": [
                     "<GOTO:Revivify:Spells+Revivify>",
                     "<GOTO:Vampiric Touch:Spells+Vampiric Touch>"
                 ]
             },
-            "6. Knowledge Domain#COLLAPSE": {
+            "6. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Knowledge Domain Spells at 5th Level": [
                     "<GOTO:Nondetection:Spells+Nondetection>",
                     "<GOTO:Speak with Dead:Spells+Speak with Dead>"
                 ]
             },
-            "7. Life Domain#COLLAPSE": {
+            "7. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Life Domain Spells at 5th Level": [
                     "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
                     "<GOTO::Spells+>"
                 ]
             },
-            "8. Light Domain#COLLAPSE": {
+            "8. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Light Domain Spells at 5th Level": [
                     "<GOTO:Daylight:Spells+Daylight>",
                     "<GOTO:Fireball:Spells+Fireball>"
                 ]
             },
-            "9. Nature Domain#COLLAPSE": {
+            "9. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Nature Domain Spells at 5th Level": [
                     "<GOTO:Plant Growth:Spells+Plant Growth>",
                     "<GOTO:Wind Wall:Spells+Wind Wall>"
                 ]
             },
-            "10. Order Domain#COLLAPSE": {
+            "10. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Order Domain Spells at 5th Level": [
                     "<GOTO:Mass Healing Word:Spells+Mass Healing Word>",
                     "<GOTO:Slow:Spells+Slow>"
                 ]
             },
-            "11. Peace Domain#COLLAPSE": {
+            "11. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Peace Domain Spells at 5th Level": [
                     "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
                     "<GOTO:Sending:Spells+Sending>"
                 ]
             },
-            "12. Tempest Domain#COLLAPSE": {
+            "12. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tempest Domain Spells at 5th Level": [
                     "<GOTO:Call Lightning:Spells+Call Lightning>",
                     "<GOTO:Sleet Storm:Spells+Sleet Storm>"
                 ]
             },
-            "13. Trickery Domain#COLLAPSE": {
+            "13. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Trickery Domain Spells at 5th Level": [
                     "<GOTO:Blink:Spells+Blink>",
                     "<GOTO:Dispel Magic:Spells+Dispel Magic>"
                 ]
             },
-            "14. Twilight Domain#COLLAPSE": {
+            "14. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Twilight Domain Spells at 5th Level": [
                     "<GOTO:Aura of Vitality:Spells+Aura of Vitality>",
                     "<GOTO:Leomund's Tiny Hut:Spells+Leomund's Tiny Hut>"
                 ]
             },
-            "15. War Domain#COLLAPSE": {
+            "15. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.War Domain Spells at 5th Level": [
                     "<GOTO:Crusader's Mantle:Spells+Crusader's Mantle>",
                     "<GOTO:Spirit Guardians:Spells+Spirit Guardians>"
                 ]
             }
         },
-        "11.6th level#COLLAPSE": {
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Channel Divinity": "Beginning at 6th level, you can use your Channel Divinity twice between rests. When you finish a short or long rest, you regain your expended uses.",
-            "1. Arcana Domain#COLLAPSE": {
+            "1. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Spell Breaker": "Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
             },
-            "2. Death Domain#COLLAPSE": {
+            "2. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Inescapable Destruction": "Starting at 6th level, your ability to channel negative energy becomes more potent. Necrotic damage dealt by your cleric spells and Channel Divinity options ignores resistance to necrotic damage."
             },
-            "3. Forge Domain#COLLAPSE": {
+            "3. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Soul of the Forge": [
                     "Starting at 6th level, your mastery of the forge grants you special abilities:",
                     "<LIST_START>",
@@ -2109,13 +2122,13 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4. Grave Domain#COLLAPSE": {
+            "4. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Sentinel at Death's Door": [
                     "At 6th level, you gain the ability to impede death's progress. As a reaction when you or an ally that you can see within 30 feet of you suffers a critical hit, you can turn that attack into a normal hit. Any effects triggered by a critical hit are canceled.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
                 ]
             },
-            "5. Knowledge Domain#COLLAPSE": {
+            "5. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Channel Divinity: Read Thoughts": [
                     "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
                     "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
@@ -2123,175 +2136,175 @@
                     "During that time, you can use your action to end this effect and cast the <GOTO:Suggestion:Spells+Suggestion> spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
                 ]
             },
-            "6. Life Domain#COLLAPSE": {
+            "6. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Blessed Healer": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
             },
-            "7. Light Domain#COLLAPSE": {
+            "7. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Improved Flare": "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
             },
-            "8. Nature Domain#COLLAPSE": {
+            "8. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Dampen Elements": "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
             },
-            "9. Order Domain#COLLAPSE": {
+            "9. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Embodiment of the Law": [
                     "At 6th level, you become remarkably adept at channeling magical energy to compel others.",
                     "If you cast a spell of the enchantment school using a spell slot of 1st level or higher, you can change the spell's casting time to 1 bonus action for this casting, provided the spell's casting time is normally 1 action.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
                 ]
             },
-            "10. Peace Domain#COLLAPSE": {
+            "10. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Protective Bond": "Beginning at 6th level, the bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead."
             },
-            "11. Tempest Domain#COLLAPSE": {
+            "11. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Destructive Wrath": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
-            "12. Trickery Domain#COLLAPSE": {
+            "12. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: Cloak of Shadows": [
                     "Starting at 6th level, you can use your Channel Divinity to vanish.",
                     "As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell."
                 ]
             },
-            "13. Twilight Domain#COLLAPSE": {
+            "13. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Steps of Night": "Starting at 6th level, you can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             },
-            "14. War Domain#COLLAPSE": {
+            "14. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Channel Divinity: War God's Blessing": "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             }
         },
-        "12.7th level#COLLAPSE": {
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 4th level spells",
-            "2. Arcana Domain#COLLAPSE": {
+            "2. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcana Domain Spells at 7th Level": [
                     "<GOTO:Arcane Eye:Spells+Arcane Eye>",
                     "<GOTO:Leomund's Secret Chest:Spells+Leomund's Secret Chest>"
                 ]
             },
-            "3. Death Domain#COLLAPSE": {
+            "3. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Death Domain Spells at 7th Level": [
                     "<GOTO:Blight:Spells+Blight>",
                     "<GOTO:Death Ward:Spells+Death Ward>"
                 ]
             },
-            "4. Forge Domain#COLLAPSE": {
+            "4. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Forge Domain Spells at 7th Level": [
                     "<GOTO:Fabricate:Spells+Fabricate>",
                     "<GOTO:Wall of Fire:Spells+Wall of Fire>"
                 ]
             },
-            "5. Grave Domain#COLLAPSE": {
+            "5. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Grave Domain Spells at 7th Level": [
                     "<GOTO:Blight:Spells+Blight>",
                     "<GOTO:Death Ward:Spells+Death Ward>"
                 ]
             },
-            "6. Knowledge Domain#COLLAPSE": {
+            "6. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Knowledge Domain Spells at 7th Level": [
                     "<GOTO:Arcane Eye:Spells+Arcane Eye>",
                     "<GOTO:Confusion:Spells+Confusion>"
                 ]
             },
-            "7. Life Domain#COLLAPSE": {
+            "7. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Life Domain Spells at 7th Level": [
                     "<GOTO:Death Ward:Spells+Death Ward>",
                     "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
-            "8. Light Domain#COLLAPSE": {
+            "8. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Light Domain Spells at 7th Level": [
                     "<GOTO:Guardian of Faith:Spells+Guardian of Faith>",
                     "<GOTO:Wall of Fire:Spells+Wall of Fire>"
                 ]
             },
-            "9. Nature Domain#COLLAPSE": {
+            "9. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Nature Domain Spells at 7th Level": [
                     "<GOTO:Dominate Beast:Spells+Dominate Beast>",
                     "<GOTO:Grasping Vine:Spells+Grasping Vine>"
                 ]
             },
-            "10. Order Domain#COLLAPSE": {
+            "10. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Order Domain Spells at 7th Level": [
                     "<GOTO:Compulsion:Spells+Compulsion>",
                     "<GOTO:Locate Creature:Spells+Locate Creature>"
                 ]
             },
-            "11. Peace Domain#COLLAPSE": {
+            "11. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Peace Domain Spells at 7th Level": [
                     "<GOTO:Aura of Purity:Spells+Aura of Purity>",
                     "<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>"
                 ]
             },
-            "12. Tempest Domain#COLLAPSE": {
+            "12. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tempest Domain Spells at 7th Level": [
                     "<GOTO:Control Water:Spells+Control Water>",
                     "<GOTO:Ice Storm:Spells+Ice Storm>"
                 ]
             },
-            "13. Trickery Domain#COLLAPSE": {
+            "13. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Trickery Domain Spells at 7th Level": [
                     "<GOTO:Dimension Door:Spells+Dimension Door>",
                     "<GOTO:Polymorph:Spells+Polymorph>"
                 ]
             },
-            "14. Twilight Domain#COLLAPSE": {
+            "14. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Twilight Domain Spells at 7th Level": [
                     "<GOTO:Aura of Life:Spells+Aura of Life>",
                     "<GOTO:Greater Invisibility:Spells+Greater Invisibility>"
                 ]
             },
-            "15. War Domain#COLLAPSE": {
+            "15. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.War Domain Spells at 7th Level": [
                     "<GOTO:Flame Strike:Spells+Flame Strike>",
                     "<GOTO:Hold Monster:Spells+Hold Monster>"
                 ]
             }
         },
-        "13.8th level#COLLAPSE": {
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "1.Destroy Undead": "Starting at 8th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 1.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list.",
-            "3. Arcana Domain#COLLAPSE": {
+            "3. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "4. Death Domain#COLLAPSE": {
+            "4. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an a 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "5. Forge Domain#COLLAPSE": {
+            "5. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 fire damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "6. Grave Domain#COLLAPSE": {
+            "6. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "7. Knowledge Domain#COLLAPSE": {
+            "7. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "8. Life Domain#COLLAPSE": {
+            "8. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "9. Light Domain#COLLAPSE": {
+            "9. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "10. Nature Domain#COLLAPSE": {
+            "10. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "11. Order Domain#COLLAPSE": {
+            "11. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "12. Peace Domain#COLLAPSE": {
+            "12. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "13. Tempest Domain#COLLAPSE": {
+            "13. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "14. Trickery Domain#COLLAPSE": {
+            "14. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with poison – a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "15. Twilight Domain#COLLAPSE": {
+            "15. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "16. War Domain#COLLAPSE": {
+            "16. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
             "Blessed Strikes (Optional)": [
@@ -2300,131 +2313,131 @@
             ]
         },
 
-        "14.9th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 5th level spells",
-            "2. Arcana Domain#COLLAPSE": {
+            "2. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Arcana Domain Spells at 9th Level": [
                     "<GOTO:Planar Binding:Spells+Planar Binding>",
                     "<GOTO:Teleportation Circle:Spells+Teleportation Circle>"
                 ]
             },
-            "3. Death Domain#COLLAPSE": {
+            "3. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Death Domain Spells at 9th Level": [
                     "<GOTO:Antilife Shell:Spells+Antilife Shell>",
                     "<GOTO:Cloudkill:Spells+Cloudkill>"
                 ]
             },
-            "4. Forge Domain#COLLAPSE": {
+            "4. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Forge Domain Spells at 9th Level": [
                     "<GOTO:Animate Objects:Spells+Animate Objects>",
                     "<GOTO:Creation:Spells+Creation>"
                 ]
             },
-            "5. Grave Domain#COLLAPSE": {
+            "5. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Grave Domain Spells at 9th Level": [
                     "<GOTO:Antilife Shell:Spells+Antilife Shell>",
                     "<GOTO:Raise Dead:Spells+Raise Dead>"
                 ]
             },
-            "6. Knowledge Domain#COLLAPSE": {
+            "6. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Knowledge Domain Spells at 9th Level": [
                     "<GOTO:Legend Lore:Spells+Legend Lore>",
                     "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
-            "7. Life Domain#COLLAPSE": {
+            "7. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Life Domain Spells at 9th Level": [
                     "<GOTO:Mass Cure Wounds:Spells+Mass Cure Wounds>",
                     "<GOTO:Raise Dead:Spells+Raise Dead>"
                 ]
             },
-            "8. Light Domain#COLLAPSE": {
+            "8. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Light Domain Spells at 9th Level": [
                     "<GOTO:Flame Strike:Spells+Flame Strike>",
                     "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
-            "9. Nature Domain#COLLAPSE": {
+            "9. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Nature Domain Spells at 9th Level": [
                     "<GOTO:Insect Plague:Spells+Insect Plague>",
                     "<GOTO:Tree Stride:Spells+Tree Stride>"
                 ]
             },
-            "10. Order Domain#COLLAPSE": {
+            "10. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Order Domain Spells at 9th Level": [
                     "<GOTO:Commune:Spells+Commune>",
                     "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             },
-            "11. Peace Domain#COLLAPSE": {
+            "11. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Peace Domain Spells at 9th Level": [
                     "<GOTO:Greater Restoration:Spells+Greater Restoration>",
                     "<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>"
                 ]
             },
-            "12. Tempest Domain#COLLAPSE": {
+            "12. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Tempest Domain Spells at 9th Level": [
                     "<GOTO:Destructive Wave:Spells+Destructive Wave>",
                     "<GOTO:Insect Plague:Spells+Insect Plague>"
                 ]
             },
-            "13. Trickery Domain#COLLAPSE": {
+            "13. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Trickery Domain Spells at 9th Level": [
                     "<GOTO:Dominate Person:Spells+Dominate Person>",
                     "<GOTO:Modify Memory:Spells+Modify Memory>"
                 ]
             },
-            "14. Twilight Domain#COLLAPSE": {
+            "14. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.Twilight Domain Spells at 9th Level": [
                     "<GOTO:Circle of Power:Spells+Circle of Power>",
                     "<GOTO:Mislead:Spells+Mislead>"
                 ]
             },
-            "15. War Domain#COLLAPSE": {
+            "15. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "1.War Domain Spells at 9th Level": [
                     "<GOTO:Flame Strike:Spells+Flame Strike>",
                     "<GOTO:Hold Monster:Spells+Hold Monster>"
                 ]
             }
         },
-        "15.10th level#COLLAPSE": {
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Divine Intervention": [
                 "Beginning at 10th level, you can call on your deity to intervene on your behalf when your need is great.",
                 "Imploring your deity's aid requires you to use your action. Describe the assistance you seek, and roll percentile dice. If you roll a number equal to or lower than your cleric level, your deity intervenes. The DM chooses the nature of the intervention; the effect of any cleric spell or cleric domain spell would be appropriate. If your deity intervenes, you can't use this feature again for 7 days. Otherwise, you can use it again after you finish a long rest.",
                 "At 20th level, your call for intervention succeeds automatically, no roll required."
             ]
         },
-        "16.11th level#COLLAPSE": {
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Destroy Undead": "Starting at 11th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 2."
         },
-        "17.12th level#COLLAPSE": {
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list."
         },
 
-        "18.13th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 7th level spells"
         },
-        "19.14th level#COLLAPSE": {
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Destroy Undead": "Starting at 14th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 3."
         },
-        "20.15th level#COLLAPSE": {
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 8th level spells"
         },
-        "21.16th level#COLLAPSE": {
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list."
         },
 
-        "22.17th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "0.Destroy Undead": "Starting at 17th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 4.",
-            "1. Arcana Domain#COLLAPSE": {
+            "1. Arcana Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Arcane Mastery": "At 17th level, you choose four spells from the wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
             },
-            "2. Death Domain#COLLAPSE": {
+            "2. Death Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Improved Reaper": "Starting at 17th level, when you cast a necromancy spell of 1st through 5th level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, you must provide them for each target."
             },
-            "3. Forge Domain#COLLAPSE": {
+            "3. Forge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Saint of Forge and Fire": [
                     "At 17th level, your blessed affinity with fire and metal becomes more powerful:",
                     "<LIST_START>",
@@ -2433,10 +2446,10 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4. Grave Domain#COLLAPSE": {
+            "4. Grave Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Keeper of Souls": "At 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't incapacitated. Once you use it, you can't do so again until the start of your next turn."
             },
-            "5. Knowledge Domain#COLLAPSE": {
+            "5. Knowledge Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Visions of the Past": [
                     "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
                     "Once you use this feature, you can't use it again until you finish a short or long rest.",
@@ -2444,47 +2457,47 @@
                     "<BOLD>Area Reading.</BOLD> As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
                 ]
             },
-            "6. Life Domain#COLLAPSE": {
+            "6. Life Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Supreme Healing": "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d6 hit points to a creature, you restore 12."
             },
-            "7. Light Domain#COLLAPSE": {
+            "7. Light Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Corona of Light": "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
             },
-            "8. Nature Domain#COLLAPSE": {
+            "8. Nature Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Master of Nature": "At 17th level, you gain the ability to command animals and plant creatures. While creatures are charmed by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
             },
-            "9. Order Domain#COLLAPSE": {
+            "9. Order Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Order's Wrath": "Starting at 17th level, enemies you designate for destruction wilt under the combined efforts of you and your allies. If you deal your Divine Strike damage to a creature on your turn, you can curse that creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack, the target also takes 2d8 psychic damage, and the curse ends. You can curse a creature in this way only once per turn."
             },
-            "10. Peace Domain#COLLAPSE": {
+            "10. Peace Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Expansive Bond": "At 17th level, the benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance to that damage."
             },
-            "11. Tempest Domain#COLLAPSE": {
+            "11. Tempest Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Stormborn": "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
             },
-            "12. Trickery Domain#COLLAPSE": {
+            "12. Trickery Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Improved Duplicity": "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
             },
-            "13. Twilight Domain#COLLAPSE": {
+            "13. Twilight Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Twilight Shroud": "At 17th level, the twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
             },
-            "14. War Domain#COLLAPSE": {
+            "14. War Domain#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
                 "Avatar of Battle": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
             }
         },
-        "23.18th level#COLLAPSE": {
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "": "Beginning at 18th level, you can use your Channel Divinity three times between rests. When you finish a short or long rest, you regain your expended uses."
         },
-        "24.19th level#COLLAPSE": {
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list."
         },
 
-        "25.20th level#COLLAPSE": {
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Divine Intervention improvement": "At 20th level, your call for intervention succeeds automatically, no roll required."
         }
     },
-    "Druid#COLLAPSE": {
+    "Druid#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -2542,7 +2555,7 @@
             "Spell slots:Add your levels in druid to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Druidic": "You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.",
             "2.Spellcasting": {
                 "1.": "Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.",
@@ -2562,7 +2575,7 @@
                 "6.Spellcasting Focus": "You can use a druidic focus as a spellcasting focus for your druid spells."
             }
         },
-        "7.2nd level#COLLAPSE": {
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Wild Shape": {
                 "1.": [
                     "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
@@ -2787,18 +2800,18 @@
                 "When you cast the spell in this way, the familiar is a fey instead of a beast, and the familiar disappears after a number of hours equal to half your druid level."
             ]
         },
-        "8.3rd level#COLLAPSE": {
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 2nd level spells"
         },
-        "9.4th level#COLLAPSE": {
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "10.5th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 3rd level spells"
         },
-        "11.6th level#COLLAPSE": {
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "2.Circle of Dreams": {
                 "Hearth of Moonlight and Shadow": [
                     "At 6th level, home can be wherever you are. During a short or long rest, you can invoke the shadowy power of the Gloaming Court to help guard your respite. At the start of the rest, you touch a point in space, and an invisible, 30-foot-radius sphere of magic appears, centered on that point. Total cover blocks the sphere.",
@@ -2847,18 +2860,18 @@
                 ]
             }
         },
-        "12.7th level#COLLAPSE": {
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 4th level spells"
         },
-        "13.8th level#COLLAPSE": {
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "14.9th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 5th level spells"
         },
-        "15.10th level#COLLAPSE": {
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "2.Circle of Dreams": {
                 "Hidden Paths": [
                     "Starting at 10th level, you can use the hidden, magical pathways that some fey use to traverse space in a blink of an eye. As a bonus action on your turn, you can teleport up to 60 feet to an unoccupied space you can see. Alternatively, you can use your action to teleport one willing creature you touch up to 30 feet to an unoccupied space you can see.",
@@ -2894,18 +2907,18 @@
                 ]
             }
         },
-        "16.11th level#COLLAPSE": {
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 6th level spells"
         },
-        "17.12th level#COLLAPSE": {
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "18.13th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 7th level spells"
         },
-        "19.14th level#COLLAPSE": {
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "2.Circle of Dreams": {
                 "Walker in Dreams": [
                     "At 14th level, the magic of the Feywild grants you the ability to travel mentally or physically through dreamlands.",
@@ -2942,34 +2955,34 @@
                 ]
             }
         },
-        "20.15th level#COLLAPSE": {
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 8th level spells"
         },
-        "21.16th level#COLLAPSE": {
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "22.17th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.": "Access to 9th level spells"
         },
-        "23.18th level#COLLAPSE": {
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Timeless Body": "Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.",
             "2.Beast Spells": "Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components."
         },
-        "24.19th level#COLLAPSE": {
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the druid spell list."
         },
 
-        "25.20th level#COLLAPSE": {
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "1.Archdruid": [
                 "At 20th level, you can use your Wild Shape an unlimited number of times.",
                 "Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape."
             ]
         }
     },
-    "Fighter#COLLAPSE": {
+    "Fighter#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3019,43 +3032,43 @@
         ],
 
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Monk#COLLAPSE": {
+    "Monk#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
@@ -3105,43 +3118,43 @@
             "Proficiencies gained: Simple weapons, shortswords"
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Paladin#COLLAPSE": {
+    "Paladin#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3195,43 +3208,43 @@
             "Spell slots: Add half your levels (round down) in paladin to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Ranger#COLLAPSE": {
+    "Ranger#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3285,43 +3298,43 @@
             "Spell slots: Add half your levels (round down) in ranger to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Rogue#COLLAPSE": {
+    "Rogue#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3370,43 +3383,43 @@
             "Spell slots: Add a third your levels (round down) if you have the Arcane Trickster feature to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Sorceror#COLLAPSE": {
+    "Sorceror#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
@@ -3467,43 +3480,43 @@
             "Spell slots: Add your levels in sorceror to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Warlock#COLLAPSE": {
+    "Warlock#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3557,43 +3570,43 @@
             "Spell slots: If you have Pact Magic and Spellcasting, you can use any spell slots to cast any spells that you know and have prepared. These spell slots should be tracked separately."
         ],
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     },
-    "Wizard#COLLAPSE": {
+    "Wizard#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -3653,40 +3666,40 @@
         ],
 
 
-        "6.1st level#COLLAPSE": {},
-        "7.2nd level#COLLAPSE": {},
-        "8.3rd level#COLLAPSE": {},
-        "9.4th level#COLLAPSE": {
+        "6.1st level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "7.2nd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "8.3rd level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "9.4th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "10.5th level#COLLAPSE": {},
-        "11.6th level#COLLAPSE": {},
-        "12.7th level#COLLAPSE": {},
-        "13.8th level#COLLAPSE": {
+        "10.5th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "11.6th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "12.7th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "13.8th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "14.9th level#COLLAPSE": {},
-        "15.10th level#COLLAPSE": {},
-        "16.11th level#COLLAPSE": {},
-        "17.12th level#COLLAPSE": {
+        "14.9th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "15.10th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "16.11th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "17.12th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "18.13th level#COLLAPSE": {},
-        "19.14th level#COLLAPSE": {},
-        "20.15th level#COLLAPSE": {},
-        "21.16th level#COLLAPSE": {
+        "18.13th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "19.14th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "20.15th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "21.16th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "22.17th level#COLLAPSE": {},
-        "23.18th level#COLLAPSE": {},
-        "24.19th level#COLLAPSE": {
+        "22.17th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "23.18th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {},
+        "24.19th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
-        "25.20th level#COLLAPSE": {}
+        "25.20th level#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
     }
 }

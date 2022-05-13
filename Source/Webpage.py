@@ -174,12 +174,12 @@ class Webpage:
         self.CollapseModelRows = {}
 
         with self.Tag('html', 'id="top-html"'):
-
             with self.Tag('head'):
                 self.Doc.stag('meta', 'charset="UTF-8"')
                 self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
                 self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
                 #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
                 
 
@@ -191,6 +191,8 @@ class Webpage:
                     pass
                 with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
                     pass
+
+                
 
             self.ItemsToProcess = DeepSize(self.JSON)
             
@@ -458,7 +460,8 @@ class Webpage:
                 if RefMatch != None:
                     HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
                     Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
-            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+            FontClass = ['font-class-{}'.format(State['font'])]
+            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
                         if 'LIST_ITEM' not in Interface:
@@ -483,7 +486,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1    
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -503,7 +506,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -524,7 +527,7 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -544,16 +547,25 @@ class Webpage:
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'onload="opencollapsewithlinkaddress(this, false, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
                 if Input.strip() != '':
-                    self.Text(Input)
+                    
+                    with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
+                        self.Text(Input)
+                if len(State['next.font']) > 0:
+                    State['font'] = State['next.font'][0]
+                    State['next.font'] = State['next.font'][1:]
                 return 
-        if Input.strip() != '':   
-            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+        if Input.strip() != '':
+            FontClass = ['font-class-{}'.format(State['font'])]
+            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 self.Text(Input)
+        if len(State['next.font']) > 0:
+            State['font'] = State['next.font'][0]
+            State['next.font'] = State['next.font'][1:]
 
     def CleanTable(self, Table):
         for IndexY in range(len(Table)):
@@ -606,6 +618,8 @@ class Webpage:
         State['mode'] = WebpageEnums.Text
         State['lookup_table.range'] = None
         State['callback'] = []
+        State['font'] = 'DEFAULT'
+        State['next.font'] = []
         return State
     
     def MixState(self, State, Interface):
@@ -614,6 +628,17 @@ class Webpage:
             State['visible'] = False
         elif 'SHOWN' in Interface:
             State['visible'] = True
+
+        FontPattern = re.compile('FONT\((.+?)\)')
+        FontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: FontPattern.match(Code), Interface))))))
+        if len(FontMatch) > 0:
+            Font = FontMatch[0].replace(' ', '').split(',')
+            if len(Font) >= 2:
+                State['font'] = Font[0]
+                State['next.font'] = Font[1:]
+            elif len(Font) == 1:
+                State['font'] = Font[0]
+                State['next.font'] = []
 
         LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
         LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                
@@ -722,12 +747,29 @@ class Webpage:
         with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
             PageText = self.Doc.getvalue()
             PageText = self.PostProcessPage(PageText)
-            OutFile.write(PageText) 
+            OutFile.write(PageText)
+        
+        CSSPath = '/'.join(OutHTML.split('/')[:-1]).replace('HTML', 'CSS')
+        OutCSS = '{}/_AUTO_{}.css'.format(CSSPath, self.MetaData['document']['title'])
+        CleanTarget = OutCSS.replace('\\', '/').replace('//', '/').replace('/', os.sep)
+        with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
+            self.AddCSSFontDefinitions(OutFile)
     
 
     def ConsumeMetaData(self, Key):
         self.MetaData = self.JSON[Key]
+        
         del self.JSON[Key]
+
+    def AddCSSFontDefinitions(self, OutFile):
+        if "font" in self.MetaData:
+            for NewFontKey in self.MetaData["font"]:
+                NewFont = '.font-class-{}'.format(NewFontKey)
+                FontTable = self.MetaData['font'][NewFontKey]
+                OutFile.write('\n{} {{ '.format(NewFont))
+                for Key in FontTable:
+                    OutFile.write('{}: {} !important;'.format(Key, FontTable[Key]))
+                OutFile.write('}\n')
 
     def GetInterfaceFromKey(self, OKey):
         Rank = 'INF'
