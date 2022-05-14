@@ -34,6 +34,9 @@
                 "font": "20px bold"
             },
             "FEATURE_HEADER": {
+                "font": "28px bold"
+            },
+            "SUBFEATURE_HEADER": {
                 "font": "24px bold",
                 "border-bottom": "2px solid darkgrey"
             },
@@ -292,7 +295,7 @@
         ],
         "999.<LIST_STOP>": ""
     },
-    "Artificer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
+    "Artificer#COLLAPSE#FONT(COLLAPSE, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
@@ -329,9 +332,9 @@
             "Level", "Proficiency Bonus", "Features", "Infusions Known", "Infused Items", "Cantrips Known"
         ],
 
-        "2.Hit Dice#CALL(_hitpoints)#FONT(FEATURE_HEADER)": 8,
+        "2.Hit Dice#CALL(_hitpoints)": 8,
         "3.Proficiencies": [
-            "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
+            "<BOLD>Armor:</BOLD>Light armor, medium armor, shields#FONT(DEFAULT)",
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
             "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
             "<BOLD>Saving Throws:</BOLD> CON and INT",
