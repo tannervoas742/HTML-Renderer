@@ -33,6 +33,13 @@
             "TABLE_HEADER": {
                 "font": "20px bold"
             },
+            "FEATURE_HEADER": {
+                "font": "24px bold",
+                "border-bottom": "2px solid darkgrey"
+            },
+            "SUB_HEADER": {
+                "font": "20px bold"
+            },
             "HEADER": {
                 "font": "24px bold"
             }
@@ -322,7 +329,7 @@
             "Level", "Proficiency Bonus", "Features", "Infusions Known", "Infused Items", "Cantrips Known"
         ],
 
-        "2.Hit Dice#CALL(_hitpoints)": 8,
+        "2.Hit Dice#CALL(_hitpoints)#FONT(FEATURE_HEADER)": 8,
         "3.Proficiencies": [
             "<BOLD>Armor:</BOLD>Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
@@ -521,7 +528,7 @@
                         "Creating an <ITALIC>experimental elixir</ITALIC> requires you to have alchemist supplies on your person, and any elixir you create with this feature lasts until it is drunk or until the end of your next long rest.",
                         "When you reach certain levels in this class, you can make more elixirs at the end of a long rest: two at 6th level and three at 15th level. Roll for each elixir's effect separately. Each elixir requires its own flask."
                     ],
-                    "2.Experimental Elixir#TABLE#FONT(TABLE_HEADER)": [
+                    "2.Experimental Elixir#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                         ["1d6", "Effect"],
                         ["1", "<BOLD>Healing.</BOLD> The drinker regains a number of hit points equal to 2d4 + your Intelligence Modifier"],
                         ["2", "<BOLD>Swiftness.</BOLD> The drinker's walking speed increases by 10 feet for 1 hour."],
@@ -584,7 +591,7 @@
                         "The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the mending spell is cast on it, it regains 2d6 hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
                         "When you create the cannon, you determine its appearance and whether it has legs. You also decide which type it is, choosing from the options on the Eldritch Cannons table. On each of your turns, you can take a bonus action to cause the cannon to activate if you are within 60 feet of it. As part of the same bonus action, you can direct the cannon to walk or climb up to 15 feet to an unoccupied space, provided it has legs."
                     ],
-                    "2.Eldritch Cannon#TABLE#FONT(TABLE_HEADER)": [
+                    "2.Eldritch Cannon#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                         ["Cannon", "Activation"],
                         ["Flamethrower", "The cannon exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking 2d8 fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."],
                         ["Force Ballista", "Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes 2d8 force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon."],
@@ -1355,7 +1362,7 @@
                         "You can retain only one of these tales in mind at a time, and rolling on the Spirit Tales table immediately ends the effect of the previous tale.",
                         "If the tale requires a saving throw, the DC equals your spell save DC."
                     ],
-                    "2.Spirit Tales#TABLE#FONT(TABLE_HEADER)": [
+                    "2.Spirit Tales#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                         ["Bardic Inspiration Die", "Tale Told Through You"],
                         ["1", "<BOLD>Tale of the Clever Animal.</BOLD> For the next 10 minutes, whenever the target makes an Intelligence, a Wisdom, or a Charisma check, the target can roll an extra die immediately after rolling the d20 and add the extra die's number to the check. The extra die is the same type as your Bardic Inspiration die."],
                         ["2", "<BOLD>Tale of the Renowned Duelist.</BOLD> You make a melee spell attack against the target. On a hit, the target takes force damage equal to two rolls of your Bardic Inspiration die + your Charisma modifier."],
@@ -1845,7 +1852,7 @@
                         "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can only use the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
                         "After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the Banishment spell, no concentration required) if it isn't on its plane of origin and its challenge rating is at or below a certain threshold, as shown on the Arcane Banishment table."
                     ],
-                    "2.Arcane Banishment#TABLE#FONT(TABLE_HEADER)": [
+                    "2.Arcane Banishment#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                         ["Cleric Level", "Banishes Creatures of CR"],
                         ["5th", "1/2 or lower"],
                         ["8th", "1 or lower"],
@@ -2585,7 +2592,7 @@
                     "Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.",
                     "Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed."
                 ],
-                "2.Beast Shapes#TABLE#FONT(TABLE_HEADER)": [
+                "2.Beast Shapes#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                     ["Level",   "Max. CR",  "Limitations",                  "Example"],
                     ["2nd",     "1/4",      "No flying or swimming speed",  "Wolf"],
                     ["4th",     "1/2",      "No flying speed",              "Crocodile"],
@@ -2623,7 +2630,7 @@
                             "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose that land – arctic, coast, desert, forest, grassland, mountain, swamp, or Underdark – and consult the associated list of spells.",
                             "Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you."
                         ],
-                        "2.Arctic#TABLE#FONT(TABLE_HEADER)": [
+                        "2.Arctic#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Hold Person:Spells+Hold Person>, <GOTO:Spike Growth:Spells+Spike Growth>"],
                             ["5th", "<GOTO:Sleet Storm:Spells+Sleet Storm>, <GOTO:Slow:Spells+Slow>"],
@@ -2631,7 +2638,7 @@
                             ["9th", "<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Cone of Cold:Spells+Cone of Cold>"]
 
                         ],
-                        "3.Coast#TABLE#FONT(TABLE_HEADER)": [
+                        "3.Coast#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Mirror Image:Spells+Mirror Image>, <GOTO:Misty Step:Spells+Misty Step>"],
                             ["5th", "<GOTO:Water Breathing:Spells+Water Breathing>, <GOTO:Water Walk:Spells+Water Walk>"],
@@ -2639,7 +2646,7 @@
                             ["9th", "<GOTO:Conjure Elemental:Spells+Conjure Elemental>, <GOTO:Scrying:Spells+Scrying>"]
 
                         ],
-                        "4.Desert#TABLE#FONT(TABLE_HEADER)": [
+                        "4.Desert#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Blur:Spells+Blur>, <GOTO:Silence:Spells+Silence>"],
                             ["5th", "<GOTO:Create Food and Water:Spells+Create Food and Water>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
@@ -2647,14 +2654,14 @@
                             ["9th", "<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
 
                         ],
-                        "5.Forest#TABLE#FONT(TABLE_HEADER)": [
+                        "5.Forest#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Barkskin:Spells+Barkskin>, <GOTO:Spider Climb:Spells+Spider Climb>"],
                             ["5th", "<GOTO:Call Lightning:Spells+Call Lightning>, <GOTO:Plant Growth:Spells+Plant Growth>"],
                             ["7th", "<GOTO:Divination:Spells+Divination>, <GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
                             ["9th", "<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Tree Stride:Spells+Tree Stride>"]
                         ],
-                        "6.Grassland#TABLE#FONT(TABLE_HEADER)": [
+                        "6.Grassland#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Invisibility:Spells+Invisibility>, <GOTO:Pass Without Trace:Spells+Pass Without Trace>"],
                             ["5th", "<GOTO:Daylight:Spells+Daylight>, <GOTO:Haste:Spells+Haste>"],
@@ -2662,21 +2669,21 @@
                             ["9th", "<GOTO:Dream:Spells+Dream>, <GOTO:Insect Plague:Spells+Insect Plague>"]
 
                         ],
-                        "7.Mountain#TABLE#FONT(TABLE_HEADER)": [
+                        "7.Mountain#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Spike Growth:Spells+Spike Growth>"],
                             ["5th", "<GOTO:Lightning Bolt:Spells+Lightning Bolt>, <GOTO:Meld into Stone:Spells+Meld into Stone>"],
                             ["7th", "<GOTO:Stone Shape:Spells+Stone Shape>, <GOTO:Stoneskin:Spells+Stoneskin>"],
                             ["9th", "<GOTO:Passwall:Spells+Passwall>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
                         ],
-                        "8.Swamp#TABLE#FONT(TABLE_HEADER)": [
+                        "8.Swamp#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Darkness:Spells+Darkness>, <GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"],
                             ["5th", "<GOTO:Water Walk:Spells+Water Walk>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
                             ["7th", "<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Locate Creature:Spells+Locate Creature>"],
                             ["9th", "<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Scrying:Spells+Scrying>"]
                         ],
-                        "9.Underdark#TABLE#FONT(TABLE_HEADER)": [
+                        "9.Underdark#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Web:Spells+Web>"],
                             ["5th", "<GOTO:Gaseous Form:Spells+Gaseous Form>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
@@ -2718,7 +2725,7 @@
                             "<LIST_ITEM><GOTO:Chill Touch:Spells+Chill Touch>",
                             "<LIST_STOP>"
                         ],
-                        "3.Circle of Spores Spells at Higher Levels#TABLE#FONT(TABLE_HEADER)": [
+                        "3.Circle of Spores Spells at Higher Levels#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>, <GOTO:Gentle Repose:Spells+Gentle Repose>"],
                             ["5th", "<GOTO:Animate Dead:Spells+Animate Dead>, <GOTO:Gaseous Form:Spells+Gaseous Form>"],
@@ -2748,7 +2755,7 @@
                             "<LIST_STOP>",
                             "If you lose the map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map."
                         ],
-                        "2.#TABLE#FONT(TABLE_HEADER)": [
+                        "2.#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["d6", "Map Form"],
                             ["1", "A scroll covered with depictions of constellations"],
                             ["2", "A stone tablet with fine holes drilled through it"],
@@ -2779,7 +2786,7 @@
                             "<LIST_ITEM><GOTO:Cure Wounds:Spells+Cure Wounds>",
                             "<LIST_STOP>"
                         ],
-                        "3.Circle of Wildfire Spells at Higher Levels#TABLE#FONT(TABLE_HEADER)": [
+                        "3.Circle of Wildfire Spells at Higher Levels#TABLE#FONT(TABLE_HEADER, DEFAULT)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Flaming Sphere:Spells+Flaming Sphere>, <GOTO:Scorching Ray:Spells+Scorching Ray>"],
                             ["5th", "<GOTO:Plant Growth:Spells+Plant Growth>, <GOTO:Revivify:Spells+Revivify>"],
