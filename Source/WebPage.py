@@ -1,12 +1,12 @@
 import yattag
-import json
 import os
 import io
 import copy
 import re
 from WebTable import WebTable
+from Utilities import *
 
-class WebpageEnums:
+class WebPageEnums:
     # Text Specifiers
     class Text:
         pass
@@ -14,60 +14,6 @@ class WebpageEnums:
         pass
     class Table:
         pass
-
-
-
-def PermuteWithOrder(List):
-    if len(List) == 1:
-        return [[List[0]]]
-    ChildList = PermuteWithOrder(List[1:])
-    return list(map(lambda Item: [List[0]] + Item, copy.deepcopy(ChildList))) + ChildList
-
-def FlushPrintUTF8(*args, **kw):
-    if 'end' not in kw:
-        kw['end'] = '\n'
-    if 'sep' not in kw:
-        kw['sep'] = ' '
-    text = kw['sep'].join(list(map(lambda x: str(x), args))) + kw['end']
-    sys.stdout.buffer.write((str(text)).encode(sys.stdout.encoding, 'backslashreplace'))
-    sys.stdout.flush()
-
-def ReadJSON(path):
-    MakePath = path.split('/')
-    MakeIndex = 0
-    while MakeIndex + 1 < len(MakePath):
-        if not os.path.exists('/'.join(MakePath[:MakeIndex+1])):
-            os.mkdir('/'.join(MakePath[:MakeIndex+1]))
-        MakeIndex += 1
-    try:
-        with io.open(path, mode='r', encoding='utf-8') as json_file:
-            structure = json.load(json_file)
-        return structure
-    except BaseException:
-        FlushPrintUTF8("Failed to read: {}".format(path))
-        return {}
-
-def WriteJSON(path, structure, beautify=True):
-    MakePath = path.split('/')
-    MakeIndex = 0
-    while MakeIndex + 1 < len(MakePath):
-        if not os.path.exists('/'.join(MakePath[:MakeIndex+1])):
-            os.mkdir('/'.join(MakePath[:MakeIndex+1]))
-        MakeIndex += 1
-    with io.open(path, mode='w', encoding='utf-8') as json_file:
-        json.dump(structure, json_file, indent=2 if beautify else None, sort_keys=beautify, ensure_ascii=False)
-
-def DeepSize(Item):
-    Size = 0
-    if type(Item) == list:
-        for Sub in Item:
-            Size += DeepSize(Sub)
-    elif type(Item) == dict:
-        for Key in Item:
-            Size += DeepSize(Item[Key])
-    else:
-        return 1
-    return Size
     
 class WebPage:
     def __init__(self, SrcJSON):
@@ -350,12 +296,12 @@ class WebPage:
             self.AddText(Input, State, Interface, Data)
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
-        if State['mode'] == WebpageEnums.LookupTable:
+        if State['mode'] == WebPageEnums.LookupTable:
             self.AddLookupTable(Input, State, Interface, Data)
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
-        elif State['mode'] == WebpageEnums.Table:
+        elif State['mode'] == WebPageEnums.Table:
             self.AddTable(Input, State, Interface, Data)
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
@@ -570,7 +516,7 @@ class WebPage:
         State['key'] = []
         State['class'] = []
         State['style'] = []
-        State['mode'] = WebpageEnums.Text
+        State['mode'] = WebPageEnums.Text
         State['lookup_table.range'] = None
         State['callback'] = []
         State['font'] = 'DEFAULT'
@@ -598,13 +544,13 @@ class WebPage:
         LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
         LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                
         if len(LTMatch) > 0:
-            State['mode'] = WebpageEnums.LookupTable
+            State['mode'] = WebPageEnums.LookupTable
             State['lookup_table.range'] = LTMatch[0]
 
         TPattern = re.compile('TABLE')
         TMatch = list(map(lambda Reg: Reg.group(0), list(filter(lambda Result: Result != None, list(map(lambda Code: TPattern.match(Code), Interface))))))                
         if len(TMatch) > 0:
-            State['mode'] = WebpageEnums.Table
+            State['mode'] = WebPageEnums.Table
 
         ClassPattern = re.compile('CLASS\((.*)\)')
         ClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: ClassPattern.match(Code), Interface))))))                
@@ -748,9 +694,6 @@ def main(Args):
     for Arg in Args:
         WP = WebPage(Arg)
         WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
-        #SortedByCount = list(sorted(WP.SeenLinkUps.keys(), key=lambda Key: WP.SeenLinkUps[Key], reverse=True))
-        #for Key in SortedByCount:
-        #    FlushPrintUTF8(Key, WP.SeenLinkUps[Key])
 
 if __name__ == '__main__':
     import sys
