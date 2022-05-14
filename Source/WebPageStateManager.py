@@ -16,6 +16,8 @@ class WebPageStateManager(StateManager):
         self['callback'] = []
         self['font'] = 'DEFAULT'
         self['next.font'] = []
+        self['key_font'] = 'HEADER'
+        self['next.key_font'] = []
 
     def MixState(self, Interface, WP):
         MixedState = copy.deepcopy(self)
@@ -25,7 +27,7 @@ class WebPageStateManager(StateManager):
         elif 'SHOWN' in Interface:
             MixedState['visible'] = True
 
-        FontPattern = re.compile('FONT\((.+?)\)')
+        FontPattern = re.compile('^FONT\((.+?)\)$')
         FontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: FontPattern.match(Code), Interface))))))
         if len(FontMatch) > 0:
             Font = FontMatch[0].replace(' ', '').split(',')
@@ -35,6 +37,17 @@ class WebPageStateManager(StateManager):
             elif len(Font) == 1:
                 MixedState['font'] = Font[0]
                 MixedState['next.font'] = []
+
+        KeyFontPattern = re.compile('^KEYFONT\((.+?)\)$')
+        KeyFontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: KeyFontPattern.match(Code), Interface))))))
+        if len(KeyFontMatch) > 0:
+            KeyFont = KeyFontMatch[0].replace(' ', '').split(',')
+            if len(KeyFont) >= 2:
+                MixedState['key_font'] = KeyFont[0]
+                MixedState['next.key_font'] = KeyFont[1:]
+            elif len(Font) == 1:
+                MixedState['key_font'] = KeyFont[0]
+                MixedState['next.key_font'] = []
 
         LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
         LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                

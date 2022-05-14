@@ -1,8 +1,6 @@
-from sre_parse import State
 import yattag
 import os
 import io
-import copy
 import re
 from WebPageEnums import WebPageEnums
 from WebPageStateManager import WebPageStateManager
@@ -181,7 +179,7 @@ class WebPage:
                     self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
                     self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
                     
-                ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
+                ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey], IsKey=True)
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                 NewState['key'] += [Key]
@@ -204,7 +202,7 @@ class WebPage:
             self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
             self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
 
-    def LoadItem(self, Input, State, Interface, Data=None):
+    def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
         ContinueFlag = True
         if len(State['callback']) > 0:
             for Callback in State['callback']:
@@ -297,9 +295,9 @@ class WebPage:
             LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
             self.SeenLinkUps[LinkUpID] = True
             with self.Tag('a', 'id={}'.format(LinkUpID)):
-                self.AddText(Input, State, Interface, Data)
+                self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         else:
-            self.AddText(Input, State, Interface, Data)
+            self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
         if State['mode'] == WebPageEnums.LookupTable:
@@ -328,7 +326,7 @@ class WebPage:
             Text = Text.replace(Key, self.TextReplaceMap[Key])
         return Text
 
-    def AddText(self, Input, State, Interface, Data, ForceTextTag=None):
+    def AddText(self, Input, State, Interface, Data, ForceTextTag=None, IsKey=False):
         if '<LIST_START>' in Input:
             if State.GlobalState['in_list_div'] == 0:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
@@ -362,7 +360,11 @@ class WebPage:
                 if RefMatch != None:
                     HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
                     Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
-            FontClass = ['font-class-{}'.format(State['font'])]
+            FontClass = []
+            if IsKey:
+                FontClass = ['font-class-{}'.format(State['key_font'])]
+            else:
+                FontClass = ['font-class-{}'.format(State['font'])]
             with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
@@ -453,26 +455,36 @@ class WebPage:
                                 self.Text(Input)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
-                if Input.strip() != '':
-                    if 'HTML' not in Interface:
-                        with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
-                            self.Text(Input)
-                    else:
-                        self.Text(Input)
-                if len(State['next.font']) > 0:
-                    State['font'] = State['next.font'][0]
-                    State['next.font'] = State['next.font'][1:]
+                if Input.strip() != '' or ForceTextTag != None:
+                    self.Text(Input)
+                if IsKey:
+                    if len(State['next.key_font']) > 0:
+                        State['key_font'] = State['next.key_font'][0]
+                        State['next.key_font'] = State['next.key_font'][1:]
+                else:
+                    if len(State['next.font']) > 0:
+                        State['font'] = State['next.font'][0]
+                        State['next.font'] = State['next.font'][1:]
                 return 
-        if Input.strip() != '':
-            if 'HTML' not in Interface:
+        if Input.strip() != '' or ForceTextTag != None:
+            FontClass = []
+            if IsKey:
+                FontClass = ['font-class-{}'.format(State['key_font'])]
+            else:
                 FontClass = ['font-class-{}'.format(State['font'])]
+            if 'HTML' not in Interface:
                 with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                     self.Text(Input)
             else:
                 self.Text(Input)
-        if len(State['next.font']) > 0:
-            State['font'] = State['next.font'][0]
-            State['next.font'] = State['next.font'][1:]
+        if IsKey:
+            if len(State['next.key_font']) > 0:
+                State['key_font'] = State['next.key_font'][0]
+                State['next.key_font'] = State['next.key_font'][1:]
+        else:
+            if len(State['next.font']) > 0:
+                State['font'] = State['next.font'][0]
+                State['next.font'] = State['next.font'][1:]
 
     def CleanTable(self, Table):
         for IndexY in range(len(Table)):
@@ -612,6 +624,14 @@ class WebPage:
         if len(OKey) > 1:
             Interface = OKey[1:]
         return Rank, OKey[0], Interface
+
+
+def main(Args):
+    if os.path.exists('HTML') == False:
+        os.mkdir('HTML/')
+    for Arg in Args:
+        WP = WebPage(Arg)
+        WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
 
 
 def main(Args):
