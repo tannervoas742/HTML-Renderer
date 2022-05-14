@@ -553,15 +553,14 @@ class Webpage:
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
-                if Input.strip() != '':
-                    
+                if Input.strip() != '' or ForceTextTag != None:
                     with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                         self.Text(Input)
                 if len(State['next.font']) > 0:
                     State['font'] = State['next.font'][0]
                     State['next.font'] = State['next.font'][1:]
                 return 
-        if Input.strip() != '':
+        if Input.strip() != '' or ForceTextTag != None:
             FontClass = ['font-class-{}'.format(State['font'])]
             with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 self.Text(Input)
