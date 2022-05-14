@@ -4,6 +4,7 @@ import os
 import io
 import copy
 import re
+from WebTable import WebTable
 
 class WebpageEnums:
     # Text Specifiers
@@ -14,68 +15,7 @@ class WebpageEnums:
     class Table:
         pass
 
-class WebTable:
-    def __init__(self, Doc, Tag, Text, Line, Data, State, Interface, WebpageObject):
-        self.Doc = Doc
-        self.Tag = Tag
-        self.Text = Text
-        self.Line = Line
-        self.Data = Data
-        self.State = State
-        self.Interface = Interface
-        self.WebpageObject = WebpageObject
 
-        self.RenderToPage()
-
-    def RenderToPage(self):
-        Widths = [None for i in self.Data[0]]
-        ColumnWidthPattern = re.compile('COLUMN_WIDTH\((.*?)\)')
-        ColumnWidthMatch = list(filter(lambda Result: Result != None, list(map(lambda Interface: ColumnWidthPattern.match(Interface), self.Interface))))
-        if len(ColumnWidthMatch) > 0:
-            NewWidths = ColumnWidthMatch[0].group(1).replace(' ', '').split(',')
-            for IDX in range(len(NewWidths)):
-                if IDX < len(Widths):
-                    if NewWidths[IDX].lower() != 'none':
-                        Widths[IDX] = NewWidths[IDX]
-        def add_header(doc, header):
-            with doc.tag('tr', klass=' '.join(self.State['class'])):
-                ColumnIDX = 0
-                for value in header:
-                    NewState = copy.deepcopy(self.State)
-                    NewState['force-no-inline'] = True
-                    NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
-                    if Widths[ColumnIDX] != None:
-                        NewState['style'] += ['width: {}'.format(Widths[ColumnIDX])]
-                        NewState['style'] += ['table-layout: fixed']
-                    self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
-                    ColumnIDX += 1
-                    #doc.line('th', value)
-
-        def add_row(doc, values, row_name=None):
-            with doc.tag('tr', klass=' '.join(self.State['class'])):
-                if row_name is not None:
-                    NewState = copy.deepcopy(self.State)
-                    NewState['force-no-inline'] = True
-                    self.WebpageObject.AddText(row_name, NewState, self.Interface, None, ForceTextTag='th')
-                    #doc.line('th', row_name)
-                ColumnIDX = 0
-                for value in values:
-                    NewState = copy.deepcopy(self.State)
-                    NewState['force-no-inline'] = True
-                    NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
-                    if Widths[ColumnIDX] != None:
-                        NewState['style'] += ['width: {}'.format(Widths[ColumnIDX])]
-                        NewState['style'] += ['table-layout: fixed']
-                    self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='td')
-                    #doc.line('td', value)
-                    ColumnIDX += 1
-                    
-        with self.Tag('table', klass='table renderer-table-bordered' + ' '.join(self.State['class'])):
-            with self.Tag('thead', klass='thead-dark ' + ' '.join(self.State['class'])):
-                add_header(self.Doc, self.Data[0])
-            with self.Tag('tbody', klass=' '.join(self.State['class'])):
-                for row in self.Data[1:]:
-                    add_row(self.Doc, row)
 
 def PermuteWithOrder(List):
     if len(List) == 1:
@@ -602,7 +542,7 @@ class Webpage:
 
         Table = self.CleanTable(Table)
 
-        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State, Interface, self)
+        WebTable(Table, State, Interface, self)
 
     def AddTable(self, Input, State, Interface, Data):
         if type(Data) == dict:
@@ -620,7 +560,7 @@ class Webpage:
             Data = NewData
         Table = Data
         Table = self.CleanTable(Table)
-        WebTable(self.Doc, self.Tag, self.Text, self.Line, Table, State, Interface, self)
+        WebTable(Table, State, Interface, self)
 
 
     def GetInitState(self):
