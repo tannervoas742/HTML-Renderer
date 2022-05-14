@@ -554,8 +554,7 @@ class Webpage:
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
                 if Input.strip() != '' or ForceTextTag != None:
-                    with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
-                        self.Text(Input)
+                    self.Text(Input)
                 if len(State['next.font']) > 0:
                     State['font'] = State['next.font'][0]
                     State['next.font'] = State['next.font'][1:]
