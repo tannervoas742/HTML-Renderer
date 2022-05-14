@@ -69,7 +69,7 @@ def DeepSize(Item):
         return 1
     return Size
     
-class Webpage:
+class WebPage:
     def __init__(self, SrcJSON):
         CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         self.JSON = ReadJSON(CleanTarget)
@@ -746,7 +746,7 @@ def main(Args):
     if os.path.exists('HTML') == False:
         os.mkdir('HTML/')
     for Arg in Args:
-        WP = Webpage(Arg)
+        WP = WebPage(Arg)
         WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
         #SortedByCount = list(sorted(WP.SeenLinkUps.keys(), key=lambda Key: WP.SeenLinkUps[Key], reverse=True))
         #for Key in SortedByCount:
