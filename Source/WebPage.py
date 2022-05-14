@@ -1,26 +1,21 @@
+from sre_parse import State
 import yattag
 import os
 import io
 import copy
 import re
+from WebPageEnums import WebPageEnums
+from WebPageStateManager import WebPageStateManager
 from WebTable import WebTable
 from Utilities import *
-
-class WebPageEnums:
-    # Text Specifiers
-    class Text:
-        pass
-    class LookupTable:
-        pass
-    class Table:
-        pass
     
 class WebPage:
-    def __init__(self, SrcJSON):
+    def Load(self, SrcJSON):
         CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         self.JSON = ReadJSON(CleanTarget)
         self.ConsumeMetaData("_metadata")
-
+    
+    def InitContainers(self):
         self.SeenLinkUps = {}
         self.SeenLinkDowns = {}
         self.PostProcessRefList = {}
@@ -48,6 +43,11 @@ class WebPage:
             NewValue = self.TextReplaceMap[Key].replace(self.PreProcessText('<'), self.PreProcessText('</'))
             self.TextReplaceMap[NewKey] = NewValue
 
+        self.ParamStorage = {}
+        self.CollapseModelCount = 0
+        self.CollapseModelRows = {}
+
+    def InitYattagDocument(self):
         self.Doc, self.Tag, self.Text, self.Line = yattag.Doc(
             defaults = {
                 'title': self.MetaData['document']['title']
@@ -55,65 +55,57 @@ class WebPage:
             errors = {}
         ).ttl()
 
-        self.ParamStorage = {}
-        self.CollapseModelCount = 0
-        self.CollapseModelRows = {}
-
-        with self.Tag('html', 'id="top-html"'):
-            with self.Tag('head'):
-                self.Doc.stag('meta', 'charset="UTF-8"')
-                self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
-                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
-                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
-                self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
-                #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
-                
-
-                with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
-                    pass
-                with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.min.js"'):
-                    pass
-                with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
-                    pass
-                with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
-                    pass
-
-                
-
-            self.ItemsToProcess = DeepSize(self.JSON)
+    def HeadAndLinkHTML(self):
+        with self.Tag('head'):
+            self.Doc.stag('meta', 'charset="UTF-8"')
+            self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
+            #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
             
-            with self.Tag('header'):
-                with self.Tag('nav', id='sticky-header-nav'):
-                    with self.Tag('div'):
-                        with self.Tag('ul'):
-                            with self.Tag('li'):
-                                self.Line('a', 'TBD')
-            self.Doc.stag('br')
-            with self.Tag('body', klass='content html-renderer'):
-                with self.Tag('div', klass='body-div'):
-                    with self.Tag('div', klass='header-spacer'):
-                        self.Line('p', ' ')
-                    self.LoadLevel(self.JSON)
-                self.AddJS()
-            self.Doc.stag('br')
-            with self.Tag('footer'):
-                self.AddFooter()
+
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
+                pass
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.min.js"'):
+                pass
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
+                pass
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
+                pass
+    
+    def StickyHeaderSection(self):
+        with self.Tag('header'):
+            with self.Tag('nav', id='sticky-header-nav'):
+                with self.Tag('div'):
+                    with self.Tag('ul'):
+                        with self.Tag('li'):
+                            self.Line('a', 'TBD')
+
+    def CoreBodyStructure(self):
+        with self.Tag('body', klass='content html-renderer'):
+            with self.Tag('div', klass='body-div'):
+                with self.Tag('div', klass='header-spacer'):
+                    self.Line('p', ' ')
+                self.LoadLevel(self.JSON)
+            self.AddJS()
 
     def AddFooter(self, State = None):
-        if State == None:
-            State = self.GetInitState()
-        if 'authors' in self.MetaData['document']:
-            if type(self.MetaData['document']['authors']) == list:
-                for Author in self.MetaData['document']['authors']:
-                    self.AddText('Author: {}'.format(Author), State, [], None)
-            else:
-                self.AddText('Author: {}'.format(self.MetaData['document']['authors']), State, [], None)
-        if 'date' in self.MetaData['document']:
-            self.AddText('Last Modified: {}'.format(self.MetaData['document']['date']), State, [], None)
+        with self.Tag('footer'):
+            if State == None:
+                State = self.InitNewStateManager()
+            if 'authors' in self.MetaData['document']:
+                if type(self.MetaData['document']['authors']) == list:
+                    for Author in self.MetaData['document']['authors']:
+                        self.AddText('Author: {}'.format(Author), State, [], None)
+                else:
+                    self.AddText('Author: {}'.format(self.MetaData['document']['authors']), State, [], None)
+            if 'date' in self.MetaData['document']:
+                self.AddText('Last Modified: {}'.format(self.MetaData['document']['date']), State, [], None)
 
     def AddJS(self, State = None):
         if State == None:
-            State = self.GetInitState()
+            State = self.InitNewStateManager()
 
         documentReadFuncCollapsible = []
         documentReadFuncCollapsible += ['$(document).ready(function() {{']
@@ -127,12 +119,26 @@ class WebPage:
                 for Row in range(self.CollapseModelRows[Model]):
                     pass
 
+    def __init__(self, SrcJSON):
+        self.Load(SrcJSON)
+        self.InitContainers()
+        self.InitYattagDocument()
+        
+
+        with self.Tag('html', 'id="top-html"'):
+            self.HeadAndLinkHTML()
+            self.StickyHeaderSection()
+            self.Doc.stag('br')
+            self.CoreBodyStructure()
+            self.Doc.stag('br')
+            self.AddFooter()
+
     def LoadLevel(self, Input, State = None):
         if State == None:
-            State = self.GetInitState()
+            State = self.InitNewStateManager()
         if type(Input) not in [list, dict]:
             Rank, Input, Interface = self.GetInterfaceFromKey(str(Input))
-            NewState = self.MixState(State, Interface)
+            NewState = State.MixState(Interface, self)
             self.LoadItem(Input, NewState, Interface)
             return
         InputSorted = None
@@ -154,7 +160,7 @@ class WebPage:
                 self.LoadLevel(OriginalKey, State)
                 continue
             Rank, Key, Interface = self.GetInterfaceFromKey(OriginalKey)   
-            NewState = self.MixState(State, Interface)                
+            NewState = State.MixState(Interface, self)                
             
             if type(Input) == dict:
                 if 'COLLAPSE' in Interface:
@@ -308,7 +314,7 @@ class WebPage:
             return False, None
         if type(Data) in [str, int, float, bool]:
             _, NewData, NewInterface = self.GetInterfaceFromKey(str(Data))
-            NewState = self.MixState(State, NewInterface)
+            NewState = State.MixState(NewInterface, self)
             self.AddText(NewData, NewState, NewInterface, None)
             return False, None
         if 'HR_AFTER' in Interface:
@@ -324,16 +330,16 @@ class WebPage:
 
     def AddText(self, Input, State, Interface, Data, ForceTextTag=None):
         if '<LIST_START>' in Input:
-            if self.in_list_div == 0:
+            if State.GlobalState['in_list_div'] == 0:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
             else:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
-            self.in_list_div += 1
+            State.GlobalState['in_list_div'] += 1
             return
         elif '<LIST_STOP>' in Input:
             self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
-            self.in_list_div -= 1
+            State.GlobalState['in_list_div'] -= 1
             self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
             return
         elif '<LIST_ITEM>' in Input:
@@ -509,87 +515,8 @@ class WebPage:
         WebTable(Table, State, Interface, self)
 
 
-    def GetInitState(self):
-        self.in_list_div = 0
-        State = {}
-        State['visible'] = True
-        State['key'] = []
-        State['class'] = []
-        State['style'] = []
-        State['mode'] = WebPageEnums.Text
-        State['lookup_table.range'] = None
-        State['callback'] = []
-        State['font'] = 'DEFAULT'
-        State['next.font'] = []
-        return State
-    
-    def MixState(self, State, Interface):
-        State = copy.deepcopy(State)
-        if 'HIDDEN' in Interface:
-            State['visible'] = False
-        elif 'SHOWN' in Interface:
-            State['visible'] = True
-
-        FontPattern = re.compile('FONT\((.+?)\)')
-        FontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: FontPattern.match(Code), Interface))))))
-        if len(FontMatch) > 0:
-            Font = FontMatch[0].replace(' ', '').split(',')
-            if len(Font) >= 2:
-                State['font'] = Font[0]
-                State['next.font'] = Font[1:]
-            elif len(Font) == 1:
-                State['font'] = Font[0]
-                State['next.font'] = []
-
-        LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
-        LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                
-        if len(LTMatch) > 0:
-            State['mode'] = WebPageEnums.LookupTable
-            State['lookup_table.range'] = LTMatch[0]
-
-        TPattern = re.compile('TABLE')
-        TMatch = list(map(lambda Reg: Reg.group(0), list(filter(lambda Result: Result != None, list(map(lambda Code: TPattern.match(Code), Interface))))))                
-        if len(TMatch) > 0:
-            State['mode'] = WebPageEnums.Table
-
-        ClassPattern = re.compile('CLASS\((.*)\)')
-        ClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: ClassPattern.match(Code), Interface))))))                
-        if len(ClassMatch) > 0:
-            State['class'] = []
-            for Group in ClassMatch:
-                State['class'] += Group.lower().split()
-
-        AddClassPattern = re.compile('ADD_CLASS\((.*)\)')
-        AddClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: AddClassPattern.match(Code), Interface))))))                
-        if len(AddClassMatch) > 0:
-            for Group in AddClassMatch:
-                State['class'] += Group.lower().split()
-
-        RemoveClassPattern = re.compile('REMOVE_CLASS\((.*)\)')
-        RemoveClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: RemoveClassPattern.match(Code), Interface))))))                
-        if len(RemoveClassMatch) > 0:
-            for Group in RemoveClassMatch:
-                for Tag in Group.lower().split():
-                    if Tag in State['class']:
-                        del State['class'][State['class'].index(Tag)]
-
-        CallPattern = re.compile('CALL\((.*)\)')
-        CallMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: CallPattern.match(Code), Interface))))))                
-        if len(CallMatch) > 0:
-            State['callback'] = []
-            for Group in CallMatch:
-                State['callback'] += list(map(lambda Item: '_CALLBACK_' + Item, Group.split()))
-            
-            Compiled = []
-            for Func in State['callback']:
-                if Func.replace('_CALLBACK_', '') in self.ParamStorage:
-                    FuncText = self.ParamStorage[Func.replace('_CALLBACK_', '')]
-                    FuncText = 'def {}(self, STATE, INTERFACE, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
-                    exec(FuncText)
-                    Compiled += [eval(Func)]
-            State['callback'] = Compiled
-        else:
-            State['callback'] = []
+    def InitNewStateManager(self):
+        State = WebPageStateManager()
         return State
 
     def CleanLinkText(self, OText):
@@ -659,7 +586,6 @@ class WebPage:
 
     def ConsumeMetaData(self, Key):
         self.MetaData = self.JSON[Key]
-        
         del self.JSON[Key]
 
     def AddCSSFontDefinitions(self, OutFile):
