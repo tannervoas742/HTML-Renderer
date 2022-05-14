@@ -350,7 +350,7 @@ class Webpage:
             LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
             for Match in LookupMatch:
                 Key = Match.group(1)
-                Computed = list(map(lambda Val: "<ERROR : LOOKUP_NOT_FOUND : {} : {}>".format(Key, Val) if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
+                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         elif 'RANGE' in Interface:
@@ -373,10 +373,16 @@ class Webpage:
             LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
             for Match in LookupMatch:
                 Key = Match.group(1)
-                Computed = list(map(lambda Val: "<ERROR:LOOKUP_NOT_FOUND:{}:{}".format(Key, Val) if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
+                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
             self.ParamStorage[Input] = Computed
             ContinueFlag = False
         else:
+            LookupReg = re.compile("LOOKUP\((.*?)\)")
+            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
+            for Match in LookupMatch:
+                Key = Match.group(1)
+                Step1 = list(map(lambda Com: str(Com).split('#')[0], Data))
+                Data = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], Step1))
             self.ParamStorage[Input] = Data
         if State['visible'] == False:
             return ContinueFlag, Data
@@ -415,8 +421,9 @@ class Webpage:
                 self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
         if type(Data) in [str, int, float, bool]:
-            _, Data, Interface = self.GetInterfaceFromKey(str(Data))
-            self.AddText(Data, State, Interface, None)
+            _, NewData, NewInterface = self.GetInterfaceFromKey(str(Data))
+            NewState = self.MixState(State, NewInterface)
+            self.AddText(NewData, NewState, NewInterface, None)
             return False, None
         if 'HR_AFTER' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
@@ -433,14 +440,15 @@ class Webpage:
         if '<LIST_START>' in Input:
             if self.in_list_div == 0:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
+            else:
+                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             self.in_list_div += 1
             return
         elif '<LIST_STOP>' in Input:
             self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
             self.in_list_div -= 1
-            if self.in_list_div == 0:
-                self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
+            self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
             return
         elif '<LIST_ITEM>' in Input:
             with self.Tag('li', style=' ;'.join(State['style']), klass=' '.join(State['class'])):
@@ -550,20 +558,25 @@ class Webpage:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
                             with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
-                                self.Text(Text)
+                                self.Text(Input)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
                 if Input.strip() != '':
-                    
-                    with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
+                    if 'HTML' not in Interface:
+                        with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
+                            self.Text(Input)
+                    else:
                         self.Text(Input)
                 if len(State['next.font']) > 0:
                     State['font'] = State['next.font'][0]
                     State['next.font'] = State['next.font'][1:]
                 return 
         if Input.strip() != '':
-            FontClass = ['font-class-{}'.format(State['font'])]
-            with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
+            if 'HTML' not in Interface:
+                FontClass = ['font-class-{}'.format(State['font'])]
+                with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
+                    self.Text(Input)
+            else:
                 self.Text(Input)
         if len(State['next.font']) > 0:
             State['font'] = State['next.font'][0]
