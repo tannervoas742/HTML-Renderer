@@ -289,7 +289,7 @@ class Webpage:
                     self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
                     self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
                     
-                ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey])
+                ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey], IsKey=True)
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
                 NewState['key'] += [Key]
@@ -312,7 +312,7 @@ class Webpage:
             self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
             self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
 
-    def LoadItem(self, Input, State, Interface, Data=None):
+    def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
         ContinueFlag = True
         if len(State['callback']) > 0:
             for Callback in State['callback']:
@@ -399,9 +399,9 @@ class Webpage:
             LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
             self.SeenLinkUps[LinkUpID] = True
             with self.Tag('a', 'id={}'.format(LinkUpID)):
-                self.AddText(Input, State, Interface, Data)
+                self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         else:
-            self.AddText(Input, State, Interface, Data)
+            self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
         if State['mode'] == WebpageEnums.LookupTable:
@@ -429,7 +429,7 @@ class Webpage:
             Text = Text.replace(Key, self.TextReplaceMap[Key])
         return Text
 
-    def AddText(self, Input, State, Interface, Data, ForceTextTag=None):
+    def AddText(self, Input, State, Interface, Data, ForceTextTag=None, IsKey=False):
         if '<LIST_START>' in Input:
             if self.in_list_div == 0:
                 self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
@@ -462,7 +462,11 @@ class Webpage:
                 if RefMatch != None:
                     HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
                     Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
-            FontClass = ['font-class-{}'.format(State['font'])]
+            FontClass = []
+            if IsKey:
+                FontClass = ['font-class-{}'.format(State['key_font'])]
+            else:
+                FontClass = ['font-class-{}'.format(State['font'])]
             with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
@@ -553,21 +557,33 @@ class Webpage:
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
-                if Input.strip() != '':
-                    
-                    with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
-                        self.Text(Input)
-                if len(State['next.font']) > 0:
-                    State['font'] = State['next.font'][0]
-                    State['next.font'] = State['next.font'][1:]
+                if Input.strip() != '' or ForceTextTag != None:
+                    self.Text(Input)
+                if IsKey:
+                    if len(State['next.key_font']) > 0:
+                        State['key_font'] = State['next.key_font'][0]
+                        State['next.key_font'] = State['next.key_font'][1:]
+                else:
+                    if len(State['next.font']) > 0:
+                        State['font'] = State['next.font'][0]
+                        State['next.font'] = State['next.font'][1:]
                 return 
-        if Input.strip() != '':
-            FontClass = ['font-class-{}'.format(State['font'])]
+        if Input.strip() != '' or ForceTextTag != None:
+            FontClass = []
+            if IsKey:
+                FontClass = ['font-class-{}'.format(State['key_font'])]
+            else:
+                FontClass = ['font-class-{}'.format(State['font'])]
             with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 self.Text(Input)
-        if len(State['next.font']) > 0:
-            State['font'] = State['next.font'][0]
-            State['next.font'] = State['next.font'][1:]
+        if IsKey:
+            if len(State['next.key_font']) > 0:
+                State['key_font'] = State['next.key_font'][0]
+                State['next.key_font'] = State['next.key_font'][1:]
+        else:
+            if len(State['next.font']) > 0:
+                State['font'] = State['next.font'][0]
+                State['next.font'] = State['next.font'][1:]
 
     def CleanTable(self, Table):
         for IndexY in range(len(Table)):
@@ -622,6 +638,8 @@ class Webpage:
         State['callback'] = []
         State['font'] = 'DEFAULT'
         State['next.font'] = []
+        State['key_font'] = 'HEADER'
+        State['next.key_font'] = []
         return State
     
     def MixState(self, State, Interface):
@@ -631,7 +649,7 @@ class Webpage:
         elif 'SHOWN' in Interface:
             State['visible'] = True
 
-        FontPattern = re.compile('FONT\((.+?)\)')
+        FontPattern = re.compile('^FONT\((.+?)\)$')
         FontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: FontPattern.match(Code), Interface))))))
         if len(FontMatch) > 0:
             Font = FontMatch[0].replace(' ', '').split(',')
@@ -641,6 +659,17 @@ class Webpage:
             elif len(Font) == 1:
                 State['font'] = Font[0]
                 State['next.font'] = []
+
+        KeyFontPattern = re.compile('^KEYFONT\((.+?)\)$')
+        KeyFontMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: KeyFontPattern.match(Code), Interface))))))
+        if len(KeyFontMatch) > 0:
+            KeyFont = KeyFontMatch[0].replace(' ', '').split(',')
+            if len(KeyFont) >= 2:
+                State['key_font'] = KeyFont[0]
+                State['next.key_font'] = KeyFont[1:]
+            elif len(Font) == 1:
+                State['key_font'] = KeyFont[0]
+                State['next.key_font'] = []
 
         LTPattern = re.compile('LOOKUP_TABLE\((\d+)\,(\d+)\)')
         LTMatch = list(map(lambda Reg: [int(Reg.group(1)), int(Reg.group(2))], list(filter(lambda Result: Result != None, list(map(lambda Code: LTPattern.match(Code), Interface))))))                
