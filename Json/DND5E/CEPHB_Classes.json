@@ -3,7 +3,7 @@
         "document": {
             "title": "Classes",
             "authors": [
-                "Peter Vandermeulen",
+                "Peter VanderMeulen",
                 "Tanner Voas - tannervoas@gmail.com"
             ],
             "date": "05/12/2022"
@@ -337,7 +337,7 @@
             "<BOLD>Armor:</BOLD> Light armor, medium armor, shields#FONT(DEFAULT)",
             "<BOLD>Weapons:</BOLD> Simple weapons, firearms*",
             "<BOLD>Tools:</BOLD> Thieves' tools, tinker's tools, one type of artisan's tools of your choice",
-            "<BOLD>Saving Throws:</BOLD> CON and INT",
+            "<BOLD>Saving Throws:</BOLD> Constitution and Intelligence",
             "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand ",
             "",
             "*The secrets of gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in the <ITALIC>Dungeon Master's Guide</ITALIC> and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
@@ -349,7 +349,7 @@
             "thieves' tools and dungeoneer's pack"
         ],
         "5.Multiclassing": [
-            "Need INT of 13 to multiclass in or out",
+            "Need Intelligence of 13 to multiclass in or out",
             "Proficiencies gained: light armor, medium armor, shields, thieves' tools, tinker's tools",
             "Spell slots: Add half your levels (round up) in artificer to the levels from other classes to determine spell slots"
         ],
@@ -901,7 +901,7 @@
             "<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> STR and CON",
+            "<BOLD>Saving Throws:</BOLD> Strength and Constitution",
             "<BOLD>Skills:</BOLD> Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp": [
@@ -910,7 +910,7 @@
             "an explorer's pack and four javelins"
         ],
         "5.Multiclassing": [
-            "Need STR of 13 to multiclass in or out",
+            "Need Strength of 13 to multiclass in or out",
             "Proficiencies gained: Shields, simple weapons, martial weapons"
         ],
 
@@ -921,7 +921,7 @@
                 "Amount of rages per level shown on Barbarian table",
                 "While raging:",
                 "<LIST_START>",
-                "<LIST_ITEM>Advantage of STR checks and STR saving throws",
+                "<LIST_ITEM>Advantage on Strength checks and Strength saving throws",
                 "<LIST_ITEM>Bonus damage with melee weapon attacks",
                 "<LIST_ITEM>Resistance to bludgeoning, piercing and slashing damage",
                 "<LIST_STOP>",
@@ -929,13 +929,13 @@
                 "Rage lasts for 1 minute. It ends early if you are knocked unconscious, haven't attacked a hostile creature since your last turn, or taken damage since then. You can end your rage early as a bonus action."
             ],
 
-            "2.Unarmored Defense": "AC is 10 + DEX + CON while you are not wearing armor. You can use a shield and still get this benefit."
+            "2.Unarmored Defense": "AC is 10 + Dexterity + Constitution while you are not wearing armor. You can use a shield and still get this benefit."
         },
 
         "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Reckless Attack": "You can choose to have advantage on melee weapon attack rolls using strength during this turn, but attack rolls against you have advantage until your next turn.",
 
-            "2.Danger Sense": "Advantage on DEX saving throws against effects that you can see. You cannot be blinded, deafened, or incapacitated."
+            "2.Danger Sense": "Advantage on Dexterity saving throws against effects that you can see. You cannot be blinded, deafened, or incapacitated."
         },
 
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
@@ -947,7 +947,7 @@
                 "1.Restriction: Dwarves Only": ["Only dwarves can follow the Path of the Battlerager. The battlerager fills a particular niche in dwarven society and culture.",
                     "Your DM can lift this restriction to better suit the campaign. The restriction exists for the Forgotten Realms. It might not apply to your DM's setting or your DM's version of the Realms."
                 ],
-                "2.Battlerager Armor": ["When you choose this path at 3rd level, you gain the ability to use spiked armor (AC=14+DEX(max 2), Stealth Disadvantage, 45 lb., 75 gp) as a weapon.",
+                "2.Battlerager Armor": ["When you choose this path at 3rd level, you gain the ability to use spiked armor (AC=14+Dexterity(max 2), Stealth Disadvantage, 45 lb., 75 gp) as a weapon.",
                     "While you are wearing spiked armor and are raging, you can use a bonus action to make one melee weapon attack with your armor spikes against a target within 5 feet of you. If the attack hits, the spikes deal 1d4 piercing damage. You use your Strength modifier for the attack and damage rolls.",
                     "Additionally, when you use the Attack action to grapple a creature, the target takes 3 piercing damage if your grapple check succeeds."
                 ]
@@ -1265,7 +1265,7 @@
             "<BOLD>Armor:</BOLD> Light armor",
             "<BOLD>Weapons:</BOLD> Simple weapons, hand crossbows, longswords, rapiers, shortswords",
             "<BOLD>Tools:</BOLD> Three musical instruments of your choice",
-            "<BOLD>Saving Throws:</BOLD> DEX and CHA",
+            "<BOLD>Saving Throws:</BOLD> Dexterity and Charisma",
             "5.Skills: Any three"
         ],
         "4.Starting Equipment or 5d4 x 10 gp": [
@@ -1275,7 +1275,7 @@
             "Leather armor and a dagger"
         ],
         "5.Multiclassing": [
-            "Need CHA of 13 to multiclass in or out",
+            "Need Charisma of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, one skill, one musical instrument",
             "Spell slots: Add your levels in bard to the levels from other classes to determine spell slots"
         ],
@@ -1652,7 +1652,7 @@
             "<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> WIS and CHA",
+            "<BOLD>Saving Throws:</BOLD> Wisdom and Charisma",
             "<BOLD>Skills:</BOLD> Choose two from History, Insight, Medicine, Persuasion, Religion "
         ],
         "4.Starting Equipment or 2d4 x 10 gp": [
@@ -1663,7 +1663,7 @@
             "A shield and a holy symbol"
         ],
         "5.Multiclassing": [
-            "Need WIS of 13 to multiclass in or out",
+            "Need Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields",
             "Spell slots:Add your levels in cleric to the levels from other classes to determine spell slots"
         ],
@@ -2555,7 +2555,7 @@
             "<BOLD>Armor:</BOLD> Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
             "<BOLD>Weapons:</BOLD> Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears",
             "<BOLD>Tools:</BOLD> Herbalism kit",
-            "<BOLD>Saving Throws:</BOLD> INT and WIS",
+            "<BOLD>Saving Throws:</BOLD> Intelligence and Wisdom",
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp": [
@@ -2564,7 +2564,7 @@
             "Leather armor, an explorer's pack, and a druidic focus"
         ],
         "5.Multiclassing": [
-            "Need WIS of 13 to multiclass in or out",
+            "Need Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
             "Spell slots:Add your levels in druid to the levels from other classes to determine spell slots"
         ],
@@ -3030,7 +3030,7 @@
             "<BOLD>Armor:</BOLD> All armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> STR and CON",
+            "<BOLD>Saving Throws:</BOLD> Strength and Constitution",
             "<BOLD>Skills:</BOLD> Choose two from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival "
         ],
         "4.Starting Equipment or 2d4 x 10 gp": [
@@ -3040,7 +3040,7 @@
             "(a) a dungeoneer's pack or (b) an explorer's pack"
         ],
         "5.Multiclassing": [
-            "Need STR or DEX of 13 to multiclass in or out",
+            "Need Strength or Dexterity of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons",
             "Spell slots:Add one third your levels (round down) if you have the Eldritch Knight feature to the levels from other classes to determine spell slots"
         ],
@@ -3119,7 +3119,7 @@
             "<BOLD>Armor:</BOLD> None",
             "<BOLD>Weapons:</BOLD> Simple weapons, shortswords",
             "<BOLD>Tools:</BOLD> Artisan's tools or a musical instrument",
-            "<BOLD>Saving Throws:</BOLD> STR and DEX",
+            "<BOLD>Saving Throws:</BOLD> Strength and Dexterity",
             "<BOLD>Skills:</BOLD> Choose two from Acrobatics, Athletics, History, Insight, Religion, Stealth"
         ],
         "4.Starting Equipment or 5d4 gp": [
@@ -3128,7 +3128,7 @@
             "10 darts"
         ],
         "5.Multiclassing": [
-            "Need DEX and WIS of 13 to multiclass in or out",
+            "Need Dexterity and Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Simple weapons, shortswords"
         ],
 
@@ -3207,7 +3207,7 @@
             "<BOLD>Armor:</BOLD> All armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> WIS and CHA",
+            "<BOLD>Saving Throws:</BOLD> Wisdom and Charisma",
             "<BOLD>Skills:</BOLD> Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, Religion"
         ],
         "4.Starting Equipment or 5d4 x 10 gp": [
@@ -3217,7 +3217,7 @@
             "Chain mail and a holy symbol"
         ],
         "5.Multiclassing": [
-            "Need STR and CHA of 13 to multiclass in or out",
+            "Need Strength and Charisma of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons",
             "Spell slots: Add half your levels (round down) in paladin to the levels from other classes to determine spell slots"
         ],
@@ -3297,7 +3297,7 @@
             "<BOLD>Armor:</BOLD> Light armor, medium armor, shields",
             "<BOLD>Weapons:</BOLD> Simple weapons, martial weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> STR and DEX",
+            "<BOLD>Saving Throws:</BOLD> Strength and Dexterity",
             "<BOLD>Skills:</BOLD> Choose three from Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival"
         ],
         "4.Starting Equipment or 2d4 x 10 gp": [
@@ -3307,7 +3307,7 @@
             "A longbow and a quiver of 20 arrows"
         ],
         "5.Multiclassing": [
-            "Need DEX and WIS of 13 to multiclass in or out",
+            "Need Dexterity and Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class list",
             "Spell slots: Add half your levels (round down) in ranger to the levels from other classes to determine spell slots"
         ],
@@ -3382,7 +3382,7 @@
             "<BOLD>Armor:</BOLD> Light armor",
             "<BOLD>Weapons:</BOLD> Simple weapons, hand crossbows, longswords, rapiers, shortswords",
             "<BOLD>Tools:</BOLD> Thieves' tools",
-            "<BOLD>Saving Throws:</BOLD> DEX and INT",
+            "<BOLD>Saving Throws:</BOLD> Dexterity and Intelligence",
             "<BOLD>Skills:</BOLD> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth"
         ],
         "4.Starting Equipment or 4d4 x 10 gp": [
@@ -3392,7 +3392,7 @@
             "Leather armor, two daggers, and thieves' tools"
         ],
         "5.Multiclassing": [
-            "Need DEX of 13 to multiclass in or out",
+            "Need Dexterity of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, one skill from the class's skill list, thieves' tools",
             "Spell slots: Add a third your levels (round down) if you have the Arcane Trickster feature to the levels from other classes to determine spell slots"
         ],
@@ -3479,7 +3479,7 @@
             "<BOLD>Armor:</BOLD> None",
             "<BOLD>Weapons:</BOLD> Daggers, darts, slings, quarterstaffs, light crossbows",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> CON and CHA",
+            "<BOLD>Saving Throws:</BOLD> Constitution and Charisma",
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, Religion"
         ],
         "4.Starting Equipment or 3d4 x 10 gp": [
@@ -3489,7 +3489,7 @@
             "Two daggers"
         ],
         "5.Multiclassing": [
-            "Need CHA of 13 to multiclass in or out",
+            "Need Charisma of 13 to multiclass in or out",
             "Proficiencies gained: None",
             "Spell slots: Add your levels in sorceror to the levels from other classes to determine spell slots"
         ],
@@ -3569,7 +3569,7 @@
             "<BOLD>Armor:</BOLD> Light armor",
             "<BOLD>Weapons:</BOLD> Simple weapons",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> WIS and CHA",
+            "<BOLD>Saving Throws:</BOLD> Wisdom and Charisma",
             "<BOLD>Skills:</BOLD> Choose two from Arcana, Deception, History, Intimidation, Investigation, Nature, Religion"
         ],
         "4.Starting Equipment or 4d4 x 10 gp": [
@@ -3579,7 +3579,7 @@
             "Leather armor, any simple weapon and two daggers"
         ],
         "5.Multiclassing": [
-            "Need CHA of 13 to multiclass in or out",
+            "Need Charisma of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, simple weapons",
             "Spell slots: If you have Pact Magic and Spellcasting, you can use any spell slots to cast any spells that you know and have prepared. These spell slots should be tracked separately."
         ],
@@ -3664,7 +3664,7 @@
             "<BOLD>Armor:</BOLD> None",
             "<BOLD>Weapons:</BOLD> Daggers, darts, slings, quarterstaffs, light crossbows",
             "<BOLD>Tools:</BOLD> None",
-            "<BOLD>Saving Throws:</BOLD> INT and WIS",
+            "<BOLD>Saving Throws:</BOLD> Intelligence and Wisdom",
             "<BOLD>Skills:</BOLD> Choose two from Arcana, History, Insight, Investigation, Medicine, Religion"
         ],
         "4.Starting Equipment or 4d4 x 10 gp": [
@@ -3674,7 +3674,7 @@
             "A spellbook"
         ],
         "5.Multiclassing": [
-            "Need INT of 13 to multiclass in or out",
+            "Need Intelligence of 13 to multiclass in or out",
             "Proficiencies gained: None",
             "Spell slots: Add your levels in wizard to the levels from other classes to determine spell slots"
         ],
