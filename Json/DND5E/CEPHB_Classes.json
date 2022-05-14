@@ -295,7 +295,7 @@
         ],
         "999.<LIST_STOP>": ""
     },
-    "Artificer#COLLAPSE#FONT(COLLAPSE, DEFAULT)": {
+    "Artificer#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
         "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
