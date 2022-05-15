@@ -1089,4 +1089,4 @@
     }
     return F(li), v(li), { Alert: q, Button: U, Carousel: at, Collapse: mt, Dropdown: Ht, Modal: he, Offcanvas: me, Popover: Fe, ScrollSpy: Ye, Tab: ei, Toast: li, Tooltip: $e }
 }));
-//# sourceMappingURL=bootstrap.min.js.map
+//# sourceMappingURL=Bootstrap.js.map
