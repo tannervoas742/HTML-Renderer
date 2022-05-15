@@ -191,8 +191,8 @@
         "6.<LIST_ITEM><GOTO:Fighter:Classes+Fighter>": [
             "<LIST_START>",
             "<LIST_ITEM>Arcane Archer",
-            "<LIST_ITEM>Battle Master",
             "<LIST_ITEM>Banneret",
+            "<LIST_ITEM>Battle Master",
             "<LIST_ITEM>Cavalier",
             "<LIST_ITEM>Champion",
             "<LIST_ITEM>Echo Knight",
