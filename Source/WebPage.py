@@ -2,6 +2,7 @@ import yattag
 import os
 import io
 import re
+from TextProcessor import TextProcessor
 from WebPageEnums import WebPageEnums
 from WebPageStateManager import WebPageStateManager
 from WebTable import WebTable
@@ -14,6 +15,7 @@ class WebPage:
         self.ConsumeMetaData("_metadata")
     
     def InitContainers(self):
+        self.TP = TextProcessor()
         self.SeenLinkUps = {}
         self.SeenLinkDowns = {}
         self.PostProcessRefList = {}
@@ -264,24 +266,31 @@ class WebPage:
 
     def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
         ContinueFlag = True
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Input, State, Interface, Data = self.ApplyCallbacks(Input, State, Interface, Data)
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'INC' in Interface:
             Input, State, Interface, Data = self.ApplyINCCommand(Input, State, Interface, Data)
         elif 'RANGE' in Interface:
             Input, State, Interface, Data = self.ApplyRANGECommand(Input, State, Interface, Data)
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Input, State, Interface, Data = self.ApplyAPPENDCommandFamily(Input, State, Interface, Data)
         Input, State, Interface, Data = self.ApplyLOOKUPCommand(Input, State, Interface, Data)
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.ParamStorage[Input] = Data
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if State['visible'] == False:
             return ContinueFlag, Data
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_BEFORE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         ValidLinkup = True
         if Data == None:
@@ -290,7 +299,10 @@ class WebPage:
             ValidLinkup = False
         if '<LIST_' in Input and '>' in Input:
             ValidLinkup = False
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #TODO: Should be "if IsKey:" but due to need to extract displayed text from <> command before doing, otherwise applied link is invalid. Also shouldn't link if displayed text is "" still.
+        #      - GATE: Want to build dedicated test/command processor before applying this.
         if ValidLinkup:
             ListToLink = PermuteWithOrder(State['key'] + [Input])
             if len(ListToLink) > 1:
@@ -304,9 +316,11 @@ class WebPage:
                 self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         else:
             self.AddText(Input, State, Interface, Data, IsKey=IsKey)
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if State['mode'] == WebPageEnums.LookupTable:
             self.AddLookupTable(Input, State, Interface, Data)
@@ -318,15 +332,18 @@ class WebPage:
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if type(Data) in [str, int, float, bool]:
             _, NewData, NewInterface = self.GetInterfaceFromKey(str(Data))
             NewState = State.MixState(NewInterface, self)
             self.AddText(NewData, NewState, NewInterface, None)
             return False, None
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_AFTER' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return ContinueFlag, Data
 
