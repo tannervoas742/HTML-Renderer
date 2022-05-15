@@ -3086,7 +3086,16 @@
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1. Martial Archetype":{
                 "1.":"At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
-                "2.":[]
+                "2.Arcane Archer":{},
+                "3.Banneret":{},
+                "4.Battle Master":{},
+                "5.Cavalier":{},
+                "6.Champion":{},
+                "7.Echo Knight":{},
+                "8.Eldritch Knight":{},
+                "9.Psi Warrior":{},
+                "10.Rune Knight":{},
+                "11.Samurai":{}
             }
         },
         "9.4th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
