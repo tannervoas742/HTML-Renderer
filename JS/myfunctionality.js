@@ -45,8 +45,10 @@ $(document).ready(function() {
             targetElement = targetElement.parentElement;
         }
         if (toClickOuter != null) {
+            toClickOuter.parentElement.children[1].classList.add("instant-update");
             toClickOuter.click();
             setTimeout(opencollapse, 10);
+            toClickOuter.parentElement.children[1].classList.remove("instant-update");
             return;
         }
         setTimeout(waitforelement, 10);
@@ -73,7 +75,9 @@ function opencollapsewithlinkaddress(LinkElement, Pre, Address) {
         if (targetElement.parentElement.classList.contains("list-collapsible")) {
             if (targetElement.parentElement.classList.contains("active") == false) {
                 if (targetElement.parentElement.children[0].classList.contains("collapsible-header")) {
+                    targetElement.classList.add("instant-update");
                     targetElement.parentElement.children[0].click()
+                    targetElement.classList.remove("instant-update");
                 }
             }
         }
@@ -102,3 +106,21 @@ function opencollapsewithlinkaddress(LinkElement, Pre, Address) {
     }
     return false;
 }
+
+$(document).ready(function() {
+    document.addEventListener("keydown", function(e) {
+        if (e.ctrlKey && e.key == 'f') {
+            var CollapsiblesToOpen = document.getElementsByClassName('collapsible-body');
+            for (let i = 0; i < CollapsiblesToOpen.length; i++) {
+                if (CollapsiblesToOpen[i].parentElement.classList.contains('active') == false) {
+                    CollapsiblesToOpen[i].classList.add("dont-close-others");
+                    CollapsiblesToOpen[i].classList.add("instant-update");
+                    CollapsiblesToOpen[i].parentElement.children[0].click()
+                    CollapsiblesToOpen[i].classList.remove("instant-update");
+                    CollapsiblesToOpen[i].classList.remove("dont-close-others");
+                }
+            }
+            window.scrollTo(0, 0);
+        }
+    });
+})

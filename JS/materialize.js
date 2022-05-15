@@ -806,7 +806,12 @@ M.anime = function() {
                             var s = n.css("padding-top"),
                                 o = n.css("padding-bottom"),
                                 a = n[0].scrollHeight;
-                            n.css({ paddingTop: 0, paddingBottom: 0 }), l({ targets: n[0], height: a, paddingTop: s, paddingBottom: o, duration: this.options.inDuration, easing: "easeInOutCubic", complete: function(t) { n.css({ overflow: "", paddingTop: "", paddingBottom: "", height: "" }), "function" == typeof e.options.onOpenEnd && e.options.onOpenEnd.call(e, i[0]) } })
+                            if (n.hasClass("instant-update")) {
+                                n.css({ paddingTop: 0, paddingBottom: 0 }), l({ targets: n[0], height: a, paddingTop: s, paddingBottom: o, duration: 0, easing: "easeInOutCubic", complete: function(t) { n.css({ overflow: "", paddingTop: "", paddingBottom: "", height: "" }), "function" == typeof e.options.onOpenEnd && e.options.onOpenEnd.call(e, i[0]) } })
+                            } else {
+                                n.css({ paddingTop: 0, paddingBottom: 0 }), l({ targets: n[0], height: a, paddingTop: s, paddingBottom: o, duration: this.options.inDuration, easing: "easeInOutCubic", complete: function(t) { n.css({ overflow: "", paddingTop: "", paddingBottom: "", height: "" }), "function" == typeof e.options.onOpenEnd && e.options.onOpenEnd.call(e, i[0]) } })
+                            }
+
                         }
                     }
                 }, {
@@ -816,7 +821,11 @@ M.anime = function() {
                             i = this.$el.children("li").eq(t);
                         if (i.length) {
                             var n = i.children(".collapsible-body");
-                            l.remove(n[0]), n.css("overflow", "hidden"), l({ targets: n[0], height: 0, paddingTop: 0, paddingBottom: 0, duration: this.options.outDuration, easing: "easeInOutCubic", complete: function() { n.css({ height: "", overflow: "", padding: "", display: "" }), "function" == typeof e.options.onCloseEnd && e.options.onCloseEnd.call(e, i[0]) } })
+                            if (n.hasClass("instant-update")) {
+                                l.remove(n[0]), n.css("overflow", "hidden"), l({ targets: n[0], height: 0, paddingTop: 0, paddingBottom: 0, duration: 0, easing: "easeInOutCubic", complete: function() { n.css({ height: "", overflow: "", padding: "", display: "" }), "function" == typeof e.options.onCloseEnd && e.options.onCloseEnd.call(e, i[0]) } })
+                            } else {
+                                l.remove(n[0]), n.css("overflow", "hidden"), l({ targets: n[0], height: 0, paddingTop: 0, paddingBottom: 0, duration: this.options.outDuration, easing: "easeInOutCubic", complete: function() { n.css({ height: "", overflow: "", padding: "", display: "" }), "function" == typeof e.options.onCloseEnd && e.options.onCloseEnd.call(e, i[0]) } })
+                            }
                         }
                     }
                 }, {
@@ -828,12 +837,14 @@ M.anime = function() {
                         var i = this,
                             e = this.$el.children("li").eq(t);
                         if (e.length && !e[0].classList.contains("active")) {
-                            if ("function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, e[0]), this.options.accordion) {
-                                var n = this.$el.children("li");
-                                this.$el.children("li.active").each(function(t) {
-                                    var e = n.index(r(t));
-                                    i.close(e)
-                                })
+                            if (e[0].children[1].classList.contains("dont-close-others") == false) {
+                                if ("function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, e[0]), this.options.accordion) {
+                                    var n = this.$el.children("li");
+                                    this.$el.children("li.active").each(function(t) {
+                                        var e = n.index(r(t));
+                                        i.close(e)
+                                    })
+                                }
                             }
                             if (e.length && e[0].children.length && e[0].children[0].classList.contains("collapsible-header-open") == false) {
                                 e[0].children[0].classList.add("collapsible-header-open");
