@@ -205,82 +205,84 @@ class WebPage:
             self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
             self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
 
-    def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
-        ContinueFlag = True
+    def ApplyCallbacks(self, Input, State, Interface, Data):
         if len(State['callback']) > 0:
             for Callback in State['callback']:
                 Data = Callback(self, State, Interface, Data)
-        if 'INC' in Interface:
-            Computed = []
-            IntData = list(filter(lambda Item: type(Item) == int, Data))
-            IntData.sort()
-            for i in IntData:
-                while len(Computed) < i:
-                    if len(Computed) == 0:
-                        Computed += [0]
-                    else:
-                        Computed += [Computed[-1]]
-                Computed[i - 1] += 1
-            StrData = list(sorted(list(filter(lambda Item: type(Item) == str, Data)), key=lambda Sort: int(Sort.split('=')[0])))
-            for i in StrData:
-                Index = int(i.split('=')[0]) - 1
-                Value = i.split('=')[1]
-                while len(Computed) < Index + 1:
+        return Input, State, Interface, Data
+
+    def ApplyAPPENDCommandFamily(self, Input, State, Interface, Data):
+        BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
+        BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
+        for Match in BeforeMatch:
+            Pattern = Match.group(1)
+            Data = list(map(lambda Val: Pattern + str(Val), Data))
+        AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
+        AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
+        for Match in AfterMatch:
+            Pattern = Match.group(1)
+            Data = list(map(lambda Val: str(Val) + Pattern, Data))
+        return Input, State, Interface, Data
+    
+    def ApplyLOOKUPCommand(self, Input, State, Interface, Data):
+        LookupReg = re.compile("LOOKUP\((.*?)\)")
+        LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
+        for Match in LookupMatch:
+            Key = Match.group(1)
+            Data = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com).split('#')[0], Data))))
+        return Input, State, Interface, Data
+
+    def ApplyINCCommand(self, Input, State, Interface, Data):
+        Computed = []
+        IntData = list(filter(lambda Item: type(Item) == int, Data))
+        IntData.sort()
+        for i in IntData:
+            while len(Computed) < i:
+                if len(Computed) == 0:
+                    Computed += [0]
+                else:
                     Computed += [Computed[-1]]
-                for j in range(Index, len(Computed)):
-                    Computed[j] = Value
-            BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
-            BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
-            for Match in BeforeMatch:
-                Pattern = Match.group(1)
-                Computed = list(map(lambda Val: Pattern + str(Val), Computed))
-            AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
-            AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
-            for Match in AfterMatch:
-                Pattern = Match.group(1)
-                Computed = list(map(lambda Val: str(Val) + Pattern, Computed))
-            LookupReg = re.compile("LOOKUP\((.*?)\)")
-            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
-            for Match in LookupMatch:
-                Key = Match.group(1)
-                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
-            self.ParamStorage[Input] = Computed
-            ContinueFlag = False
+            Computed[i - 1] += 1
+        StrData = list(sorted(list(filter(lambda Item: type(Item) == str, Data)), key=lambda Sort: int(Sort.split('=')[0])))
+        for i in StrData:
+            Index = int(i.split('=')[0]) - 1
+            Value = i.split('=')[1]
+            while len(Computed) < Index + 1:
+                Computed += [Computed[-1]]
+            for j in range(Index, len(Computed)):
+                Computed[j] = Value
+        return Input, State, Interface, Computed
+
+    def ApplyRANGECommand(self, Input, State, Interface, Data):
+        Computed = []
+        while len(Data) >= 2:
+            Computed += [i for i in range(Data[0], Data[1] + 1)]
+            Data = Data[2:]
+        Computed.sort()
+        
+        return Input, State, Interface, Computed
+
+    def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
+        ContinueFlag = True
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        Input, State, Interface, Data = self.ApplyCallbacks(Input, State, Interface, Data)
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if 'INC' in Interface:
+            Input, State, Interface, Data = self.ApplyINCCommand(Input, State, Interface, Data)
         elif 'RANGE' in Interface:
-            Computed = []
-            while len(Data) >= 2:
-                Computed += [i for i in range(Data[0], Data[1] + 1)]
-                Data = Data[2:]
-            Computed.sort()
-            BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
-            BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
-            for Match in BeforeMatch:
-                Pattern = Match.group(1)
-                Computed = list(map(lambda Val: Pattern + str(Val), Computed))
-            AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
-            AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
-            for Match in AfterMatch:
-                Pattern = Match.group(1)
-                Computed = list(map(lambda Val: str(Val) + Pattern, Computed))
-            LookupReg = re.compile("LOOKUP\((.*?)\)")
-            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
-            for Match in LookupMatch:
-                Key = Match.group(1)
-                Computed = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com), Computed))))
-            self.ParamStorage[Input] = Computed
-            ContinueFlag = False
-        else:
-            LookupReg = re.compile("LOOKUP\((.*?)\)")
-            LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
-            for Match in LookupMatch:
-                Key = Match.group(1)
-                Step1 = list(map(lambda Com: str(Com).split('#')[0], Data))
-                Data = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], Step1))
-            self.ParamStorage[Input] = Data
+            Input, State, Interface, Data = self.ApplyRANGECommand(Input, State, Interface, Data)
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        Input, State, Interface, Data = self.ApplyAPPENDCommandFamily(Input, State, Interface, Data)
+        Input, State, Interface, Data = self.ApplyLOOKUPCommand(Input, State, Interface, Data)
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        self.ParamStorage[Input] = Data
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if State['visible'] == False:
             return ContinueFlag, Data
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_BEFORE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         ValidLinkup = True
         if Data == None:
             ValidLinkup = False
@@ -288,6 +290,7 @@ class WebPage:
             ValidLinkup = False
         if '<LIST_' in Input and '>' in Input:
             ValidLinkup = False
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if ValidLinkup:
             ListToLink = PermuteWithOrder(State['key'] + [Input])
             if len(ListToLink) > 1:
@@ -301,8 +304,10 @@ class WebPage:
                 self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         else:
             self.AddText(Input, State, Interface, Data, IsKey=IsKey)
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_MIDDLE' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if State['mode'] == WebPageEnums.LookupTable:
             self.AddLookupTable(Input, State, Interface, Data)
             if 'HR_AFTER' in Interface:
@@ -313,13 +318,16 @@ class WebPage:
             if 'HR_AFTER' in Interface:
                 self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
             return False, None
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if type(Data) in [str, int, float, bool]:
             _, NewData, NewInterface = self.GetInterfaceFromKey(str(Data))
             NewState = State.MixState(NewInterface, self)
             self.AddText(NewData, NewState, NewInterface, None)
             return False, None
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HR_AFTER' in Interface:
             self.Doc.stag('hr', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return ContinueFlag, Data
 
     def CleanText(self, Text):
@@ -614,6 +622,8 @@ class WebPage:
                 OutFile.write('}\n')
 
     def GetInterfaceFromKey(self, OKey):
+        if type(OKey) != str:
+            return 'INF', OKey, []
         Rank = 'INF'
         DotPattern = re.compile('(\d+?)\.(.*)')
         DotMatch = DotPattern.match(OKey)
