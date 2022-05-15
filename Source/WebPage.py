@@ -56,21 +56,24 @@ class WebPage:
     def HeadAndLinkHTML(self):
         with self.Tag('head'):
             self.Doc.stag('meta', 'charset="UTF-8"')
-            self.Doc.stag('link', 'href="../CSS/bootstrap.min.css"', 'rel="stylesheet"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/bootstrap.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
-            #self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/random.css"')
             
 
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
                 pass
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.min.js"'):
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.js"'):
                 pass
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
                 pass
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
                 pass
+            if 'javascript' in self.MetaData:
+                for File in self.MetaData['javascript']:
+                    with self.Tag('script', 'type="text/javascript"', 'src="{}"'.format(File)):
+                        pass
     
     def StickyHeaderSection(self):
         with self.Tag('header'):

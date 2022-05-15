@@ -46,7 +46,10 @@
             "HEADER": {
                 "font": "24px bold"
             }
-        }
+        },
+        "javascript": [
+            "../JS/_CUSTOM_IterativeCharacterSheet.js"
+        ]
     },
     "_precompute#HIDDEN": {
         "_st": {
