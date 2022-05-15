@@ -121,6 +121,10 @@ div.collapsible-body {
     padding-bottom: 0px;
 }
 
+li.active div.collapsible-body {
+    padding-bottom: 30px;
+}
+
 div.collapsible-header {
     margin-left: -30px;
     margin-right: -30px;
@@ -263,4 +267,25 @@ nav li a:hover {
 
 a.is-anchor-link {
     scroll-margin-top: '1em';
+}
+
+html.expand-all#top-html body.html-renderer div.collapsible-body {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+}
+
+html.expand-all#top-html body.html-renderer div.collapsible-header {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+html.expand-all#top-html body.html-renderer li.list-collapsible {
+    border: 0px;
+}
+
+html.expand-all#top-html body.html-renderer ul.collapsible {
+    border: 0px;
 }

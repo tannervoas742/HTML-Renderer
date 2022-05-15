@@ -791,6 +791,9 @@ M.anime = function() {
                                     s = i.children("li"),
                                     o = n[0].classList.contains("active"),
                                     a = s.index(n);
+                                if (document.getElementById("top-html").classList.contains("expand-all") == true) {
+                                    document.getElementById("top-html").classList.remove("expand-all");
+                                }
                                 o ? this.close(a) : this.open(a);
                             }
                         }
@@ -832,7 +835,7 @@ M.anime = function() {
                     key: "open",
                     value: function(t) {
                         if (document.getElementById("top-html").classList.contains("updating-collapsible") == false) {
-                            document.getElementById("top-html").classList.add("updating-collapsible")
+                            document.getElementById("top-html").classList.add("updating-collapsible");
                         }
                         var i = this,
                             e = this.$el.children("li").eq(t);
