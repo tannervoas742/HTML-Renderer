@@ -56,19 +56,19 @@ class WebPage:
     def HeadAndLinkHTML(self):
         with self.Tag('head'):
             self.Doc.stag('meta', 'charset="UTF-8"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/bootstrap.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/materialize.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/mystyle.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/Bootstrap.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/Materialize.css"')
+            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/MyStyle.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
             
 
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/jquery-1.2.6.js"'):
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/JQuery-1.2.6.js"'):
                 pass
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/bootstrap.js"'):
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/Bootstrap.js"'):
                 pass
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/materialize.js"'):
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/Materialize.js"'):
                 pass
-            with self.Tag('script', 'type="text/javascript"', 'src="../JS/myfunctionality.js"'):
+            with self.Tag('script', 'type="text/javascript"', 'src="../JS/MyFunctionality.js"'):
                 pass
             if 'javascript' in self.MetaData:
                 for File in self.MetaData['javascript']:
