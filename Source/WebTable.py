@@ -22,7 +22,7 @@ class WebTable:
         if len(ColumnWidthMatch) > 0:
             NewWidths = ColumnWidthMatch[0].group(1).replace(' ', '').split(',')
             for IDX in range(len(NewWidths)):
-                if IDX < len(Widths):
+                if IDX < len(self.Widths):
                     if NewWidths[IDX].lower() != 'none':
                         self.Widths[IDX] = NewWidths[IDX]
         

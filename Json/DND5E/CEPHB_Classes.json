@@ -192,12 +192,12 @@
             "<LIST_START>",
             "<LIST_ITEM>Arcane Archer",
             "<LIST_ITEM>Battle Master",
+            "<LIST_ITEM>Banneret",
             "<LIST_ITEM>Cavalier",
             "<LIST_ITEM>Champion",
             "<LIST_ITEM>Echo Knight",
             "<LIST_ITEM>Eldritch Knight",
             "<LIST_ITEM>Psi Warrior",
-            "<LIST_ITEM>Purple Dragon Knight",
             "<LIST_ITEM>Rune Knight",
             "<LIST_ITEM>Samurai",
             "<LIST_STOP>"
@@ -531,7 +531,7 @@
                         "Creating an <ITALIC>experimental elixir</ITALIC> requires you to have alchemist supplies on your person, and any elixir you create with this feature lasts until it is drunk or until the end of your next long rest.",
                         "When you reach certain levels in this class, you can make more elixirs at the end of a long rest: two at 6th level and three at 15th level. Roll for each elixir's effect separately. Each elixir requires its own flask."
                     ],
-                    "2.Experimental Elixir#TABLE": [
+                    "2.Experimental Elixir#TABLE#COLUMN_WIDTH(30%)": [
                         ["1d6", "Effect"],
                         ["1", "<BOLD>Healing.</BOLD> The drinker regains a number of hit points equal to 2d4 + your Intelligence Modifier"],
                         ["2", "<BOLD>Swiftness.</BOLD> The drinker's walking speed increases by 10 feet for 1 hour."],
@@ -594,7 +594,7 @@
                         "The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the mending spell is cast on it, it regains 2d6 hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
                         "When you create the cannon, you determine its appearance and whether it has legs. You also decide which type it is, choosing from the options on the Eldritch Cannons table. On each of your turns, you can take a bonus action to cause the cannon to activate if you are within 60 feet of it. As part of the same bonus action, you can direct the cannon to walk or climb up to 15 feet to an unoccupied space, provided it has legs."
                     ],
-                    "2.Eldritch Cannon#TABLE": [
+                    "2.Eldritch Cannon#TABLE#COLUMN_WIDTH(30%)": [
                         ["Cannon", "Activation"],
                         ["Flamethrower", "The cannon exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking 2d8 fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."],
                         ["Force Ballista", "Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes 2d8 force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon."],
@@ -1365,7 +1365,7 @@
                         "You can retain only one of these tales in mind at a time, and rolling on the Spirit Tales table immediately ends the effect of the previous tale.",
                         "If the tale requires a saving throw, the DC equals your spell save DC."
                     ],
-                    "2.Spirit Tales#TABLE": [
+                    "2.Spirit Tales#TABLE#COLUMN_WIDTH(30%)": [
                         ["Bardic Inspiration Die", "Tale Told Through You"],
                         ["1", "<BOLD>Tale of the Clever Animal.</BOLD> For the next 10 minutes, whenever the target makes an Intelligence, a Wisdom, or a Charisma check, the target can roll an extra die immediately after rolling the d20 and add the extra die's number to the check. The extra die is the same type as your Bardic Inspiration die."],
                         ["2", "<BOLD>Tale of the Renowned Duelist.</BOLD> You make a melee spell attack against the target. On a hit, the target takes force damage equal to two rolls of your Bardic Inspiration die + your Charisma modifier."],
@@ -1855,7 +1855,7 @@
                         "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. It also can't take reactions. For its action, it can only use the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
                         "After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the Banishment spell, no concentration required) if it isn't on its plane of origin and its challenge rating is at or below a certain threshold, as shown on the Arcane Banishment table."
                     ],
-                    "2.Arcane Banishment#TABLE": [
+                    "2.Arcane Banishment#TABLE#COLUMN_WIDTH(30%)": [
                         ["Cleric Level", "Banishes Creatures of CR"],
                         ["5th", "1/2 or lower"],
                         ["8th", "1 or lower"],
@@ -2633,7 +2633,7 @@
                             "Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid. Choose that land – arctic, coast, desert, forest, grassland, mountain, swamp, or Underdark – and consult the associated list of spells.",
                             "Once you gain access to a circle spell, you always have it prepared, and it doesn't count against the number of spells you can prepare each day. If you gain access to a spell that doesn't appear on the druid spell list, the spell is nonetheless a druid spell for you."
                         ],
-                        "2.Arctic#TABLE": [
+                        "2.Arctic#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Hold Person:Spells+Hold Person>, <GOTO:Spike Growth:Spells+Spike Growth>"],
                             ["5th", "<GOTO:Sleet Storm:Spells+Sleet Storm>, <GOTO:Slow:Spells+Slow>"],
@@ -2641,7 +2641,7 @@
                             ["9th", "<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Cone of Cold:Spells+Cone of Cold>"]
 
                         ],
-                        "3.Coast#TABLE": [
+                        "3.Coast#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Mirror Image:Spells+Mirror Image>, <GOTO:Misty Step:Spells+Misty Step>"],
                             ["5th", "<GOTO:Water Breathing:Spells+Water Breathing>, <GOTO:Water Walk:Spells+Water Walk>"],
@@ -2649,7 +2649,7 @@
                             ["9th", "<GOTO:Conjure Elemental:Spells+Conjure Elemental>, <GOTO:Scrying:Spells+Scrying>"]
 
                         ],
-                        "4.Desert#TABLE": [
+                        "4.Desert#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Blur:Spells+Blur>, <GOTO:Silence:Spells+Silence>"],
                             ["5th", "<GOTO:Create Food and Water:Spells+Create Food and Water>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
@@ -2657,14 +2657,14 @@
                             ["9th", "<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
 
                         ],
-                        "5.Forest#TABLE": [
+                        "5.Forest#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Barkskin:Spells+Barkskin>, <GOTO:Spider Climb:Spells+Spider Climb>"],
                             ["5th", "<GOTO:Call Lightning:Spells+Call Lightning>, <GOTO:Plant Growth:Spells+Plant Growth>"],
                             ["7th", "<GOTO:Divination:Spells+Divination>, <GOTO:Freedom of Movement:Spells+Freedom of Movement>"],
                             ["9th", "<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Tree Stride:Spells+Tree Stride>"]
                         ],
-                        "6.Grassland#TABLE": [
+                        "6.Grassland#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Invisibility:Spells+Invisibility>, <GOTO:Pass Without Trace:Spells+Pass Without Trace>"],
                             ["5th", "<GOTO:Daylight:Spells+Daylight>, <GOTO:Haste:Spells+Haste>"],
@@ -2672,21 +2672,21 @@
                             ["9th", "<GOTO:Dream:Spells+Dream>, <GOTO:Insect Plague:Spells+Insect Plague>"]
 
                         ],
-                        "7.Mountain#TABLE": [
+                        "7.Mountain#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Spike Growth:Spells+Spike Growth>"],
                             ["5th", "<GOTO:Lightning Bolt:Spells+Lightning Bolt>, <GOTO:Meld into Stone:Spells+Meld into Stone>"],
                             ["7th", "<GOTO:Stone Shape:Spells+Stone Shape>, <GOTO:Stoneskin:Spells+Stoneskin>"],
                             ["9th", "<GOTO:Passwall:Spells+Passwall>, <GOTO:Wall of Stone:Spells+Wall of Stone>"]
                         ],
-                        "8.Swamp#TABLE": [
+                        "8.Swamp#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Darkness:Spells+Darkness>, <GOTO:Melf's Acid Arrow:Spells+Melf's Acid Arrow>"],
                             ["5th", "<GOTO:Water Walk:Spells+Water Walk>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
                             ["7th", "<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Locate Creature:Spells+Locate Creature>"],
                             ["9th", "<GOTO:Insect Plague:Spells+Insect Plague>, <GOTO:Scrying:Spells+Scrying>"]
                         ],
-                        "9.Underdark#TABLE": [
+                        "9.Underdark#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Spider Climb:Spells+Spider Climb>, <GOTO:Web:Spells+Web>"],
                             ["5th", "<GOTO:Gaseous Form:Spells+Gaseous Form>, <GOTO:Stinking Cloud:Spells+Stinking Cloud>"],
@@ -2728,7 +2728,7 @@
                             "<LIST_ITEM><GOTO:Chill Touch:Spells+Chill Touch>",
                             "<LIST_STOP>"
                         ],
-                        "3.Circle of Spores Spells at Higher Levels#TABLE": [
+                        "3.Circle of Spores Spells at Higher Levels#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>, <GOTO:Gentle Repose:Spells+Gentle Repose>"],
                             ["5th", "<GOTO:Animate Dead:Spells+Animate Dead>, <GOTO:Gaseous Form:Spells+Gaseous Form>"],
@@ -2758,7 +2758,7 @@
                             "<LIST_STOP>",
                             "If you lose the map, you can perform a 1-hour ceremony to magically create a replacement. This ceremony can be performed during a short or long rest, and it destroys the previous map."
                         ],
-                        "2.#TABLE": [
+                        "2.#TABLE#COLUMN_WIDTH(30%)": [
                             ["d6", "Map Form"],
                             ["1", "A scroll covered with depictions of constellations"],
                             ["2", "A stone tablet with fine holes drilled through it"],
@@ -2789,7 +2789,7 @@
                             "<LIST_ITEM><GOTO:Cure Wounds:Spells+Cure Wounds>",
                             "<LIST_STOP>"
                         ],
-                        "3.Circle of Wildfire Spells at Higher Levels#TABLE": [
+                        "3.Circle of Wildfire Spells at Higher Levels#TABLE#COLUMN_WIDTH(30%)": [
                             ["Druid Level", "Circle Spells"],
                             ["3rd", "<GOTO:Flaming Sphere:Spells+Flaming Sphere>, <GOTO:Scorching Ray:Spells+Scorching Ray>"],
                             ["5th", "<GOTO:Plant Growth:Spells+Plant Growth>, <GOTO:Revivify:Spells+Revivify>"],
@@ -3003,22 +3003,22 @@
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
             "Martial Archetype",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Extra Attack",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Martial Archetype feature",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Indomitable (one use)",
-            "Martial Archetype feature",
+            "Martial Archetype feature, Martial Versatility (Optional)",
             "Extra Attack (2)",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Indomitable (two uses)",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Martial Archetype feature",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Action Surge (two uses), Indomitable (three uses)",
             "Martial Archetype feature",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Extra Attack (3)"
         ],
         "1.The Fighter#LOOKUP_TABLE(1,20)": [
@@ -3046,41 +3046,168 @@
         ],
 
 
-        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Fighting Style":[
+                "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+                "<LIST_START>",
+                "<LIST_ITEM><BOLD>Archery.</BOLD> You gain a +2 bonus to attack rolls you make with ranged weapons.",
+                "<LIST_ITEM><BOLD>Blind Fighting.</BOLD> You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.",
+                "<LIST_ITEM><BOLD>Defense.</BOLD> While you are wearing armor, you gain a +1 bonus to AC.",
+                "<LIST_ITEM><BOLD>Dueling.</BOLD> When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+                "<LIST_ITEM><BOLD>Great Weapon Fighting.</BOLD> When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.",
+                "<LIST_ITEM><BOLD>Interception.</BOLD> When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction.",
+                "<LIST_ITEM><BOLD>Protection.</BOLD> When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.",
+                "<LIST_ITEM><BOLD>Superior Technique.</BOLD> You learn one maneuver of your choice from among those available to the Battle Master archetype. If a maneuver you use requires your target to make a saving throw to resist the maneuver's effects, the saving throw DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice.)",
+                    "<LIST_START>",
+                    "<LIST_ITEM>You gain one superiority die, which is a d6 (this die is added to any superiority dice you have from another source). This die is used to fuel your maneuvers. A superiority die is expended when you use it. You regain your expended superiority dice when you finish a short or long rest.",
+                    "<LIST_STOP>",
+                "<LIST_ITEM><BOLD>Thrown Weapon Fighting.</BOLD> You can draw a weapon that has the thrown property as part of the attack you make with the weapon.",
+                    "<LIST_START>",
+                    "<LIST_ITEM>In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.",
+                    "<LIST_STOP>",
+                "<LIST_ITEM><BOLD>Two-Weapon Fighting.</BOLD> When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.",
+                "<LIST_ITEM><BOLD>Unarmed Fighting.</BOLD> Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.",
+                    "<LIST_START>",
+                    "<LIST_ITEM>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.",
+                    "<LIST_STOP>",
+                "<LIST_STOP>"
+            ],
+            "2.Second Wind":[
+                "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.",
+                "Once you use this feature, you must finish a short or long rest before you can use it again."
+            ]
+        },
+        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Action Surge":[
+                "Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.",
+                "Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
+            ]
+        },
+        "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Martial Archetype":{
+                "1.":"At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.",
+                "2.Arcane Archer":{},
+                "3.Banneret":{},
+                "4.Battle Master":{},
+                "5.Cavalier":{},
+                "6.Champion":{},
+                "7.Echo Knight":{},
+                "8.Eldritch Knight":{},
+                "9.Psi Warrior":{},
+                "10.Rune Knight":{},
+                "11.Samurai":{}
+            }
+        },
         "9.4th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Extra Attack":[
+                "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+                "The number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class."
+            ]
+        },
+        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
+        },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Indomitable":[
+                "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest.",
+                "You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+            ]
+        },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Extra Attack":"Beginning at 11th level, you can attack three times whenever you take the Attack action on your turn."
+        },
         "17.12th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Indomitable (two uses)":[
+                "You can reroll a saving throw that you fail. If you do so, you must use the new roll",
+                "Beginning at 13th level, you can use this feature twice between long rests."
+            ]
+        },
+        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
+        },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Action Surge (two uses)":"Starting at 17th level, you can use this feautre twice before you must take a short or long rest, but only once on the same turn.",
+            "2.Indomitable (three uses)":[
+                "You can reroll a saving throw that you fail. If you do so, you must use the new roll",
+                "Beginning at 17th level, you can use this feature three times between long rests."
+            ]
+        },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "24.19th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":[
+                "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, as you shift the focus of your martial practice:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace a fighting style you know with another fighting style available to fighters.",
+                "<LIST_ITEM>If you know any maneuvers from the Battle Master archetype, you can replace one maneuver you know with a different maneuver.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {}
+        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Extra Attack":"Beginning at 20th level, you can attack four times whenever you take the Attack action on your turn."
+        }
     },
     "Monk#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
