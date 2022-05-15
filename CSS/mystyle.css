@@ -54,28 +54,28 @@ div.columns-6 {
     column-rule-width: 2px !important;
 }
 
-div.list-div.columns-1.column-inline,
-div.list-div.columns-2.column-inline,
-div.list-div.columns-3.column-inline,
-div.list-div.columns-4.column-inline,
-div.list-div.columns-5.column-inline,
-div.list-div.columns-6.column-inline,
-div.list-div.columns-1.column-inline,
-div.list-div.columns-2.column-inline,
-div.list-div.columns-3.column-inline,
-div.list-div.columns-4.column-inline,
-div.list-div.columns-5.column-inline,
-div.list-div.columns-6.column-inline {
-    display: revert;
+div.list-div.columns-1.subcolumn-inline,
+div.list-div.columns-2.subcolumn-inline,
+div.list-div.columns-3.subcolumn-inline,
+div.list-div.columns-4.subcolumn-inline,
+div.list-div.columns-5.subcolumn-inline,
+div.list-div.columns-6.subcolumn-inline,
+div.list-div.columns-1.subcolumn-inline,
+div.list-div.columns-2.subcolumn-inline,
+div.list-div.columns-3.subcolumn-inline,
+div.list-div.columns-4.subcolumn-inline,
+div.list-div.columns-5.subcolumn-inline,
+div.list-div.columns-6.subcolumn-inline {
+    display: flow-root;
 }
 
-div.columns-1.column-inline,
-div.columns-2.column-inline,
-div.columns-3.column-inline,
-div.columns-4.column-inline,
-div.columns-5.column-inline,
-div.columns-6.column-inline {
-    display: inline-table;
+div.columns-1.subcolumn-inline,
+div.columns-2.subcolumn-inline,
+div.columns-3.subcolumn-inline,
+div.columns-4.subcolumn-inline,
+div.columns-5.subcolumn-inline,
+div.columns-6.subcolumn-inline {
+    display: inline-flex;
 }
 
 div.columns-1.columns-no-rule,
@@ -94,6 +94,15 @@ li.columns-4.columns-center,
 li.columns-5.columns-center,
 li.columns-6.columns-center {
     text-align: center !important;
+}
+
+div.columns-1.columns-center.subcolumn-inline,
+div.columns-2.columns-center.subcolumn-inline,
+div.columns-3.columns-center.subcolumn-inline,
+div.columns-4.columns-center.subcolumn-inline,
+div.columns-5.columns-center.subcolumn-inline,
+div.columns-6.columns-center.subcolumn-inline {
+    text-align: center;
 }
 
 ul.ul-bordered {
@@ -281,10 +290,6 @@ div.header-spacer {
     height: 90px;
     padding: 40px;
     margin: 0;
-}
-
-div.body-div {
-    background-color: ;
 }
 
 nav ul {

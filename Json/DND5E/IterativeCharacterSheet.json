@@ -30,6 +30,19 @@
                 "font": "30px bold",
                 "border-bottom": "2px solid darkgrey"
             },
+            "TABLE_HEADER": {
+                "font": "20px bold"
+            },
+            "FEATURE_HEADER": {
+                "font": "28px bold"
+            },
+            "SUBFEATURE_HEADER": {
+                "font": "24px bold",
+                "border-bottom": "2px solid darkgrey"
+            },
+            "SUB_HEADER": {
+                "font": "20px bold"
+            },
             "HEADER": {
                 "font": "24px bold"
             }
@@ -115,8 +128,8 @@
             "return NewArg"
         ]
     },
-    "Iterative Character Sheet#FONT(TOC, DEFAULT)": {
-        "1.#ADD_CLASS(columns-2 columns-no-rule columns-center column-inline)#LOOKUP(_html)": [
+    "Iterative Character Sheet#KEYFONT(TOC, DEFAULT)#FONT(DEFAULT)": {
+        "1.#ADD_CLASS(columns-2 columns-no-rule columns-center subcolumn-inline)#LOOKUP(_html)": [
             "<LIST_START>",
             "<LIST_START>",
             "<LIST_ITEM>A1",
@@ -129,7 +142,7 @@
             "<LIST_STOP>",
             "<LIST_STOP>"
         ],
-        "2.#ADD_CLASS(columns-3 columns-no-rule columns-center)#LOOKUP(_html)": [
+        "2.#ADD_CLASS(columns-3 columns-no-rule columns-center subcolumn-inline)#LOOKUP(_html)": [
             "<LIST_START>",
             "<LIST_START>",
             "<LIST_ITEM>C1",
@@ -151,5 +164,5 @@
             "<LIST_STOP>"
         ]
     },
-    "Race Selection#COLLAPSE#FONT(COLLAPSE, LARGE_HEADER, DEFAULT)": {}
+    "Race Selection#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {}
 }
