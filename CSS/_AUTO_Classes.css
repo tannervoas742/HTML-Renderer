@@ -5,7 +5,7 @@
 
 .font-class-COLLAPSE { font: 30px bold !important;text-align: left !important;}
 
-.font-class-LARGE_HEADER { font: 30px bold !important;border-bottom: 2px solid darkgrey !important;}
+.font-class-LARGE_HEADER { font: 30px bold !important;padding-top: 10px !important;border-bottom: 2px solid darkgrey !important;}
 
 .font-class-TABLE_HEADER { font: 20px bold !important;}
 

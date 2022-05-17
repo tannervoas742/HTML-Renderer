@@ -120,6 +120,9 @@ $(document).ready(function() {
                     CollapsiblesToOpen[i].classList.remove("dont-close-others");
                 }
             }
+            if (document.getElementById("top-html").classList.contains("expand-all") == false) {
+                document.getElementById("top-html").classList.add("expand-all");
+            }
             window.scrollTo(0, 0);
         }
     });

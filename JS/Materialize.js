@@ -783,15 +783,25 @@ M.anime = function() {
                 }, {
                     key: "_handleCollapsibleClick",
                     value: function(t) {
-                        var e = r(t.target).closest(".collapsible-header");
-                        if (t.target && e.length) {
-                            var i = e.closest(".collapsible");
-                            if (i[0] === this.el) {
-                                var n = e.closest("li"),
-                                    s = i.children("li"),
-                                    o = n[0].classList.contains("active"),
-                                    a = s.index(n);
-                                o ? this.close(a) : this.open(a);
+                        if (document.getElementById("top-html").classList.contains("expand-all") == true) {
+                            document.getElementById("top-html").classList.remove("expand-all");
+                            $(".collapsible-header-open").each(function(Index) {
+                                this.parentElement.children[1].classList.add("instant-update");
+                                this.click();
+                                while (this.classList.contains("collapsible-header-open")) {}
+                                this.parentElement.children[1].classList.remove("instant-update");
+                            });
+                        } else {
+                            var e = r(t.target).closest(".collapsible-header");
+                            if (t.target && e.length) {
+                                var i = e.closest(".collapsible");
+                                if (i[0] === this.el) {
+                                    var n = e.closest("li"),
+                                        s = i.children("li"),
+                                        o = n[0].classList.contains("active"),
+                                        a = s.index(n);
+                                    o ? this.close(a) : this.open(a);
+                                }
                             }
                         }
                     }
@@ -832,10 +842,11 @@ M.anime = function() {
                     key: "open",
                     value: function(t) {
                         if (document.getElementById("top-html").classList.contains("updating-collapsible") == false) {
-                            document.getElementById("top-html").classList.add("updating-collapsible")
+                            document.getElementById("top-html").classList.add("updating-collapsible");
                         }
                         var i = this,
                             e = this.$el.children("li").eq(t);
+
                         if (e.length && !e[0].classList.contains("active")) {
                             if (e[0].children[1].classList.contains("dont-close-others") == false) {
                                 if ("function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, e[0]), this.options.accordion) {
@@ -850,8 +861,11 @@ M.anime = function() {
                                 e[0].children[0].classList.add("collapsible-header-open");
                             }
 
-                            e[0].classList.add("active");
+                            if (e[0].classList.contains("active") == false) {
+                                e[0].classList.add("active");
+                            }
                             this._animateIn(t);
+
 
                             var mat_prevWindowHeight = -100;
 
