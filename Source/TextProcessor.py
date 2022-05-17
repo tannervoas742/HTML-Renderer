@@ -95,4 +95,12 @@ class TextProcessor:
         Values = Value.split(',')
         return Values, len(Values)
 
+    def JoinLists(self, Lists):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        List = []
+        for SubList in Lists:
+            List += SubList
+        return List
+
 

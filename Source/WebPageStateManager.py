@@ -55,6 +55,57 @@ class WebPageStateManager(StateManager):
             if Function[3] != None:
                 State[Function[3]] = MatchData[0]
 
+    def HandleStorageType(self, WP, State, Interface, Function):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if Function[2] == WebPageEnums.Add:
+            Function[0] = 'ADD_' + Function[0]
+        elif Function[2] == WebPageEnums.Del:
+            Function[0] = 'REMOVE_' + Function[0]
+        elif  Function[2] == WebPageEnums.Set:
+            Function[0] = Function[0]
+        else:
+            return
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        MatchData = WP.TP.JoinLists(WP.TP.Extract(Function[0], Interface, True))
+        if WP.TP.Match:
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+            if Function[2] == WebPageEnums.Set:
+                State[Function[1]] = []
+            for Group in MatchData:
+                if Function[2] != WebPageEnums.Del:
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+                    State[Function[1]] += Group.lower().split()
+                else:
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+                    for Tag in Group.lower().split():
+                        if Tag in State[Function[1]]:
+                            del State[Function[1]][State[Function[1]].index(Tag)]
+
+    def HandleCallbacks(self, WP, State, Interface, Function):
+        
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        MatchData = WP.TP.Index(0, WP.TP.Split(WP.TP.Extract(Function[0], Interface, True)))
+        if WP.TP.Match:
+            State[Function[1]] = []
+            for Group in MatchData:
+                State[Function[1]] += list(map(lambda Item: '_CALLBACK_' + Item, Group.split()))
+            Compiled = []
+            for Func in State[Function[1]]:
+                if Func.replace('_CALLBACK_', '') in WP.ParamStorage:
+                    FuncText = WP.ParamStorage[Func.replace('_CALLBACK_', '')]
+                    FuncText = 'def {}(self, STATE, INTERFACE, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
+                    exec(FuncText)
+                    Compiled += [eval(Func)]
+            State[Function[1]] = Compiled
+        else:
+            State[Function[1]] = []
+        
+
     def MixState(self, Interface, WP):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -68,58 +119,22 @@ class WebPageStateManager(StateManager):
             MixedState['visible'] = True
 
         Functions = [
-            ['FONT(.)'          , 'font'                                                      , self.HandleSingleStringKeyAndNext],
-            ['KEYFONT(.)'       , 'key_font'                                                  , self.HandleSingleStringKeyAndNext],
-            ['LOOKUP_TABLE(.,.)', 'mode', WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
-            ['TABLE'            , 'mode', WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ]
+            ['FONT(.)'          , 'font'     ,                                                       self.HandleSingleStringKeyAndNext],
+            ['KEYFONT(.)'       , 'key_font' ,                                                       self.HandleSingleStringKeyAndNext],
+            ['LOOKUP_TABLE(.,.)', 'mode'     , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
+            ['TABLE'            , 'mode'     , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ],
+            ['CLASS(.)'         , 'class'    , WebPageEnums.Add        ,                             self.HandleStorageType           ],
+            ['CLASS(.)'         , 'class'    , WebPageEnums.Del        ,                             self.HandleStorageType           ],
+            ['CLASS(.)'         , 'class'    , WebPageEnums.Set        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'    , WebPageEnums.Add        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'    , WebPageEnums.Del        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'    , WebPageEnums.Set        ,                             self.HandleStorageType           ],
+            ['CALL(.)'          , 'callbacks',                                                       self.HandleCallbacks             ]
         ]
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         for Function in Functions:
             Function[-1](WP, MixedState, Interface, Function)
-
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        ClassPattern = re.compile('CLASS\((.*)\)')
-        ClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: ClassPattern.match(Code), Interface))))))                
-        if len(ClassMatch) > 0:
-            MixedState['class'] = []
-            for Group in ClassMatch:
-                MixedState['class'] += Group.lower().split()
-
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        AddClassPattern = re.compile('ADD_CLASS\((.*)\)')
-        AddClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: AddClassPattern.match(Code), Interface))))))                
-        if len(AddClassMatch) > 0:
-            for Group in AddClassMatch:
-                MixedState['class'] += Group.lower().split()
-
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        RemoveClassPattern = re.compile('REMOVE_CLASS\((.*)\)')
-        RemoveClassMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: RemoveClassPattern.match(Code), Interface))))))                
-        if len(RemoveClassMatch) > 0:
-            for Group in RemoveClassMatch:
-                for Tag in Group.lower().split():
-                    if Tag in MixedState['class']:
-                        del MixedState['class'][MixedState['class'].index(Tag)]
-
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        CallPattern = re.compile('CALL\((.*)\)')
-        CallMatch = list(map(lambda Reg: Reg.group(1), list(filter(lambda Result: Result != None, list(map(lambda Code: CallPattern.match(Code), Interface))))))                
-        if len(CallMatch) > 0:
-            MixedState['callback'] = []
-            for Group in CallMatch:
-                MixedState['callback'] += list(map(lambda Item: '_CALLBACK_' + Item, Group.split()))
-            
-            Compiled = []
-            for Func in MixedState['callback']:
-                if Func.replace('_CALLBACK_', '') in WP.ParamStorage:
-                    FuncText = WP.ParamStorage[Func.replace('_CALLBACK_', '')]
-                    FuncText = 'def {}(self, STATE, INTERFACE, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
-                    exec(FuncText)
-                    Compiled += [eval(Func)]
-            MixedState['callback'] = Compiled
-        else:
-            MixedState['callback'] = []
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return MixedState

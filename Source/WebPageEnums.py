@@ -6,3 +6,9 @@ class WebPageEnums:
         pass
     class Table:
         pass
+    class Add:
+        pass
+    class Set:
+        pass
+    class Del:
+        pass
