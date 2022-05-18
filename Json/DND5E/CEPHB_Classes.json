@@ -3705,7 +3705,11 @@
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Monastic Tradition":{
                 "1.":"When you reach 3rd level, you commit yourself to a monastic tradition. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.",
-                "2.Way of the Ascendant Dragon":{},
+                "2.Way of the Ascendant Dragon":{
+                    "1.":{},
+                    "2.Draconic Disciple":[],
+                    "3.Breath of the Dragon":[]
+                },
                 "3.Way of the Astral Self":{},
                 "4.Way of the Drunken Master":{},
                 "5.Way of the Four Elements":{},
