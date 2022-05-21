@@ -4567,15 +4567,55 @@
             ]
         },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Oath of the Ancients":{},
-            "2.Oath of Conquest":{},
-            "3.Oath of the Crown":{},
-            "4.Oath of Devotion":{},
-            "5.Oath of Glory":{},
-            "6.Oath of Redemption":{},
-            "7.Oath of Vengeance":{},
-            "8.Oath of the Watchers":{},
-            "9.Oathbreaker":{}
+            "1.Oath of the Ancients":{
+                "1.Aura of Warding":[
+                    "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Aura of Conquest":[
+                    "Starting at 7th level, you constantly emanate a menacing aura while you’re not incapacitated. The aura extends 10 feet from you in every direction, but not through total cover.",
+                    "If a creature is frightened of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "3.Oath of the Crown":{
+                "1.Divine Allegiance":"Starting at 7th level, when a creature within 5 feet of you takes damage, you can use your reaction to magically substitute your own health for that of the target creature, causing that creature not to take the damage. Instead, you take the damage. This damage to you can't be reduced or prevented in any way."
+            },
+            "4.Oath of Devotion":{
+                "1.Aura of Devotion":[
+                    "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "5.Oath of Glory":{
+                "1.Aura of Alacrity":[
+                    "At 7th level, you emanate an aura that fills you and your companions with supernatural speed, allowing you to race across a battlefield in formation. Your walking speed increases by 10 feet. In addition, if you aren't incapacitated, the walking speed of any ally who starts their turn within 5 feet of you increases by 10 feet until the end of that turn.",
+                    "At 18th level, the range of this aura increases to 10 feet."
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.Aura of the Guardian":[
+                    "Starting at 7th level, you can shield your allies from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage, instead of that creature taking it. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "7.Oath of Vengeance":{
+                "1.Relentless Avenger":"By 7th level, your supernatural focus helps you close off a foe's retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn't provoke opportunity attacks."
+            },
+            "8.Oath of the Watchers":{
+                "1.Aura of the Sentinel":[
+                    "At 7th level, you emit an aura of alertness while you aren't incapacitated. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "9.Oathbreaker":{
+                "1.Aura of Hate":[
+                    "Starting at 7th level you, as well any fiends and undead within 10 feet of you, gain a bonus to melee weapon damage rolls equal to your Charisma modifier (minimum of +1). A creature can benefit from this feature from only one paladin at a time.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            }
         },
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -4717,15 +4757,39 @@
             ]
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Oath of the Ancients":{},
-            "2.Oath of Conquest":{},
-            "3.Oath of the Crown":{},
-            "4.Oath of Devotion":{},
-            "5.Oath of Glory":{},
-            "6.Oath of Redemption":{},
-            "7.Oath of Vengeance":{},
-            "8.Oath of the Watchers":{},
-            "9.Oathbreaker":{}
+            "1.Oath of the Ancients":{
+                "1.Undying Sentinel":[
+                    "Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest.",
+                    "Additionally, you suffer none of the drawbacks of old age, and you can't be aged magically."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Scornful Rebuke":"Starting at 15th level, those who dare to strike you are psychically punished for their audacity. Whenever a creature hits you with an attack, that creature takes psychic damage equal to your Charisma modifier (minimum of 1) if you’re not incapacitated."
+            },
+            "3.Oath of the Crown":{
+                "1.Unyielding Saint":"Starting at 15th level, you have advantage on saving throws to avoid becoming paralyzed or stunned."
+            },
+            "4.Oath of Devotion":{
+                "1.Purity of Spirit":"Beginning at 15th level, you are always under the effects of a <GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good> spell."
+            },
+            "5.Oath of Glory":{
+                "1.Glorious Defense":[
+                    "When you reach 15th level, you can turn defense into a sudden strike. When you or another creature you can see within 10 feet of you is hit by an attack roll, you can use your reaction to grant a bonus to the target's AC against that attack, potentially causing it to miss. The bonus equals your Charisma modifier (minimum of +1). If the attack misses, you can make one weapon attack against the attacker as part of this reaction, provided the attacker is within your weapon's range.",
+                    "You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.Protective Spirit":"Starting at 15th level, a holy presence mends your wounds in combat. You regain hit points equal to 1d6 + half your paladin level if you end your turn in combat with fewer than half of your hit points remaining and you aren’t incapacitated."
+            },
+            "7.Oath of Vengeance":{
+                "1.Soul of Vengeance":"Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range."
+            },
+            "8.Oath of the Watchers":{
+                "1.Vigilant Rebuke":"At 15th level, you've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, a Wisdom, or a Charisma saving throw, you can use your reaction to deal 2d8 + your Charisma modifier force damage to the creature that forced the saving throw."
+            },
+            "9.Oathbreaker":{
+                "1.Supernatural Resistance":"At 15th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+            }
         },
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -4790,10 +4854,7 @@
             }
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Aura improvements":{
-                "1.Aura of Protection":"At 18th level, the range of this aura increases to 30 feet.",
-                "2.Aura of Courage":"At 18th level, the range of this aura increases to 30 feet."
-            }
+            "1.Aura improvements":"At 18th level, the range of all your auras (including subclass auras) increase to 30 feet, with the sole exception of the Oath of Glory's 7th level aura, Aura of Alacrity, which increases to a range of 10 feet."
         },
         "24.19th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -4801,15 +4862,104 @@
         },
 
         "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Oath of the Ancients":{},
-            "2.Oath of Conquest":{},
-            "3.Oath of the Crown":{},
-            "4.Oath of Devotion":{},
-            "5.Oath of Glory":{},
-            "6.Oath of Redemption":{},
-            "7.Oath of Vengeance":{},
-            "8.Oath of the Watchers":{},
-            "9.Oathbreaker":{}
+            "1.Oath of the Ancients":{
+                "1.Elder Champion":[
+                    "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.",
+                    "Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:",
+                    "<LIST_START>",
+                    "<LIST_ITEM>At the start of each of your turns, you regain 10 hit points.",
+                    "<LIST_ITEM>Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.",
+                    "<LIST_ITEM>Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.",
+                    "<LIST_STOP>",
+                    "Once you use this feature, you can't use it again until you finish a long rest."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Invincible Conqueror":[
+                    "At 20th level, you gain the ability to harness extraordinary martial prowess. As an action, you can magically become an avatar of conquest, gaining the following benefits for 1 minute:",
+                    "<LIST_START>",
+                    "<LIST_ITEM>You have resistance to all damage.",
+                    "<LIST_ITEM>When you take the Attack action on your turn, you can make one additional attack as part of that action.",
+                    "<LIST_ITEM>Your melee weapon attacks score a critical hit on a roll of 19 or 20 on the d20.",
+                    "<LIST_STOP>",
+                    "Once you use this feature, you can’t use it again until you finish a long rest."
+                ]
+            },
+            "3.Oath of the Crown":{
+                "1.Exalted Champion":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "4.Oath of Devotion":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "5.Oath of Glory":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "7.Oath of Vengeance":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "8.Oath of the Watchers":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "9.Oathbreaker":{"1.":[
+                "",
+                "<LIST_START>",
+                "<LIST_ITEM>",
+                "<LIST_ITEM>",
+                "<LIST_ITEM>",
+                "<LIST_STOP>",
+                ""
+            ]}
         }
     },
     "Ranger#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
