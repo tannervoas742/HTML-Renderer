@@ -4507,56 +4507,56 @@
             "1.Extra Attack":"Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Moonbeam:Spells+Moonbeam>",
+                    "<GOTO:Misty Step:Spells+Misty Step>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Person:Spells+Hold Person>",
+                    "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Warding Bond:Spells+Warding Bond>",
+                    "<GOTO:Zone of Truth:Spells+Zone of Truth>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Lesser Restoration:Spells+Lesser Restoration>",
+                    "<GOTO:Zone of Truth:Spells+Zone of Truth>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Enhance Ability:Spells+Enhance Ability>",
+                    "<GOTO:Magic Weapon:Spells+Magic Weapon>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Calm Emotions:Spells+Calm Emotions>",
+                    "<GOTO:Hold Person:Spells+Hold Person>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Person:Spells+Hold Person>",
+                    "<GOTO:Misty Step:Spells+Misty Step>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Moonbeam:Spells+Moonbeam>",
+                    "<GOTO:See Invisibility:Spells+See Invisibility>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Crown of Madness:Spells+Crown of Madness>",
+                    "<GOTO:Darkness:Spells+Darkness>"
                 ]
             }
         },
@@ -4626,56 +4626,56 @@
             "1.":"Access to 3rd level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Plant Growth:Spells+Plant Growth>",
+                    "<GOTO:Protection from Energy:Spells+Protection from Energy>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Bestow Curse:Spells+Bestow Curse>",
+                    "<GOTO:Fear:Spells+Fear>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Vitality:Spells+Aura of Vitality>",
+                    "<GOTO:Spirit Guardians:Spells+Spirit Guardians>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
+                    "<GOTO:Dispel Magic:Spells+Dispel Magic>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Haste:Spells+Haste>",
+                    "<GOTO:Protection From Energy:Spells+Protection From Energy>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Counterspell:Spells+Counterspell>",
+                    "<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Haste:Spells+Haste>",
+                    "<GOTO:Protection from Energy:Spells+Protection from Energy>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Counterspell:Spells+Counterspell>",
+                    "<GOTO:Nondetection:Spells+Nondetection>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Animate Dead:Spells+Animate Dead>",
+                    "<GOTO:Bestow Curse:Spells+Bestow Curse>"
                 ]
             }
         },
@@ -4697,56 +4697,56 @@
             "1.":"Access to 4th level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Ice Storm:Spells+Ice Storm>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Dominate Beast:Spells+Dominate Beast>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Banishment:Spells+Banishment>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Freedom of Movement:Spells+Freedom of Movement>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Compulsion:Spells+Compulsion>",
+                    "<GOTO:Freedom Of Movement:Spells+Freedom Of Movement>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Banishment:Spells+Banishment>",
+                    "<GOTO:Dimension Door:Spells+Dimension Door>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Purity:Spells+Aura of Purity>",
+                    "<GOTO:Banishment:Spells+Banishment>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Confusion:Spells+Confusion>"
                 ]
             }
         },
@@ -4800,56 +4800,56 @@
             "1.":"Access to 5th level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune with Nature:Spells+Commune with Nature>",
+                    "<GOTO:Tree Stride:Spells+Tree Stride>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Cloudkill:Spells+Cloudkill>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Circle of Power:Spells+Circle of Power>",
+                    "<GOTO:Geas:Spells+Geas>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Flame Strike:Spells+Flame Strike>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Flame Strike:Spells+Flame Strike>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Wall of Force:Spells+Wall of Force>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Contagion:Spells+Contagion>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             }
         },
