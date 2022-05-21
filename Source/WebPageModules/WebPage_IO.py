@@ -25,7 +25,7 @@ class WebPage_IO:
             OutFile.write(PageText)
         
         CSSPath = '/'.join(OutHTML.split('/')[:-1]).replace('HTML', 'CSS')
-        OutCSS = '{}/_AUTO_{}.css'.format(CSSPath, self.MetaData['document']['title'])
+        OutCSS = Format('{}/_AUTO_{}.css', CSSPath, self.MetaData['document']['title'])
         CleanTarget = OutCSS.replace('\\', '/').replace('//', '/').replace('/', os.sep)
         with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
             #NOTE: Required external definition

@@ -32,7 +32,7 @@ def ReadJSON(path):
             structure = json.load(json_file)
         return structure
     except BaseException:
-        FlushPrintUTF8("Failed to read: {}".format(path))
+        FlushPrintUTF8(Format("Failed to read: {}", path))
         return {}
 
 def WriteJSON(path, structure, beautify=True):
@@ -56,3 +56,8 @@ def DeepSize(Item):
     else:
         return 1
     return Size
+
+def Format(String, *Args):
+    if len(Args) == 0:
+        return String
+    return String.format(*Args)

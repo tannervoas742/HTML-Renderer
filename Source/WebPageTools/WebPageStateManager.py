@@ -31,12 +31,12 @@ class WebPageStateManager(StateManager):
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if Count >= 2:
             State[Key] = Matches[0]
-            State['next.{}'.format(Key)] = Matches[1:]
+            State[Format('next.{}', Key)] = Matches[1:]
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         elif Count == 1:
             State[Key] = Matches[0]
-            State['next.{}'.format(Key)] = []
+            State[Format('next.{}', Key)] = []
 
     def HandleSingleStringKeyAndNext(self, WP, State, Interface, Function):
 
@@ -71,17 +71,17 @@ class WebPageStateManager(StateManager):
         MatchData = WP.TP.JoinLists(WP.TP.Extract(Function[0], Interface, True))
         if WP.TP.Match:
 
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
             if Function[2] == WebPageEnums.Set:
                 State[Function[1]] = []
             for Group in MatchData:
                 if Function[2] != WebPageEnums.Del:
 
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
                     State[Function[1]] += Group.lower().split()
                 else:
 
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        #           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
                     for Tag in Group.lower().split():
                         if Tag in State[Function[1]]:
                             del State[Function[1]][State[Function[1]].index(Tag)]
@@ -98,7 +98,7 @@ class WebPageStateManager(StateManager):
             for Func in State[Function[1]]:
                 if Func.replace('_CALLBACK_', '') in WP.ParamStorage:
                     FuncText = WP.ParamStorage[Func.replace('_CALLBACK_', '')]
-                    FuncText = 'def {}(self, STATE, INTERFACE, ARG):\n    '.format(Func) + '\n    '.join(FuncText)
+                    FuncText = Format('def {}(self, STATE, INTERFACE, ARG):\n    ', Func) + '\n    '.join(FuncText)
                     exec(FuncText)
                     Compiled += [eval(Func)]
             State[Function[1]] = Compiled

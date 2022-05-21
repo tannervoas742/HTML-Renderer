@@ -1,6 +1,7 @@
 import yattag
 import re
 import copy
+from Utilities.Core import *
 
 class WebTable:
     def __init__(self, Data, State, Interface, WebpageObject):
@@ -42,9 +43,9 @@ class WebTable:
             for value in header:
                 NewState = copy.deepcopy(self.State)
                 NewState['force-no-inline'] = True
-                NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
+                NewState['class'] += [Format('table-column-{}', ColumnIDX)]
                 if self.Widths[ColumnIDX] != None:
-                    NewState['style'] += ['width: {}'.format(self.Widths[ColumnIDX])]
+                    NewState['style'] += [Format('width: {}', self.Widths[ColumnIDX])]
                     NewState['style'] += ['table-layout: fixed']
                 self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
                 ColumnIDX += 1
@@ -61,9 +62,9 @@ class WebTable:
             for value in values:
                 NewState = copy.deepcopy(self.State)
                 NewState['force-no-inline'] = True
-                NewState['class'] += ['table-column-{}'.format(ColumnIDX)]
+                NewState['class'] += [Format('table-column-{}', ColumnIDX)]
                 if self.Widths[ColumnIDX] != None:
-                    NewState['style'] += ['width: {}'.format(self.Widths[ColumnIDX])]
+                    NewState['style'] += [Format('width: {}', self.Widths[ColumnIDX])]
                     NewState['style'] += ['table-layout: fixed']
                 self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='td')
                 #self.Doc.line('td', value)

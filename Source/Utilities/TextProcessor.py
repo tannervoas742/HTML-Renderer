@@ -1,5 +1,5 @@
 import re
-from Utilities.Core import FlushPrintUTF8
+from Utilities.Core import FlushPrintUTF8, Format
 
 class TextProcessor:
     def __init__(self):
@@ -20,11 +20,13 @@ class TextProcessor:
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if '.' in UncompiledPattern:
             self.ExtractCount = UncompiledPattern.count('.')
-            UncompiledPattern = UncompiledPattern.replace('.', '(.+?)')
+            UncompiledPattern = UncompiledPattern.replace('.', '(.*?)')
         
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if Exact:
-            UncompiledPattern = '^{}$'.format(UncompiledPattern)
+            UncompiledPattern = Format('^{}$', UncompiledPattern)
+        else:
+            UncompiledPattern = Format('.*?{}.*', UncompiledPattern)
         
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if UncompiledPattern not in self.Compiled:

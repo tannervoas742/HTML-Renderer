@@ -4,19 +4,28 @@ import io
 import re
 from WebPageModules.WebPage_IO import WebPage_IO
 from WebPageModules.WebPage_Yattag import WebPage_Yattag
+from WebPageModules.WebPage_Tables import WebPage_Tables
 from WebPageTools.WebPageEnums import WebPageEnums
 from WebPageTools.WebPageStateManager import WebPageStateManager
 from WebStructures.WebTable import WebTable
 from Utilities.TextProcessor import TextProcessor
 from Utilities.Core import *
     
-class WebPage(WebPage_IO, WebPage_Yattag):
+class WebPage(WebPage_IO, WebPage_Yattag, WebPage_Tables):
     def InitContainers(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.TP = TextProcessor()
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.SeenLinkUps = {}
         self.SeenLinkDowns = {}
         self.PostProcessRefList = {}
+        self.ParamStorage = {}
+        self.CollapseModelCount = 0
+        self.CollapseModelRows = {}
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.JSCodeMap = {
             '<': '|~lt~|',
             '>': '|~gt~|',
@@ -24,6 +33,7 @@ class WebPage(WebPage_IO, WebPage_Yattag):
             '—': '|~em~dash~|'
         }
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.TextReplaceMap = {
             '<BOLD>': self.PreProcessText('<b>'),
             '<ITALIC>': self.PreProcessText('<i>'),
@@ -40,19 +50,19 @@ class WebPage(WebPage_IO, WebPage_Yattag):
             NewValue = self.TextReplaceMap[Key].replace(self.PreProcessText('<'), self.PreProcessText('</'))
             self.TextReplaceMap[NewKey] = NewValue
 
-        self.ParamStorage = {}
-        self.CollapseModelCount = 0
-        self.CollapseModelRows = {}
-
     def HeadAndLinkHTML(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with self.Tag('head'):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
             self.Doc.stag('meta', 'charset="UTF-8"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/Bootstrap.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/Materialize.css"')
             self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/MyStyle.css"')
-            self.Doc.stag('link', 'rel="stylesheet"', 'href="../CSS/_AUTO_{}.css"'.format(self.MetaData['document']['title']))
+            self.Doc.stag('link', 'rel="stylesheet"', Format('href="../CSS/_AUTO_{}.css"', self.MetaData['document']['title']))
             
-
+        #   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/JQuery-1.2.6.js"'):
                 pass
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/Bootstrap.js"'):
@@ -61,12 +71,16 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                 pass
             with self.Tag('script', 'type="text/javascript"', 'src="../JS/MyFunctionality.js"'):
                 pass
+
+        #   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
             if 'javascript' in self.MetaData:
                 for File in self.MetaData['javascript']:
-                    with self.Tag('script', 'type="text/javascript"', 'src="{}"'.format(File)):
+                    with self.Tag('script', Format('type="text/javascript"', 'src="{}"', File)):
                         pass
     
     def StickyHeaderSection(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with self.Tag('header'):
             with self.Tag('nav', id='sticky-header-nav'):
                 with self.Tag('div'):
@@ -75,11 +89,17 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                             self.Line('a', 'TBD')
 
     def CoreBodyStructure(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with self.Tag('body', klass='content html-renderer'):
             with self.Tag('div', klass='body-div'):
                 with self.Tag('div', klass='header-spacer'):
                     self.Line('p', ' ')
+        
+        #       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
                 self.LoadLevel(self.JSON)
+        
+        #   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
             self.AddJS()
 
     def AddFooter(self, State = None):
@@ -89,11 +109,11 @@ class WebPage(WebPage_IO, WebPage_Yattag):
             if 'authors' in self.MetaData['document']:
                 if type(self.MetaData['document']['authors']) == list:
                     for Author in self.MetaData['document']['authors']:
-                        self.AddText('Author: {}'.format(Author), State, [], None)
+                        self.AddText(Format('Author: {}', Author), State, [], None)
                 else:
-                    self.AddText('Author: {}'.format(self.MetaData['document']['authors']), State, [], None)
+                    self.AddText(Format('Author: {}', self.MetaData['document']['authors']), State, [], None)
             if 'date' in self.MetaData['document']:
-                self.AddText('Last Modified: {}'.format(self.MetaData['document']['date']), State, [], None)
+                self.AddText(Format('Last Modified: {}', self.MetaData['document']['date']), State, [], None)
 
     def AddJS(self, State = None):
         if State == None:
@@ -107,16 +127,23 @@ class WebPage(WebPage_IO, WebPage_Yattag):
 
         with self.Tag('script'):
             for Model in range(self.CollapseModelCount):
-                self.Text(self.PreProcessText(documentReadFuncCollapsible.format(Model)))
+                self.Text(self.PreProcessText(Format(documentReadFuncCollapsible, Model)))
                 for Row in range(self.CollapseModelRows[Model]):
                     pass
 
     def __init__(self, SrcJSON):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        WebPage_IO.__init__(self)
+        WebPage_Yattag.__init__(self)
+        WebPage_Tables.__init__(self)
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.Load(SrcJSON)
         self.InitContainers()
         self.InitYattagDocument()
         
-
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with self.Tag('html', 'id="top-html"'):
             self.HeadAndLinkHTML()
             self.StickyHeaderSection()
@@ -143,7 +170,7 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                 Digits += 1
                 Items /= 10
             FormatString = '{:0>' + str(Digits) + '}'
-            InputSorted = list(sorted(Input.keys(), key=lambda Key: FormatString.format(self.GetInterfaceFromKey(Key)[0])))
+            InputSorted = list(sorted(Input.keys(), key=lambda Key: Format(FormatString, self.GetInterfaceFromKey(Key)[0])))
         LastItemWasCollapse = False
         CollapseModelCount = self.CollapseModelCount
         CollapseRowCount = 0
@@ -160,29 +187,29 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
                         self.Doc.stag('br', style='; '.join(NewState['style']), klass=' '.join(NewState['class'] + ['pre-collapsible-br']))
-                        self.Doc.stag('ul', 'id="collapsible-model{}"'.format(CollapseModelCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible collapsible-model{}'.format(CollapseModelCount)]))
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
+                        self.Doc.stag('ul', Format('id="collapsible-model{}"', CollapseModelCount), self.DCTS, style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + [Format('collapsible collapsible-model{}', CollapseModelCount)]))
+                        self.Doc.stag('li', Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
                     else:
-                        self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
-                        self.Doc.stag('li', 'id="list-item-mode{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
-                    self.Doc.stag('div', 'id="collapsible-header{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-header normal-collapsible closed-header collapsible-header{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                        self.Doc.stag('/li', self.DCTS)
+                        self.Doc.stag('li', Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['list-collapsible']))
+                    self.Doc.stag('div', Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + [Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)]))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
                     CollapseRowCount += 0
                     LastItemWasCollapse = False
-                    self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
-                    self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
+                    self.Doc.stag('/li', self.DCTS)
+                    self.Doc.stag('/ul', self.DCTS)
                     
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey], IsKey=True)
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
+                    self.Doc.stag('/div', self.DCTS)
                 NewState['key'] += [Key]
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('div', 'id="collapsible-body{}-row{}"'.format(CollapseModelCount, CollapseRowCount), '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + ['collapsible-body collapsible-body{}-row{}'.format(CollapseModelCount, CollapseRowCount)]))
+                    self.Doc.stag('div', Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, style=' ;'.join(NewState['style']), klass=' '.join(NewState['class'] + [Format('collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)]))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
+                    self.Doc.stag('/div', self.DCTS)
                     CollapseRowCount += 1
                     LastItemWasCollapse = True
                 del NewState['key'][-1]
@@ -193,12 +220,12 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                 self.LoadLevel(Key, NewState)
         if LastItemWasCollapse == True:
             self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
-            self.Doc.stag('/li', '_DONT_CLOSE_THIS_STAG_')
-            self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
+            self.Doc.stag('/li', self.DCTS)
+            self.Doc.stag('/ul', self.DCTS)
 
     def ApplyCallbacks(self, Input, State, Interface, Data):
-        if len(State['callback']) > 0:
-            for Callback in State['callback']:
+        if len(State['callbacks']) > 0:
+            for Callback in State['callbacks']:
                 Data = Callback(self, State, Interface, Data)
         return Input, State, Interface, Data
 
@@ -295,10 +322,10 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                 for ListIn in ListToLink[1:]:
                     LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))
                     self.SeenLinkUps[LinkUpID] = True
-                    self.Doc.stag('a', 'id={}'.format(LinkUpID))
+                    self.Doc.stag('a', Format('id={}', LinkUpID))
             LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
             self.SeenLinkUps[LinkUpID] = True
-            with self.Tag('a', 'id={}'.format(LinkUpID)):
+            with self.Tag('a', Format('id={}', LinkUpID)):
                 self.AddText(Input, State, Interface, Data, IsKey=IsKey)
         else:
             self.AddText(Input, State, Interface, Data, IsKey=IsKey)
@@ -343,16 +370,16 @@ class WebPage(WebPage_IO, WebPage_Yattag):
     def AddText(self, Input, State, Interface, Data, ForceTextTag=None, IsKey=False):
         if '<LIST_START>' in Input:
             if State.GlobalState['in_list_div'] == 0:
-                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
+                self.Doc.stag('div', self.DCTS, style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['list-div']))
             else:
-                self.Doc.stag('div', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
-            self.Doc.stag('ul', '_DONT_CLOSE_THIS_STAG_', style=' ;'.join(State['style']), klass=' '.join(State['class']))
+                self.Doc.stag('div', self.DCTS, style=' ;'.join(State['style']), klass=' '.join(State['class']))
+            self.Doc.stag('ul', self.DCTS, style=' ;'.join(State['style']), klass=' '.join(State['class']))
             State.GlobalState['in_list_div'] += 1
             return
         elif '<LIST_STOP>' in Input:
-            self.Doc.stag('/ul', '_DONT_CLOSE_THIS_STAG_')
+            self.Doc.stag('/ul', self.DCTS)
             State.GlobalState['in_list_div'] -= 1
-            self.Doc.stag('/div', '_DONT_CLOSE_THIS_STAG_')
+            self.Doc.stag('/div', self.DCTS)
             return
         elif '<LIST_ITEM>' in Input:
             with self.Tag('li', style=' ;'.join(State['style']), klass=' '.join(State['class'])):
@@ -373,12 +400,12 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                 RefMatch = RefPattern.match(Input)
                 if RefMatch != None:
                     HasRef = '|+REF+' + '+'.join(list(map(lambda Match: self.CleanLinkText(Match), RefMatch.group(1).split(':')))) + '+|'
-                    Input = Input.replace('<REF:{}>'.format(RefMatch.group(1)), '')
+                    Input = Input.replace(Format('<REF:{}>', RefMatch.group(1)), '')
             FontClass = []
             if IsKey:
-                FontClass = ['font-class-{}'.format(State['key_font'])]
+                FontClass = [Format('font-class-{}', State['key_font'])]
             else:
-                FontClass = ['font-class-{}'.format(State['font'])]
+                FontClass = [Format('font-class-{}', State['font'])]
             with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                 while '<GOTO' in Input and '>' in Input:
                     if 'display:inline' not in State['style'] and 'force-no-inline' not in State:
@@ -394,17 +421,17 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                             Text = GotoMatch1.group(1)
                             File = GotoMatch1.group(2)
                             Location = GotoMatch1.group(3)
-                            ToReplace = "<GOTO:{}:{}+{}>".format(Text, File, Location)
+                            ToReplace = Format("<GOTO:{}:{}+{}>", Text, File, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\'{0}.html#{1}\''.format(File, self.CleanLinkText(Location))
+                            LinkAddress = Format('\'{0}.html#{1}\'', File, self.CleanLinkText(Location))
                             if HasRef != None:
                                 LinkAddress = LinkAddress[1:-1] + HasRef
                                 self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
-                                LinkAddress = "'{}'".format(LinkAddress)
+                                LinkAddress = Format("'{}'", LinkAddress)
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1    
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -414,17 +441,17 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                         if GotoMatch2 != None:
                             Text = GotoMatch2.group(1)
                             File = GotoMatch2.group(2)
-                            ToReplace = "<GOTO:{}:{}>".format(Text, File)
+                            ToReplace = Format("<GOTO:{}:{}>", Text, File)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html\"'.format(File)
+                            LinkAddress = Format('\"{0}.html\"', File)
                             if HasRef != None:
                                 LinkAddress = LinkAddress[1:-1] + HasRef
                                 self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
-                                LinkAddress = "'{}'".format(LinkAddress)
+                                LinkAddress = Format("'{}'", LinkAddress)
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -435,17 +462,17 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                             File = GotoMatch3.group(1)
                             Text = File
                             Location = GotoMatch3.group(2)
-                            ToReplace = "<GOTO:{}+{}>".format(Text, Location)
+                            ToReplace = Format("<GOTO:{}+{}>", Text, Location)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html#{1}\"'.format(File, self.CleanLinkText(Location))
+                            LinkAddress = Format('\"{0}.html#{1}\"', File, self.CleanLinkText(Location))
                             if HasRef != None:
                                 LinkAddress = LinkAddress[1:-1] + HasRef
                                 self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
-                                LinkAddress = "'{}'".format(LinkAddress)
+                                LinkAddress = Format("'{}'", LinkAddress)
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
+                            with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'] + ['is-anchor-link'])):
                                 self.Text(Text)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -455,17 +482,17 @@ class WebPage(WebPage_IO, WebPage_Yattag):
                         if GotoMatch4 != None:
                             File = GotoMatch4.group(1)
                             Text = File
-                            ToReplace = "<GOTO:{}>".format(Text)
+                            ToReplace = Format("<GOTO:{}>", Text)
                             self.Text(Input.split(ToReplace)[0])
-                            LinkAddress = '\"{0}.html\"'.format(File)
+                            LinkAddress = Format('\"{0}.html\"', File)
                             if HasRef != None:
                                 LinkAddress = LinkAddress[1:-1] + HasRef
                                 self.PostProcessRefList[LinkAddress.split('#')[-1]] = Text 
-                                LinkAddress = "'{}'".format(LinkAddress)
+                                LinkAddress = Format("'{}'", LinkAddress)
                             if LinkAddress not in self.SeenLinkDowns:
                                 self.SeenLinkDowns[LinkAddress] = 0
                             self.SeenLinkDowns[LinkAddress] += 1  
-                            with self.Tag('a', 'onclick="opencollapsewithlinkaddress(this, true, {})"'.format(LinkAddress), 'href="{}"'.format(LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
+                            with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), style=' ;'.join(State['style']), klass=' '.join(State['class'])):
                                 self.Text(Input)
                             Input = ToReplace.join(Input.split(ToReplace)[1:])
                             HitAleady = True
@@ -483,9 +510,9 @@ class WebPage(WebPage_IO, WebPage_Yattag):
         if Input.strip() != '' or ForceTextTag != None:
             FontClass = []
             if IsKey:
-                FontClass = ['font-class-{}'.format(State['key_font'])]
+                FontClass = [Format('font-class-{}', State['key_font'])]
             else:
-                FontClass = ['font-class-{}'.format(State['font'])]
+                FontClass = [Format('font-class-{}', State['font'])]
             if 'HTML' not in Interface:
                 with self.Tag(TextTag, style=' ;'.join(State['style']), klass=' '.join(State['class'] + FontClass)):
                     self.Text(Input)
@@ -499,46 +526,6 @@ class WebPage(WebPage_IO, WebPage_Yattag):
             if len(State['next.font']) > 0:
                 State['font'] = State['next.font'][0]
                 State['next.font'] = State['next.font'][1:]
-
-    def CleanTable(self, Table):
-        for IndexY in range(len(Table)):
-            for IndexX in range(len(Table[IndexY])):
-                Table[IndexY][IndexX] = str(Table[IndexY][IndexX])
-        return Table
-
-
-    def AddLookupTable(self, Input, State, Interface, Data):
-        Table = [Data]
-        for i in range(State['lookup_table.range'][0] - 1, State['lookup_table.range'][1]):
-            Row = []
-            for Key in Data:
-                if i >= len(self.ParamStorage[Key]):
-                    Row += [self.ParamStorage[Key][-1]]
-                else:    
-                    Row += [self.ParamStorage[Key][i]]
-            Table += [Row]
-
-        Table = self.CleanTable(Table)
-
-        WebTable(Table, State, Interface, self)
-
-    def AddTable(self, Input, State, Interface, Data):
-        if type(Data) == dict:
-            NewData = []
-            Ranks = list(map(lambda Ret: self.GetInterfaceFromKey(Ret)[0:2], Data.keys()))
-            FormatString = 2
-            Count = len(Ranks)
-            while Count >= 10:
-                FormatString += 1
-                Count /= 10
-            FormatString = '{:0>' + str(FormatString) + '}'
-            Ranks = list(map(lambda Ret: '.'.join(Ret) if Ret[0].isnumeric() == False else '.'.join([FormatString.format(Ret[0]), Ret[1]]), Ranks))
-            for Key in list(sorted(list(Data.keys()), key=lambda x: str(x))):
-                NewData += [['.'.join(Key.split('.')[1:]), Data[Key]]]
-            Data = NewData
-        Table = Data
-        Table = self.CleanTable(Table)
-        WebTable(Table, State, Interface, self)
 
 
     def InitNewStateManager(self):
@@ -569,11 +556,29 @@ class WebPage(WebPage_IO, WebPage_Yattag):
         for Key in self.JSCodeMap:
             PageText = PageText.replace(self.JSCodeMap[Key], Key)
 
-        _DONT_CLOSE_THIS_STAG_re = re.compile('.*?_DONT_CLOSE_THIS_STAG_(.*?)/>.*')
-        _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
-        while _DONT_CLOSE_THIS_STAG_ma != None:
-            PageText = PageText.replace('_DONT_CLOSE_THIS_STAG_{}/>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)), '{}>'.format(_DONT_CLOSE_THIS_STAG_ma.group(1)))
-            _DONT_CLOSE_THIS_STAG_ma = _DONT_CLOSE_THIS_STAG_re.match(PageText)
+        DCTSLen = len(self.DCTS)
+        NewPageText = ''
+        CurrentMatch = ''
+        PostMatch = ''
+        CurrentClose = ''
+        CloseSearch = '/>'
+        CloseSearchLen = len(CloseSearch)
+        for Char in PageText:
+            if len(CurrentMatch) == DCTSLen and self.DCTS == CurrentMatch:
+                if len(CurrentClose) == CloseSearchLen and CurrentClose == CloseSearch:
+                    NewPageText += PostMatch + '>'
+                    CurrentMatch = ''
+                    PostMatch = ''
+                    CurrentClose = ''
+                elif Char == CloseSearch[len(CurrentClose)]:
+                    CurrentClose += Char
+                else:
+                    PostMatch += Char
+            elif Char == self.DCTS[len(CurrentMatch)]:
+                CurrentMatch += Char
+            else:
+                NewPageText += Char
+                CurrentMatch = ''
 
 
         for Key in list(self.PostProcessRefList.keys()):
@@ -604,11 +609,11 @@ class WebPage(WebPage_IO, WebPage_Yattag):
     def AddCSSFontDefinitions(self, OutFile):
         if "font" in self.MetaData:
             for NewFontKey in self.MetaData["font"]:
-                NewFont = '.font-class-{}'.format(NewFontKey)
+                NewFont = Format('.font-class-{}', NewFontKey)
                 FontTable = self.MetaData['font'][NewFontKey]
-                OutFile.write('\n{} {{ '.format(NewFont))
+                OutFile.write(Format('\n{} {{ ', NewFont))
                 for Key in FontTable:
-                    OutFile.write('{}: {} !important;'.format(Key, FontTable[Key]))
+                    OutFile.write(Format('{}: {} !important;', Key, FontTable[Key]))
                 OutFile.write('}\n')
 
     def GetInterfaceFromKey(self, OKey):
@@ -634,7 +639,7 @@ def main(Args):
         os.mkdir('HTML/')
     for Arg in Args:
         WP = WebPage(Arg)
-        WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
+        WP.Save(Format('HTML/{}.html', WP.MetaData['document']['title']))
 
 if __name__ == '__main__':
     import sys
