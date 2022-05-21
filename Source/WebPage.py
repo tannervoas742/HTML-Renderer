@@ -2,18 +2,15 @@ import yattag
 import os
 import io
 import re
-from TextProcessor import TextProcessor
-from WebPageEnums import WebPageEnums
-from WebPageStateManager import WebPageStateManager
-from WebTable import WebTable
-from Utilities import *
+from WebPageModules.WebPage_IO import WebPage_IO
+from WebPageModules.WebPage_Yattag import WebPage_Yattag
+from WebPageTools.WebPageEnums import WebPageEnums
+from WebPageTools.WebPageStateManager import WebPageStateManager
+from WebStructures.WebTable import WebTable
+from Utilities.TextProcessor import TextProcessor
+from Utilities.Core import *
     
-class WebPage:
-    def Load(self, SrcJSON):
-        CleanTarget = SrcJSON.replace('\\', '/').replace('//', '/').replace('/', os.sep)
-        self.JSON = ReadJSON(CleanTarget)
-        self.ConsumeMetaData("_metadata")
-    
+class WebPage(WebPage_IO, WebPage_Yattag):
     def InitContainers(self):
         self.TP = TextProcessor()
         self.SeenLinkUps = {}
@@ -46,14 +43,6 @@ class WebPage:
         self.ParamStorage = {}
         self.CollapseModelCount = 0
         self.CollapseModelRows = {}
-
-    def InitYattagDocument(self):
-        self.Doc, self.Tag, self.Text, self.Line = yattag.Doc(
-            defaults = {
-                'title': self.MetaData['document']['title']
-            },
-            errors = {}
-        ).ttl()
 
     def HeadAndLinkHTML(self):
         with self.Tag('head'):
@@ -214,24 +203,21 @@ class WebPage:
         return Input, State, Interface, Data
 
     def ApplyAPPENDCommandFamily(self, Input, State, Interface, Data):
-        BeforeReg = re.compile("APPEND_BEFORE\((.*?)\)")
-        BeforeMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: BeforeReg.match(Com), Interface))))
-        for Match in BeforeMatch:
-            Pattern = Match.group(1)
-            Data = list(map(lambda Val: Pattern + str(Val), Data))
-        AfterReg = re.compile("APPEND_AFTER\((.*?)\)")
-        AfterMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: AfterReg.match(Com), Interface))))
-        for Match in AfterMatch:
-            Pattern = Match.group(1)
-            Data = list(map(lambda Val: str(Val) + Pattern, Data))
+        MatchData = self.TP.Index(0, self.TP.Split(self.TP.Extract('APPEND_BEFORE(.)', Interface, True)))
+        if self.TP.Match:
+            for Pattern in MatchData:
+                Data = list(map(lambda Val: Pattern + str(Val), Data))
+        MatchData = self.TP.Index(0, self.TP.Split(self.TP.Extract('APPEND_AFTER(.)', Interface, True)))
+        if self.TP.Match:
+            for Pattern in MatchData:
+                Data = list(map(lambda Val: str(Val) + Pattern, Data))
         return Input, State, Interface, Data
     
     def ApplyLOOKUPCommand(self, Input, State, Interface, Data):
-        LookupReg = re.compile("LOOKUP\((.*?)\)")
-        LookupMatch = list(filter(lambda Res: Res != None, list(map(lambda Com: LookupReg.match(Com), Interface))))
-        for Match in LookupMatch:
-            Key = Match.group(1)
-            Data = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com).split('#')[0], Data))))
+        MatchData = self.TP.Index(0, self.TP.Split(self.TP.Extract('LOOKUP(.)', Interface, True)))      
+        if self.TP.Match:
+            for Key in MatchData:
+                Data = list(map(lambda Val: Val if Key not in self.ParamStorage or Val not in self.ParamStorage[Key] else self.ParamStorage[Key][Val], list(map(lambda Com: str(Com).split('#')[0], Data))))
         return Input, State, Interface, Data
 
     def ApplyINCCommand(self, Input, State, Interface, Data):
@@ -609,19 +595,6 @@ class WebPage:
             if not Matched:
                 PageText = PageText.replace(Key, Goal)
         return PageText
-
-    def Save(self, OutHTML):
-        CleanTarget = OutHTML.replace('\\', '/').replace('//', '/').replace('/', os.sep)
-        with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
-            PageText = self.Doc.getvalue()
-            PageText = self.PostProcessPage(PageText)
-            OutFile.write(PageText)
-        
-        CSSPath = '/'.join(OutHTML.split('/')[:-1]).replace('HTML', 'CSS')
-        OutCSS = '{}/_AUTO_{}.css'.format(CSSPath, self.MetaData['document']['title'])
-        CleanTarget = OutCSS.replace('\\', '/').replace('//', '/').replace('/', os.sep)
-        with io.open(CleanTarget, mode='w', encoding='utf-8') as OutFile:
-            self.AddCSSFontDefinitions(OutFile)
     
 
     def ConsumeMetaData(self, Key):
@@ -654,14 +627,6 @@ class WebPage:
         if len(OKey) > 1:
             Interface = OKey[1:]
         return Rank, OKey[0], Interface
-
-
-def main(Args):
-    if os.path.exists('HTML') == False:
-        os.mkdir('HTML/')
-    for Arg in Args:
-        WP = WebPage(Arg)
-        WP.Save('HTML/{}.html'.format(WP.MetaData['document']['title']))
 
 
 def main(Args):

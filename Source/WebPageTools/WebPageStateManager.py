@@ -1,8 +1,8 @@
 import copy
 import re
-from Utilities import *
-from WebPageEnums import WebPageEnums
-from StateManager import StateManager
+from Utilities.Core import *
+from WebPageTools.WebPageEnums import WebPageEnums
+from Utilities.StateManager import StateManager
 
 class WebPageStateManager(StateManager):
     def __init__(self):
@@ -118,7 +118,7 @@ class WebPageStateManager(StateManager):
         elif 'SHOWN' in Interface:
             MixedState['visible'] = True
 
-        Functions = [
+        StateModiferFunctions = [
             ['FONT(.)'          , 'font'     ,                                                       self.HandleSingleStringKeyAndNext],
             ['KEYFONT(.)'       , 'key_font' ,                                                       self.HandleSingleStringKeyAndNext],
             ['LOOKUP_TABLE(.,.)', 'mode'     , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
@@ -133,8 +133,8 @@ class WebPageStateManager(StateManager):
         ]
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        for Function in Functions:
-            Function[-1](WP, MixedState, Interface, Function)
+        for StateModiferFunction in StateModiferFunctions:
+            StateModiferFunction[-1](WP, MixedState, Interface, StateModiferFunction)
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return MixedState
