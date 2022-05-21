@@ -2030,7 +2030,7 @@
         },
 
         "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Destroy Undead": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
+            "1.Destroy Undead": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
             "2. Arcana Domain#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Arcana Domain Spells at 5th Level": [
                     "<GOTO:Dispel Magic:Spells+Dispel Magic>",
@@ -4144,23 +4144,23 @@
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
-            "Divine Health, Sacred Oath",
-            "Ability Score Improvement",
+            "Divine Health, Sacred Oath, Harness Divine Power (Optional)",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Extra Attack",
             "Aura of Protection",
             "Sacred Oath feature",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "—",
             "Aura of Courage",
             "Improved Divine Smite",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "—",
             "Cleansing Touch",
             "Sacred Oath feature",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "—",
             "Aura Improvements",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Martial Versatility (Optional)",
             "Sacred Oath feature"
         ],
         "1st level spell slots#HIDDEN#INC": [1, 1, 3, 5],
@@ -4192,41 +4192,771 @@
             "Spell slots: Add half your levels (round down) in paladin to the levels from other classes to determine spell slots"
         ],
 
-        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Divine Sense":[
+                "The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (the vampire Count Strahd von Zarovich, for instance). Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the <GOTO:Hallow:Spells+Hallow> spell.",
+                "You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses."
+            ],
+            "2.Lay on Hands":[
+                "Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5.",
+                "As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.",
+                "Alternatively, you can expend 5 hit points from your pool of healing to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.",
+                "This feature has no effect on undead and constructs."
+            ]
+        },
+        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Fighting Style#COLLAPSE":[
+                "Starting at 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",
+                "<LIST_START>",
+                "<LIST_ITEM><BOLD>Blessed Warrior.</BOLD> You learn two cantrips of your choice from the cleric spell list. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list.",
+                "<LIST_ITEM><BOLD>Blind Fighting.</BOLD> You have blindsight with a range of 10 feet. Within that range, you can effectively see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.",
+                "<LIST_ITEM><BOLD>Defense.</BOLD> While you are wearing armor, you gain a +1 bonus to AC.",
+                "<LIST_ITEM><BOLD>Dueling.</BOLD> When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.",
+                "<LIST_ITEM><BOLD>Great Weapon Fighting.</BOLD> When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.",
+                "<LIST_ITEM><BOLD>Interception.</BOLD> When a creature you can see hits a target, other than you, within 5 feet of you with an attack, you can use your reaction to reduce the damage the target takes by 1d10 + your proficiency bonus (to a minimum of 0 damage). You must be wielding a shield or a simple or martial weapon to use this reaction.",
+                "<LIST_ITEM><BOLD>Protection.</BOLD> When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.",
+                "<LIST_STOP>"
+            ],
+            "2.Spellcasting":{
+                "1.":"By 2nd level, you have learned to draw on divine magic through meditation and prayer to cast spells as a cleric does.",
+                "2.Preparing and Casting Spells":[
+                    "The Paladin table shows how many spell slots you have to cast your paladin spells. To cast one of your paladin spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
+                    "You prepare the list of paladin spells that are available for you to cast, choosing from the paladin spell list. When you do so, choose a number of paladin spells equal to your Charisma modifier + half your paladin level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
+                    "For example, if you are a 5th-level paladin, you have four 1st-level and two 2nd-level spell slots. With a Charisma of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell <GOTO:Cure Wounds:Spells+Cure Wounds>, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
+                    "You can change your list of prepared spells when you finish a long rest. Preparing a new list of paladin spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list."
+                ],
+                "3.Spellcasting Ability":[
+                    "Charisma is your spellcasting ability for your paladin spells, since their power derives from the strength of your convictions. You use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a paladin spell you cast and when making an attack roll with one.",
+                    "<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Charisma modifier",
+                    "<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Charisma modifier"
+                ],
+                "4.Spellcasting Focus":"You can use a holy symbol as a spellcasting focus for your paladin spells."
+            },
+            "3.Divine Smite":"Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon's damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8."
+        },
+        "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Divine Health":"By 3rd level, the divine magic flowing through you makes you immune to disease.",
+            "2.Sacred Oath":{
+                "1.":"When you reach 3rd level, you swear the oath that binds you as a paladin forever. Up to this time you have been in a preparatory stage, committed to the path but not yet sworn to it. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level. Those features include oath spells and the Channel Divinity feature.",
+                "2.Oath Spells":[
+                    "Each oath has a list of associated spells. You gain access to these spells at the levels specified in the oath description. Once you gain access to an oath spell, you always have it prepared. Oath spells don't count against the number of spells you can prepare each day.",
+                    "If you gain an oath spell that doesn't appear on the paladin spell list, the spell is nonetheless a paladin spell for you."
+                ],
+                "3.Channel Divinity":[
+                    "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it.",
+                    "When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.",
+                    "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
+                ],
+                "4.":{
+                    "1.Oath of the Ancients":{
+                        "1.Tenets of the Ancients":[
+                            "The tenets of the Oath of the Ancients have been preserved for uncounted centuries. This oath emphasizes the principles of good above any concerns of law or chaos. Its four central principles are simple.",
+                            "<BOLD>Kindle the Light.</BOLD> Through your acts of mercy, kindness, and forgiveness, kindle the light of hope in the world, beating back despair.",
+                            "<BOLD>Shelter the Light.</BOLD> Where there is good, beauty, love, and laughter in the world, stand against the wickedness that would swallow it. Where life flourishes, stand against the forces that would render it barren.",
+                            "<BOLD>Preserve Your Own Light.</BOLD> Delight in song and laughter, in beauty and art. If you allow the light to die in your own heart, you can't preserve it in the world.",
+                            "<BOLD>Be the Light.</BOLD> Be a glorious beacon for all who live in despair. Let the light of your joy and courage shine forth in all your deeds."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of the Ancients Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Ensnaring Strike:Spells+Ensnaring Strike>,<GOTO:Speak with Animals:Spells+Speak with Animals>"],
+                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>,<GOTO:Misty Step:Spells+Misty Step>"],
+                                ["9th","<GOTO:Plant Growth:Spells+Plant Growth>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                                ["13th","<GOTO:Ice Storm:Spells+Ice Storm>,<GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Commune with Nature:Spells+Commune with Nature>,<GOTO:Tree Stride:Spells+Tree Stride>"]                                
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Nature's Wrath.</BOLD> You can use your Channel Divinity to invoke primeval forces to ensnare a foe. As an action, you can cause spectral vines to spring up and reach for a creature within 10 feet of you that you can see. The creature must succeed on a Strength or Dexterity saving throw (its choice) or be restrained. While restrained by the vines, the creature repeats the saving throw at the end of each of its turns. On a success, it frees itself and the vines vanish.",
+                            "<LIST_ITEM><BOLD>Turn the Faithless.</BOLD> You can use your Channel Divinity to utter ancient words that are painful for fey and fiends to hear. As an action, you present your holy symbol, and each fey or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
+                            "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+                            "If the creature's true form is concealed by an illusion, shapeshifting, or other effect, that form is revealed while it is turned.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "2.Oath of Conquest":{
+                        "1.Tenets of Conquest":[
+                            "A paladin who takes this oath has the tenets of conquest seared on the upper arm.",
+                            "<BOLD>Douse the Flame of Hope.</BOLD> It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies’ will to fight is shattered forever. A blade can end a life. Fear can end an empire.",
+                            "<BOLD>Rule with an Iron Fist.</BOLD> Once you have conquered, tolerate no dissent. Your word is law. Those who obey it shall be favored. Those who defy it shall be punished as an example to all who might follow.",
+                            "<BOLD>Strength Above All.</BOLD> You shall rule until a stronger one arises. Then you must grow mightier and meet the challenge, or fall to your own ruin."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of Conquest Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Armor of Agathys:Spells+Armor of Agathys>,<GOTO:Command:Spells+Command>"],
+                                ["5th","<GOTO:Hold Person:Spells+Hold Person>,<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"],
+                                ["9th","<GOTO:Bestow Curse:Spells+Bestow Curse>,<GOTO:Fear:Spells+Fear>"],
+                                ["13th","<GOTO:Dominate Beast:Spells+Dominate Beast>,<GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Cloudkill:Spells+Cloudkill>,<GOTO:Dominate Person:Spells+Dominate Person>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Conquering Presence.</BOLD> You can use your Channel Divinity to exude a terrifying presence. As an action, you force each creature of your choice that you can see within 30 feet of you to make a Wisdom saving throw. On a failed save, a creature becomes frightened of you for 1 minute. The frightened creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.",
+                            "<LIST_ITEM><BOLD>Guided Strike.</BOLD> You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "3.Oath of the Crown":{
+                        "1.Tenets of the Crown":[
+                            "The tenets of the Oath of the Crown are often set by the sovereign to which their oath is sworn, but generally emphasize the following tenets.",
+                            "<BOLD>Law.</BOLD> The law is paramount. It is the mortar that holds the stones of civilization together, and it must be respected.",
+                            "<BOLD>Loyalty.</BOLD> Your word is your bond. Without loyalty, oaths and laws are meaningless.",
+                            "<BOLD>Courage.</BOLD> You must be willing to do what needs to be done for the sake of order, even in the face of overwhelming odds. If you don't act, then who will?",
+                            "<BOLD>Responsibility.</BOLD> You must deal with the consequences of your actions, and you are responsible for fulfilling your duties and obligations."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of the Crown Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Command:Spells+Command>,<GOTO:Compelled Duel:Spells+Compelled Duel>"],
+                                ["5th","<GOTO:Warding Bond:Spells+Warding Bond>,<GOTO:Zone of Truth:Spells+Zone of Truth>"],
+                                ["9th","<GOTO:Aura of Vitality:Spells+Aura of Vitality>,<GOTO:Spirit Guardians:Spells+Spirit Guardians>"],
+                                ["13th","<GOTO:Banishment:Spells+Banishment>,<GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
+                                ["17th","<GOTO:Circle of Power:Spells+Circle of Power>,<GOTO:Geas:Spells+Geas>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Champion Challenge.</BOLD> As a bonus action, you issue a challenge that compels other creatures to do battle with you. Each creature of your choice that you can see within 30 feet of you must make a Wisdom saving throw. On a failed save, a creature can't willingly move more than 30 feet away from you. This effect ends on the creature if you are incapacitated or die or if the creature is more than 30 feet away from you.",
+                            "<LIST_ITEM><BOLD>Turn the Tide.</BOLD> As a bonus action, you can bolster injured creatures with your Channel Divinity. Each creature of your choice that can hear you within 30 feet of you regains hit points equal to 1d6 + your Charisma modifier (minimum of 1) if it has no more than half of its hit points.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "4.Oath of Devotion":{
+                        "1.Tenets of Devotion":[
+                            "Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.",
+                            "<BOLD>Honesty.</BOLD> Don't lie or cheat. Let your word be your promise.",
+                            "<BOLD>Courage.</BOLD> Never fear to act, though caution is wise.",
+                            "<BOLD>Compassion.</BOLD> Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom.",
+                            "<BOLD>Honor.</BOLD> Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.",
+                            "<BOLD>Duty.</BOLD> Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of Devotion Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>,<GOTO:Sanctuary:Spells+Sanctuary>"],
+                                ["5th","<GOTO:Lesser Restoration:Spells+Lesser Restoration>,<GOTO:Zone of Truth:Spells+Zone of Truth>"],
+                                ["9th","<GOTO:Beacon of Hope:Spells+Beacon of Hope>,<GOTO:Dispel Magic:Spells+Dispel Magic>"],
+                                ["13th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
+                                ["17th","<GOTO:Commune:Spells+Commune>,<GOTO:Flame Strike:Spells+Flame Strike>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD></BOLD>Sacred Weapon. As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier to attack rolls made with that weapon (with a minimum bonus of +1). The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.",
+                            "You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, this effect ends.",
+                            "<LIST_ITEM><BOLD></BOLD>Turn the Unholy. As an action, you present your holy symbol and speak a prayer censuring fiends and undead, using your Channel Divinity. Each fiend or undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes damage.",
+                            "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "5.Oath of Glory":{
+                        "1.Tenets of Glory":[
+                            "The tenets of the Oath of Glory drive a paladin to attempt heroics that might one day shine in legend.",
+                            "<BOLD>Actions over Words.</BOLD> Strive to be known by glorious deeds, not words.",
+                            "<BOLD>>Challenges Are but Tests.</BOLD Face hardships with courage, and encourage your allies to face them with you.",
+                            "<BOLD>Hone the Body.</BOLD> Like raw stone, your body must be worked so its potential can be realized.",
+                            "<BOLD>Discipline the Soul.</BOLD> You must marshal the discipline to overcome failings within yourself that threaten to dim the glory of you and your friends."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of Glory Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Guiding Bolt:Spells+Guiding Bolt>,<GOTO:Heroism:Spells+Heroism>"],
+                                ["5th","<GOTO:Enhance Ability:Spells+Enhance Ability>,<GOTO:Magic Weapon:Spells+Magic Weapon>"],
+                                ["9th","<GOTO:Haste:Spells+Haste>,<GOTO:Protection From Energy:Spells+Protection From Energy>"],
+                                ["13th","<GOTO:Compulsion:Spells+Compulsion>,<GOTO:Freedom Of Movement:Spells+Freedom Of Movement>"],
+                                ["17th","<GOTO:Commune:Spells+Commune>,<GOTO:Flame Strike:Spells+Flame Strike>"]                                
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Peerless Athlete.</BOLD> As a bonus action, you can use your Channel Divinity to augment your athleticism. For the next 10 minutes, you have advantage on Strength (Athletics) and Dexterity (Acrobatics) checks; you can carry, push, drag, and lift twice as much weight as normal; and the distance of your long and high jumps increases by 10 feet (this extra distance costs movement as normal).",
+                            "<LIST_ITEM><BOLD>Inspiring Smite.</BOLD> Immediately after you deal damage to a creature with your Divine Smite feature, you can use your Channel Divinity as a bonus action and distribute temporary hit points to creatures of your choice within 30 feet of you, which can include you. The total number of temporary hit points equals 2d8 + your level in this class, divided among the chosen creatures however you like.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "6.Oath of Redemption":{
+                        "1.Tenets of Redemption":[
+                            "The tenets of the Oath of Redemption hold a paladin to a high standard of peace and justice.",
+                            "<BOLD>Peace.</BOLD> Violence is a weapon of last resort. Diplomacy and understanding are the paths to long-lasting peace.",
+                            "<BOLD>Innocence.</BOLD> All people begin life in an innocent state, and it is their environment or the influence of dark forces that drives them to evil. By setting the proper example, and working to heal the wounds of a deeply flawed world, you can set anyone on a righteous path.",
+                            "<BOLD>Patience.</BOLD> Change takes time. Those who have walked the path of the wicked must be given reminders to keep them honest and true. Once you have planted the seed of righteousness in a creature, you must work day after day to allow it to survive and then flourish.",
+                            "<BOLD>Wisdom.</BOLD> Your heart and mind must stay clear, for eventually you will be forced to admit defeat. While every creature can be redeemed, some are so far along the path of evil that you have no choice but to end their lives for the greater good. Any such action must be carefully weighed and the consequences fully understood, but once you have made the decision, follow through with it knowing your path is just."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of Redemption Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Sanctuary:Spells+Sanctuary>,<GOTO:Sleep:Spells+Sleep>"],
+                                ["5th","<GOTO:Calm Emotions:Spells+Calm Emotions>,<GOTO:Hold Person:Spells+Hold Person>"],
+                                ["9th","<GOTO:Counterspell:Spells+Counterspell>,<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>"],
+                                ["13th","<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>,<GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Wall of Force:Spells+Wall of Force>"]                                
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Emissary of Peace.</BOLD> You can use your Channel Divinity to augment your presence with divine power. As a bonus action, you grant yourself a +5 bonus to Charisma (Persuasion) checks for the next 10 minutes.",
+                            "<LIST_ITEM><BOLD>Rebuke the Violent.</BOLD> You can use your Channel Divinity to rebuke those who use violence. Immediately after an attacker within 30 feet of you deals damage with an attack against a creature other than you, you can use your reaction to force the attacker to make a Wisdom saving throw. On a failed save, the attacker takes radiant damage equal to the damage it just dealt. On a successful save, it takes half as much damage.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "7.Oath of Vengeance":{
+                        "1.Tenets of Vengeance":[
+                            "The tenets of the Oath of Vengeance vary by paladin, but all the tenets revolve around punishing wrongdoers by any means necessary. Paladins who uphold these tenets are willing to sacrifice even their own righteousness to mete out justice upon those who do evil, so the paladins are often neutral or lawful neutral in alignment. The core principles of the tenets are brutally simple.",
+                            "<BOLD>Fight the Greater Evil.</BOLD> Faced with a choice of fighting my sworn foes or combating a lesser evil, I choose the greater evil.",
+                            "<BOLD>No Mercy for the Wicked.</BOLD> Ordinary foes might win my mercy, but my sworn enemies do not.",
+                            "<BOLD>By Any Means Necessary.</BOLD> My qualms can't get in the way of exterminating my foes.",
+                            "<BOLD>Restitution.</BOLD> If my foes wreak ruin on the world, it is because I failed to stop them. I must help those harmed by their misdeeds."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of Vengeance Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Bane:Spells+Bane>,<GOTO:Hunter's Mark:Spells+Hunter's Mark>"],
+                                ["5th","<GOTO:Hold Person:Spells+Hold Person>,<GOTO:Misty Step:Spells+Misty Step>"],
+                                ["9th","<GOTO:Haste:Spells+Haste>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                                ["13th","<GOTO:Banishment:Spells+Banishment>,<GOTO:Dimension Door:Spells+Dimension Door>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Scrying:Spells+Scrying>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Abjure Enemy.</BOLD> As an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being frightened. Fiends and undead have disadvantage on this saving throw.",
+                            "On a failed save, the creature is frightened for 1 minute or until it takes any damage. While frightened, the creature's speed is 0, and it can't benefit from any bonus to its speed.",
+                            "On a successful save, the creature's speed is halved for 1 minute or until the creature takes any damage.",
+                            "<LIST_ITEM><BOLD>Vow of Enmity.</BOLD> As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls unconscious.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "8.Oath of the Watchers":{
+                        "1.Tenets of the Watchers":[
+                            "A paladin who assumes the Oath of the Watchers swears to safeguard mortal realms from otherwordly threats.",
+                            "<BOLD>Vigilance.</BOLD> The threats you face are cunning, powerful, and subversive. Be ever alert for their corruption.",
+                            "<BOLD>Loyalty.</BOLD> Never accept gifts or favors from fiends or those who truck with them. Stay true to your order, your comrades, and your duty.",
+                            "<BOLD>Discipline.</BOLD> You are the shield against the endless terrors that lie beyond the stars. Your blade must be forever sharp and your mind keen to survive what lies beyond."
+                        ],
+                        "2.Oath Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oath of the Watchers Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Alarm:Spells+Alarm>,<GOTO:Detect Magic:Spells+Detect Magic>"],
+                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>,<GOTO:See Invisibility:Spells+See Invisibility>"],
+                                ["9th","<GOTO:Counterspell:Spells+Counterspell>,<GOTO:Nondetection:Spells+Nondetection>"],
+                                ["13th","<GOTO:Aura of Purity:Spells+Aura of Purity>,<GOTO:Banishment:Spells+Banishment>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Scrying:Spells+Scrying>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM>Watcher's Will.<BOLD></BOLD> You can use your Channel Divinity to invest your presence with the warding power of your faith. As an action, you can choose a number of creatures you can see within 30 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). For 1 minute, you and the chosen creatures have advantage on Intelligence, Wisdom, and Charisma saving throws.",
+                            "<LIST_ITEM><BOLD>Abjure the Extraplanar.</BOLD> You can use your Channel Divinity to castigate unworldly beings. As an action, you present your holy symbol and each aberration, celestial, elemental, fey, or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.",
+                            "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly end its move in a space within 30 feet of you. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can take the Dodge action.",
+                            "<LIST_STOP>"
+                        ]
+                    },
+                    "9.Oathbreaker":{
+                        "2.Oathbreaker Spells":{
+                            "1.":"You gain oath spells at the paladin levels listed.",
+                            "2.Oathbreaker Spells#TABLE":[
+                                ["Paladin Level","Spells"],
+                                ["3rd","<GOTO:Hellish Rebuke:Spells+Hellish Rebuke>,<GOTO:Inflict Wounds:Spells+Inflict Wounds>"],
+                                ["5th","<GOTO:Crown of Madness:Spells+Crown of Madness>,<GOTO:Darkness:Spells+Darkness>"],
+                                ["9th","<GOTO:Animate Dead:Spells+Animate Dead>,<GOTO:Bestow Curse:Spells+Bestow Curse>"],
+                                ["13th","<GOTO:Blight:Spells+Blight>,<GOTO:Confusion:Spells+Confusion>"],
+                                ["17th","<GOTO:Contagion:Spells+Contagion>,<GOTO:Dominate Person:Spells+Dominate Person>"]
+                            ]
+                        },
+                        "3.Channel Divinity":[
+                            "When you take this oath at 3rd level, you gain the following two Channel Divinity options.",
+                            "<LIST_START>",
+                            "<LIST_ITEM><BOLD>Control Undead.</BOLD> As an action, you target one undead creature you can see within 30 feet of you. The target must make a Wisdom saving throw. On a failed save, the target must obey your commands for the next 24 hours, or until you use this Channel Divinity option again. An undead whose challenge rating is equal to or greater than your paladin level is immune to this effect.",
+                            "<LIST_ITEM><BOLD>Dreadful Aspect.</BOLD> As an action, you channel the darkest emotions and focus them into a burst of magical menace. Each creature of your choice within 30 feet of you must make a Wisdom saving throw if it can see you. On a failed save, the target is frightened of you for 1 minute. If a creature frightened by this effect ends its turn more than 30 feet away from you, it can attempt another Wisdom saving throw to end the effect on it.",
+                            "<LIST_STOP>"
+                        ]
+                    }
+                }
+            },
+            "3.Harness Divine Power (Optional)":"Also at 3rd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 3rd level, once; 7th level, twice; and 15th level, thrice. You regain all expended uses when you finish a long rest."
+        },
         "9.4th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
         },
 
-        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Extra Attack":"Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
+            "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Ancients Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Conquest Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Crown Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Devotion Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Glory Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Redemption Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Vengeance Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Watchers Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oathbreaker Spells at 5th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            }
+        },
+        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Aura of Protection":[
+                "Starting at 6th level, whenever you or a friendly creature within 10 feet of you must make a saving throw, the creature gains a bonus to the saving throw equal to your Charisma modifier (with a minimum bonus of +1). You must be conscious to grant this bonus.",
+                "At 18th level, the range of this aura increases to 30 feet."
+            ]
+        },
+        "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Oath of the Ancients":{
+                "1.Aura of Warding":[
+                    "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Aura of Conquest":[
+                    "Starting at 7th level, you constantly emanate a menacing aura while you’re not incapacitated. The aura extends 10 feet from you in every direction, but not through total cover.",
+                    "If a creature is frightened of you, its speed is reduced to 0 while in the aura, and that creature takes psychic damage equal to half your paladin level if it starts its turn there.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "3.Oath of the Crown":{
+                "1.Divine Allegiance":"Starting at 7th level, when a creature within 5 feet of you takes damage, you can use your reaction to magically substitute your own health for that of the target creature, causing that creature not to take the damage. Instead, you take the damage. This damage to you can't be reduced or prevented in any way."
+            },
+            "4.Oath of Devotion":{
+                "1.Aura of Devotion":[
+                    "Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "5.Oath of Glory":{
+                "1.Aura of Alacrity":[
+                    "At 7th level, you emanate an aura that fills you and your companions with supernatural speed, allowing you to race across a battlefield in formation. Your walking speed increases by 10 feet. In addition, if you aren't incapacitated, the walking speed of any ally who starts their turn within 5 feet of you increases by 10 feet until the end of that turn.",
+                    "At 18th level, the range of this aura increases to 10 feet."
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.Aura of the Guardian":[
+                    "Starting at 7th level, you can shield your allies from harm at the cost of your own health. When a creature within 10 feet of you takes damage, you can use your reaction to magically take that damage, instead of that creature taking it. This feature doesn't transfer any other effects that might accompany the damage, and this damage can't be reduced in any way.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "7.Oath of Vengeance":{
+                "1.Relentless Avenger":"By 7th level, your supernatural focus helps you close off a foe's retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn't provoke opportunity attacks."
+            },
+            "8.Oath of the Watchers":{
+                "1.Aura of the Sentinel":[
+                    "At 7th level, you emit an aura of alertness while you aren't incapacitated. When you and any creatures of your choice within 10 feet of you roll initiative, you all gain a bonus to initiative equal to your proficiency bonus.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            },
+            "9.Oathbreaker":{
+                "1.Aura of Hate":[
+                    "Starting at 7th level you, as well any fiends and undead within 10 feet of you, gain a bonus to melee weapon damage rolls equal to your Charisma modifier (minimum of +1). A creature can benefit from this feature from only one paladin at a time.",
+                    "At 18th level, the range of this aura increases to 30 feet."
+                ]
+            }
+        },
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
         },
 
-        "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.":"Access to 3rd level spells",
+            "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Ancients Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Conquest Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Crown Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Devotion Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Glory Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Redemption Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Vengeance Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Watchers Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oathbreaker Spells at 9th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            }
+        },
+        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Aura of Courage":[
+                "Starting at 10th level, you and friendly creatures within 10 feet of you can't be frightened while you are conscious.",
+                "At 18th level, the range of this aura increases to 30 feet."
+            ]
+        },
+        "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Improved Divine Smite":"By 11th level, you are so suffused with righteous might that all your melee weapon strikes carry divine power with them. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage."
+        },
         "17.12th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
         },
 
-        "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.":"Access to 4th level spells",
+            "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Ancients Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Conquest Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Crown Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Devotion Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Glory Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Redemption Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Vengeance Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Watchers Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oathbreaker Spells at 13th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            }
+        },
+        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Cleansing Touch":[
+                "Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.",
+                "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain expended uses when you finish a long rest."
+            ]
+        },
+        "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Oath of the Ancients":{
+                "1.Undying Sentinel":[
+                    "Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest.",
+                    "Additionally, you suffer none of the drawbacks of old age, and you can't be aged magically."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Scornful Rebuke":"Starting at 15th level, those who dare to strike you are psychically punished for their audacity. Whenever a creature hits you with an attack, that creature takes psychic damage equal to your Charisma modifier (minimum of 1) if you’re not incapacitated."
+            },
+            "3.Oath of the Crown":{
+                "1.Unyielding Saint":"Starting at 15th level, you have advantage on saving throws to avoid becoming paralyzed or stunned."
+            },
+            "4.Oath of Devotion":{
+                "1.Purity of Spirit":"Beginning at 15th level, you are always under the effects of a <GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good> spell."
+            },
+            "5.Oath of Glory":{
+                "1.Glorious Defense":[
+                    "When you reach 15th level, you can turn defense into a sudden strike. When you or another creature you can see within 10 feet of you is hit by an attack roll, you can use your reaction to grant a bonus to the target's AC against that attack, potentially causing it to miss. The bonus equals your Charisma modifier (minimum of +1). If the attack misses, you can make one weapon attack against the attacker as part of this reaction, provided the attacker is within your weapon's range.",
+                    "You can use this feature a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.Protective Spirit":"Starting at 15th level, a holy presence mends your wounds in combat. You regain hit points equal to 1d6 + half your paladin level if you end your turn in combat with fewer than half of your hit points remaining and you aren’t incapacitated."
+            },
+            "7.Oath of Vengeance":{
+                "1.Soul of Vengeance":"Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range."
+            },
+            "8.Oath of the Watchers":{
+                "1.Vigilant Rebuke":"At 15th level, you've learned how to chastise anyone who dares wield beguilements against you and your wards. Whenever you or a creature you can see within 30 feet of you succeeds on an Intelligence, a Wisdom, or a Charisma saving throw, you can use your reaction to deal 2d8 + your Charisma modifier force damage to the creature that forced the saving throw."
+            },
+            "9.Oathbreaker":{
+                "1.Supernatural Resistance":"At 15th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons."
+            }
+        },
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
         },
 
-        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.":"Access to 5th level spells",
+            "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Ancients Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Conquest Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Crown Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Devotion Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Glory Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Redemption Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of Vengeance Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oath of the Watchers Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            },
+            "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+                "1.Oathbreaker Spells at 17th Level": [
+                    "<GOTO::Spells+>",
+                    "<GOTO::Spells+>"
+                ]
+            }
+        },
+        "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Aura improvements":"At 18th level, the range of all your auras (including subclass auras) increase to 30 feet, with the sole exception of the Oath of Glory's 7th level aura, Aura of Alacrity, which increases to a range of 10 feet."
+        },
         "24.19th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Martial Versatility (Optional)":"Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to paladins. This replacement represents a shift of focus in your martial practice."
         },
 
-        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {}
+        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Oath of the Ancients":{
+                "1.Elder Champion":[
+                    "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.",
+                    "Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:",
+                    "<LIST_START>",
+                    "<LIST_ITEM>At the start of each of your turns, you regain 10 hit points.",
+                    "<LIST_ITEM>Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.",
+                    "<LIST_ITEM>Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.",
+                    "<LIST_STOP>",
+                    "Once you use this feature, you can't use it again until you finish a long rest."
+                ]
+            },
+            "2.Oath of Conquest":{
+                "1.Invincible Conqueror":[
+                    "At 20th level, you gain the ability to harness extraordinary martial prowess. As an action, you can magically become an avatar of conquest, gaining the following benefits for 1 minute:",
+                    "<LIST_START>",
+                    "<LIST_ITEM>You have resistance to all damage.",
+                    "<LIST_ITEM>When you take the Attack action on your turn, you can make one additional attack as part of that action.",
+                    "<LIST_ITEM>Your melee weapon attacks score a critical hit on a roll of 19 or 20 on the d20.",
+                    "<LIST_STOP>",
+                    "Once you use this feature, you can’t use it again until you finish a long rest."
+                ]
+            },
+            "3.Oath of the Crown":{
+                "1.Exalted Champion":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "4.Oath of Devotion":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "5.Oath of Glory":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "6.Oath of Redemption":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "7.Oath of Vengeance":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "8.Oath of the Watchers":{
+                "1.":[
+                    "",
+                    "<LIST_START>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_ITEM>",
+                    "<LIST_STOP>",
+                    ""
+                ]
+            },
+            "9.Oathbreaker":{"1.":[
+                "",
+                "<LIST_START>",
+                "<LIST_ITEM>",
+                "<LIST_ITEM>",
+                "<LIST_ITEM>",
+                "<LIST_STOP>",
+                ""
+            ]}
+        }
     },
     "Ranger#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
