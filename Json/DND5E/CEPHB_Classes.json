@@ -294,7 +294,7 @@
     },
     "Artificer#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Magical Tinkering, Spellcasting",
             "Infuse Item",
@@ -864,7 +864,7 @@
     },
     "Barbarian#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Rage, Unarmored Defense",
             "Reckless Attack, Danger Sense",
@@ -1219,7 +1219,7 @@
     },
     "Bard#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Bardic Inspiration (d6)",
             "Jack of All Trades, Song of Rest (d6), Magical Inspiration (Optional)",
@@ -1607,7 +1607,7 @@
     },
     "Cleric#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Divine Domain",
             "Channel Divinity (1/rest), Divine Domain feature, Harness Divine Power (Optional)",
@@ -2510,7 +2510,7 @@
     },
     "Druid#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Druidic, Spellcasting",
             "Wild Shape, Druid Circle, Wild Companion (Optional)",
@@ -2995,7 +2995,7 @@
     },
     "Fighter#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Fighting Style, Second Wind",
             "Action Surge (one use)",
@@ -3610,7 +3610,7 @@
     },
     "Monk#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Martial Arts#HIDDEN#INC#APPEND_BEFORE(1d)": [1, 1, 1, 1, 5, 5, 11, 11, 17, 17],
         "Ki Points#HIDDEN#INC": [2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         "Unarmored Movement#HIDDEN": ["—", "+10 ft", "+10 ft", "+10 ft", "+10 ft", "+15 ft", "+15 ft", "+15 ft", "+15 ft", "+20 ft", "+20 ft", "+20 ft", "+20 ft", "+25 ft", "+25 ft", "+25 ft", "+25 ft", "+30 ft", "+30 ft", "+30 ft"],
@@ -4140,7 +4140,7 @@
     },
     "Paladin#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Divine Sense, Lay on Hands",
             "Fighting Style, Spellcasting, Divine Smite",
@@ -4503,56 +4503,56 @@
             "1.Extra Attack":"Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Moonbeam:Spells+Moonbeam>",
+                    "<GOTO:Misty Step:Spells+Misty Step>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Person:Spells+Hold Person>",
+                    "<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Warding Bond:Spells+Warding Bond>",
+                    "<GOTO:Zone of Truth:Spells+Zone of Truth>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Lesser Restoration:Spells+Lesser Restoration>",
+                    "<GOTO:Zone of Truth:Spells+Zone of Truth>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Enhance Ability:Spells+Enhance Ability>",
+                    "<GOTO:Magic Weapon:Spells+Magic Weapon>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Calm Emotions:Spells+Calm Emotions>",
+                    "<GOTO:Hold Person:Spells+Hold Person>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Person:Spells+Hold Person>",
+                    "<GOTO:Misty Step:Spells+Misty Step>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Moonbeam:Spells+Moonbeam>",
+                    "<GOTO:See Invisibility:Spells+See Invisibility>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 5th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Crown of Madness:Spells+Crown of Madness>",
+                    "<GOTO:Darkness:Spells+Darkness>"
                 ]
             }
         },
@@ -4622,56 +4622,56 @@
             "1.":"Access to 3rd level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Plant Growth:Spells+Plant Growth>",
+                    "<GOTO:Protection from Energy:Spells+Protection from Energy>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Bestow Curse:Spells+Bestow Curse>",
+                    "<GOTO:Fear:Spells+Fear>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Vitality:Spells+Aura of Vitality>",
+                    "<GOTO:Spirit Guardians:Spells+Spirit Guardians>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Beacon of Hope:Spells+Beacon of Hope>",
+                    "<GOTO:Dispel Magic:Spells+Dispel Magic>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Haste:Spells+Haste>",
+                    "<GOTO:Protection From Energy:Spells+Protection From Energy>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Counterspell:Spells+Counterspell>",
+                    "<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Haste:Spells+Haste>",
+                    "<GOTO:Protection from Energy:Spells+Protection from Energy>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Counterspell:Spells+Counterspell>",
+                    "<GOTO:Nondetection:Spells+Nondetection>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 9th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Animate Dead:Spells+Animate Dead>",
+                    "<GOTO:Bestow Curse:Spells+Bestow Curse>"
                 ]
             }
         },
@@ -4693,56 +4693,56 @@
             "1.":"Access to 4th level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Ice Storm:Spells+Ice Storm>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Dominate Beast:Spells+Dominate Beast>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Banishment:Spells+Banishment>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Freedom of Movement:Spells+Freedom of Movement>",
+                    "<GOTO:Guardian of Faith:Spells+Guardian of Faith>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Compulsion:Spells+Compulsion>",
+                    "<GOTO:Freedom Of Movement:Spells+Freedom Of Movement>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>",
+                    "<GOTO:Stoneskin:Spells+Stoneskin>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Banishment:Spells+Banishment>",
+                    "<GOTO:Dimension Door:Spells+Dimension Door>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Aura of Purity:Spells+Aura of Purity>",
+                    "<GOTO:Banishment:Spells+Banishment>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 13th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Blight:Spells+Blight>",
+                    "<GOTO:Confusion:Spells+Confusion>"
                 ]
             }
         },
@@ -4796,56 +4796,56 @@
             "1.":"Access to 5th level spells",
             "2.Oath of the Ancients#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Ancients Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune with Nature:Spells+Commune with Nature>",
+                    "<GOTO:Tree Stride:Spells+Tree Stride>"
                 ]
             },
             "2.Oath of Conquest#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Conquest Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Cloudkill:Spells+Cloudkill>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             },
             "3.Oath of the Crown#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Crown Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Circle of Power:Spells+Circle of Power>",
+                    "<GOTO:Geas:Spells+Geas>"
                 ]
             },
             "4.Oath of Devotion#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Devotion Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Flame Strike:Spells+Flame Strike>"
                 ]
             },
             "5.Oath of Glory#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Glory Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Commune:Spells+Commune>",
+                    "<GOTO:Flame Strike:Spells+Flame Strike>"
                 ]
             },
             "6.Oath of Redemption#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Redemption Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Wall of Force:Spells+Wall of Force>"
                 ]
             },
             "7.Oath of Vengeance#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of Vengeance Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "8.Oath of the Watchers#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oath of the Watchers Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Hold Monster:Spells+Hold Monster>",
+                    "<GOTO:Scrying:Spells+Scrying>"
                 ]
             },
             "9.Oathbreaker#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Oathbreaker Spells at 17th Level": [
-                    "<GOTO::Spells+>",
-                    "<GOTO::Spells+>"
+                    "<GOTO:Contagion:Spells+Contagion>",
+                    "<GOTO:Dominate Person:Spells+Dominate Person>"
                 ]
             }
         },
@@ -4883,84 +4883,76 @@
             },
             "3.Oath of the Crown":{
                 "1.Exalted Champion":[
-                    "",
+                    "At 20th level, your presence on the field of battle is an inspiration to those dedicated to your cause. You can use your action to gain the following benefits for 1 hour:",
                     "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
+                    "<LIST_ITEM>You have resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.",
+                    "<LIST_ITEM>Your allies have advantage on death saving throws while within 30 feet of you.",
+                    "<LIST_ITEM>You have advantage on Wisdom saving throws, as do your allies within 30 feet of you.",
                     "<LIST_STOP>",
-                    ""
+                    "This effect ends early if you are incapacitated or die. Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
             "4.Oath of Devotion":{
-                "1.":[
-                    "",
-                    "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_STOP>",
-                    ""
+                "1.Holy Nimbus":[
+                    "At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.",
+                    "Whenever an enemy creature starts its turn in the bright light, the creature takes 10 radiant damage.",
+                    "In addition, for the duration, you have advantage on saving throws against spells cast by fiends or undead.",
+                    "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
             "5.Oath of Glory":{
-                "1.":[
-                    "",
+                "1.Living Legend":[
+                    "At 20th level, you can empower yourself with the legends — whether true or exaggerated — of your great deeds. As a bonus action, you gain the following benefits for 1 minute:",
                     "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
+                    "<LIST_ITEM>You are blessed with an otherworldly presence, gaining advantage on all Charisma checks.",
+                    "<LIST_ITEM>Once on each of your turns when you make a weapon attack and miss, you can cause that attack to hit instead.",
+                    "<LIST_ITEM>If you fail a saving throw, you can use your reaction to reroll it. You must use this new roll.",
                     "<LIST_STOP>",
-                    ""
+                    "Once you use this feature, you can’t use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
                 ]
             },
             "6.Oath of Redemption":{
-                "1.":[
-                    "",
+                "1.Emissary of Redemption":[
+                    "At 20th level, you become an avatar of peace, which gives you the following benefits.",
                     "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
+                    "<LIST_ITEM>You have resistance to all damage dealt by other creatures (their attacks, spells, and other effects).",
+                    "<LIST_ITEM>Whenever a creature damages you, it takes radiant damage equal to half the amount it dealt to you.",
                     "<LIST_STOP>",
-                    ""
+                    "If you attack a creature, cast a spell on it, or deal damage to it by any means but this feature, neither benefit works against that creature until you finish a long rest."
                 ]
             },
             "7.Oath of Vengeance":{
-                "1.":[
-                    "",
+                "1.Avenging Angel":[
+                    "At 20th level, you can assume the form of an angelic avenger. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:",
                     "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
+                    "<LIST_ITEM>Wings sprout from your back and grant you a flying speed of 60 feet.",
+                    "<LIST_ITEM>You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage. Attack rolls against the frightened creature have advantage.",
                     "<LIST_STOP>",
-                    ""
+                    "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
             "8.Oath of the Watchers":{
-                "1.":[
-                    "",
+                "1.Mortal Bulwark":[
+                    "At 20th level, you manifest a spark of divine power in defense of the mortal realms. As a bonus action, you gain the following benefits for 1 minute:",
                     "<LIST_START>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
-                    "<LIST_ITEM>",
+                    "<LIST_ITEM>You gain truesight with a range of 120 feet.",
+                    "<LIST_ITEM>You have advantage on attack rolls against aberrations, celestials, elementals, fey, and fiends.",
+                    "<LIST_ITEM>When you hit a creature with an attack roll and deal damage to it, you can also force it to make a Charisma saving throw against your spell save DC. On a failed save, the creature is magically banished to its native plane of existence if it's currently not there. On a successful save, the creature can't be banished by this feature for 24 hours.",
                     "<LIST_STOP>",
-                    ""
+                    "Once you use this bonus action, you can't use it again until you finish a long rest, unless you expend a 5th-level spell slot to use it again."
                 ]
             },
-            "9.Oathbreaker":{"1.":[
-                "",
-                "<LIST_START>",
-                "<LIST_ITEM>",
-                "<LIST_ITEM>",
-                "<LIST_ITEM>",
-                "<LIST_STOP>",
-                ""
+            "9.Oathbreaker":{
+                "1.Dread Lord":[
+                "At 20th level, you can, as an action, surround yourself with an aura of gloom that lasts for 1 minute. The aura reduces any bright light in a 30-foot radius around you to dim light. Whenever an enemy that is frightened by you starts its turn in the aura, it takes 4d10 psychic damage. Additionally, you and any creatures of your choosing in the aura are draped in deeper shadow. Creatures that rely on sight have disadvantage on attack rolls against creatures draped in this shadow.",
+                "While the aura lasts, you can use a bonus action on your turn to cause the shadows in the aura to attack one creature. Make a melee spell attack against the target. If the attack hits, the target takes necrotic damage equal to 3d10 + your Charisma modifier.",
+                "After activating the aura, you can't do so again until you finish a long rest."
             ]}
         }
     },
     "Ranger#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Favored Enemy, Natural Explorer",
             "Fighting Style, Spellcasting",
@@ -5050,7 +5042,7 @@
     },
     "Rogue#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Expertise, Sneak Attack, Thieves' Cant",
             "Cunning Action",
@@ -5135,7 +5127,7 @@
     },
     "Sorceror#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Sorcery Points#HIDDEN#INC": [2, 2, 3, 4, 5, 67, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Sorcerous Origin",
@@ -5232,7 +5224,7 @@
     },
     "Warlock#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
@@ -5322,7 +5314,7 @@
     },
     "Wizard#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
-        "Proficiency Bonus#HIDDEN#INC": [1, 1, 5, 9, 13, 17],
+        "Proficiency Bonus#HIDDEN#INC#APPEND_BEFORE(+)": [1, 1, 5, 9, 13, 17],
         "Features#HIDDEN#CALL(_autorefrepeatitems _genlocallink)": [
             "Spellcasting, Arcane Recovery",
             "Arcane Tradition",
