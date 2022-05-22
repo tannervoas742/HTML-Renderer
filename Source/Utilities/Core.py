@@ -6,21 +6,31 @@ import sys
 
 
 def PermuteWithOrder(List):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     if len(List) == 1:
         return [[List[0]]]
     ChildList = PermuteWithOrder(List[1:])
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     return list(map(lambda Item: [List[0]] + Item, copy.deepcopy(ChildList))) + ChildList
 
 def FlushPrintUTF8(*args, **kw):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     if 'end' not in kw:
         kw['end'] = '\n'
     if 'sep' not in kw:
         kw['sep'] = ' '
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     text = kw['sep'].join(list(map(lambda x: str(x), args))) + kw['end']
     sys.stdout.buffer.write((str(text)).encode(sys.stdout.encoding, 'backslashreplace'))
     sys.stdout.flush()
 
 def ReadJSON(path):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     MakePath = path.split('/')
     MakeIndex = 0
     while MakeIndex + 1 < len(MakePath):
@@ -36,6 +46,8 @@ def ReadJSON(path):
         return {}
 
 def WriteJSON(path, structure, beautify=True):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     MakePath = path.split('/')
     MakeIndex = 0
     while MakeIndex + 1 < len(MakePath):
@@ -46,6 +58,8 @@ def WriteJSON(path, structure, beautify=True):
         json.dump(structure, json_file, indent=2 if beautify else None, sort_keys=beautify, ensure_ascii=False)
 
 def DeepSize(Item):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     Size = 0
     if type(Item) == list:
         for Sub in Item:
@@ -58,6 +72,8 @@ def DeepSize(Item):
     return Size
 
 def Format(String, *Args):
+
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
     if len(Args) == 0:
         return String
     return String.format(*Args)

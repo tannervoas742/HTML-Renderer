@@ -11,10 +11,14 @@ from Utilities.Core import *
     
 class WebPage_Yattag:
     def __init__(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.HTML = SimpleHTML(self)
         self.DCTS = '_DONT_CLOSE_THIS_STAG_'
 
     def InitYattagDocument(self):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.Doc, self.Tag, self.Text, self.Line = yattag.Doc(
             defaults = {
                 'title': self.MetaData['document']['title']

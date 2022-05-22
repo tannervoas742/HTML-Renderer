@@ -11,6 +11,8 @@ from Utilities.Core import *
     
 class WebPage_Tables:
     def CleanTable(self, Table):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         for IndexY in range(len(Table)):
             for IndexX in range(len(Table[IndexY])):
                 Table[IndexY][IndexX] = str(Table[IndexY][IndexX])
@@ -18,6 +20,8 @@ class WebPage_Tables:
 
 
     def AddLookupTable(self, Input, State, Interface, Data):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Table = [Data]
         for i in range(State['lookup_table.range'][0] - 1, State['lookup_table.range'][1]):
             Row = []
@@ -28,14 +32,18 @@ class WebPage_Tables:
                     Row += [self.ParamStorage[Key][i]]
             Table += [Row]
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Table = self.CleanTable(Table)
 
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         WebTable(Table, State, Interface, self)
 
     def AddTable(self, Input, State, Interface, Data):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if type(Data) == dict:
             NewData = []
-            Ranks = list(map(lambda Ret: self.GetInterfaceFromKey(Ret)[0:2], Data.keys()))
+            Ranks = list(map(lambda Ret: self.GetCommandInterfaceFromKey(Ret)[0:2], Data.keys()))
             FormatString = 2
             Count = len(Ranks)
             while Count >= 10:
@@ -46,6 +54,10 @@ class WebPage_Tables:
             for Key in list(sorted(list(Data.keys()), key=lambda x: str(x))):
                 NewData += [['.'.join(Key.split('.')[1:]), Data[Key]]]
             Data = NewData
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Table = Data
         Table = self.CleanTable(Table)
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         WebTable(Table, State, Interface, self)
