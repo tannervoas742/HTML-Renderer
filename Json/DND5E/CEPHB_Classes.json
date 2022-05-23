@@ -4251,8 +4251,8 @@
                     "When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.",
                     "Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
                 ],
-                "4.":{
-                    "1.Oath of the Ancients":{
+                "4.#KEYFONT(LARGE_HEADER, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)":{
+                    "1.Oath of the Ancients#COLLAPSE":{
                         "1.Tenets of the Ancients":[
                             "The tenets of the Oath of the Ancients have been preserved for uncounted centuries. This oath emphasizes the principles of good above any concerns of law or chaos. Its four central principles are simple.",
                             "<BOLD>Kindle the Light.</BOLD> Through your acts of mercy, kindness, and forgiveness, kindle the light of hope in the world, beating back despair.",
@@ -4281,7 +4281,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "2.Oath of Conquest":{
+                    "2.Oath of Conquest#COLLAPSE":{
                         "1.Tenets of Conquest":[
                             "A paladin who takes this oath has the tenets of conquest seared on the upper arm.",
                             "<BOLD>Douse the Flame of Hope.</BOLD> It is not enough to merely defeat an enemy in battle. Your victory must be so overwhelming that your enemies’ will to fight is shattered forever. A blade can end a life. Fear can end an empire.",
@@ -4307,7 +4307,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "3.Oath of the Crown":{
+                    "3.Oath of the Crown#COLLAPSE":{
                         "1.Tenets of the Crown":[
                             "The tenets of the Oath of the Crown are often set by the sovereign to which their oath is sworn, but generally emphasize the following tenets.",
                             "<BOLD>Law.</BOLD> The law is paramount. It is the mortar that holds the stones of civilization together, and it must be respected.",
@@ -4334,7 +4334,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "4.Oath of Devotion":{
+                    "4.Oath of Devotion#COLLAPSE":{
                         "1.Tenets of Devotion":[
                             "Though the exact words and strictures of the Oath of Devotion vary, paladins of this oath share these tenets.",
                             "<BOLD>Honesty.</BOLD> Don't lie or cheat. Let your word be your promise.",
@@ -4364,7 +4364,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "5.Oath of Glory":{
+                    "5.Oath of Glory#COLLAPSE":{
                         "1.Tenets of Glory":[
                             "The tenets of the Oath of Glory drive a paladin to attempt heroics that might one day shine in legend.",
                             "<BOLD>Actions over Words.</BOLD> Strive to be known by glorious deeds, not words.",
@@ -4391,7 +4391,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "6.Oath of Redemption":{
+                    "6.Oath of Redemption#COLLAPSE":{
                         "1.Tenets of Redemption":[
                             "The tenets of the Oath of Redemption hold a paladin to a high standard of peace and justice.",
                             "<BOLD>Peace.</BOLD> Violence is a weapon of last resort. Diplomacy and understanding are the paths to long-lasting peace.",
@@ -4418,7 +4418,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "7.Oath of Vengeance":{
+                    "7.Oath of Vengeance#COLLAPSE":{
                         "1.Tenets of Vengeance":[
                             "The tenets of the Oath of Vengeance vary by paladin, but all the tenets revolve around punishing wrongdoers by any means necessary. Paladins who uphold these tenets are willing to sacrifice even their own righteousness to mete out justice upon those who do evil, so the paladins are often neutral or lawful neutral in alignment. The core principles of the tenets are brutally simple.",
                             "<BOLD>Fight the Greater Evil.</BOLD> Faced with a choice of fighting my sworn foes or combating a lesser evil, I choose the greater evil.",
@@ -4447,7 +4447,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "8.Oath of the Watchers":{
+                    "8.Oath of the Watchers#COLLAPSE":{
                         "1.Tenets of the Watchers":[
                             "A paladin who assumes the Oath of the Watchers swears to safeguard mortal realms from otherwordly threats.",
                             "<BOLD>Vigilance.</BOLD> The threats you face are cunning, powerful, and subversive. Be ever alert for their corruption.",
@@ -4474,7 +4474,7 @@
                             "<LIST_STOP>"
                         ]
                     },
-                    "9.Oathbreaker":{
+                    "9.Oathbreaker#COLLAPSE":{
                         "2.Oathbreaker Spells":{
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oathbreaker Spells#TABLE":[
