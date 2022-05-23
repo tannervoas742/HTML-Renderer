@@ -134,10 +134,6 @@ class WebPage_Links:
             MatchData = self.TP.Index(0, self.TP.Split(self.TP.Extract('<GOTO:.>', Input, False)))
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        if self.TP.Match:
-            self.Doc.stag('/' + TextTag, self.DCTS, self.Style(State), self.Class(State, FontClass))
-
-        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if Matched:
             if Input.strip() != '' or ForceTextTag != None:
                 self.Text(Input)
@@ -150,6 +146,10 @@ class WebPage_Links:
                     State['font'] = State['next.font'][0]
                     State['next.font'] = State['next.font'][1:]
             return True
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if Matched:
+            self.Doc.stag('/' + TextTag, self.DCTS, self.Style(State), self.Class(State, FontClass))
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         else:
