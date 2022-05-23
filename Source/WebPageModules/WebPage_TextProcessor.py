@@ -66,20 +66,22 @@ class WebPage_TextProcessor:
         CloseSearchLen = len(CloseSearch)
         for Char in PageText:
             if len(CurrentMatch) == DCTSLen and self.DCTS == CurrentMatch:
-                if len(CurrentClose) == CloseSearchLen and CurrentClose == CloseSearch:
-                    NewPageText += PostMatch + '>'
-                    CurrentMatch = ''
-                    PostMatch = ''
-                    CurrentClose = ''
-                elif Char == CloseSearch[len(CurrentClose)]:
+                if Char == CloseSearch[len(CurrentClose)]:
                     CurrentClose += Char
+                    if len(CurrentClose) == CloseSearchLen and CurrentClose == CloseSearch:
+                        NewPageText += PostMatch + '>'
+                        CurrentMatch = ''
+                        PostMatch = ''
+                        CurrentClose = ''
                 else:
                     PostMatch += Char
             elif Char == self.DCTS[len(CurrentMatch)]:
                 CurrentMatch += Char
             else:
-                NewPageText += Char
+                NewPageText += CurrentMatch + Char
                 CurrentMatch = ''
+        NewPageText += CurrentMatch + PostMatch + CurrentClose
+        PageText = NewPageText
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         for Key in list(self.PostProcessRefList.keys()):

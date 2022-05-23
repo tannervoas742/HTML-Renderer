@@ -262,12 +262,12 @@ class WebPage(
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
                         self.Doc.stag('br', self.Style(NewState), self.Class(NewState, 'pre-collapsible-br'))
-                        self.Doc.stag('ul', Format('id="collapsible-model{}"', CollapseModelCount), self.DCTS, self.Style(NewState), self.Class(NewState, Format('collapsible collapsible-model{}', CollapseModelCount)))
-                        self.Doc.stag('li', Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, self.Style(NewState), self.Class(NewState, 'list-collapsible'))
+                        self.Doc.stag('ul', self.DCTS, Format('id="collapsible-model{}"', CollapseModelCount), self.Style(NewState), self.Class(NewState, Format('collapsible collapsible-model{}', CollapseModelCount)))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
                     else:
                         self.Doc.stag('/li', self.DCTS)
-                        self.Doc.stag('li', Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, self.Style(NewState), self.Class(NewState, 'list-collapsible'))
-                    self.Doc.stag('div', Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, self.Style(NewState), self.Class(NewState, Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
+                    self.Doc.stag('div', self.DCTS, Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
                     CollapseRowCount += 0
@@ -280,7 +280,7 @@ class WebPage(
                     self.Doc.stag('/div', self.DCTS)
                 NewState['key'] += [Key]
                 if 'COLLAPSE' in Interface:
-                    self.Doc.stag('div', Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.DCTS, self.Style(NewState), self.Class(NewState, Format('collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)))
+                    self.Doc.stag('div', self.DCTS, Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
                 if 'COLLAPSE' in Interface:
