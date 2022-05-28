@@ -5849,14 +5849,45 @@
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "2.Arcane Trickster":{},
-            "3.Assassin":{},
-            "4.Inquisitive":{},
-            "5.Mastermind":{},
-            "6.Phantom":{},
-            "7.Scout":{},
-            "8.Soulknife":{},
-            "9.Swashbuckler":{},
+            "2.Arcane Trickster":{
+                "1.Versatile Trickster":"At 13th level, you gain the ability to distract targets with your <GOTO:Mage Hand:Spells+Mage Hand>. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
+            },
+            "3.Assassin":{
+                "1.Impostor":[
+                    "At 13th level, you gain the ability to unerringly mimic another person's speech, writing, and behavior. You must spend at least three hours studying these three components of the person's behavior, listening to speech, examining handwriting, and observing mannerisms.",
+                    "Your ruse is indiscernible to the casual observer. If a wary creature suspects something is amiss, you have advantage on any Charisma (Deception) check you make to avoid detection."
+                ]
+            },
+            "4.Inquisitive":{
+                "1.Unerring Eye":[
+                    "At 13th level, your senses are almost impossible to foil. As an action, you sense the presence of illusions, shapechangers not in their original form, and other magic designed to deceive the senses within 30 feet of you, provided you aren't blinded or deafened. You sense that an effect is attempting to trick you, but you gain no insight into what is hidden or into its true nature.",
+                    "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
+                ]
+            },
+            "5.Mastermind":{
+                "1.Misdirection":"Beginning at 13th level, you can sometimes cause another creature to suffer an attack meant for you. When you are targeted by an attack while a creature within 5 feet of you is granting you cover against that attack, you can use your reaction to have the attack target that creature instead of you."
+            },
+            "6.Phantom":{
+                "1.Ghost Walk":[
+                    "At 13th level, you can phase partially into the realm of the dead, becoming like a ghost. As a bonus action, you assume a spectral form. While in this form, you have a flying speed of 10 feet, you can hover, and attack rolls have disadvantage against you. You can also move through creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside a creature or an object.",
+                    "You stay in this form for 10 minutes or until you end it as a bonus action. To use this feature again, you must finish a long rest or destroy one of your soul trinkets as part of the bonus action you use to activate Ghost Walk."
+                ]
+            },
+            "7.Scout":{
+                "1.Ambush Master":[
+                    "Starting at 13th level, you excel at leading ambushes and acting first in a fight.",
+                    "You have advantage on initiative rolls. In addition, the first creature you hit during the first round of a combat becomes easier for you and others to strike; attack rolls against that target have advantage until the start of your next turn."
+                ]
+            },
+            "8.Soulknife":{
+                "1.Psychic Veil":[
+                    "At 13th level, you can weave a veil of psychic static to mask yourself. As an action, you can magically become invisible, along with anything you are wearing or carrying, for 1 hour or until you dismiss this effect (no action required). This invisibility ends early immediately after you deal damage to a creature, or you force a creature to make a saving throw.",
+                    "Once you use this feature, you can't do so again until you finish a long rest, unless you expend a Psionic Energy die to use this feature again."
+                ]
+            },
+            "9.Swashbuckler":{
+                "1.Elegant Maneuver":"Starting at 13th level, you can use a bonus action on your turn to gain advantage on the next Dexterity (Acrobatics) or Strength (Athletics) check you make during the same turn."
+            },
             "10.Thief":{
                 "1.Use Magic Device":"By 13th level, you have learned enough about the workings of magic that you can improvise the use of items even when they are not intended for you. You ignore all class, race, and level requirements on the use of magic items."
             }
@@ -5872,10 +5903,25 @@
         },
 
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "2.Arcane Trickster":{},
-            "3.Assassin":{},
-            "4.Inquisitive":{},
-            "5.Mastermind":{},
+            "2.Arcane Trickster":{
+                "1.Spell Thief":[
+                    "At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.",
+                    "Immediately after a creature casts a spell that targets you or includes you in its area of effect, you can use your reaction to force the creature to make a saving throw with its spellcasting ability modifier. The DC equals your spell save DC. On a failed save, you negate the spell's effect against you, and you steal the knowledge of the spell if it is at least 1st level and of a level you can cast (it doesn't need to be a wizard spell). For the next 8 hours, you know the spell and can cast it using your spell slots. The creature can't cast that spell until the 8 hours have passed.",
+                    "Once you use this feature, you can't use it again until you finish a long rest."
+                ]
+            },
+            "3.Assassin":{
+                "1.Death Strike":"Starting at 17th level, you become a master of instant death. When you attack and hit a creature that is surprised, it must make a Constitution saving throw (DC 8 + your Dexterity modifier + your proficiency bonus). On a failed save, double the damage of your attack against the creature."
+            },
+            "4.Inquisitive":{
+                "1.Eye for Weakness":"At 17th level, you learn to exploit a creature’s weaknesses by carefully studying its tactics and movement. While your Insightful Fighting feature applies to a creature, your Sneak Attack damage against that creature increases by 3d6."
+            },
+            "5.Mastermind":{
+                "1.Soul of Deceit":[
+                    "Starting at 17th level, your thoughts can't be read by telepathy or other means, unless you allow it. You can present false thoughts by making a Charisma (Deception) check contested by the mind reader's Wisdom (Insight) check.",
+                    "Additionally, no matter what you say, magic that would determine if you are telling the truth indicates you are being truthful if you so choose, and you can't be compelled to tell the truth by magic."
+                ]
+            },
             "6.Phantom":{},
             "7.Scout":{},
             "8.Soulknife":{},
