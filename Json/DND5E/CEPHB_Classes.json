@@ -5922,11 +5922,30 @@
                     "Additionally, no matter what you say, magic that would determine if you are telling the truth indicates you are being truthful if you so choose, and you can't be compelled to tell the truth by magic."
                 ]
             },
-            "6.Phantom":{},
-            "7.Scout":{},
-            "8.Soulknife":{},
-            "9.Swashbuckler":{},
-            "10.Thief":{}
+            "6.Phantom":{
+                "1.Death Knell":[
+                    "At 17th level, your association with death has become so close that you gain the following benefits:",
+                    "<LIST_START>",
+                    "<LIST_ITEM>When you use your Wails from the Grave, you can now deal the necrotic damage to both the first and the second creature.",
+                    "<LIST_ITEM>At the end of a long rest, a soul trinket appears in your hand if you don't have any soul trinkets, as the spirits of the dead are drawn to you.",
+                    "<LIST_STOP>"
+                ]
+            },
+            "7.Scout":{
+                "1.Sudden Strike":"Starting at 17th level, you can strike with deadly speed. If you take the Attack action on your turn, you can make one additional attack as a bonus action. This attack can benefit from your Sneak Attack even if you have already used it this turn, but you can't use your Sneak Attack against the same target more than once in a turn."
+            },
+            "8.Soulknife":{
+                "1.Rend Mind":[
+                    "When you reach 17th level, you can sweep your Psychic Blade directly through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Dexterity modifier). If the save fails, the target is stunned for 1 minute. The stunned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+                    "Once you use this feature, you can't do so again until you finish a long rest, unless you expend three Psionic Energy dice to use it again."
+                ]
+            },
+            "9.Swashbuckler":{
+                "1.Master Duelist":"Beginning at 17th level, your mastery of the blade lets you turn failure into success in combat. If you miss with an attack roll, you can roll it again with advantage. Once you do so, you can't use this feature again until you finish a short or long rest."
+            },
+            "10.Thief":{
+                "1.Thief's Reflexes":"When you reach 17th level, you have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal initiative and your second turn at your initiative minus 10. You can't use this feature when you are surprised."
+            }
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Elusive":"Beginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren't incapacitated."
