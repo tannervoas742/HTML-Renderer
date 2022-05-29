@@ -4261,11 +4261,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of the Ancients Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Ensnaring Strike:Spells+Ensnaring Strike>,<GOTO:Speak with Animals:Spells+Speak with Animals>"],
-                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>,<GOTO:Misty Step:Spells+Misty Step>"],
-                                ["9th","<GOTO:Plant Growth:Spells+Plant Growth>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
-                                ["13th","<GOTO:Ice Storm:Spells+Ice Storm>,<GOTO:Stoneskin:Spells+Stoneskin>"],
-                                ["17th","<GOTO:Commune with Nature:Spells+Commune with Nature>,<GOTO:Tree Stride:Spells+Tree Stride>"]                                
+                                ["3rd","<GOTO:Ensnaring Strike:Spells+Ensnaring Strike>, <GOTO:Speak with Animals:Spells+Speak with Animals>"],
+                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>, <GOTO:Misty Step:Spells+Misty Step>"],
+                                ["9th","<GOTO:Plant Growth:Spells+Plant Growth>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                                ["13th","<GOTO:Ice Storm:Spells+Ice Storm>, <GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Commune with Nature:Spells+Commune with Nature>, <GOTO:Tree Stride:Spells+Tree Stride>"]                                
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4289,11 +4289,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of Conquest Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Armor of Agathys:Spells+Armor of Agathys>,<GOTO:Command:Spells+Command>"],
-                                ["5th","<GOTO:Hold Person:Spells+Hold Person>,<GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"],
-                                ["9th","<GOTO:Bestow Curse:Spells+Bestow Curse>,<GOTO:Fear:Spells+Fear>"],
-                                ["13th","<GOTO:Dominate Beast:Spells+Dominate Beast>,<GOTO:Stoneskin:Spells+Stoneskin>"],
-                                ["17th","<GOTO:Cloudkill:Spells+Cloudkill>,<GOTO:Dominate Person:Spells+Dominate Person>"]
+                                ["3rd","<GOTO:Armor of Agathys:Spells+Armor of Agathys>, <GOTO:Command:Spells+Command>"],
+                                ["5th","<GOTO:Hold Person:Spells+Hold Person>, <GOTO:Spiritual Weapon:Spells+Spiritual Weapon>"],
+                                ["9th","<GOTO:Bestow Curse:Spells+Bestow Curse>, <GOTO:Fear:Spells+Fear>"],
+                                ["13th","<GOTO:Dominate Beast:Spells+Dominate Beast>, <GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Cloudkill:Spells+Cloudkill>, <GOTO:Dominate Person:Spells+Dominate Person>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4316,11 +4316,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of the Crown Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Command:Spells+Command>,<GOTO:Compelled Duel:Spells+Compelled Duel>"],
-                                ["5th","<GOTO:Warding Bond:Spells+Warding Bond>,<GOTO:Zone of Truth:Spells+Zone of Truth>"],
-                                ["9th","<GOTO:Aura of Vitality:Spells+Aura of Vitality>,<GOTO:Spirit Guardians:Spells+Spirit Guardians>"],
-                                ["13th","<GOTO:Banishment:Spells+Banishment>,<GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
-                                ["17th","<GOTO:Circle of Power:Spells+Circle of Power>,<GOTO:Geas:Spells+Geas>"]
+                                ["3rd","<GOTO:Command:Spells+Command>, <GOTO:Compelled Duel:Spells+Compelled Duel>"],
+                                ["5th","<GOTO:Warding Bond:Spells+Warding Bond>, <GOTO:Zone of Truth:Spells+Zone of Truth>"],
+                                ["9th","<GOTO:Aura of Vitality:Spells+Aura of Vitality>, <GOTO:Spirit Guardians:Spells+Spirit Guardians>"],
+                                ["13th","<GOTO:Banishment:Spells+Banishment>, <GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
+                                ["17th","<GOTO:Circle of Power:Spells+Circle of Power>, <GOTO:Geas:Spells+Geas>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4344,11 +4344,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of Devotion Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>,<GOTO:Sanctuary:Spells+Sanctuary>"],
-                                ["5th","<GOTO:Lesser Restoration:Spells+Lesser Restoration>,<GOTO:Zone of Truth:Spells+Zone of Truth>"],
-                                ["9th","<GOTO:Beacon of Hope:Spells+Beacon of Hope>,<GOTO:Dispel Magic:Spells+Dispel Magic>"],
-                                ["13th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
-                                ["17th","<GOTO:Commune:Spells+Commune>,<GOTO:Flame Strike:Spells+Flame Strike>"]
+                                ["3rd","<GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>, <GOTO:Sanctuary:Spells+Sanctuary>"],
+                                ["5th","<GOTO:Lesser Restoration:Spells+Lesser Restoration>, <GOTO:Zone of Truth:Spells+Zone of Truth>"],
+                                ["9th","<GOTO:Beacon of Hope:Spells+Beacon of Hope>, <GOTO:Dispel Magic:Spells+Dispel Magic>"],
+                                ["13th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Guardian of Faith:Spells+Guardian of Faith>"],
+                                ["17th","<GOTO:Commune:Spells+Commune>, <GOTO:Flame Strike:Spells+Flame Strike>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4373,11 +4373,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of Glory Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Guiding Bolt:Spells+Guiding Bolt>,<GOTO:Heroism:Spells+Heroism>"],
-                                ["5th","<GOTO:Enhance Ability:Spells+Enhance Ability>,<GOTO:Magic Weapon:Spells+Magic Weapon>"],
-                                ["9th","<GOTO:Haste:Spells+Haste>,<GOTO:Protection From Energy:Spells+Protection From Energy>"],
-                                ["13th","<GOTO:Compulsion:Spells+Compulsion>,<GOTO:Freedom Of Movement:Spells+Freedom Of Movement>"],
-                                ["17th","<GOTO:Commune:Spells+Commune>,<GOTO:Flame Strike:Spells+Flame Strike>"]                                
+                                ["3rd","<GOTO:Guiding Bolt:Spells+Guiding Bolt>, <GOTO:Heroism:Spells+Heroism>"],
+                                ["5th","<GOTO:Enhance Ability:Spells+Enhance Ability>, <GOTO:Magic Weapon:Spells+Magic Weapon>"],
+                                ["9th","<GOTO:Haste:Spells+Haste>, <GOTO:Protection From Energy:Spells+Protection From Energy>"],
+                                ["13th","<GOTO:Compulsion:Spells+Compulsion>, <GOTO:Freedom Of Movement:Spells+Freedom Of Movement>"],
+                                ["17th","<GOTO:Commune:Spells+Commune>, <GOTO:Flame Strike:Spells+Flame Strike>"]                                
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4400,11 +4400,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of Redemption Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Sanctuary:Spells+Sanctuary>,<GOTO:Sleep:Spells+Sleep>"],
-                                ["5th","<GOTO:Calm Emotions:Spells+Calm Emotions>,<GOTO:Hold Person:Spells+Hold Person>"],
-                                ["9th","<GOTO:Counterspell:Spells+Counterspell>,<GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>"],
-                                ["13th","<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>,<GOTO:Stoneskin:Spells+Stoneskin>"],
-                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Wall of Force:Spells+Wall of Force>"]                                
+                                ["3rd","<GOTO:Sanctuary:Spells+Sanctuary>, <GOTO:Sleep:Spells+Sleep>"],
+                                ["5th","<GOTO:Calm Emotions:Spells+Calm Emotions>, <GOTO:Hold Person:Spells+Hold Person>"],
+                                ["9th","<GOTO:Counterspell:Spells+Counterspell>, <GOTO:Hypnotic Pattern:Spells+Hypnotic Pattern>"],
+                                ["13th","<GOTO:Otiluke's Resilient Sphere:Spells+Otiluke's Resilient Sphere>, <GOTO:Stoneskin:Spells+Stoneskin>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>, <GOTO:Wall of Force:Spells+Wall of Force>"]                                
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4427,11 +4427,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of Vengeance Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Bane:Spells+Bane>,<GOTO:Hunter's Mark:Spells+Hunter's Mark>"],
-                                ["5th","<GOTO:Hold Person:Spells+Hold Person>,<GOTO:Misty Step:Spells+Misty Step>"],
-                                ["9th","<GOTO:Haste:Spells+Haste>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
-                                ["13th","<GOTO:Banishment:Spells+Banishment>,<GOTO:Dimension Door:Spells+Dimension Door>"],
-                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Scrying:Spells+Scrying>"]
+                                ["3rd","<GOTO:Bane:Spells+Bane>, <GOTO:Hunter's Mark:Spells+Hunter's Mark>"],
+                                ["5th","<GOTO:Hold Person:Spells+Hold Person>, <GOTO:Misty Step:Spells+Misty Step>"],
+                                ["9th","<GOTO:Haste:Spells+Haste>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                                ["13th","<GOTO:Banishment:Spells+Banishment>, <GOTO:Dimension Door:Spells+Dimension Door>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>, <GOTO:Scrying:Spells+Scrying>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4455,11 +4455,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oath of the Watchers Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Alarm:Spells+Alarm>,<GOTO:Detect Magic:Spells+Detect Magic>"],
-                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>,<GOTO:See Invisibility:Spells+See Invisibility>"],
-                                ["9th","<GOTO:Counterspell:Spells+Counterspell>,<GOTO:Nondetection:Spells+Nondetection>"],
-                                ["13th","<GOTO:Aura of Purity:Spells+Aura of Purity>,<GOTO:Banishment:Spells+Banishment>"],
-                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>,<GOTO:Scrying:Spells+Scrying>"]
+                                ["3rd","<GOTO:Alarm:Spells+Alarm>, <GOTO:Detect Magic:Spells+Detect Magic>"],
+                                ["5th","<GOTO:Moonbeam:Spells+Moonbeam>, <GOTO:See Invisibility:Spells+See Invisibility>"],
+                                ["9th","<GOTO:Counterspell:Spells+Counterspell>, <GOTO:Nondetection:Spells+Nondetection>"],
+                                ["13th","<GOTO:Aura of Purity:Spells+Aura of Purity>, <GOTO:Banishment:Spells+Banishment>"],
+                                ["17th","<GOTO:Hold Monster:Spells+Hold Monster>, <GOTO:Scrying:Spells+Scrying>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -4476,11 +4476,11 @@
                             "1.":"You gain oath spells at the paladin levels listed.",
                             "2.Oathbreaker Spells#TABLE":[
                                 ["Paladin Level","Spells"],
-                                ["3rd","<GOTO:Hellish Rebuke:Spells+Hellish Rebuke>,<GOTO:Inflict Wounds:Spells+Inflict Wounds>"],
-                                ["5th","<GOTO:Crown of Madness:Spells+Crown of Madness>,<GOTO:Darkness:Spells+Darkness>"],
-                                ["9th","<GOTO:Animate Dead:Spells+Animate Dead>,<GOTO:Bestow Curse:Spells+Bestow Curse>"],
-                                ["13th","<GOTO:Blight:Spells+Blight>,<GOTO:Confusion:Spells+Confusion>"],
-                                ["17th","<GOTO:Contagion:Spells+Contagion>,<GOTO:Dominate Person:Spells+Dominate Person>"]
+                                ["3rd","<GOTO:Hellish Rebuke:Spells+Hellish Rebuke>, <GOTO:Inflict Wounds:Spells+Inflict Wounds>"],
+                                ["5th","<GOTO:Crown of Madness:Spells+Crown of Madness>, <GOTO:Darkness:Spells+Darkness>"],
+                                ["9th","<GOTO:Animate Dead:Spells+Animate Dead>, <GOTO:Bestow Curse:Spells+Bestow Curse>"],
+                                ["13th","<GOTO:Blight:Spells+Blight>, <GOTO:Confusion:Spells+Confusion>"],
+                                ["17th","<GOTO:Contagion:Spells+Contagion>, <GOTO:Dominate Person:Spells+Dominate Person>"]
                             ]
                         },
                         "3.Channel Divinity":[
@@ -6061,11 +6061,11 @@
                         ],
                         "2.Psionic Spells#TABLE":[
                             ["Sorcerer Level","Spells"],
-                            ["1st","<GOTO:Arms of Hadar:Spells+Arms of Hadar>,<GOTO:Dissonant Whispers, Mind Sliver:Spells+Dissonant Whispers, Mind Sliver>"],
-                            ["3rd","<GOTO:Calm Emotions:Spells+Calm Emotions>,<GOTO:Detect Thoughts:Spells+Detect Thoughts>"],
-                            ["5th","<GOTO:Hunger of Hadar:Spells+Hunger of Hadar>,<GOTO:Sending:Spells+Sending>"],
-                            ["7th","<GOTO:Evard's Black Tentacles:Spells+Evard's Black Tentacles>,<GOTO:Summon Aberration:Spells+Summon Aberration>"],
-                            ["9th","<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>,<GOTO:Telekinesis:Spells+Telekinesis>"]
+                            ["1st","<GOTO:Arms of Hadar:Spells+Arms of Hadar>, <GOTO:Dissonant Whispers:Spells+Dissonant Whispers>, <GOTO:Mind Sliver:Spells+Mind Sliver>"],
+                            ["3rd","<GOTO:Calm Emotions:Spells+Calm Emotions>, <GOTO:Detect Thoughts:Spells+Detect Thoughts>"],
+                            ["5th","<GOTO:Hunger of Hadar:Spells+Hunger of Hadar>, <GOTO:Sending:Spells+Sending>"],
+                            ["7th","<GOTO:Evard's Black Tentacles:Spells+Evard's Black Tentacles>, <GOTO:Summon Aberration:Spells+Summon Aberration>"],
+                            ["9th","<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>, <GOTO:Telekinesis:Spells+Telekinesis>"]
                         ]
                     },
                     "3.Telepathic Speech":[
@@ -6081,11 +6081,11 @@
                         ],
                         "2.Clockwork Spells#TABLE":[
                             ["Sorcerer Level","Spells"],
-                            ["1st","<GOTO:Alarm:Spells+Alarm>,<GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>"],
-                            ["3rd","<GOTO:Aid:Spells+Aid>,<GOTO:Lesser Restoration:Spells+Lesser Restoration>"],
-                            ["5th","<GOTO:Dispel Magic:Spells+Dispel Magic>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
-                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Summon Construct:Spells+Summon Construct>"],
-                            ["9th","<GOTO:Greater Restoration:Spells+Greater Restoration>,<GOTO:Wall of Force:Spells+Wall of Force>"]
+                            ["1st","<GOTO:Alarm:Spells+Alarm>, <GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>"],
+                            ["3rd","<GOTO:Aid:Spells+Aid>, <GOTO:Lesser Restoration:Spells+Lesser Restoration>"],
+                            ["5th","<GOTO:Dispel Magic:Spells+Dispel Magic>, <GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>, <GOTO:Summon Construct:Spells+Summon Construct>"],
+                            ["9th","<GOTO:Greater Restoration:Spells+Greater Restoration>, <GOTO:Wall of Force:Spells+Wall of Force>"]
                         ],
                         "3.":"In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
                         "4.Manifestations of Order#TABLE":[
