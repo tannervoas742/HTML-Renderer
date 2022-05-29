@@ -6044,8 +6044,65 @@
             },
             "2.Sorcerous Origin":{
                 "1.":"Choose a sorcerous origin, which describes the source of your innate magical power. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.",
-                "2.Aberrant Mind":{},
-                "3.Clockwork Soul":{},
+                "2.Aberrant Mind":{
+                    "1.Aberrant Origins#TABLE":[
+                        ["d6","Origin"],
+                        ["1","You were exposed to the Far Realm's warping influence. You are convinced that a tentacle is now growing on you, but no one else can see it."],
+                        ["2","A psychic wind from the Astral Plane carried psionic energy to you. When you use your powers, faint motes of light sparkle around you."],
+                        ["3","You once suffered the dominating powers of an aboleth, leaving a psychic splinter in your mind."],
+                        ["4","You were implanted with a mind flayer tadpole, but the ceremorphosis never completed. And now its psionic power is yours. When you use it, your flesh shines with a strange mucus."],
+                        ["5","As a child, you had an imaginary friend that looked like a flumph or a strange platypus-like creature. One day, it gifted you with psionic powers, which have ended up being not so imaginary."],
+                        ["6","Your nightmares whisper the truth to you: your psionic powers are not your own. You draw them from your parasitic twin!"]
+                    ],
+                    "2.Psionic Spells":{
+                        "1.":[
+                            "Starting at 1st level, you learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.",
+                            "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be a divination or an enchantment spell from the sorcerer, warlock, or wizard spell list."
+                        ],
+                        "2.Psionic Spells#TABLE":[
+                            ["Sorcerer Level","Spells"],
+                            ["1st","<GOTO:Arms of Hadar:Spells+Arms of Hadar>,<GOTO:Dissonant Whispers, Mind Sliver:Spells+Dissonant Whispers, Mind Sliver>"],
+                            ["3rd","<GOTO:Calm Emotions:Spells+Calm Emotions>,<GOTO:Detect Thoughts:Spells+Detect Thoughts>"],
+                            ["5th","<GOTO:Hunger of Hadar:Spells+Hunger of Hadar>,<GOTO:Sending:Spells+Sending>"],
+                            ["7th","<GOTO:Evard's Black Tentacles:Spells+Evard's Black Tentacles>,<GOTO:Summon Aberration:Spells+Summon Aberration>"],
+                            ["9th","<GOTO:Rary's Telepathic Bond:Spells+Rary's Telepathic Bond>,<GOTO:Telekinesis:Spells+Telekinesis>"]
+                        ]
+                    },
+                    "3.Telepathic Speech":[
+                        "Starting at 1st level, you can form a telepathic connection between your mind and the mind of another. As a bonus action, choose one creature you can see within 30 feet of you. You and the chosen creature can speak telepathically with each other while the two of you are within a number of miles of each other equal to your Charisma modifier (minimum of 1 mile). To understand each other, you each must speak mentally in a language the other knows.",
+                        "The telepathic connection lasts for a number of minutes equal to your sorcerer level. It ends early if you are incapacitated or die or if you use this ability to form a connection with a different creature."
+                    ]
+                },
+                "3.Clockwork Soul":{
+                    "1.Clockwork Magic":{
+                        "1.":[
+                            "You learn additional spells when you reach certain levels in this class, as shown on the Clockwork Spells table. Each spell counts as a sorcerer spell for you, but it doesn’t count against the number of sorcerer spells you know. These spells can’t be replaced when you gain a level in this class.",
+                            "Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. The new spell must be an abjuration or a transmutation spell from the sorcerer, warlock, or wizard spell list."
+                        ],
+                        "2.Clockwork Spells#TABLE":[
+                            ["Sorcerer Level","Spells"],
+                            ["1st","<GOTO:Alarm:Spells+Alarm>,<GOTO:Protection from Evil and Good:Spells+Protection from Evil and Good>"],
+                            ["3rd","<GOTO:Aid:Spells+Aid>,<GOTO:Lesser Restoration:Spells+Lesser Restoration>"],
+                            ["5th","<GOTO:Dispel Magic:Spells+Dispel Magic>,<GOTO:Protection from Energy:Spells+Protection from Energy>"],
+                            ["7th","<GOTO:Freedom of Movement:Spells+Freedom of Movement>,<GOTO:Summon Construct:Spells+Summon Construct>"],
+                            ["9th","<GOTO:Greater Restoration:Spells+Greater Restoration>,<GOTO:Wall of Force:Spells+Wall of Force>"]
+                        ],
+                        "3.":"In addition, consult the Manifestations of Order table and choose or randomly determine a way your connection to order manifests while you are casting any of your sorcerer spells.",
+                        "4.Manifestations of Order#TABLE":[
+                            ["d6","Manifestation"],
+                            ["1","Spectral cogwheels hover behind you."],
+                            ["2","The hands of a clock spin in your eyes."],
+                            ["3","Your skin glows with a brassy sheen."],
+                            ["4","Floating equations and geometric objects overlay your body."],
+                            ["5","Your spellcasting focus temporarily takes the form of a Tiny clockwork mechanism."],
+                            ["6","The ticking of gears or ringing of a clock can be heard by you and those affected by your magic."]
+                        ]
+                    },
+                    "2.Restore Balance":[
+                        "Starting at 1st level, your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.",
+                        "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+                    ]
+                },
                 "4.Draconic Bloodline":{},
                 "5.Divine Soul":{},
                 "6.Shadow Magic":{},
@@ -6081,33 +6138,42 @@
                 "At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level.",
                 "You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.",
                 "<LIST_START>",
-                "<LIST_ITEM><BOLD></BOLD>Careful Spell. When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, you spend 1 sorcery point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell.",
-                "<LIST_ITEM><BOLD></BOLD>Distant Spell. When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.",
+                "<LIST_ITEM><BOLD>Careful Spell.</BOLD> When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, you spend 1 sorcery point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell.",
+                "<LIST_ITEM><BOLD>Distant Spell.</BOLD> When you cast a spell that has a range of 5 feet or greater, you can spend 1 sorcery point to double the range of the spell.",
                     "<LIST_START>",
                     "<LIST_ITEM>When you cast a spell that has a range of touch, you can spend 1 sorcery point to make the range of the spell 30 feet.",
                     "<LIST_STOP>",
-                "<LIST_ITEM><BOLD></BOLD>Empowered Spell. When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.",
+                "<LIST_ITEM><BOLD>Empowered Spell.</BOLD> When you roll damage for a spell, you can spend 1 sorcery point to reroll a number of the damage dice up to your Charisma modifier (minimum of one). You must use the new rolls.",
                     "<LIST_START>",
                     "<LIST_ITEM>You can use Empowered Spell even if you have already used a different Metamagic option during the casting of the spell.",
                     "<LIST_STOP>",
-                "<LIST_ITEM><BOLD></BOLD>Extended Spell. When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours.",
-                "<LIST_ITEM><BOLD></BOLD>Heightened Spell. When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell.",
-                "<LIST_ITEM><BOLD></BOLD>Quickened Spell. When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.",
-                "<LIST_ITEM><BOLD></BOLD>Seeking Spell. If you make an attack roll for a spell and miss, you can spend 2 sorcerer points to reroll the d20, and you must use the new roll.",
+                "<LIST_ITEM><BOLD>Extended Spell.</BOLD> When you cast a spell that has a duration of 1 minute or longer, you can spend 1 sorcery point to double its duration, to a maximum duration of 24 hours.",
+                "<LIST_ITEM><BOLD>Heightened Spell.</BOLD> When you cast a spell that forces a creature to make a saving throw to resist its effects, you can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw made against the spell.",
+                "<LIST_ITEM><BOLD>Quickened Spell.</BOLD> When you cast a spell that has a casting time of 1 action, you can spend 2 sorcery points to change the casting time to 1 bonus action for this casting.",
+                "<LIST_ITEM><BOLD>Seeking Spell.</BOLD> If you make an attack roll for a spell and miss, you can spend 2 sorcerer points to reroll the d20, and you must use the new roll.",
                     "<LIST_START>",
                     "<LIST_ITEM>You can use Seeking Spell even if you have already used a different Metamagic option during the casting of the spell.",
                     "<LIST_STOP>",
-                "<LIST_ITEM><BOLD></BOLD>Subtle Spell. When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components.",
-                "<LIST_ITEM><BOLD></BOLD>Transmuted Spell. When you cast a spell that deals a type of damage from the following list, you can spend 1 sorcery point to change that damage type to one of the other listed types: acid, cold, fire, lightning, poison, thunder.",
-                "<LIST_ITEM><BOLD></BOLD>Twinned Spell. When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip). To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, <GOTO:Magic Missile:Spells+Magic Missile> and <GOTO:Scorching Ray:Spells+Scorching Ray> aren't eligible, but <GOTO:Ray of Frost:Spells+Ray of Frost> and <GOTO:Chromatic Orb:Spells+Chromatic Orb> are.",
+                "<LIST_ITEM><BOLD>Subtle Spell.</BOLD> When you cast a spell, you can spend 1 sorcery point to cast it without any somatic or verbal components.",
+                "<LIST_ITEM><BOLD>Transmuted Spell.</BOLD> When you cast a spell that deals a type of damage from the following list, you can spend 1 sorcery point to change that damage type to one of the other listed types: acid, cold, fire, lightning, poison, thunder.",
+                "<LIST_ITEM><BOLD>Twinned Spell.</BOLD> When you cast a spell that targets only one creature and doesn't have a range of self, you can spend a number of sorcery points equal to the spell's level to target a second creature in range with the same spell (1 sorcery point if the spell is a cantrip). To be eligible, a spell must be incapable of targeting more than one creature at the spell's current level. For example, <GOTO:Magic Missile:Spells+Magic Missile> and <GOTO:Scorching Ray:Spells+Scorching Ray> aren't eligible, but <GOTO:Ray of Frost:Spells+Ray of Frost> and <GOTO:Chromatic Orb:Spells+Chromatic Orb> are.",
                 "<LIST_STOP>"
             ]
         },
         "9.4th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Sorcerous Versatility (Optional)":[
+                "When you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class' spellcasting feature with another cantrip from the sorcerer spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Magical Guidance (Optional)":"When you reach 5th level, you can tap into your inner wellspring of magic to try and conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the d20, and you must use the new roll, potentially turning the failure into a success."
+        },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "2.Aberrant Mind":{},
             "3.Clockwork Soul":{},
@@ -6119,14 +6185,30 @@
         },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Sorcerous Versatility (Optional)":[
+                "When you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class' spellcasting feature with another cantrip from the sorcerer spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
         "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Metamagic":"At 10th level you gain an additional Metamagic option."
+        },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "17.12th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Sorcerous Versatility (Optional)":[
+                "When you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class' spellcasting feature with another cantrip from the sorcerer spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
@@ -6141,10 +6223,19 @@
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Sorcerous Versatility (Optional)":[
+                "When you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class' spellcasting feature with another cantrip from the sorcerer spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Metamagic":"At 17th level you gain an additional Metamagic option."
+        },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "2.Aberrant Mind":{},
             "3.Clockwork Soul":{},
@@ -6155,10 +6246,19 @@
             "8.Wild Magic":{}
         },
         "24.19th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
+            "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
+            "2.Sorcerous Versatility (Optional)":[
+                "When you reach a level in this class that grants the Ability Score Improvement feature, you can do one of the following, representing the magic within you flowing in new ways:",
+                "<LIST_START>",
+                "<LIST_ITEM>Replace one of the options you chose for the Metamagic feature with a different Metamagic option available to you.",
+                "<LIST_ITEM>Replace one cantrip you learned from this class' spellcasting feature with another cantrip from the sorcerer spell list.",
+                "<LIST_STOP>"
+            ]
         },
 
-        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {}
+        "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Sorcerous Restoration":"At 20th level, you regain 4 expended sorcery points whenever you finish a short rest."
+        }
     },
     "Warlock#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
         "Level#HIDDEN#RANGE": [1, 20],
