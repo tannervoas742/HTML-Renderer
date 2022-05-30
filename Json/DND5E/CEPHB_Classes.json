@@ -6474,22 +6474,22 @@
             "Otherworldly Patron, Pact Magic",
             "Eldritch Invocations",
             "Pact Boon",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Eldritch Versatility (Optional)",
             "—",
             "Otherworldly Patron feature",
             "—",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Eldritch Versatility (Optional)",
             "—",
             "Otherworldly Patron feature",
             "Mystic Arcanum (6th level)",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Eldritch Versatility (Optional)",
             "Mystic Arcanum (7th level)",
             "Otherworldly Patron feature",
             "Mystic Arcanum (8th level)",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Eldritch Versatility (Optional)",
             "Mystic Arcanum (9th level)",
             "—",
-            "Ability Score Improvement",
+            "Ability Score Improvement, Eldritch Versatility (Optional)",
             "Eldritch Master"
         ],
         "Cantrips Known#HIDDEN#INC": [1, 1, 4, 10],
@@ -6521,29 +6521,186 @@
             "Spell slots: If you have Pact Magic and Spellcasting, you can use any spell slots to cast any spells that you know and have prepared. These spell slots should be tracked separately."
         ],
 
-        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.":{
+                "1.":"At 1st level, you have struck a bargain with an otherworldly being of your choice. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.",
+                "2.Archfey":{},
+                "3.Celestial":{},
+                "4.Fathomless":{},
+                "5.Fiend":{},
+                "6.The Genie":{},
+                "7.Great Old One":{},
+                "8.Hexblade":{},
+                "9.Undead":{},
+                "10.Undying":{}
+            },
+            "2.Pact Magic":{
+                "1.":"Your arcane research and the magic bestowed on you by your patron have given you facility with spells.",
+                "2.Cantrips":"You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.",
+                "3.Spell Slots":[
+                    "The Warlock table shows how many spell slots you have to cast your warlock spells of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your warlock spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+                    "For example, when you are 5th level, you have two 3rd-level spell slots. To cast the 1st-level spell <GOTO:Witch Bolt:Spells+Witch Bolt>, you must spend one of those slots, and you cast it as a 3rd-level spell."
+                ],
+                "4.Spells Known of 1st Level and Higher":[
+                    "At 1st level, you know two 1st-level spells of your choice from the warlock spell list.",
+                    "The Spells Known column of the Warlock table shows when you learn more warlock spells of your choice of 1st level or higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new warlock spell, which can be 1st, 2nd, or 3rd level.",
+                    "Additionally, when you gain a level in this class, you can choose one of the warlock spells you know and replace it with another spell from the warlock spell list, which also must be of a level for which you have spell slots."
+                ],
+                "5.Spellcasting Ability":[
+                    "Charisma is your spellcasting ability for your warlock spells, so you use your Charisma whenever a spell refers to your spellcasting ability. In addition, you use your Charisma modifier when setting the saving throw DC for a warlock spell you cast and when making an attack roll with one.",
+                    "<BOLD>Spell save DC</BOLD> = 8 + your proficiency bonus + your Charisma modifier",
+                    "<BOLD>Spell attack modifier</BOLD> = your proficiency bonus + your Charisma modifier"
+                ],
+                "6.Spellcasting Focus":"You can use an arcane focus as a spellcasting focus for your warlock spells."
+            }
+        },
+        "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Eldritch Invocations":{
+                "1.":[
+                    "In your study of occult lore, you have unearthed Eldritch Invocations, fragments of forbidden knowledge that imbue you with an abiding magical ability.",
+                    "At 2nd level, you gain two eldritch invocations of your choice. When you gain certain warlock levels, you gain additional invocations of your choice, as shown in the Invocations Known column of the Warlock table. A level prerequisite refers to your level in this class.",
+                    "Additionally, when you gain a level in this class, you can choose one of the invocations you know and replace it with another invocation that you could learn at that level."
+                ],
+                "2.Agonizing Blast":[
+                    "<BOLD>Prerequisite: <GOTO:Eldritch Blast:Spells+Eldritch Blast> cantrip</BOLD>",
+                    "When you cast Eldritch Blast, add your Charisma modifier to the damage it deals on a hit."
+                ],
+                "3.Armor of Shadows":[
+                    "You can cast <GOTO:Mage Armor:Spells+Mage Armor> on yourself at will, without expending a spell slot or material components."
+               ],
+                "4.Aspect of the Moon":[
+                    "<BOLD>Prerequisite: Pact of the Tome feature</BOLD>",
+                    "You no longer need to sleep and can’t be forced to sleep by any means. To gain the benefits of a long rest, you can spend all 8 hours doing light activity, such as reading your Book of Shadows and keeping watch."
+                ],
+                "5.Beast Speech":[
+                    "You can cast Speak with Animals at will, without expending a spell slot."
+               ],
+                "6.Beguiling Influence":[
+                    "You gain proficiency in the Deception and Persuasion skills."
+               ],
+                "7.Book of Ancient Secrets":[
+                    "<BOLD>Prerequisite: Pact of the Tome feature</BOLD>",
+                    "You can now inscribe magical rituals in your Book of Shadows. Choose two 1st-level spells that have the ritual tag from any class's spell list (the two needn't be from the same list). The spells appear in the book and don't count against the number of spells you know. With your Book of Shadows in hand, you can cast the chosen spells as rituals. You can't cast the spells except as rituals, unless you've learned them by some other means. You can also cast a warlock spell you know as a ritual if it has the ritual tag.",
+                    "On your adventures, you can add other ritual spells to your Book of Shadows. When you find such a spell, you can add it to the book if the spell's level is equal to or less than half your warlock level (rounded up) and if you can spare the time to transcribe the spell. For each level of the spell, the transcription process takes 2 hours and costs 50 gp for the rare inks needed to inscribe it."
+                ],
+                "8.Devil's Sight":[
+                    "You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet."
+               ],
+                "9.Eldritch Mind":[
+                    "You have advantage on Constitution saving throws that you make to maintain your concentration on a spell."
+               ],
+                "10.Eldritch Sight":[
+                    "You can cast Detect Magic at will, without expending a spell slot or material components."
+               ],
+                "11.Eldritch Spear":[
+                    "<BOLD>Prerequisite: <GOTO:Eldritch Blast:Spells+Eldritch Blast> cantrip</BOLD>",
+                    "When you cast Eldritch Blast, its range is 300 feet."
+                ],
+                "12.Eyes of the Rune Keeper":[
+                    "You can read all writing."
+               ],
+                "13.Fiendish Vigor":[
+                    "You can cast False Life on yourself at will as a 1st-level spell, without expending a spell slot or material components."
+               ],
+                "14.Gaze of Two Minds":[
+                    "You can use your action to touch a willing humanoid and perceive through its senses until the end of your next turn. As long as the creature is on the same plane of existence as you, you can use your action on subsequent turns to maintain this connection, extending the duration until the end of your next turn. While perceiving through the other creature's senses, you benefit from any special senses possessed by that creature, and you are blinded and deafened to your own surroundings."
+               ],
+                "15.Gift of the Ever-Living Ones":[
+                    "<BOLD>Prerequisite: Pact of the Chain feature</BOLD>",
+                    "Whenever you regain hit points while your familiar is within 100 feet of you, treat any dice rolled to determine the hit points you regain as having rolled their maximum value for you."
+                ],
+                "16.Grasp of Hadar":[
+                    "<BOLD>Prerequisite: <GOTO:Eldritch Blast:Spells+Eldritch Blast> cantrip</BOLD>",
+                    "Once on each of your turns when you hit a creature with your Eldritch Blast, you can move that creature in a straight line 10 feet closer to yourself."
+                ],
+                "17.Improved Pact Weapon":[
+                    "<BOLD>Prerequisite: Pact of the Blade feature</BOLD>",
+                    "You can use any weapon you summon with your Pact of the Blade feature as a spellcasting focus for your warlock spells.",
+                    "In addition, the weapon gains a +1 bonus to its attack and damage rolls, unless it is a magic weapon that already has a bonus to those rolls.",
+                    "Finally, the weapon you conjure can be a shortbow, longbow, light crossbow, or heavy crossbow."
+                ],
+                "18.Investment of the Chain Master":[
+                    "<BOLD>Prerequisite: Pact of the Chain feature</BOLD>",
+                    ""
+                ],
+                "19.Lance of Lethargy":[
+                    "<BOLD>Prerequisite: <GOTO:Eldritch Blast:Spells+Eldritch Blast> cantrip</BOLD>",
+                    ""
+                ],
+                "20.Mask of Many Faces":[
+                    ""
+               ],
+                "21.Misty Visions":[
+                    ""
+               ],
+                "22.Rebuke of the Talisman":[
+                    "<BOLD>Prerequisite: Pact of the Talisman feature</BOLD>",
+                    ""
+                ],
+                "23.Repelling Blast":[
+                    "<BOLD>Prerequisite: <GOTO:Eldritch Blast:Spells+Eldritch Blast> cantrip</BOLD>",
+                    ""
+                ],
+                "24.Thief of Five Fates":[
+                    ""
+               ],
+                "25.Voice of the Chain Master":[
+                    "<BOLD>Prerequisite: Pact of the Chain feature</BOLD>",
+                    ""
+                ]
+            }
+        },
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "9.4th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "2.Archfey":{},
+            "3.Celestial":{},
+            "4.Fathomless":{},
+            "5.Fiend":{},
+            "6.The Genie":{},
+            "7.Great Old One":{},
+            "8.Hexblade":{},
+            "9.Undead":{},
+            "10.Undying":{}
+        },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "2.Archfey":{},
+            "3.Celestial":{},
+            "4.Fathomless":{},
+            "5.Fiend":{},
+            "6.The Genie":{},
+            "7.Great Old One":{},
+            "8.Hexblade":{},
+            "9.Undead":{},
+            "10.Undying":{}
+        },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "17.12th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
-        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
+        "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "2.Archfey":{},
+            "3.Celestial":{},
+            "4.Fathomless":{},
+            "5.Fiend":{},
+            "6.The Genie":{},
+            "7.Great Old One":{},
+            "8.Hexblade":{},
+            "9.Undead":{},
+            "10.Undying":{}
+        },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {},
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature."
