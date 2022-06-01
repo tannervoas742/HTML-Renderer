@@ -277,18 +277,18 @@
         ],
         "13.<LIST_ITEM><GOTO:Wizard:Classes+Wizard>": [
             "<LIST_START>",
-            "<LIST_ITEM>Abjuration ",
-            "<LIST_ITEM>Bladesinging",
-            "<LIST_ITEM>Chronurgy",
-            "<LIST_ITEM>Conjuration",
-            "<LIST_ITEM>Divination",
-            "<LIST_ITEM>Enchantment",
-            "<LIST_ITEM>Evocation",
-            "<LIST_ITEM>Graviturgy",
-            "<LIST_ITEM>Necromancy",
+            "<LIST_ITEM>School of Abjuration ",
+            "<LIST_ITEM>School of Bladesinging",
+            "<LIST_ITEM>School of Chronurgy",
+            "<LIST_ITEM>School of Conjuration",
+            "<LIST_ITEM>School of Divination",
+            "<LIST_ITEM>School of Enchantment",
+            "<LIST_ITEM>School of Evocation",
+            "<LIST_ITEM>School of Graviturgy",
+            "<LIST_ITEM>School of Necromancy",
             "<LIST_ITEM>Order of Scribes",
-            "<LIST_ITEM>Transmutation",
-            "<LIST_ITEM>War Magic",
+            "<LIST_ITEM>School of Transmutation",
+            "<LIST_ITEM>School of War Magic",
             "<LIST_STOP>"
         ],
         "999.<LIST_STOP>": ""
@@ -6527,7 +6527,7 @@
                 "2.The Archfey":{
                     "1.Expanded Spell List":{
                         "1.":"The Archfey lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Archfey Expanded Spells":[
+                        "2.Archfey Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Faerie Fire:Spells+Faerie Fire>,<GOTO:Sleep:Spells+Sleep>"],
                             ["2nd","<GOTO:Calm Emotions:Spells+Calm Emotions>,<GOTO:Phantasmal Force:Spells+Phantasmal Force>"],
@@ -6544,7 +6544,7 @@
                 "3.The Celestial":{
                     "1.Expanded Spell List":{
                         "1.":"The Celestial lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Celestial Expanded Spells":[
+                        "2.Celestial Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Cure Wounds:Spells+Cure Wounds>,<GOTO:Guiding Bolt:Spells+Guiding Bolt>"],
                             ["2nd","<GOTO:Flaming Sphere:Spells+Flaming Sphere>,<GOTO:Lesser Restoration:Spells+Lesser Restoration>"],
@@ -6563,7 +6563,7 @@
                 "4.The Fathomless":{
                     "1.Expanded Spell List":{
                         "1.":"The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Fathomless Expanded Spells":[
+                        "2.Fathomless Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Create or Destroy Water:Spells+Create or Destroy Water>,<GOTO:Thunderwave:Spells+Thunderwave>"],
                             ["2nd","<GOTO:Gust of Wind:Spells+Gust of Wind>,<GOTO:Silence:Spells+Silence>"],
@@ -6583,7 +6583,7 @@
                 "5.The Fiend":{
                     "1.Expanded Spell List":{
                         "1.":"The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Fiend Expanded Spells":[
+                        "2.Fiend Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Burning Hands:Spells+Burning Hands>,<GOTO:Command:Spells+Command>"],
                             ["2nd","<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>,<GOTO:Scorching Ray:Spells+Scorching Ray>"],
@@ -6604,14 +6604,14 @@
                     ],
                     "1.Expanded Spell List":{
                         "1.":"At 1st level, the Genie lets you choose from an expanded list of spells when you learn a warlock spell. The Genie Expanded Spells table shows the genie spells that are added to the warlock spell list for you, along with the spells associated in the table with your patron's kind: dao, djinni, efreeti, or marid.",
-                        "2.Genie Expanded Spells":[
+                        "2.Genie Expanded Spells#TABLE":[
                             ["Spell Level","Genie Spells","Dao Spells","Djinni Spells","Efreeti Spells","Marid Spells"],
-                            ["1st","<GOTO:Detect Evil and Good:Spells+Detect Evil and Good>,<GOTO:Sanctuary:Spells+Sanctuary>,<GOTO:Thunderwave:Spells+Thunderwave>,<GOTO:Burning Hands:Spells+Burning Hands>,<GOTO:Fog Cloud:Spells+Fog Cloud>"],
-                            ["2nd","<GOTO:Phantasmal Force:Spells+Phantasmal Force>,<GOTO:Spike Growth:Spells+Spike Growth>,<GOTO:Gust of Wind:Spells+Gust of Wind>,<GOTO:Scorching Ray:Spells+Scorching Ray>,<GOTO:Blur:Spells+Blur>"],
-                            ["3rd","<GOTO:Create Food and Water:Spells+Create Food and Water>,<GOTO:Meld into Stone:Spells+Meld into Stone>,<GOTO:Wind Wall:Spells+Wind Wall>,<GOTO:Fireball:Spells+Fireball>,<GOTO:Sleet Storm:Spells+Sleet Storm>"],
-                            ["4th","<GOTO:Phantasmal Killer:Spells+Phantasmal Killer>,<GOTO:Stone Shape:Spells+Stone Shape>,<GOTO:Greater Invisibility:Spells+Greater Invisibility>,<GOTO:Fire Shield:Spells+Fire Shield>,<GOTO:Control Water:Spells+Control Water>"],
-                            ["5th","<GOTO:Creation:Spells+Creation>,<GOTO:Wall of Stone:Spells+Wall of Stone>,<GOTO:Seeming:Spells+Seeming>,<GOTO:Flame Strike:Spells+Flame Strike>,<GOTO:Cone of Cold:Spells+Cone of Cold>"],
-                            ["9th","<GOTO:Wish:Spells+Wish>,—,—,—,—"]
+                            ["1st","<GOTO:Detect Evil and Good:Spells+Detect Evil and Good>","<GOTO:Sanctuary:Spells+Sanctuary>","<GOTO:Thunderwave:Spells+Thunderwave>","<GOTO:Burning Hands:Spells+Burning Hands>","<GOTO:Fog Cloud:Spells+Fog Cloud>"],
+                            ["2nd","<GOTO:Phantasmal Force:Spells+Phantasmal Force>","<GOTO:Spike Growth:Spells+Spike Growth>","<GOTO:Gust of Wind:Spells+Gust of Wind>","<GOTO:Scorching Ray:Spells+Scorching Ray>","<GOTO:Blur:Spells+Blur>"],
+                            ["3rd","<GOTO:Create Food and Water:Spells+Create Food and Water>","<GOTO:Meld into Stone:Spells+Meld into Stone>","<GOTO:Wind Wall:Spells+Wind Wall>","<GOTO:Fireball:Spells+Fireball>","<GOTO:Sleet Storm:Spells+Sleet Storm>"],
+                            ["4th","<GOTO:Phantasmal Killer:Spells+Phantasmal Killer>","<GOTO:Stone Shape:Spells+Stone Shape>","<GOTO:Greater Invisibility:Spells+Greater Invisibility>","<GOTO:Fire Shield:Spells+Fire Shield>","<GOTO:Control Water:Spells+Control Water>"],
+                            ["5th","<GOTO:Creation:Spells+Creation>","<GOTO:Wall of Stone:Spells+Wall of Stone>","<GOTO:Seeming:Spells+Seeming>","<GOTO:Flame Strike:Spells+Flame Strike>","<GOTO:Cone of Cold:Spells+Cone of Cold>"],
+                            ["9th","<GOTO:Wish:Spells+Wish>","—","—","—","—"]
                         ]
                     },
                     "2.Genie's Vessel":{
@@ -6639,7 +6639,7 @@
                 "7.The Great Old One":{
                     "1.Expanded Spell List":{
                         "1.":"The Great Old One lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Great Old One Expanded Spells":[
+                        "2.Great Old One Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Dissonant Whispers:Spells+Dissonant Whispers>,<GOTO:Tasha's Hideous Laughter:Spells+Tasha's Hideous Laughter>"],
                             ["2nd","<GOTO:Detect Thoughts:Spells+Detect Thoughts>,<GOTO:Phantasmal Force:Spells+Phantasmal Force>"],
@@ -6653,7 +6653,7 @@
                 "8.The Hexblade":{
                     "1.Expanded Spell List":{
                         "1.":"The Hexblade lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Hexblade Expanded Spells":[
+                        "2.Hexblade Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Shield:Spells+Shield>,<GOTO:Wrathful Smite:Spells+Wrathful Smite>"],
                             ["2nd","<GOTO:Blur:Spells+Blur>,<GOTO:Branding Smite:Spells+Branding Smite>"],
@@ -6679,7 +6679,7 @@
                 "9.The Undead":{
                     "1.Expanded Spell List":{
                         "1.":"The Undead lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Undead Expanded Spells":[
+                        "2.Undead Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:Bane:Spells+Bane>,<GOTO:False Life:Spells+False Life>"],
                             ["2nd","<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>,<GOTO:Phantasmal Force:Spells+Phantasmal Force>"],
@@ -6702,7 +6702,7 @@
                 "10.The Undying":{
                     "1.Expanded Spell List":{
                         "1.":"The Undying lets you choose from an expanded list of spells when you learn a warlock spell. The following spells are added to the warlock spell list for you.",
-                        "2.Undying Expanded Spells":[
+                        "2.Undying Expanded Spells#TABLE":[
                             ["Spell Level","Spells"],
                             ["1st","<GOTO:False Life:Spells+False Life>,<GOTO:Ray of Sickness:Spells+Ray of Sickness>"],
                             ["2nd","<GOTO:Blindness/Deafness:Spells+Blindness/Deafness>,<GOTO:Silence:Spells+Silence>"],
