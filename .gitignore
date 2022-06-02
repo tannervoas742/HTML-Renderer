@@ -1,2 +1,2 @@
 HTML/*.html
-**/__pycache__/*
+*.pyc
