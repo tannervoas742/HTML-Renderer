@@ -6,6 +6,10 @@ class WebPageEnums:
         pass
     class Table:
         pass
+    class Slides:
+        pass
+    class SlideContent:
+        pass
     class Add:
         pass
     class Set:

@@ -12,6 +12,8 @@ class WebPageStateManager(StateManager):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.GlobalState['in_list_div'] = 0
+        self.GlobalState['in_slide'] = False
+        self.GlobalState['in_slide_show'] = False
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self['visible'] = True
@@ -25,6 +27,7 @@ class WebPageStateManager(StateManager):
         self['next.font'] = []
         self['key_font'] = 'HEADER'
         self['next.key_font'] = []
+        self['slide_depth'] = 0
 
     def SaveToKeyAndNext(self, State, Key, Matches, Count):
 
@@ -49,6 +52,7 @@ class WebPageStateManager(StateManager):
     def HandleEnableAndStore(self, WP, State, Interface, Function):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        
         MatchData = WP.TP.Extract(Function[0], Interface, True, Processor=Function[4])
         if WP.TP.Match:
             State[Function[1]] = Function[2]
@@ -113,6 +117,10 @@ class WebPageStateManager(StateManager):
         MixedState.GlobalState = self.GlobalState
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if MixedState['slide_depth'] > 0:
+            MixedState['slide_depth'] += 1
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if 'HIDDEN' in Interface:
             MixedState['visible'] = False
         elif 'SHOWN' in Interface:
@@ -123,6 +131,7 @@ class WebPageStateManager(StateManager):
             ['KEYFONT(.)'       , 'key_font' ,                                                       self.HandleSingleStringKeyAndNext],
             ['LOOKUP_TABLE(.,.)', 'mode'     , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
             ['TABLE'            , 'mode'     , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ],
+            ['SLIDES(.)'        , 'mode'     , WebPageEnums.Slides     , 'slides_group'      , str , self.HandleEnableAndStore        ],
             ['CLASS(.)'         , 'class'    , WebPageEnums.Add        ,                             self.HandleStorageType           ],
             ['CLASS(.)'         , 'class'    , WebPageEnums.Del        ,                             self.HandleStorageType           ],
             ['CLASS(.)'         , 'class'    , WebPageEnums.Set        ,                             self.HandleStorageType           ],

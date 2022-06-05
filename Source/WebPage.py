@@ -5,6 +5,7 @@ import re
 from WebPageModules.WebPage_IO import WebPage_IO
 from WebPageModules.WebPage_Yattag import WebPage_Yattag
 from WebPageModules.WebPage_Tables import WebPage_Tables
+from WebPageModules.WebPage_Slides import WebPage_Slides
 from WebPageModules.WebPage_Links import WebPage_Links
 from WebPageModules.WebPage_Lists import WebPage_Lists
 from WebPageModules.WebPage_Commands import WebPage_Commands
@@ -19,6 +20,7 @@ class WebPage(
     WebPage_IO,
     WebPage_Yattag,
     WebPage_Tables,
+    WebPage_Slides,
     WebPage_Links,
     WebPage_Lists,
     WebPage_Commands,
@@ -31,6 +33,7 @@ class WebPage(
         WebPage_IO.__init__(self)
         WebPage_Yattag.__init__(self)
         WebPage_Tables.__init__(self)
+        WebPage_Slides.__init__(self)
         WebPage_Links.__init__(self)
         WebPage_Lists.__init__(self)
         WebPage_Commands.__init__(self)
@@ -190,6 +193,15 @@ class WebPage(
                 self.Text(self.PreProcessText(Format(documentReadFuncCollapsible, Model)))
                 for Row in range(self.CollapseModelRows[Model]):
                     pass
+            
+            #self.WebPageIOAddJS()
+            #self.WebPageYattagAddJS()
+            #self.WebPageTablesAddJS()
+            self.WebPageSlidesAddJS()
+            #self.WebPageLinksAddJS()
+            #self.WebPageListsAddJS()
+            #self.WebPageCommandsAddJS()
+            #self.WebPageTextProcessorAddJS()
 
     def AddCSSFontDefinitions(self, OutFile):
 
@@ -249,12 +261,15 @@ class WebPage(
         LastItemWasCollapse = False
         CollapseModelCount = self.CollapseModelCount
         CollapseRowCount = 0
-        for OriginalKey in InputSorted:
+        for OriginalKeyIndex in range(len(InputSorted)):
+            OriginalKey = InputSorted[OriginalKeyIndex]
             if type(OriginalKey) in [list, dict]:
                 self.LoadLevel(OriginalKey, State)
                 continue
             Rank, Key, Interface = self.GetCommandInterfaceFromKey(OriginalKey)   
-            NewState = State.MixState(Interface, self)                
+            NewState = State.MixState(Interface, self)
+            if NewState.GlobalState['in_slide_show'] == True and NewState['mode'] not in [WebPageEnums.Slides, WebPageEnums.SlideContent] and NewState['slide_depth'] == 0:
+                self.CloseSlideShow(Input, NewState, Interface)
             
             if type(Input) == dict:
                 if 'COLLAPSE' in Interface:
@@ -263,10 +278,10 @@ class WebPage(
                         self.CollapseModelCount += 1
                         self.Doc.stag('br', self.Style(NewState), self.Class(NewState, 'pre-collapsible-br'))
                         self.Doc.stag('ul', self.DCTS, Format('id="collapsible-model{}"', CollapseModelCount), self.Style(NewState), self.Class(NewState, Format('collapsible collapsible-model{}', CollapseModelCount)))
-                        self.Doc.stag('li', self.DCTS, Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
                     else:
                         self.Doc.stag('/li', self.DCTS)
-                        self.Doc.stag('li', self.DCTS, Format('id="list-item-mode{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
                     self.Doc.stag('div', self.DCTS, Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
@@ -274,8 +289,9 @@ class WebPage(
                     LastItemWasCollapse = False
                     self.Doc.stag('/li', self.DCTS)
                     self.Doc.stag('/ul', self.DCTS)
-                    
+
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey], IsKey=True)
+
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', self.DCTS)
                 NewState['key'] += [Key]
@@ -283,6 +299,13 @@ class WebPage(
                     self.Doc.stag('div', self.DCTS, Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
+
+                if State['slide_depth'] == 0 and State.GlobalState['in_slide'] == True:
+                    self.CloseSlide(Input, NewState, Interface)
+                    #TODO_SLIDHOW: Handle case where we arent last item in the loop!!!
+                    if OriginalKeyIndex == len(InputSorted) - 1 and NewState.GlobalState['in_slide_show'] == True and NewState['mode'] == WebPageEnums.Slides:
+                        self.CloseSlideShow(Input, NewState, Interface)
+
                 if 'COLLAPSE' in Interface:
                     self.Doc.stag('/div', self.DCTS)
                     CollapseRowCount += 1
@@ -300,7 +323,13 @@ class WebPage(
 
     def LoadItem(self, Input, State, Interface, Data=None, IsKey=False):
         ContinueFlag = True
-        
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if State['mode'] == WebPageEnums.Slides:
+            if State.GlobalState['in_slide_show'] == False:
+                self.AddSlideShow(Input, State, Interface, Data, IsKey=IsKey)
+            return self.AddSlide(Input, State, Interface, Data, IsKey=IsKey)
+
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Input, State, Interface, Data = self.ApplyCallbacks(Input, State, Interface, Data)
         
@@ -342,9 +371,13 @@ class WebPage(
             if len(ListToLink) > 1:
                 for ListIn in ListToLink[1:]:
                     LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListIn)))
+                    while '_-' in LinkUpID or '-_' in LinkUpID or '--' in LinkUpID:
+                        LinkUpID = LinkUpID.replace('_-', '_').replace('-_', '_').replace('--', '-')
                     self.SeenLinkUps[LinkUpID] = True
-                    self.Doc.stag('a', Format('id={}', LinkUpID))
+                    self.Doc.stag('a', Format('id={}', LinkUpID), self.Style(State), self.Class(State))
             LinkUpID = '_'.join(list(map(lambda Item: self.CleanLinkText(Item), ListToLink[0])))
+            while '_-' in LinkUpID or '-_' in LinkUpID or '--' in LinkUpID:
+                LinkUpID = LinkUpID.replace('_-', '_').replace('-_', '_').replace('--', '-')
             self.SeenLinkUps[LinkUpID] = True
             with self.Tag('a', Format('id={}', LinkUpID)):
                 self.AddText(Input, State, Interface, Data, IsKey=IsKey)

@@ -341,3 +341,47 @@ html.expand-all#top-html body.html-renderer li.list-collapsible {
 html.expand-all#top-html body.html-renderer ul.collapsible {
     border: 0px;
 }
+
+.slide {
+    display: none
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+
+/* Next & previous buttons */
+
+.slideshow-control-spacer {
+    height: 34px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0px;
+}
+
+.prev {
+    left: 0px;
+}

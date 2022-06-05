@@ -127,3 +127,32 @@ $(document).ready(function() {
         }
     });
 })
+
+let slideIndex = [];
+
+function initSlides(tagNumber) {
+    while (slideIndex.length <= tagNumber) {
+        slideIndex.push(0);
+        showSlides(slideIndex.length - 1);
+    }
+}
+
+function plusSlides(tagNumber, direction) {
+    slideIndex[tagNumber] += direction
+    showSlides(tagNumber);
+}
+
+function showSlides(no) {
+    let targetSlideShowClass = "slideshow-container-instance" + no;
+    let i, j;
+    let x = document.getElementsByClassName(targetSlideShowClass);
+    for (i = 0; i < x.length; i++) {
+        let xSlides = x[i].getElementsByClassName("slide");
+        if (slideIndex[no] >= xSlides.length) { slideIndex[no] = 0 }
+        if (slideIndex[no] < 0) { slideIndex[no] = xSlides.length - 1 }
+        for (j = 0; j < xSlides.length; j++) {
+            xSlides[j].style.display = "none";
+        }
+        xSlides[slideIndex[no]].style.display = "block";
+    }
+}
