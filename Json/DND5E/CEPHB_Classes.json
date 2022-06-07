@@ -3680,7 +3680,7 @@
                 "Some of your ki features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows:",
                 "<BOLD>Ki save DC</BOLD> = 8 + your proficiency bonus + your Wisdom modifier",
                 "<LIST_START>",
-                "<LIST_ITEM>Flurry of Blows.<BOLD></BOLD> Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
+                "<LIST_ITEM><BOLD>Flurry of Blows.</BOLD> Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.",
                 "<LIST_ITEM><BOLD>Patient Defense.</BOLD> You can spend 1 ki point to take the Dodge action as a bonus action on your turn.",
                 "<LIST_ITEM><BOLD>Step of the Wind.</BOLD> You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.",
                 "<LIST_STOP>"                
