@@ -1663,7 +1663,7 @@
         "5.Multiclassing": [
             "Need Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields",
-            "Spell slots:Add your levels in cleric to the levels from other classes to determine spell slots"
+            "Spell slots: Add your levels in cleric to the levels from other classes to determine spell slots"
         ],
 
         "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
@@ -2564,7 +2564,7 @@
         "5.Multiclassing": [
             "Need Wisdom of 13 to multiclass in or out",
             "Proficiencies gained: Light armor, medium armor, shields (druids will not use armor or shields made of metal)",
-            "Spell slots:Add your levels in druid to the levels from other classes to determine spell slots"
+            "Spell slots: Add your levels in druid to the levels from other classes to determine spell slots"
         ],
 
         "6.1st level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
