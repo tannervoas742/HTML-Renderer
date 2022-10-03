@@ -154,5 +154,7 @@ function showSlides(no) {
             xSlides[j].style.display = "none";
         }
         xSlides[slideIndex[no]].style.display = "block";
+        let xSlideStatus = x[i].getElementsByClassName("slide-status");
+        xSlideStatus[0].textContent = "Slide: " + (1 + slideIndex[no]) + " / " + xSlides.length;
     }
 }

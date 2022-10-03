@@ -33,6 +33,8 @@ class WebPage_Slides:
             self.Text(self.PreProcessText('&#10094;'))
         with self.Tag('a', 'onclick="plusSlides({}, 1)"'.format(self.SlideTagToIdNumber[State['slides_group'][0]]), self.Style(State), self.Class(State, 'slideshow-control-spacer', 'next', 'waves-effect', 'waves-light', 'btn')):
             self.Text(self.PreProcessText('&#10095;'))
+        with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slide-status', 'slide-status-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
+            self.Text('')
         State.GlobalState['in_slide_show'] = True
         #FlushPrintUTF8('Start Slide Show', State['slides_group'][0], self.SlideTagToIdNumber[State['slides_group'][0]])
         #FlushPrintUTF8('{}[{}]: '.format(State['slides_group'][0], self.SlideTagToIdNumber[State['slides_group'][0]]), end='')
