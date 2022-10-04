@@ -2826,6 +2826,7 @@
             "1.": "Access to 3rd level spells"
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Druid Circle feature":"",
             "2.Circle of Dreams#SLIDES(DRUID)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Hearth of Moonlight and Shadow": [
                     "At 6th level, home can be wherever you are. During a short or long rest, you can invoke the shadowy power of the Gloaming Court to help guard your respite. At the start of the rest, you touch a point in space, and an invisible, 30-foot-radius sphere of magic appears, centered on that point. Total cover blocks the sphere.",
@@ -2886,6 +2887,7 @@
             "1.": "Access to 5th level spells"
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Druid Circle feature":"",
             "2.Circle of Dreams#SLIDES(DRUID)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Hidden Paths": [
                     "Starting at 10th level, you can use the hidden, magical pathways that some fey use to traverse space in a blink of an eye. As a bonus action on your turn, you can teleport up to 60 feet to an unoccupied space you can see. Alternatively, you can use your action to teleport one willing creature you touch up to 30 feet to an unoccupied space you can see.",
@@ -2933,6 +2935,7 @@
             "1.": "Access to 7th level spells"
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Druid Circle feature":"",
             "2.Circle of Dreams#SLIDES(DRUID)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Walker in Dreams": [
                     "At 14th level, the magic of the Feywild grants you the ability to travel mentally or physically through dreamlands.",
@@ -3323,6 +3326,7 @@
             ]
         },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Martial Archetype feature":"",
             "2.Arcane Archer#SLIDES(FIGHTER)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Magic Arrow": "At 7th level, you gain the ability to infuse arrows with magic. Whenever you fire a nonmagical arrow from a shortbow or longbow, you can make it magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. The magic fades from the arrow immediately after it hits or misses its target.",
                 "2.Curving Shot": "At 7th level, you learn how to direct an errant arrow toward a new target. When you make an attack roll with a magic arrow and miss, you can use a bonus action to reroll the attack roll against a different target within 60 feet of the original target.",
@@ -3405,6 +3409,7 @@
             ]
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Martial Archetype feature":"",
             "2.Arcane Archer#SLIDES(FIGHTER)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Additional Arcane Shot": "You gain an additional Arcane Shot option of your choice when you reach 10th level in this class."
             },
@@ -3476,6 +3481,7 @@
             ]
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Martial Archetype feature":"",
             "2.Arcane Archer#SLIDES(FIGHTER)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Ever-Ready Shot": "Starting at 15th level, your magical archery is available whenever battle starts. If you roll initiative and have no uses of Arcane Shot remaining, you regain one use of it.",
                 "2.Additional Arcane Shot": "You gain an additional Arcane Shot option of your choice when you reach 18th level in this class."
@@ -3533,6 +3539,7 @@
             ]
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Martial Archetype feature":"",
             "2.Arcane Archer#SLIDES(FIGHTER)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Additional Arcane Shot": "You gain an additional Arcane Shot option of your choice when you reach 18th level in this class.",
                 "2.Arcane Shot improvement#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": [
