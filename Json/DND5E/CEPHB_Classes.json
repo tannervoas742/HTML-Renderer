@@ -3628,7 +3628,7 @@
             "Monastic Tradition, Deflect Missiles, Ki-Fueled Attack (Optional)",
             "Ability Score Improvement, Slow Fall, Quickened Healing (Optional)",
             "Extra Attack, Stunning Strike, Focused Aim (Optional)",
-            "Ki-Empowered Strikes, Monastic Tradition Feature",
+            "Ki-Empowered Strikes, Monastic Tradition feature",
             "Evasion, Stillness of Mind",
             "Ability Score Improvement",
             "Unarmored Movement improvment",
@@ -3864,7 +3864,8 @@
             "3.Focused Aim (Optional)": "Also at 5th level, when you miss with an attack roll, you can spend 1 to 3 ki points to increase your attack roll by 2 for each of these ki points you spend, potentially turning the miss into a hit."
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Ki-Empowered Strikes": "Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+            "0.Ki-Empowered Strikes": "Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+            "1.Monastic Tradition feature":"",
             "2.Way of the Ascendant Dragon#SLIDES(MONK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Wings Unfurled": [
                     "At 6th level when you use your Step of the Wind, you can unfurl spectral draconic wings from your back that vanish at the end of your turn. While the wings exist, you have a flying speed equal to your walking speed.",
@@ -3959,6 +3960,7 @@
             "1.Purity of Body": "At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison."
         },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Monastic Tradition feature":"",
             "2.Way of the Ascendant Dragon#SLIDES(MONK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Aspect of the Wyrm": [
                     "At 11th level the power of your draconic spirit now radiates from you, warding your allies or inspiring fear in your enemies. As a bonus action, you can create an aura of draconic power that radiates 10 feet from you for 1 minute. For the duration, you gain one of the following effects of your choice:",
@@ -4052,6 +4054,7 @@
         },
 
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Monastic Tradition feature":"",
             "2.Way of the Ascendant Dragon#SLIDES(MONK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Ascendant Aspect": [
                     "At 17th level, your draconic spirit reaches its peak. You gain the following benefits:",
@@ -4567,6 +4570,7 @@
             ]
         },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Sacred Oath feature":"",
             "1.Oath of the Ancients#SLIDES(PALADIN)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Aura of Warding": [
                     "Beginning at 7th level, ancient magic lies so heavily upon you that it forms an eldritch ward. You and friendly creatures within 10 feet of you have resistance to damage from spells.",
@@ -4757,6 +4761,7 @@
             ]
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Sacred Oath feature":"",
             "1.Oath of the Ancients#SLIDES(PALADIN)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Undying Sentinel": [
                     "Starting at 15th level, when you are reduced to 0 hit points and are not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can't use it again until you finish a long rest.",
@@ -4862,6 +4867,7 @@
         },
 
         "25.20th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Sacred Oath feature":"",
             "1.Oath of the Ancients#SLIDES(PALADIN)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Elder Champion": [
                     "At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on a bark-like texture, your hair might become leafy or moss-like, or you might sprout antlers or a lion-like mane.",
@@ -5331,6 +5337,7 @@
             }
         },
         "12.7th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Ranger Archetype feature":"",
             "1.Beast Master#SLIDES(RANGER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Exceptional Training": "Beginning at 7th level, on any of your turns when your beast companion doesn't attack, you can use a bonus action to command the beast to take the Dash, Disengage, or Help action on its turn. In addition, the beast's attacks now count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage."
             },
@@ -5426,6 +5433,7 @@
             ]
         },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Ranger Archetype feature":"",
             "1.Beast Master#SLIDES(RANGER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Bestial Fury": "Starting at 11th level, when you command your beast companion to take the Attack action, the beast can make two attacks, or it can take the Multiattack action if it has that action."
             },
@@ -5510,6 +5518,7 @@
             "3.Vanish": "Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can't be tracked by nonmagical means, unless you choose to leave a trail."
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Ranger Archetype feature":"",
             "1.Beast Master#SLIDES(RANGER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Share Spells": "Beginning at 15th level, when you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you."
             },
@@ -5796,6 +5805,7 @@
         },
 
         "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Roguish Archetype feature":"",
             "2.Arcane Trickster#SLIDES(ROGUE)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Magical Ambush": "Starting at 9th level, if you are hidden from a creature when you cast a spell on it, the creature has disadvantage on any saving throw it makes against the spell this turn."
             },
@@ -5864,6 +5874,7 @@
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Roguish Archetype feature":"",
             "2.Arcane Trickster#SLIDES(ROGUE)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Versatile Trickster": "At 13th level, you gain the ability to distract targets with your <GOTO:Mage Hand:Spells+Mage Hand>. As a bonus action on your turn, you can designate a creature within 5 feet of the spectral hand created by the spell. Doing so gives you advantage on attack rolls against that creature until the end of the turn."
             },
@@ -5918,6 +5929,7 @@
         },
 
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Roguish Archetype feature":"",
             "2.Arcane Trickster#SLIDES(ROGUE)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Spell Thief": [
                     "At 17th level, you gain the ability to magically steal the knowledge of how to cast a spell from another spellcaster.",
@@ -6287,6 +6299,7 @@
             "1.Magical Guidance (Optional)": "When you reach 5th level, you can tap into your inner wellspring of magic to try and conjure success from failure. When you make an ability check that fails, you can spend 1 sorcery point to reroll the d20, and you must use the new roll, potentially turning the failure into a success."
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Sorcerous Origin feature":"",
             "2.Aberrant Mind#SLIDES(SORCERER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Psionic Sorcery": "Beginning at 6th level, when you cast any spell of 1st level or higher from your Psionic Spells feature, you can cast it by expending a spell slot as normal or by spending a number of sorcery points equal to the spell's level. If you cast the spell using sorcery points, it requires no verbal or somatic components, and it requires no material components, unless they are consumed by the spell.",
                 "2.Psychic Defenses": "At 6th level, you gain resistance to psychic damage, and you have advantage on saving throws against being charmed or frightened."
@@ -6365,6 +6378,7 @@
             "1.": "Access to 7th level spells"
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Sorcerous Origin feature":"",
             "2.Aberrant Mind#SLIDES(SORCERER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Revelation in Flesh": [
                     "Beginning at 14th level, you can unleash the aberrant truth hidden within yourself. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 10 minutes. For each sorcery point you spend, you can gain one of the following benefits of your choice, the effects of which last until the transformation ends:",
@@ -6423,6 +6437,7 @@
             "2.": "Access to 9th level spells"
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Sorcerous Origin feature":"",
             "2.Aberrant Mind#SLIDES(SORCERER)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Warping Implosion": [
                     "At 18th level, You can unleash your aberrant power as a space-warping anomaly. As an action, you can teleport to an unoccupied space you can see within 120 feet of you. Immediately after you disappear, each creature within 30 feet of the space you left must make a Strength saving throw. On a failed save, a creature takes 3d10 force damage and is pulled straight toward the space you left, ending in an unoccupied space as close to your former space as possible. On a successful save, the creature takes half as much damage and isn't pulled.",
@@ -7042,6 +7057,7 @@
             }
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Otherworldly Patron feature":"",
             "2.The Archfey#SLIDES(WARLOCK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Misty Escape": [
                     "Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.",
@@ -7478,6 +7494,7 @@
             }
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Otherworldly Patron feature":"",
             "2.The Archfey#SLIDES(WARLOCK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Beguiling Defenses": "Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage."
             },
@@ -7520,7 +7537,7 @@
             }
         },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Mystic Arcanum": [
+            "1.Mystic Arcanum (6th level)": [
                 "At 11th level, your patron bestows upon you a magical secret called an arcanum. Choose one 6th-level spell from the warlock spell list as this arcanum.",
                 "You can cast your arcanum spell once without expending a spell slot. You must finish a long rest before you can do so again.",
                 "At higher levels, you gain more warlock spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of your Mystic Arcanum when you finish a long rest."
@@ -7743,11 +7760,12 @@
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Mystic Arcanum": [
+            "1.Mystic Arcanum (7th level)": [
                 "At 13th level, your patron bestows upon you a 7th-level spell from the warlock spell list. You regain all uses of your Mystic Arcanum when you finish a long rest."
             ]
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Otherworldly Patron feature":"",
             "2.The Archfey#SLIDES(WARLOCK)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Dark Delirium": [
                     "Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage.",
@@ -7811,7 +7829,7 @@
             }
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "0.Mystic Arcanum": [
+            "0.Mystic Arcanum (8th level)": [
                 "At 15th level, your patron bestows upon you an 8th-level spell from the warlock spell list. You regain all uses of your Mystic Arcanum when you finish a long rest."
             ],
             "1.Eldritch Invocations at 15th level": {
@@ -8051,7 +8069,7 @@
             ]
         },
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Mystic Arcanum": [
+            "1.Mystic Arcanum (9th level)": [
                 "At 17th level, your patron bestows upon you a 9th-level spell from the warlock spell list. You regain all uses of your Mystic Arcanum when you finish a long rest."
             ]
         },
@@ -8290,6 +8308,7 @@
             "1.": "Access to 3rd level spells"
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Arcane Tradition feature":"",
             "2.School of Abjuration#SLIDES(WIZARD)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Projected Ward": "Starting at 6th level, when a creature that you can see within 30 feet of you takes damage, you can use your reaction to cause your Arcane Ward to absorb that damage. If this damage reduces the ward to 0 hit points, the warded creature takes any remaining damage."
             },
@@ -8379,6 +8398,7 @@
             "1.": "Access to 5th level spells"
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Arcane Tradition feature":"",
             "2.School of Abjuration#SLIDES(WIZARD)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Improved Abjuration": "Beginning at 10th level, when you cast an abjuration spell that requires you to make an ability check as a part of casting that spell (as in <GOTO:Counterspell:Spells+Counterspell> and <GOTO:Dispel Magic:Spells+Dispel Magic>), you add your proficiency bonus to that ability check."
             },
@@ -8454,6 +8474,7 @@
             "1.": "Access to 7th level spells"
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Arcane Tradition feature":"",
             "2.School of Abjuration#SLIDES(WIZARD)#KEYFONT(LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Spell Resistance": [
                     "Starting at 14th level, you have advantage on saving throws against spells.",
