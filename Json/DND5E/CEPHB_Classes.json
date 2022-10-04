@@ -942,7 +942,7 @@
 
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "0.Primal Knowledge (Optional)": "When you reach 3rd level and again at 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
-            "1. Primal Path": "",
+            "1. Primal Path": "At 3rd level, you choose a path that shapes the nature of your rage. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.",
             "2.Ancestral Guardian#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Ancestral Protectors": "Starting when you choose this path at 3rd level, spectral warriors appear when you enter your rage. While you're raging, the first creature you hit with an attack on your turn becomes the target of the warriors, which hinder its attacks. Until the start of your next turn, that target has disadvantage on any attack roll that isn't against you, and when the target hits a creature other than you with an attack, that creature has resistance to the damage of the target's attacks."
             },
@@ -1028,6 +1028,7 @@
             "2.Fast Movement": "Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor."
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0. Path feature":"",
             "1.Ancestral Guardian#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Spirit Shield": ["Beginning at 6th level, the guardian spirits that aid you can provide supernatural protection to those you defend. If you are raging and a creature you can see within 30 feet of you takes damage, you can use your reaction to reduce that damage by 2d6.",
                     "When you reach certain levels in this class, you can reduce the damage by more: by 3d6 at 10th level and by 4d6 at 14th level."
@@ -1093,15 +1094,16 @@
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "0.Primal Knowledge improvement (Optional)": "When you reach 10th level, you gain proficiency in one skill of your choice from the list of skills available to barbarians at 1st level.",
-            "1.Ancestral Guardian#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Path feature":"",
+            "2.Ancestral Guardian#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Consult the Spirits": ["At 10th level, you gain the ability to consult with your ancestral spirits. When you do so, you cast the Augury or Clairvoyance spell, without using a spell slot or material components. Rather than creating a spherical sensor, this use of Clairvoyance invisibly summons one of your ancestral spirits to the chosen location. Wisdom is your spellcasting ability for these spells.",
                     "After you cast either spell in this way, you can,t use this feature again until you finish a short or long rest."
                 ]
             },
-            "2.Battlerager#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3.Battlerager#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Battlerager Charge": "Beginning at 10th level, you can take the Dash action as a bonus action while you are raging."
             },
-            "3.Beast#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4.Beast#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Infectious Fury": ["At 10th level, when you hit a creature with your natural weapons while you are raging, the beast within you can curse your target with rabid fury. The target must succeed on a Wisdom saving throw (DC equal to 8 + your Constitution modifier + your proficiency bonus) or suffer one of the following effects (your choice):",
                     "<LIST_START>",
                     "<LIST_ITEM>The target must use its reaction to make a melee attack against another creature of your choice that you can see.",
@@ -1110,21 +1112,21 @@
                     "You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "4.Berserker#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5.Berserker#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Intimidating Presence": ["Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.",
                     "If the creature succeeds on its saving throw, you can't use this feature on that creature again for 24 hours."
                 ]
             },
-            "5.Storm Herald#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6.Storm Herald#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Shielding Storm": "At 10th level, you learn to use your mastery of the storm to protect others. Each creature of your choice has the damage resistance you gained from the Storm Soul feature while the creature is in your Storm Aura."
             },
-            "6.Totem Warrior#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7.Totem Warrior#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Spirit Walker": "At 10th level, you can cast the <GOTO:Commune with Nature:Spells+Commune with Nature> spell, but only as a ritual. When you do so, a spiritual version of one of the animals you chose for Totem Spirit or Aspect of the Beast appears to you to convey the information you seek."
             },
-            "7.Wild Magic#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8.Wild Magic#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Unstable Backlash": "At 10th level, when you are imperiled during your rage, the magic within you can lash out; immediately after you take damage or fail a saving throw while raging, you can use your reaction to roll on the Wild Magic table and immediately produce the effect rolled. This effect replaces your current Wild Magic effect."
             },
-            "8.Zealot#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9.Zealot#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Zealous Presence": [
                     "At 10th level, you learn to channel divine power to inspire zealotry in others. As a bonus action, you unleash a battle cry infused with divine energy. Up to ten other creatures of your choice within 60 feet of you that can hear you gain advantage on attack rolls and saving throws until the start of your next turn.",
                     "Once you use this feature, you can,t use it again until you finish a long rest."
@@ -1148,6 +1150,7 @@
         },
 
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0. Path feature":"",
             "1.Ancestral Guardian#SLIDES(BARBARIAN)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Vengeful Ancestors": "At 14th level, your ancestral spirits grow powerful enough to retaliate. When you use your Spirit Shield to reduce the damage of an attack, the attacker takes an amount of force damage that your Spirit Shield prevents."
             },
@@ -1222,7 +1225,7 @@
             "Bard College, Expertise",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Bardic Inspiration (d8), Font of Inspiration",
-            "Countercharm, Bard College Feature",
+            "Countercharm, Bard College feature",
             "—",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d8)",
@@ -1230,7 +1233,7 @@
             "—",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d10)",
-            "Magical Secrets, Bard College Feature",
+            "Magical Secrets, Bard College feature",
             "Bardic Inspiration (d12)",
             "Ability Score Improvement, Bardic Versatility (Optional)",
             "Song of Rest (d12)",
@@ -1293,7 +1296,7 @@
                 "6.Ritual Casting": "You can cast any bard spell you know as a ritual if that spell has the ritual tag.",
                 "7.Spellcasting Focus": "You can use a musical instrument as a spellcasting focus for your bard spells."
             },
-            "2.Bardic Inspiration": [
+            "2.Bardic Inspiration (d6)": [
                 "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6.",
                 "Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.",
                 "You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest.",
@@ -1302,7 +1305,7 @@
         },
         "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Jack of All Trades": "Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn't already include your proficiency bonus.",
-            "2.Song of Rest": [
+            "2.Song of Rest (d6)": [
                 "Beginning at 2nd level, you can use soothing music or oration to help revitalize your wounded allies during a short rest. If you or any friendly creatures who can hear your performance regain hit points at the end of the short rest by spending one or more Hit Dice, each of those creatures regains an extra 1d6 hit points.",
                 "The extra Hit Points increase when you reach certain levels in this class: to 1d8 at 9th level, to 1d10 at 13th level, and to 1d12 at 17th level."
             ],
@@ -1432,12 +1435,13 @@
         },
 
         "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d8.",
+            "1.Bardic Inspiration (d8)": "Your Bardic Inspiration die is now a d8.",
             "2.Font of Inspiration": "Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest."
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "0.Countercharm": "At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being frightened or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are incapacitated or silenced or if you voluntarily end it (no action required).",
-            "1.College of Creation#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Bard College feature":"",
+            "2.College of Creation#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Animating Performance": [
                     "By 6th level, as an action, you can target a Large or smaller nonmagical item you can see within 30 feet of you and animate it. The animate item uses the Dancing Item stat block, which uses your proficiency bonus (PB), The item is friendly to you and your companions and obeys your commands. It lives for 1 hour, until it is reduced to 0 hit points, or until you die.",
                     "In combat, the item shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the item can take any action of its choice, not just Dodge.",
@@ -1446,37 +1450,37 @@
                     "Dancing Item Stat Block: wtf"
                 ]
             },
-            "2.College of Eloquence#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3.College of Eloquence#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Unfailing Inspiration": "At 6th level, your inspiring words are so persuasive that others feel driven to succeed. When a creature adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll fails, the creature can keep the Bardic Inspiration die.",
                 "2.Universal Speech": [
                     "Also at 6th level, you have gained the ability to make your speech intelligible to any creature. As an action, choose one or more creatures within 60 feet of you, up to a number equal to your Charisma modifier (minimum of one creature). The chosen creatures can magically understand you, regardless of the language you speak, for 1 hour.",
                     "Once you use this feature, you can't use it again until you finish a long rest, unless you expend a spell slot to use it again."
                 ]
             },
-            "3.College of Glamour#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4.College of Glamour#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Mantle of Majesty": [
                     "At 6th level, you gain the ability to cloak yourself in a fey magic that makes others want to serve you. As a bonus action, you cast <GOTO:Command:Spells+Command>, without expending a spell slot, and you take on an appearance of unearthly beauty for 1 minute or until your concentration ends (as if you were concentrating on a spell). During this time, you can cast <GOTO:Command:Spells+Command> as a bonus action on each of your turns, without expending a spell slot.",
                     "Any creature charmed by you automatically fails its saving throw against the <GOTO:Command:Spells+Command> you cast with this feature.",
                     "Once you use this feature, you can't use it again until you finish a long rest."
                 ]
             },
-            "4.College of Lore#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5.College of Lore#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Additional Magical Secrets": "At 6th level, you learn two spells of your choice from any class. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip. The chosen spells count as bard spells for you but don't count against the number of bard spells you know."
             },
-            "5.College of Spirits#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6.College of Spirits#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Spirit Session": [
                     "At 6th level, spirits provide you with supernatural insights. You can conduct an hour-long ritual channeling spirits (which can be done during a short or long rest) using your Spiritual Focus. You can conduct the ritual with a number of willing creatures equal to your proficiency bonus (including yourself). At the end of the ritual, you temporarily learn one spell of your choice from any class.",
                     "The spell you choose must be of a level equal to the number of creatures that conducted the ritual or less, the spell must of a level you can cast, and it must be in the school of Divination or Necromancy. The chosen spell counts as a bard spell for you but doesn't count against the number of bard spells you know.",
                     "Once you perform the ritual, you can't do so again until you start a long rest, and you know the chosen spell until you start a long rest."
                 ]
             },
-            "6.College of Swords#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7.College of Swords#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Extra Attack": "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "7.College of Valor#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8.College of Valor#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Extra Attack": "Starting at 6th level, you can attack twice, instead of once, whenever you take the Attack action on your turn."
             },
-            "8.College of Whispers#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9.College of Whispers#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Mantle of Whispers": [
                     "At 6th level, you gain the ability to adopt a humanoid's persona. When a humanoid dies within 30 feet of you, you can magically capture its shadow using your reaction. You retain this shadow until you use it or you finish a long rest.",
                     "You can use the shadow as an action. When you do so, it vanishes, magically transforming into a disguise that appears on you. You now look like the dead person, but healthy and alive. This disguise lasts for 1 hour or until you end it as a bonus action.",
@@ -1494,10 +1498,10 @@
         },
 
         "14.9th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Song of Rest": "Beginning at 9th level, creatures regain an extra 1d8 hit points when you use this feature."
+            "1.Song of Rest (d8)": "Beginning at 9th level, creatures regain an extra 1d8 hit points when you use this feature."
         },
         "15.10th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d10.",
+            "1.Bardic Inspiration (d10)": "Your Bardic Inspiration die is now a d10.",
             "2.Expertise": "At 10th level, you can choose another two skill proficiencies to gain this benefit.",
             "3.Magical Secrets": [
                 "By 10th level, you have plundered magical knowledge from a wide spectrum of disciplines. Choose two spells from any classes, including this one. A spell you choose must be of a level you can cast, as shown on the Bard table, or a cantrip.",
@@ -1520,42 +1524,43 @@
         },
 
         "18.13th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Song of Rest": "Beginning at 13th level, creatures regain an extra 1d10 hit points when you use this feature."
+            "1.Song of Rest (d10)": "Beginning at 13th level, creatures regain an extra 1d10 hit points when you use this feature."
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "0.Magical Secrets": "You learn two additional spells from any classes.",
-            "1.College of Creation#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1.Bard College feature":"",
+            "2.College of Creation#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Creative Crescendo": [
                     "At 14th level, when you use your Performance of Creation feature, you can create more than one item at once. The number of items equals your Charisma modifier (minimum of two items). If you create an item that would exceed that number, you choose which of the previously created items disappears. Only one of these items can be of the maximum size you can create; the rest must be Small or Tiny.",
                     "You are no longer limited by gp value when creating items with Performance of Creation."
                 ]
             },
-            "2.College of Eloquence#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3.College of Eloquence#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Infectious Inspiration": [
                     "At 14th level, when you successfully inspire someone, the power of your eloquence can now spread to someone else. When a creature within 60 feet of you adds one of your Bardic Inspiration dice to its ability check, attack roll, or saving throw and the roll succeeds, you can use your reaction to encourage a different creature (other than yourself) that can hear you within 60 feet of you, giving it a Bardic Inspiration die without expending any of your Bardic Inspiration uses.",
                     "You can use this reaction a number of times equal to your Charisma modifier (minimum of once), and you regain all expended uses when you finish a long rest."
                 ]
             },
-            "3.College of Glamour#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4.College of Glamour#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Unbreakable Majesty": [
                     "At 14th level, your appearance permanently gains an otherworldly aspect that makes you look more lovely and fierce.",
                     "In addition, as a bonus action, you can assume a magically majestic presence for 1 minute or until you are incapacitated. For the duration, whenever any creature tries to attack you for the first time on a turn, the attacker must make a Charisma saving throw against your spell save DC. On a failed save, it can't attack you on this turn, and it must choose a new target for its attack or the attack is wasted. On a successful save, it can attack you on this turn, but it has disadvantage on any saving throw it makes against your spells on your next turn.",
                     "Once you assume this majestic presence, you can't do so again until you finish a short or long rest."
                 ]
             },
-            "4.College of Lore#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5.College of Lore#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Peerless Skill": "Starting at 14th level, when you make an ability check, you can expend one use of Bardic Inspiration. Roll a Bardic Inspiration die and add the number rolled to your ability check. You can choose to do so after you roll the die for the ability check, but before the DM tells you whether you succeed or fail."
             },
-            "5.College of Spirits#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6.College of Spirits#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Mystical Connection": "At 14th level, you now have the ability to nudge the spirits of Tales from Beyond toward certain tales. Whenever you roll on the Spirit Tales table, you can roll the die twice and choose which of the two effects to bestow. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
             },
-            "6.College of Swords#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7.College of Swords#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Master's Flourish": "Starting at 14th level, whenever you use a Blade Flourish option, you can roll a d6 and use it instead of expending a Bardic Inspiration die."
             },
-            "7.College of Valor#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8.College of Valor#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Battle Magic": "At 14th level, you have mastered the art of weaving spellcasting and weapon use into a single harmonious act. When you use your action to cast a bard spell, you can make one weapon attack as a bonus action."
             },
-            "8.College of Whispers#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9.College of Whispers#SLIDES(BARD)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Shadow Lore": [
                     "At 14th level, you gain the ability to weave dark magic into your words and tap into a creature's deepest fears.",
                     "As an action, you magically whisper a phrase that only one creature of your choice within 30 feet of you can hear. The target must make a Wisdom saving throw against your spell save DC. It automatically succeeds if it doesn't share a language with you or if it can't hear you. On a successful saving throw, your whisper sounds like unintelligible mumbling and has no effect.",
@@ -1567,7 +1572,7 @@
             }
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Bardic Inspiration": "Your Bardic Inspiration die is now a d12."
+            "1.Bardic Inspiration (d12)": "Your Bardic Inspiration die is now a d12."
         },
         "21.16th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -1581,7 +1586,7 @@
         },
 
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Song of Rest": "Beginning at 17th level, creatures regain an extra 1d12 hit points when you use this feature."
+            "1.Song of Rest (d12)": "Beginning at 17th level, creatures regain an extra 1d12 hit points when you use this feature."
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Magical Secrets": "You learn two additional spells from any classes."
@@ -1828,7 +1833,7 @@
             }
         },
         "7.2nd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "0.Channel Divinity": {
+            "0.Channel Divinity (1/rest)": {
                 "1.": [
                     "At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.",
                     "When you use your Channel Divinity, you choose which effect to create. You must then finish a short or long rest to use your Channel Divinity again.",
@@ -1840,7 +1845,8 @@
                     "A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action."
                 ]
             },
-            "1. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "1. Divine Domain feature":"",
+            "2. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Channel Divinity: Arcane Abjuration": {
                     "1.": [
                         "Starting at 2nd level, you can use your Channel Divinity to abjure otherworldly creatures.",
@@ -1858,10 +1864,10 @@
                     ]
                 }
             },
-            "2. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Touch of Death": "Starting at 2nd level, you can use Channel Divinity to destroy another creature's life force by touch. When you hit a creature with a melee attack, you can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice your cleric level."
             },
-            "3. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Artisan's Blessing": [
                     "Starting at 2nd level, you can use your Channel Divinity to create simple items.",
                     "You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object. The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.",
@@ -1869,56 +1875,56 @@
                     "The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual."
                 ]
             },
-            "4. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Path to the Grave": [
                     "Starting at 2nd level, you can use your Channel Divinity to mark another creature's life force for termination.",
                     "As an action, you choose one creature you can see within 30 feet of you, cursing it until the end of your next turn. The next time you or an ally of yours hits the cursed creature with an attack, the creature has vulnerability to all of that attack's damage, and then the curse ends."
                 ]
             },
-            "5. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Channel Divinity: Knowledge of the Ages": "Starting at 2nd level, you can use your Channel Divinity to tap into a divine well of knowledge. As an action, you choose one skill or tool. For 10 minutes, you have proficiency with the chosen skill or tool."
             },
-            "6. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Preserve Life": [
                     "Starting at 2nd level, you can use your Channel Divinity to heal the badly injured.",
                     "As an action, you present your holy symbol and evoke healing energy that can restore a number of hit points equal to five times your cleric level. Choose any creatures within 30 feet of you, and divide those hit points among them. This feature can restore a creature to no more than half of its hit point maximum. You can't use this feature on an undead or a construct."
                 ]
             },
-            "7. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Radiance of the Dawn": [
                     "Starting at 2nd level, you can use your Channel Divinity to harness sunlight, banishing darkness and dealing radiant damage to your foes.",
                     "As an action, you present your holy symbol, and any magical darkness within 30 feet of you is dispelled. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature takes radiant damage equal to 2d10 + your cleric level on a failed saving throw, and half as much damage on a successful one. A creature that has total cover from you is not affected."
                 ]
             },
-            "8. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Charm Animals and Plants": [
                     "Starting at 2nd level, you can use your Channel Divinity to charm animals and plants.",
                     "As an action, you present your holy symbol and invoke the name of your deity. Each beast or plant creature that can see you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is charmed by you for 1 minute or until it takes damage. While it is charmed by you, it is friendly to you and other creatures you designate."
                 ]
             },
-            "9. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "10. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Order's Demand": [
                     "Starting at 2nd level, you can use your Channel Divinity to exert an intimidating presence over others.",
                     "As an action, you present your holy symbol, and each creature of your choice that can see or hear you within 30 feet of you must succeed on a Wisdom saving throw or be charmed by you until the end of your next turn or until the charmed creature takes any damage. You can also cause any of the charmed creatures to drop what they are holding when they fail the saving throw."
                 ]
             },
-            "10. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "11. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Balm of Peace": "Starting at 2nd level, you can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action, you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action."
             },
-            "11. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "12. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Destructive Wrath": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
-            "12. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "13. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Invoke Duplicity": [
                     "Starting at 2nd level, you can use your Channel Divinity to create an illusory duplicate of yourself.",
                     "As an action, you create a perfect illusion of yourself that lasts for 1 minute, or until you lose your concentration (as if you were concentrating on a spell). The illusion appears in an unoccupied space that you can see within 30 feet of you. As a bonus action on your turn, you can move the illusion up to 30 feet to a space you can see, but it must remain within 120 feet of you.",
                     "For the duration, you can cast spells as though you were in the illusion's space, but you must use your own senses. Additionally, when both you and your illusion are within 5 feet of a creature that can see the illusion, you have advantage on attack rolls against that creature, given how distracting the illusion is to the target."
                 ]
             },
-            "13. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "14. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Twilight Sanctuary": [
                     "At 2nd level, you can use your Channel Divinity to refresh your allies with soothing twilight.",
                     "As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you are incapacitated or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:",
@@ -1928,10 +1934,10 @@
                     "<LIST_STOP>"
                 ]
             },
-            "14. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "15. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Guided Strike": "Starting at 2nd level, you can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             },
-            "15.Harness Divine Power (Optional)": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
+            "16.Harness Divine Power (Optional)": "At 2nd level, you can expend a use of your Channel Divinity to fuel your spells. As a bonus action, you touch your holy symbol, utter a prayer, and regain one expended spell slot, the level of which can be no higher than half your proficiency bonus (rounded up). The number of times you can use this feature is based on the level you've reached in this class: 2nd level, once; 6th level, twice; and 18th level, thrice. You regain all expended uses when you finish a long rest."
         },
         "8.3rd level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.": "Access to 2nd level spells",
@@ -2026,7 +2032,7 @@
         },
 
         "10.5th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Destroy Undead": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
+            "1.Destroy Undead (CR 1/2)": "Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Cleric table above.",
             "2. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Arcana Domain Spells at 5th Level": [
                     "<GOTO:Dispel Magic:Spells+Dispel Magic>",
@@ -2113,14 +2119,15 @@
             }
         },
         "11.6th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "0.Channel Divinity": "Beginning at 6th level, you can use your Channel Divinity twice between rests. When you finish a short or long rest, you regain your expended uses.",
-            "1. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Channel Divinity (2/rest)": "Beginning at 6th level, you can use your Channel Divinity twice between rests. When you finish a short or long rest, you regain your expended uses.",
+            "1. Divine Domain feature":"",
+            "2. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Spell Breaker": "Starting at 6th level, when you restore hit points to an ally with a spell of 1st level or higher, you can also end one spell of your choice on that creature. The level of the spell you end must be equal to or lower than the level of the spell slot you use to cast the healing spell."
             },
-            "2. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Inescapable Destruction": "Starting at 6th level, your ability to channel negative energy becomes more potent. Necrotic damage dealt by your cleric spells and Channel Divinity options ignores resistance to necrotic damage."
             },
-            "3. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Soul of the Forge": [
                     "Starting at 6th level, your mastery of the forge grants you special abilities:",
                     "<LIST_START>",
@@ -2129,13 +2136,13 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Sentinel at Death's Door": [
                     "At 6th level, you gain the ability to impede death's progress. As a reaction when you or an ally that you can see within 30 feet of you suffers a critical hit, you can turn that attack into a normal hit. Any effects triggered by a critical hit are canceled.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest."
                 ]
             },
-            "5. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "1.Channel Divinity: Read Thoughts": [
                     "At 6th level, you can use your Channel Divinity to read a creature's thoughts. You can then use your access to the creature's mind to command it.",
                     "As an action, choose one creature that you can see within 60 feet of you. That creature must make a Wisdom saving throw. If the creature succeeds on the saving throw, you can't use this feature on it again until you finish a long rest.",
@@ -2143,41 +2150,41 @@
                     "During that time, you can use your action to end this effect and cast the <GOTO:Suggestion:Spells+Suggestion> spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell."
                 ]
             },
-            "6. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Blessed Healer": "Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level."
             },
-            "7. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Improved Flare": "Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you."
             },
-            "8. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Dampen Elements": "Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage."
             },
-            "9. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "10. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Embodiment of the Law": [
                     "At 6th level, you become remarkably adept at channeling magical energy to compel others.",
                     "If you cast a spell of the enchantment school using a spell slot of 1st level or higher, you can change the spell's casting time to 1 bonus action for this casting, provided the spell's casting time is normally 1 action.",
                     "You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest."
                 ]
             },
-            "10. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "11. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Protective Bond": "Beginning at 6th level, the bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead."
             },
-            "11. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "12. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Destructive Wrath": [
                     "Starting at 2nd level, you can use your Channel Divinity to wield the power of the storm with unchecked ferocity.",
                     "When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling."
                 ]
             },
-            "12. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "13. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: Cloak of Shadows": [
                     "Starting at 6th level, you can use your Channel Divinity to vanish.",
                     "As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell."
                 ]
             },
-            "13. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "14. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Steps of Night": "Starting at 6th level, you can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
             },
-            "14. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "15. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Channel Divinity: War God's Blessing": "At 6th level, when a creature within 30 feet of you makes an attack roll, you can use your reaction to grant that creature a +10 bonus to the roll, using your Channel Divinity. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
             }
         },
@@ -2270,51 +2277,52 @@
         },
         "13.8th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "0.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
-            "1.Destroy Undead": "Starting at 8th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 1.",
+            "1.Destroy Undead (CR 1)": "Starting at 8th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 1.",
             "2.Cantrip Versatility (Optional)": "Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace one cantrip you learned from this class's Spellcasting feature with another cantrip from the cleric spell list.",
-            "3. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3. Divine Domain feature":"",
+            "4. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "4. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with necrotic energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an a 1d8 necrotic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "5. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with the fiery power of the forge. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 fire damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "6. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "7. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "8. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "9. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "10. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "10. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "11. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "11. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "12. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "12. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "13. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Potent Spellcasting": "Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip."
             },
-            "13. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "14. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 thunder damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "14. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "15. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with poison — a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "15. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "16. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "16. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "17. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Divine Strike": "At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by the weapon to the target. When you reach 14th level, the extra damage increases to 2d8."
             },
-            "Blessed Strikes (Optional)": [
+            "18. Blessed Strikes (Optional)": [
                 "<ITALIC>Replaces the Divine Strike or Potent Spellcasting feature</ITALIC>",
                 "When you reach 8th level, you are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal 1d8 radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
             ]
@@ -2415,7 +2423,7 @@
             ]
         },
         "16.11th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Destroy Undead": "Starting at 11th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 2."
+            "1.Destroy Undead (CR 2)": "Starting at 11th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 2."
         },
         "17.12th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
@@ -2426,7 +2434,7 @@
             "1.": "Access to 7th level spells"
         },
         "19.14th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "1.Destroy Undead": "Starting at 14th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 3."
+            "1.Destroy Undead (CR 3)": "Starting at 14th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 3."
         },
         "20.15th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.": "Access to 8th level spells"
@@ -2437,14 +2445,15 @@
         },
 
         "22.17th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "0.Destroy Undead": "Starting at 17th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 4.",
-            "1. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "0.Destroy Undead (CR 4)": "Starting at 17th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below CR 4.",
+            "1. Divine Domain feature":"",
+            "2. Arcana Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Arcane Mastery": "At 17th level, you choose four spells from the wizard spell list, one from each of the following levels: 6th, 7th, 8th, and 9th. You add them to your list of domain spells. Like your other domain spells, they are always prepared and count as cleric spells for you."
             },
-            "2. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "3. Death Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Improved Reaper": "Starting at 17th level, when you cast a necromancy spell of 1st through 5th level that targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. If the spell consumes its material components, you must provide them for each target."
             },
-            "3. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "4. Forge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Saint of Forge and Fire": [
                     "At 17th level, your blessed affinity with fire and metal becomes more powerful:",
                     "<LIST_START>",
@@ -2453,10 +2462,10 @@
                     "<LIST_STOP>"
                 ]
             },
-            "4. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "5. Grave Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Keeper of Souls": "At 17th level, you can seize a trace of vitality from a parting soul and use it to heal the living. When an enemy you can see dies within 30 feet of you, you or one ally of your choice that is within 30 feet of you regains hit points equal to the enemy's number of Hit Dice. You can use this feature only if you aren't incapacitated. Once you use it, you can't do so again until the start of your next turn."
             },
-            "5. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "6. Knowledge Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Visions of the Past": [
                     "Starting at 17th level, you can call up visions of the past that relate to an object you hold or your immediate surroundings. You spend at least 1 minute in meditation and prayer, then receive dreamlike, shadowy glimpses of recent events. You can meditate in this way for a number of minutes equal to your Wisdom score and must maintain concentration during that time, as if you were casting a spell.",
                     "Once you use this feature, you can't use it again until you finish a short or long rest.",
@@ -2464,36 +2473,36 @@
                     "<BOLD>Area Reading.</BOLD> As you meditate, you see visions of recent events in your immediate vicinity (a room, street, tunnel, clearing, or the like, up to a 50-foot cube), going back a number of days equal to your Wisdom score. For each minute you meditate, you learn about one significant event, beginning with the most recent. Significant events typically involve powerful emotions, such as battles and betrayals, marriages and murders, births and funerals. However, they might also include more mundane events that are nevertheless important in your current situation."
                 ]
             },
-            "6. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "7. Life Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Supreme Healing": "Starting at 17th level, when you would normally roll one or more dice to restore hit points with a spell, you instead use the highest number possible for each die. For example, instead of restoring 2d6 hit points to a creature, you restore 12."
             },
-            "7. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "8. Light Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Corona of Light": "Starting at 17th level, you can use your action to activate an aura of sunlight that lasts for 1 minute or until you dismiss it using another action. You emit bright light in a 60-foot radius and dim light 30 feet beyond that. Your enemies in the bright light have disadvantage on saving throws against any spell that deals fire or radiant damage."
             },
-            "8. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "9. Nature Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Master of Nature": "At 17th level, you gain the ability to command animals and plant creatures. While creatures are charmed by your Charm Animals and Plants feature, you can take a bonus action on your turn to verbally command what each of those creatures will do on its next turn."
             },
-            "9. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "10. Order Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Order's Wrath": "Starting at 17th level, enemies you designate for destruction wilt under the combined efforts of you and your allies. If you deal your Divine Strike damage to a creature on your turn, you can curse that creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack, the target also takes 2d8 psychic damage, and the curse ends. You can curse a creature in this way only once per turn."
             },
-            "10. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "11. Peace Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Expansive Bond": "At 17th level, the benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance to that damage."
             },
-            "11. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "12. Tempest Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Stormborn": "At 17th level, you have a flying speed equal to your current walking speed whenever you are not underground or indoors."
             },
-            "12. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "13. Trickery Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Improved Duplicity": "At 17th level, you can create up to four duplicates of yourself, instead of one, when you use Invoke Duplicity. As a bonus action on your turn, you can move any number of them up to 30 feet, to a maximum range of 120 feet."
             },
-            "13. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "14. Twilight Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Twilight Shroud": "At 17th level, the twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
             },
-            "14. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
+            "15. War Domain#SLIDES(CLERIC)#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
                 "Avatar of Battle": "At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
             }
         },
         "23.18th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
-            "": "Beginning at 18th level, you can use your Channel Divinity three times between rests. When you finish a short or long rest, you regain your expended uses."
+            "1. Channel Divinity (3/rest)": "Beginning at 18th level, you can use your Channel Divinity three times between rests. When you finish a short or long rest, you regain your expended uses."
         },
         "24.19th level#COLLAPSE#KEYFONT(COLLAPSE, LARGE_HEADER, HEADER, SUB_HEADER)#FONT(DEFAULT)": {
             "1.Ability Score Improvement": "Increase one ability score by 2, or two ability scores by 1. As normal, you cannot increase an ability score above 20 with this feature.",
