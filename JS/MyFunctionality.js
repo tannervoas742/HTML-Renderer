@@ -165,7 +165,15 @@ function showSlides(no) {
     }
 }
 
+function upSlides(no, e) {
+    funcUpDownSlides(no, e, -1);
+}
+
 function downSlides(no, e) {
+    funcUpDownSlides(no, e, 1);
+}
+
+function funcUpDownSlides(no, e, direction) {
     let SlideShowList = document.getElementsByClassName("slideshow-container-instance" + no);
     let i;
     for (i = 0; i < SlideShowList.length; i++) {
@@ -173,10 +181,11 @@ function downSlides(no, e) {
             break;
         }
     }
-    let TargetSlide = (SlideShowList.length + i + 1) % SlideShowList.length;
-    ControlledScrollTo(0, SlideShowList[TargetSlide].getBoundingClientRect().height);
-
+    let TargetSlide = (SlideShowList.length + i + direction) % SlideShowList.length;
+    OpenAllCollapsiblesTo(SlideShowList[TargetSlide], true);
 }
+
+
 
 let OpenAllTarget;
 
@@ -241,5 +250,39 @@ function ScrollEnable() {
         document.getElementById("top-html").classList.remove("disable-scroll-to");
     } else {
         setTimeout(ScrollEnable, 10);
+    }
+}
+
+let DelayedGotoTargetElement;
+
+function OpenAllCollapsiblesTo(TargetElement, EndGoal) {
+    if (TargetElement != null) {
+        OpenAllCollapsiblesTo(TargetElement.parentElement, false);
+        if (TargetElement.classList.contains("list-collapsible") == true) {
+            if (TargetElement.classList.contains("active") == false) {
+                TargetElement.children[0].click();
+            }
+        } else if (EndGoal == true) {
+            DelayedGotoTargetElement = TargetElement;
+            setTimeout(DelayedGotoTargetElementFunc, 33);
+        }
+    }
+}
+
+function DelayedGotoTargetElementFunc() {
+    if (document.getElementById("top-html").classList.contains("updating-collapsible") == true) {
+        setTimeout(DelayedGotoTargetElementFunc, 33);
+    } else {
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        var goto = top + DelayedGotoTargetElement.getBoundingClientRect().top - window.screen.height * 0.15;
+        var stickyHeaderNav = document.getElementById("sticky-header-nav");
+        if (stickyHeaderNav != null) {
+            goto = goto - stickyHeaderNav.getBoundingClientRect().height;
+        }
+        if (goto < 0) {
+            goto = 0;
+        }
+        ControlledScrollTo(0, goto);
     }
 }
