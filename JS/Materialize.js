@@ -22,6 +22,12 @@ function _inherits(t, e) {
     t.prototype = Object.create(e && e.prototype, { constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 } }), e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : t.__proto__ = e)
 }
 
+function ControlledScrollTo(a1, a2) {
+    if (document.getElementById("top-html").classList.contains("disable-scroll-to") == false) {
+        window.scrollTo(a1, a2);
+    }
+}
+
 function _classCallCheck(t, e) { if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function") }
 window.cash = function() {
     var i, o = document,
@@ -841,6 +847,11 @@ M.anime = function() {
                 }, {
                     key: "open",
                     value: function(t) {
+
+                        if (document.getElementById("top-html").classList.contains("lock-collapsible") == true) {
+                            document.getElementById("top-html").classList.remove("lock-collapsible")
+                            return;
+                        }
                         if (document.getElementById("top-html").classList.contains("updating-collapsible") == false) {
                             document.getElementById("top-html").classList.add("updating-collapsible");
                         }
@@ -848,7 +859,7 @@ M.anime = function() {
                             e = this.$el.children("li").eq(t);
 
                         if (e.length && !e[0].classList.contains("active")) {
-                            if (e[0].children[1].classList.contains("dont-close-others") == false) {
+                            if (e[0].children[1].classList.contains("accordion") == true && e[0].children[1].classList.contains("dont-close-others") == false) {
                                 if ("function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, e[0]), this.options.accordion) {
                                     var n = this.$el.children("li");
                                     this.$el.children("li.active").each(function(t) {
@@ -886,8 +897,20 @@ M.anime = function() {
                                         goto = goto - stickyHeaderNav.getBoundingClientRect().height;
                                     }
 
-                                    window.scrollTo(0, goto);
+                                    ControlledScrollTo(0, goto);
 
+                                    setTimeout(mat_pagescrolling, 33);
+
+                                }
+                            }
+
+                            var mat_pagescrolling = function() {
+                                var mat_windowHeight = document.getElementById("top-html").getBoundingClientRect().height;
+
+                                if (Math.abs(mat_windowHeight - mat_prevWindowHeight) > 0.1) {
+                                    mat_prevWindowHeight = mat_windowHeight;
+                                    setTimeout(mat_pagescrolling, 33);
+                                } else {
                                     document.getElementById("top-html").classList.remove("updating-collapsible");
 
                                 }
@@ -899,6 +922,10 @@ M.anime = function() {
                 }, {
                     key: "close",
                     value: function(t) {
+                        if (document.getElementById("top-html").classList.contains("lock-collapsible") == true) {
+                            document.getElementById("top-html").classList.remove("lock-collapsible")
+                            return;
+                        }
                         var e = this.$el.children("li").eq(t);
                         if (e.length && e[0].children.length && e[0].children[0].classList.contains("collapsible-header-open")) {
                             e[0].children[0].classList.remove("collapsible-header-open");

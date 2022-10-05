@@ -152,6 +152,7 @@ div.collapsible-header h2,
 div.collapsible-header h3,
 div.collapsible-header h4 {
     margin: 0.5rem 0 0.5rem 0 !important;
+    width: max-content;
 }
 
 div.collapsible-header a {
@@ -353,7 +354,7 @@ div.slideshow-container {
     position: relative;
     margin: auto;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 0px 0.5% 0px 0.5%;
 }
 
 
@@ -361,28 +362,40 @@ div.slideshow-container {
 
 .slideshow-control-spacer {
     height: 34px;
+    margin-bottom: 0px !important;
 }
 
 p.slide-status {
     position: absolute;
     border: 1px solid black;
     background-color: #f0f0f0;
-    top: 0%;
-    width: 20%;
+    top: 34px;
+    width: 100%;
     font-weight: bold;
     font-size: 18px;
-    right: 40%;
+    right: 0%;
     text-align: center;
     padding: 7.5px;
     margin: 0px;
+}
+
+a.up {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
 }
 
 a.prev,
 a.next {
     cursor: pointer;
     position: absolute;
-    top: 0%;
-    width: 40%;
+    top: 0px;
+    width: 30%;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -398,4 +411,44 @@ a.next {
 
 a.prev {
     left: 0px;
+}
+
+a.up {
+    right: 30%;
+    width: 40%;
+}
+
+a.down {
+    left: -0.5%;
+    width: 101%;
+}
+
+a.collapsible-button {
+    float: right;
+    margin: 0.5rem;
+    border-radius: 60px;
+    background-color: inherit;
+    color: #ddd;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+a.collapsible-button p.font-class-collapse {
+    font: 18px bold !important;
+    color: #ddd !important;
+}
+
+a.collapsible-button:hover {
+    border: none !important;
+    -webkit-box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%) !important;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 14%), 0 1px 7px 0 rgb(0 0 0 / 12%), 0 3px 1px -1px rgb(0 0 0 / 20%) !important;
+}
+
+a.collapsible-button:hover p.font-class-collapse {
+    color: #212529 !important;
+}
+
+div.collapsible-button-div {
+    width: -webkit-fill-available;
+    place-self: center;
 }

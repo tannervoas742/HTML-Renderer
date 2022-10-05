@@ -272,17 +272,20 @@ class WebPage(
                 self.CloseSlideShow(Input, NewState, Interface)
             
             if type(Input) == dict:
-                if 'COLLAPSE' in Interface:
+                BonusClass = ''
+                if 'ACCORDION' in Interface:
+                    BonusClass = 'accordion'
+                if 'COLLAPSE' in Interface or 'ACCORDION' in Interface:
                     if LastItemWasCollapse == False:
                         CollapseModelCount = self.CollapseModelCount
                         self.CollapseModelCount += 1
-                        self.Doc.stag('br', self.Style(NewState), self.Class(NewState, 'pre-collapsible-br'))
-                        self.Doc.stag('ul', self.DCTS, Format('id="collapsible-model{}"', CollapseModelCount), self.Style(NewState), self.Class(NewState, Format('collapsible collapsible-model{}', CollapseModelCount)))
-                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
+                        self.Doc.stag('br', self.Style(NewState), self.Class(NewState, BonusClass, 'pre-collapsible-br'))
+                        self.Doc.stag('ul', self.DCTS, Format('id="collapsible-model{}"', CollapseModelCount), self.Style(NewState), self.Class(NewState, BonusClass, Format('collapsible collapsible-model{}', CollapseModelCount)))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, BonusClass, 'list-collapsible'))
                     else:
                         self.Doc.stag('/li', self.DCTS)
-                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'list-collapsible'))
-                    self.Doc.stag('div', self.DCTS, Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)))
+                        self.Doc.stag('li', self.DCTS, Format('id="list-item-model{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, BonusClass, 'list-collapsible'))
+                    self.Doc.stag('div', self.DCTS, Format('id="collapsible-header{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, BonusClass, Format('collapsible-header normal-collapsible closed-header collapsible-header{}-row{}', CollapseModelCount, CollapseRowCount)))
                 elif LastItemWasCollapse:
                     self.CollapseModelRows[CollapseModelCount] = CollapseRowCount
                     CollapseRowCount += 0
@@ -292,10 +295,21 @@ class WebPage(
 
                 ContinueFlag, Input[OriginalKey] = self.LoadItem(Key, NewState, Interface, Input[OriginalKey], IsKey=True)
 
-                if 'COLLAPSE' in Interface:
+                if 'COLLAPSE' in Interface or 'ACCORDION' in Interface:
+                    if 'COLLAPSE' in Interface:
+                        self.Doc.stag('div', self.DCTS, Format('id="collapsible-button-div{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-button-div collapsible-button-div{}-row{}', CollapseModelCount, CollapseRowCount)))
+                        with self.Tag('a', 'onClick="CloseAll(this)"', Format('id="collapsible-button-close-all{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, 'round', Format('collapsible-button collapsible-button-close-all collapsible-button-close-all{}-row{} waves-effect waves-light btn', CollapseModelCount, CollapseRowCount))):
+                            with self.Tag('p', self.Style(NewState), self.Class(NewState, Format('font-class-collapse'))):
+                                self.Text('Close All')
+                        with self.Tag('a', 'onClick="OpenAll(this)"', Format('id="collapsible-button-open-all{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-button collapsible-button-open-all collapsible-button-open-all{}-row{} waves-effect waves-light btn', CollapseModelCount, CollapseRowCount))):
+                            with self.Tag('p', self.Style(NewState), self.Class(NewState, Format('font-class-collapse'))):
+                                self.Text('Open All')
+                        self.Doc.stag('/div', self.DCTS)
                     self.Doc.stag('/div', self.DCTS)
                 NewState['key'] += [Key]
-                if 'COLLAPSE' in Interface:
+                if 'ACCORDION' in Interface:
+                    self.Doc.stag('div', self.DCTS, Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('accordion collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)))
+                elif 'COLLAPSE' in Interface:
                     self.Doc.stag('div', self.DCTS, Format('id="collapsible-body{}-row{}"', CollapseModelCount, CollapseRowCount), self.Style(NewState), self.Class(NewState, Format('collapsible-body collapsible-body{}-row{}', CollapseModelCount, CollapseRowCount)))
                 if ContinueFlag:
                     self.LoadLevel(Input[OriginalKey], NewState)
@@ -306,7 +320,7 @@ class WebPage(
                     if OriginalKeyIndex == len(InputSorted) - 1 and NewState.GlobalState['in_slide_show'] == True and NewState['mode'] == WebPageEnums.Slides:
                         self.CloseSlideShow(Input, NewState, Interface)
 
-                if 'COLLAPSE' in Interface:
+                if 'COLLAPSE' in Interface or 'ACCORDION' in Interface:
                     self.Doc.stag('/div', self.DCTS)
                     CollapseRowCount += 1
                     LastItemWasCollapse = True

@@ -1,3 +1,9 @@
+function ControlledScrollTo(a1, a2) {
+    if (document.getElementById("top-html").classList.contains("disable-scroll-to") == false) {
+        window.scrollTo(a1, a2);
+    }
+}
+
 $(document).ready(function() {
     var waitforelement = function() {
         if (document.getElementById("top-html").classList.contains("updating-collapsible")) {
@@ -14,7 +20,7 @@ $(document).ready(function() {
             if (goto < 0) {
                 goto = 0;
             }
-            window.scrollTo(0, goto);
+            ControlledScrollTo(0, goto);
         }
     }
     var opencollapse = function() {
@@ -99,7 +105,7 @@ function opencollapsewithlinkaddress(LinkElement, Pre, Address) {
                 if (goto < 0) {
                     goto = 0;
                 }
-                window.scrollTo(0, goto);
+                ControlledScrollTo(0, goto);
             }
         }
         setTimeout(gotoLinkOnceUpdatingCollapsibleIsDone, 33);
@@ -107,26 +113,26 @@ function opencollapsewithlinkaddress(LinkElement, Pre, Address) {
     return false;
 }
 
-$(document).ready(function() {
-    document.addEventListener("keydown", function(e) {
-        if (e.ctrlKey && e.key == 'f') {
-            var CollapsiblesToOpen = document.getElementsByClassName('collapsible-body');
-            for (let i = 0; i < CollapsiblesToOpen.length; i++) {
-                if (CollapsiblesToOpen[i].parentElement.classList.contains('active') == false) {
-                    CollapsiblesToOpen[i].classList.add("dont-close-others");
-                    CollapsiblesToOpen[i].classList.add("instant-update");
-                    CollapsiblesToOpen[i].parentElement.children[0].click()
-                    CollapsiblesToOpen[i].classList.remove("instant-update");
-                    CollapsiblesToOpen[i].classList.remove("dont-close-others");
-                }
-            }
-            if (document.getElementById("top-html").classList.contains("expand-all") == false) {
-                document.getElementById("top-html").classList.add("expand-all");
-            }
-            window.scrollTo(0, 0);
-        }
-    });
-})
+//$(document).ready(function() {
+//    document.addEventListener("keydown", function(e) {
+//        if (e.ctrlKey && e.key == 'f') {
+//            var CollapsiblesToOpen = document.getElementsByClassName('collapsible-body');
+//            for (let i = 0; i < CollapsiblesToOpen.length; i++) {
+//                if (CollapsiblesToOpen[i].parentElement.classList.contains('active') == false) {
+//                    CollapsiblesToOpen[i].classList.add("dont-close-others");
+//                    CollapsiblesToOpen[i].classList.add("instant-update");
+//                    CollapsiblesToOpen[i].parentElement.children[0].click()
+//                    CollapsiblesToOpen[i].classList.remove("instant-update");
+//                    CollapsiblesToOpen[i].classList.remove("dont-close-others");
+//                }
+//            }
+//            if (document.getElementById("top-html").classList.contains("expand-all") == false) {
+//                document.getElementById("top-html").classList.add("expand-all");
+//            }
+//            ControlledScrollTo(0, 0);
+//        }
+//    });
+//})
 
 let slideIndex = [];
 
@@ -156,5 +162,84 @@ function showSlides(no) {
         xSlides[slideIndex[no]].style.display = "block";
         let xSlideStatus = x[i].getElementsByClassName("slide-status");
         xSlideStatus[0].textContent = "Slide: " + (1 + slideIndex[no]) + " / " + xSlides.length;
+    }
+}
+
+function downSlides(no, e) {
+    let SlideShowList = document.getElementsByClassName("slideshow-container-instance" + no);
+    let i;
+    for (i = 0; i < SlideShowList.length; i++) {
+        if (SlideShowList[i] == e.parentElement) {
+            break;
+        }
+    }
+    let TargetSlide = (SlideShowList.length + i + 1) % SlideShowList.length;
+    ControlledScrollTo(0, SlideShowList[TargetSlide].getBoundingClientRect().height);
+
+}
+
+let OpenAllTarget;
+
+function OpenAll(e) {
+    if (document.getElementById("top-html").classList.contains("lock-collapsible") == false) {
+        document.getElementById("top-html").classList.add("lock-collapsible");
+    }
+    OpenAllTarget = e;
+    setTimeout(OpenAllAction, 10);
+}
+
+function OpenAllAction() {
+    if (document.getElementById("top-html").classList.contains("lock-collapsible") == true) {
+        setTimeout(OpenAllAction, 10);
+        return;
+    }
+    if (document.getElementById("top-html").classList.contains("disable-scroll-to") == false) {
+        document.getElementById("top-html").classList.add("disable-scroll-to");
+    }
+    let TargetHeaders = OpenAllTarget.parentElement.parentElement.parentElement.parentElement.children;
+    let i;
+    for (i = 0; i < TargetHeaders.length; i++) {
+        if (TargetHeaders[i].children[0].classList.contains("collapsible-header-open") == false) {
+            TargetHeaders[i].children[0].click()
+        }
+    }
+
+    setTimeout(ScrollEnable, 10);
+}
+
+let CloseAllTarget;
+
+function CloseAll(e) {
+    if (document.getElementById("top-html").classList.contains("lock-collapsible") == false) {
+        document.getElementById("top-html").classList.add("lock-collapsible");
+    }
+    CloseAllTarget = e;
+    setTimeout(CloseAllAction, 10);
+}
+
+function CloseAllAction() {
+    if (document.getElementById("top-html").classList.contains("lock-collapsible") == true) {
+        setTimeout(CloseAllAction, 10);
+        return;
+    }
+    if (document.getElementById("top-html").classList.contains("disable-scroll-to") == false) {
+        document.getElementById("top-html").classList.add("disable-scroll-to");
+    }
+    let TargetHeaders = CloseAllTarget.parentElement.parentElement.parentElement.parentElement.children;
+    let i;
+    for (i = 0; i < TargetHeaders.length; i++) {
+        if (TargetHeaders[i].children[0].classList.contains("collapsible-header-open") == true) {
+            TargetHeaders[i].children[0].click()
+        }
+    }
+
+    setTimeout(ScrollEnable, 10);
+}
+
+function ScrollEnable() {
+    if (document.getElementById("top-html").classList.contains("updating-collapsible") == false && document.getElementById("top-html").classList.contains("disable-scroll-to") == true) {
+        document.getElementById("top-html").classList.remove("disable-scroll-to");
+    } else {
+        setTimeout(ScrollEnable, 10);
     }
 }
