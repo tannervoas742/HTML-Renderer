@@ -22,6 +22,7 @@ class WebPageStateManager(StateManager):
         self['style'] = []
         self['mode'] = WebPageEnums.Text
         self['lookup_table.range'] = None
+        self['table_header'] = []
         self['callback'] = []
         self['late callback'] = []
         self['font'] = 'DEFAULT'
@@ -83,11 +84,11 @@ class WebPageStateManager(StateManager):
                 if Function[2] != WebPageEnums.Del:
 
         #           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-                    State[Function[1]] += Group.lower().split()
+                    State[Function[1]] += Group.split(',')
                 else:
 
         #           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-                    for Tag in Group.lower().split():
+                    for Tag in Group.split(','):
                         if Tag in State[Function[1]]:
                             del State[Function[1]][State[Function[1]].index(Tag)]
 
@@ -109,7 +110,13 @@ class WebPageStateManager(StateManager):
             State[Function[1]] = Compiled
         else:
             State[Function[1]] = []
-        
+
+    def Lower(self, WP, State, Interface, Function):
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        if len(State[Function[1]]) != 0:
+            State[Function[1]] = list(map(lambda x: x.lower(), State[Function[1]]))
+
     def MixState(self, Interface, WP):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -127,24 +134,28 @@ class WebPageStateManager(StateManager):
             MixedState['visible'] = True
 
         StateModiferFunctions = [
-            ['FONT(.)'          , 'font'          ,                                                       self.HandleSingleStringKeyAndNext],
-            ['KEYFONT(.)'       , 'key_font'      ,                                                       self.HandleSingleStringKeyAndNext],
-            ['LOOKUP_TABLE(.,.)', 'mode'          , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
-            ['TABLE'            , 'mode'          , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ],
-            ['SLIDES(.)'        , 'mode'          , WebPageEnums.Slides     , 'slides_group'      , str , self.HandleEnableAndStore        ],
-            ['CLASS(.)'         , 'class'         , WebPageEnums.Add        ,                             self.HandleStorageType           ],
-            ['CLASS(.)'         , 'class'         , WebPageEnums.Del        ,                             self.HandleStorageType           ],
-            ['CLASS(.)'         , 'class'         , WebPageEnums.Set        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'         , WebPageEnums.Add        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'         , WebPageEnums.Del        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'         , WebPageEnums.Set        ,                             self.HandleStorageType           ],
-            ['CALL(.)'          , 'callbacks'     ,                                                       self.HandleCallbacks             ],
-            ['LATE_CALL(.)'     , 'late_callbacks',                                                       self.HandleCallbacks             ]
+            ['FONT(.)'              , 'font'          ,                                                       self.HandleSingleStringKeyAndNext   ],
+            ['KEYFONT(.)'           , 'key_font'      ,                                                       self.HandleSingleStringKeyAndNext   ],
+            ['LOOKUP_TABLE(.,.)'    , 'mode'          , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore           ],
+            ['TABLE'                , 'mode'          , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore           ],
+            ['SLIDES(.)'            , 'mode'          , WebPageEnums.Slides     , 'slides_group'      , str , self.HandleEnableAndStore           ],
+            ['CLASS(.)'             , 'class'         , WebPageEnums.Add        ,                             [self.HandleStorageType, self.Lower]],
+            ['CLASS(.)'             , 'class'         , WebPageEnums.Del        ,                             [self.HandleStorageType, self.Lower]],
+            ['CLASS(.)'             , 'class'         , WebPageEnums.Set        ,                             [self.HandleStorageType, self.Lower]],
+            ['STYLE(.)'             , 'style'         , WebPageEnums.Add        ,                             [self.HandleStorageType, self.Lower]],
+            ['STYLE(.)'             , 'style'         , WebPageEnums.Del        ,                             [self.HandleStorageType, self.Lower]],
+            ['STYLE(.)'             , 'style'         , WebPageEnums.Set        ,                             [self.HandleStorageType, self.Lower]],
+            ['CALL(.)'              , 'callbacks'     ,                                                       self.HandleCallbacks                ],
+            ['LATE_CALL(.)'         , 'late_callbacks',                                                       self.HandleCallbacks                ],
+            ['TABLE_HEADER(.,.,.,.)', 'table_header'  , WebPageEnums.Set        ,                             self.HandleStorageType              ]
         ]
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         for StateModiferFunction in StateModiferFunctions:
-            StateModiferFunction[-1](WP, MixedState, Interface, StateModiferFunction)
+            if type(StateModiferFunction[-1]) != list:
+                StateModiferFunction[-1] = [StateModiferFunction[-1]]
+            for Callback in StateModiferFunction[-1]:
+                Callback(WP, MixedState, Interface, StateModiferFunction)
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return MixedState

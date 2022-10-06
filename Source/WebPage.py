@@ -431,7 +431,7 @@ class WebPage(
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         return ContinueFlag, Data
 
-    def AddText(self, Input, State, Interface, Data, ForceTextTag=None, IsKey=False):
+    def AddText(self, Input, State, Interface, Data, ForceTextTag=None, IsKey=False, BonusContent=''):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         if self.HandleLists(Input, State, Interface, Data):
@@ -448,7 +448,7 @@ class WebPage(
             TextTag = ForceTextTag
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        if self.HandleLinks(Input, State, Interface, Data, TextTag=TextTag, ForceTextTag=ForceTextTag, IsKey=IsKey):
+        if self.HandleLinks(Input, State, Interface, Data, TextTag=TextTag, ForceTextTag=ForceTextTag, IsKey=IsKey, BonusContent=BonusContent):
             return
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -459,7 +459,7 @@ class WebPage(
             else:
                 FontClass = Format('font-class-{}', State['font'])
             if 'HTML' not in Interface:
-                with self.Tag(TextTag, self.Style(State), self.Class(State, FontClass)):
+                with self.Tag(TextTag, BonusContent, self.Style(State), self.Class(State, FontClass)):
                     self.Text(Input)
             else:
                 self.Text(Input)

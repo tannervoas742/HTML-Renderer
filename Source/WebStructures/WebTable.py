@@ -4,7 +4,7 @@ import copy
 from Utilities.Core import *
 
 class WebTable:
-    def __init__(self, Data, State, Interface, WebpageObject):
+    def __init__(self, Data, State, Interface, WebpageObject, HeaderCount = 1):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.Doc = WebpageObject.Doc
@@ -15,6 +15,7 @@ class WebTable:
         self.State = State
         self.Interface = Interface
         self.WebpageObject = WebpageObject
+        self.HeaderCount = HeaderCount
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.RenderToPage()
@@ -22,7 +23,7 @@ class WebTable:
     def RenderToPage(self):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-        self.Widths = [None for i in self.Data[0]]
+        self.Widths = [None for i in self.Data[-1]]
         ColumnWidthPattern = re.compile('COLUMN_WIDTH\((.*?)\)')
         ColumnWidthMatch = list(filter(lambda Result: Result != None, list(map(lambda Interface: ColumnWidthPattern.match(Interface), self.Interface))))
 
@@ -37,9 +38,10 @@ class WebTable:
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         with self.Tag('table', self.WebpageObject.Class(self.State, 'table renderer-table-bordered')):
             with self.Tag('thead', self.WebpageObject.Class(self.State, 'thead-dark ')):
-                self.add_header(self.Data[0])
+                for HeaderIndex in range(self.HeaderCount):
+                    self.add_header(self.Data[HeaderIndex])
             with self.Tag('tbody', self.WebpageObject.Class(self.State)):
-                for row in self.Data[1:]:
+                for row in self.Data[self.HeaderCount:]:
                     self.add_row(row)
 
     def add_header(self, header):
@@ -54,7 +56,10 @@ class WebTable:
                 if self.Widths[ColumnIDX] != None:
                     NewState['style'] += [Format('width: {}', self.Widths[ColumnIDX])]
                     NewState['style'] += ['table-layout: fixed']
-                self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
+                if type(value) == str:
+                    self.WebpageObject.AddText(value, NewState, self.Interface, None, ForceTextTag='th')
+                else:
+                    self.WebpageObject.AddText(value[1], NewState, self.Interface, None, ForceTextTag='th', BonusContent=Format('colspan="{}"', value[0]))
                 ColumnIDX += 1
                 #self.Doc.line('th', value)
 

@@ -10,7 +10,7 @@ from WebStructures.SimpleHTML import SimpleHTML
 from Utilities.Core import *
     
 class WebPage_Links:
-    def HandleLinks(self, Input, State, Interface, Data, TextTag='p', ForceTextTag=None, IsKey=False):
+    def HandleLinks(self, Input, State, Interface, Data, TextTag='p', ForceTextTag=None, IsKey=False, BonusContent=''):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Matched = False
@@ -64,7 +64,7 @@ class WebPage_Links:
                     if LinkAddress not in self.SeenLinkDowns:
                         self.SeenLinkDowns[LinkAddress] = 0
                     self.SeenLinkDowns[LinkAddress] += 1    
-                    with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State, 'is-anchor-link')):
+                    with self.Tag('a', BonusContent, Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State, 'is-anchor-link')):
                         self.Text(Text)
                     Input = ToReplace.join(Input.split(ToReplace)[1:])
                     HitAleady = True
@@ -84,7 +84,7 @@ class WebPage_Links:
                     if LinkAddress not in self.SeenLinkDowns:
                         self.SeenLinkDowns[LinkAddress] = 0
                     self.SeenLinkDowns[LinkAddress] += 1  
-                    with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State)):
+                    with self.Tag('a', BonusContent, Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State)):
                         self.Text(Text)
                     Input = ToReplace.join(Input.split(ToReplace)[1:])
                     HitAleady = True
@@ -105,7 +105,7 @@ class WebPage_Links:
                     if LinkAddress not in self.SeenLinkDowns:
                         self.SeenLinkDowns[LinkAddress] = 0
                     self.SeenLinkDowns[LinkAddress] += 1  
-                    with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State, 'is-anchor-link')):
+                    with self.Tag('a', BonusContent, Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State, 'is-anchor-link')):
                         self.Text(Text)
                     Input = ToReplace.join(Input.split(ToReplace)[1:])
                     HitAleady = True
@@ -125,7 +125,7 @@ class WebPage_Links:
                     if LinkAddress not in self.SeenLinkDowns:
                         self.SeenLinkDowns[LinkAddress] = 0
                     self.SeenLinkDowns[LinkAddress] += 1  
-                    with self.Tag('a', Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State)):
+                    with self.Tag('a', BonusContent, Format('onclick="opencollapsewithlinkaddress(this, true, {})"', LinkAddress), Format('href="{}"', LinkAddress.replace('\'', '')), self.Style(State), self.Class(State)):
                         self.Text(Input)
                     Input = ToReplace.join(Input.split(ToReplace)[1:])
                     HitAleady = True
