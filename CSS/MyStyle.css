@@ -369,14 +369,20 @@ p.slide-status {
     position: absolute;
     border: 1px solid black;
     background-color: #f0f0f0;
-    top: 34px;
-    width: 100%;
+    top: 0px;
+    width: 40%;
     font-weight: bold;
     font-size: 18px;
-    right: 0%;
+    right: 30%;
     text-align: center;
     padding: 7.5px;
     margin: 0px;
+}
+
+p.slide-status.full-row {
+    top: 34px;
+    width: 100%;
+    right: 0%;
 }
 
 a.up {

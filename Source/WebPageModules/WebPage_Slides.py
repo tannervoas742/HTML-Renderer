@@ -18,11 +18,13 @@ class WebPage_Slides:
         self.SlideTagSlideCounter = {}
         self.NextSlideTagIdNumber = 0
         self.LastSlideShowState = None
+        self.LastSlideShowInterface = None
 
     def AddSlideShow(self, Input, State, Interface, Data, IsKey=False):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         self.LastSlideShowState = deepcopy(State)
+        self.LastSlideShowInterface = deepcopy(Interface)
         if State['slides_group'][0] not in self.SlideTagToIdNumber:
             self.SlideTagToIdNumber[State['slides_group'][0]] = self.NextSlideTagIdNumber
             self.SlideTagSlideCounter[State['slides_group'][0]] = 0
@@ -32,15 +34,20 @@ class WebPage_Slides:
         self.Doc.stag('div', self.DCTS, self.Style(State), self.Class(State, 'slideshow-container', 'slideshow-container-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]])))
         with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slideshow-control-spacer-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
             self.Text('')
-        with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slideshow-control-spacer-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
-            self.Text('')
-        with self.Tag('a', 'onclick="upSlides({}, this)"'.format(self.SlideTagToIdNumber[State['slides_group'][0]]), self.Style(State), self.Class(State, 'slideshow-control-spacer', 'up', 'waves-effect', 'waves-light', 'btn')):
-            self.Text(self.PreProcessText('&#9650;'))
+        if 'UP_DOWN_SLIDES' in Interface:
+            with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slideshow-control-spacer-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
+                self.Text('')
+        if 'UP_DOWN_SLIDES' in Interface:
+            with self.Tag('a', 'onclick="upSlides({}, this)"'.format(self.SlideTagToIdNumber[State['slides_group'][0]]), self.Style(State), self.Class(State, 'slideshow-control-spacer', 'up', 'waves-effect', 'waves-light', 'btn')):
+                self.Text(self.PreProcessText('&#9650;'))
         with self.Tag('a', 'onclick="plusSlides({}, -1)"'.format(self.SlideTagToIdNumber[State['slides_group'][0]]), self.Style(State), self.Class(State, 'slideshow-control-spacer', 'prev', 'waves-effect', 'waves-light', 'btn')):
             self.Text(self.PreProcessText('&#10094;'))
         with self.Tag('a', 'onclick="plusSlides({}, 1)"'.format(self.SlideTagToIdNumber[State['slides_group'][0]]), self.Style(State), self.Class(State, 'slideshow-control-spacer', 'next', 'waves-effect', 'waves-light', 'btn')):
             self.Text(self.PreProcessText('&#10095;'))
-        with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slide-status', 'slide-status-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
+        BonusSlideStatusClass = ''
+        if 'UP_DOWN_SLIDES' in Interface:
+            BonusSlideStatusClass = 'full-row'
+        with self.Tag('p', self.Style(State), self.Class(State, 'slideshow-control-spacer', 'slide-status', BonusSlideStatusClass, 'slide-status-instance{}'.format(self.SlideTagToIdNumber[State['slides_group'][0]]))):
             self.Text('')
         State.GlobalState['in_slide_show'] = True
         #FlushPrintUTF8('Start Slide Show', State['slides_group'][0], self.SlideTagToIdNumber[State['slides_group'][0]])
@@ -71,8 +78,9 @@ class WebPage_Slides:
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         #with self.Tag('p', self.Style(self.LastSlideShowState), self.Class(self.LastSlideShowState, 'slideshow-control-spacer', 'slideshow-control-spacer-instance{}'.format(self.SlideTagToIdNumber[self.LastSlideShowState['slides_group'][0]]))):
         #    self.Text('')
-        with self.Tag('a', 'onclick="downSlides({}, this)"'.format(self.SlideTagToIdNumber[self.LastSlideShowState['slides_group'][0]]), self.Style(self.LastSlideShowState), self.Class(self.LastSlideShowState, 'slideshow-control-spacer', 'down', 'waves-effect', 'waves-light', 'btn')):
-            self.Text(self.PreProcessText('&#9660;'))
+        if 'UP_DOWN_SLIDES' in self.LastSlideShowInterface:
+            with self.Tag('a', 'onclick="downSlides({}, this)"'.format(self.SlideTagToIdNumber[self.LastSlideShowState['slides_group'][0]]), self.Style(self.LastSlideShowState), self.Class(self.LastSlideShowState, 'slideshow-control-spacer', 'down', 'waves-effect', 'waves-light', 'btn')):
+                self.Text(self.PreProcessText('&#9660;'))
         self.Doc.stag('/div', self.DCTS)
         State.GlobalState['in_slide_show'] = False
         #FlushPrintUTF8('End Slide Show')

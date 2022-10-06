@@ -352,7 +352,10 @@ class WebPage(
             Input, State, Interface, Data = self.ApplyINCCommand(Input, State, Interface, Data)
         elif 'RANGE' in Interface:
             Input, State, Interface, Data = self.ApplyRANGECommand(Input, State, Interface, Data)
-        
+
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+        Input, State, Interface, Data = self.ApplyLateCallbacks(Input, State, Interface, Data)
+
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         Input, State, Interface, Data = self.ApplyAPPENDCommandFamily(Input, State, Interface, Data)
         Input, State, Interface, Data = self.ApplyLOOKUPCommand(Input, State, Interface, Data)

@@ -23,6 +23,7 @@ class WebPageStateManager(StateManager):
         self['mode'] = WebPageEnums.Text
         self['lookup_table.range'] = None
         self['callback'] = []
+        self['late callback'] = []
         self['font'] = 'DEFAULT'
         self['next.font'] = []
         self['key_font'] = 'HEADER'
@@ -109,7 +110,6 @@ class WebPageStateManager(StateManager):
         else:
             State[Function[1]] = []
         
-
     def MixState(self, Interface, WP):
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -127,18 +127,19 @@ class WebPageStateManager(StateManager):
             MixedState['visible'] = True
 
         StateModiferFunctions = [
-            ['FONT(.)'          , 'font'     ,                                                       self.HandleSingleStringKeyAndNext],
-            ['KEYFONT(.)'       , 'key_font' ,                                                       self.HandleSingleStringKeyAndNext],
-            ['LOOKUP_TABLE(.,.)', 'mode'     , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
-            ['TABLE'            , 'mode'     , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ],
-            ['SLIDES(.)'        , 'mode'     , WebPageEnums.Slides     , 'slides_group'      , str , self.HandleEnableAndStore        ],
-            ['CLASS(.)'         , 'class'    , WebPageEnums.Add        ,                             self.HandleStorageType           ],
-            ['CLASS(.)'         , 'class'    , WebPageEnums.Del        ,                             self.HandleStorageType           ],
-            ['CLASS(.)'         , 'class'    , WebPageEnums.Set        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'    , WebPageEnums.Add        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'    , WebPageEnums.Del        ,                             self.HandleStorageType           ],
-            ['STYLE(.)'         , 'style'    , WebPageEnums.Set        ,                             self.HandleStorageType           ],
-            ['CALL(.)'          , 'callbacks',                                                       self.HandleCallbacks             ]
+            ['FONT(.)'          , 'font'          ,                                                       self.HandleSingleStringKeyAndNext],
+            ['KEYFONT(.)'       , 'key_font'      ,                                                       self.HandleSingleStringKeyAndNext],
+            ['LOOKUP_TABLE(.,.)', 'mode'          , WebPageEnums.LookupTable, 'lookup_table.range', int , self.HandleEnableAndStore        ],
+            ['TABLE'            , 'mode'          , WebPageEnums.Table      , None                , None, self.HandleEnableAndStore        ],
+            ['SLIDES(.)'        , 'mode'          , WebPageEnums.Slides     , 'slides_group'      , str , self.HandleEnableAndStore        ],
+            ['CLASS(.)'         , 'class'         , WebPageEnums.Add        ,                             self.HandleStorageType           ],
+            ['CLASS(.)'         , 'class'         , WebPageEnums.Del        ,                             self.HandleStorageType           ],
+            ['CLASS(.)'         , 'class'         , WebPageEnums.Set        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'         , WebPageEnums.Add        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'         , WebPageEnums.Del        ,                             self.HandleStorageType           ],
+            ['STYLE(.)'         , 'style'         , WebPageEnums.Set        ,                             self.HandleStorageType           ],
+            ['CALL(.)'          , 'callbacks'     ,                                                       self.HandleCallbacks             ],
+            ['LATE_CALL(.)'     , 'late_callbacks',                                                       self.HandleCallbacks             ]
         ]
 
         #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
