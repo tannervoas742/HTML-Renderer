@@ -335,7 +335,7 @@
         "3rd#LATE_CALL(_zerotodash)#HIDDEN#INC": [9, 9, 11],
         "4th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 15, 17],
         "5th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17, 19],
-        "1.The Artificer#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,7,11,Daily Spells Per Slot)": [
+        "1.The Artificer#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,7,11,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "Infusions Known", "Infused Items", "Cantrips Known", "1st", "2nd", "3rd", "4th", "5th"
         ],
 
@@ -1261,7 +1261,7 @@
         "7th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 20],
         "8th#LATE_CALL(_zerotodash)#HIDDEN#INC": [15],
         "9th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17],
-        "1.The Bard#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,6,14,Daily Spells Per Slot)": [
+        "1.The Bard#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,6,14,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "Spells Known", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"
         ],
 
@@ -1650,7 +1650,7 @@
         "7th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 20],
         "8th#LATE_CALL(_zerotodash)#HIDDEN#INC": [15],
         "9th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17],
-        "1.The Cleric#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,Daily Spells Per Slot)": [
+        "1.The Cleric#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"
         ],
 
@@ -2557,7 +2557,7 @@
         "7th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 20],
         "8th#LATE_CALL(_zerotodash)#HIDDEN#INC": [15],
         "9th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17],
-        "1.The Druid#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,Daily Spells Per Slot)": [
+        "1.The Druid#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"
         ],
 
@@ -4186,7 +4186,7 @@
         "3rd#LATE_CALL(_zerotodash)#HIDDEN#INC": [9, 9, 11],
         "4th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 15, 17],
         "5th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17, 19],
-        "1.The Paladin#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,4,8,Daily Spells Per Slot)": [
+        "1.The Paladin#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,4,8,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "1st", "2nd", "3rd", "4th", "5th"
         ],
 
@@ -5000,7 +5000,7 @@
         "3rd#LATE_CALL(_zerotodash)#HIDDEN#INC": [9, 9, 11],
         "4th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 15, 17],
         "5th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17, 19],
-        "1.The Ranger#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,4,8,Daily Spells Per Slot)": [
+        "1.The Ranger#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,4,8,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "1st", "2nd", "3rd", "4th", "5th"
         ],
 
@@ -6034,7 +6034,7 @@
         "7th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 20],
         "8th#LATE_CALL(_zerotodash)#HIDDEN#INC": [15],
         "9th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17],
-        "1.The Sorceror#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,7,15,Daily Spells Per Slot)": [
+        "1.The Sorceror#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,7,15,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Sorcery Points", "Features", "Cantrips Known", "Spells Known", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"
         ],
 
@@ -8134,7 +8134,7 @@
         "7th#LATE_CALL(_zerotodash)#HIDDEN#INC": [13, 20],
         "8th#LATE_CALL(_zerotodash)#HIDDEN#INC": [15],
         "9th#LATE_CALL(_zerotodash)#HIDDEN#INC": [17],
-        "1.The Wizard#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,Daily Spells Per Slot)": [
+        "1.The Wizard#LOOKUP_TABLE(1,20)#TABLE_HEADER(1,5,13,-Spell Slots per Spell Level-)": [
             "Level", "Proficiency Bonus", "Features", "Cantrips Known", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"
         ],
 
